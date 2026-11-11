@@ -1,0 +1,1 @@
+[{"id":"q1","split":"dev","question":"Hoàn tiền mất bao lâu?","gold":[{"source_id":"policy-1","page":1,"evidence":"xử lý trong 7 ngày làm việc"}],"expected_answer":"7 ngày làm việc","filter":{"version":"2025"}}]
