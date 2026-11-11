@@ -1,35 +1,48 @@
-# Day 7 — Retrieval & Context Engineering: Từ câu hỏi đến bằng chứng
+# Day 7 — Retrieval & Context Engineering
 
-**Cá nhân · 4 giờ · Python 3.11+ · tiếp nối Day 6**
+### Từ câu hỏi đến bằng chứng
 
-Bạn nhận đầu ra ingestion: chunks, metadata và benchmark. Hãy xây, so sánh ít nhất **ba chiến lược retrieval**, đóng gói kết quả thành context có thể truy nguồn, dùng dev để cải thiện một cấu hình và đánh giá trên test.
+**Bài cá nhân · 4 giờ · Python 3.11+ · tiếp nối Day 6**
 
-> **Gợi ý thêm — tùy chọn:** Muốn dùng Codex, Claude Code hoặc Antigravity để hỗ trợ lập trình? Xem [best practices về context cho coding agent](AGENT_SETUP.md): instruction, skill, MCP và plugin. Phần này không bắt buộc, không tính điểm và không yêu cầu cài đặt.
+Sử dụng chunks, metadata và benchmark từ Day 6 để tìm bằng chứng phù hợp cho một câu hỏi. Bạn sẽ so sánh các chiến lược retrieval, tạo context có thể truy nguồn và cải thiện pipeline dựa trên kết quả đánh giá.
 
-Đọc [RULES](RULES.md), [CHECKPOINTS](CHECKPOINTS.md), [GUIDE](GUIDE.md), [RUBRIC](RUBRIC.md), [SUBMISSION](SUBMISSION.md) và [PSEUDOCODE](PSEUDOCODE.md). Báo cáo theo [mẫu cá nhân](report/individual/MSSV_HoTen.md). Có thể làm offline không API key; không cần chatbot hoặc LLM sinh câu trả lời.
+> **Gợi ý tùy chọn:** Dùng coding agent để hỗ trợ lập trình? Xem [best practices về instruction, skill, MCP và plugin](AGENT_SETUP.md). Phần này không bắt buộc và không tính điểm.
 
-## Pipeline: từ Day 6 đến context
+## Bạn sẽ làm gì?
 
-![Sơ đồ pipeline từ dữ liệu Day 6, các chiến lược retrieval đến context có nguồn](assets/retrieval-pipeline.svg)
+![Pipeline từ dữ liệu Day 6 qua retrieval đến context có nguồn](assets/retrieval-pipeline.svg)
 
-Từ cùng một bộ chunks, chạy TF-IDF + cosine và BM25 độc lập; dùng RRF để gộp hai bảng xếp hạng thành chiến lược thứ ba. Mỗi chiến lược trả top-3 để đóng gói context và đo retrieval. Có thể thay TF-IDF bằng dense embedding thật; RRF kết hợp TF-IDF và BM25 là kết hợp hai phương pháp lexical.
+1. **Chuẩn bị dữ liệu:** chuyển chunks và benchmark Day 6 theo [data contract](data/README.md), giữ ID, nguồn, trang và evidence. Nếu chưa có đầu ra Day 6, làm theo hướng dẫn chuẩn bị dữ liệu trong [GUIDE](GUIDE.md).
+2. **So sánh retrieval:** chạy TF-IDF + cosine, BM25 và RRF trên cùng chunks và câu hỏi. Có thể dùng dense embedding thật thay TF-IDF.
+3. **Tạo context:** chọn top-3, loại trùng, giữ nguồn/trang và tuân thủ budget 800 ký tự.
+4. **Đánh giá và cải thiện:** đo Hit@1, Evidence Hit@3 và Context Evidence Hit@3; phân tích lỗi, thử một cải tiến trên dev rồi đánh giá cấu hình đã chọn trên test.
 
-## Vòng lặp thực nghiệm
+TF-IDF là phương pháp lexical. RRF kết hợp TF-IDF và BM25 là kết hợp hai phương pháp lexical; xem [GUIDE](GUIDE.md) để biết chi tiết và tiêu chí đánh giá.
 
-![Vòng lặp đánh giá trên dev và kiểm thử sau khi chốt cấu hình](assets/experiment-loop.svg)
+## Quy trình thực nghiệm
 
-Đọc trace, thử cải tiến trên dev, chọn cấu hình rồi đánh giá test đã giữ kín.
+![Vòng lặp baseline, phân tích lỗi, cải tiến trên dev và đánh giá test](assets/experiment-loop.svg)
 
-## Đầu ra bắt buộc
-
-- Chuyển dữ liệu Day 6 sang contract trong `data/README.md`; giữ nguyên văn evidence và định danh nguồn/trang. Nếu không có Day 6, tự chuẩn bị corpus và benchmark theo GUIDE.
-- Ba chiến lược có tên: BM25, TF-IDF + cosine, và RRF kết hợp hai bảng xếp hạng; hoặc dense embedding thật thay TF-IDF. Không gọi TF-IDF là semantic embedding. Giữ cùng corpus/chunks và so sánh công bằng.
-- Context có nguồn, loại trùng, tuân thủ budget cố định; trace đủ để tính và kiểm tra metrics.
-- Chốt baseline → phân tích dev → đề xuất và thử cải tiến có kiểm soát → chọn cấu hình theo dev → chạy test một lần. Cải thiện không bắt buộc có điểm cao hơn.
-- Nộp code, dữ liệu được phép chia sẻ hoặc cách tái tạo, benchmark/gold, config, trace, nhãn và báo cáo.
+Giữ test độc lập trong lúc thử nghiệm và chọn cấu hình. Một cải tiến không tăng điểm vẫn có giá trị nếu bạn phân tích và báo cáo trung thực.
 
 ## Bắt đầu
 
-1. Fork hoặc clone repository đề bài và tạo repo cá nhân theo [SUBMISSION](SUBMISSION.md); mở thư mục này trong môi trường làm việc của bạn.
-2. Tạo môi trường Python và cài các thư viện bạn chọn; ghi phiên bản và lệnh trong README bài nộp. Dùng `data/example_*.json` chỉ để kiểm tra schema, không phải benchmark nộp bài.
-3. Làm theo [GUIDE](GUIDE.md). Chạy `python -m unittest discover -s tests -v` để kiểm tra fixture và contract mẫu.
+1. Fork hoặc clone repo và tạo repo bài làm cá nhân theo [SUBMISSION](SUBMISSION.md).
+2. Chuẩn bị Python 3.11+ và dữ liệu Day 6; xem [GUIDE](GUIDE.md) và [CHECKPOINTS](CHECKPOINTS.md) để làm bài theo từng bước. Có thể làm offline, không cần API key hay chatbot.
+3. Kiểm tra fixture mẫu:
+
+   ```bash
+   python -m unittest discover -s tests -v
+   ```
+
+   Các file `data/example_*.json` chỉ minh họa schema, không phải benchmark đủ điều kiện nộp.
+
+## Nộp bài và tài liệu
+
+Nộp code, cấu hình, dữ liệu được phép chia sẻ hoặc cách tái tạo, benchmark và gold, trace, kết quả dev/test, nhãn đánh giá và [báo cáo cá nhân](report/individual/MSSV_HoTen.md). Xem checklist đầy đủ tại [SUBMISSION](SUBMISSION.md).
+
+| Tài liệu | Nội dung |
+|---|---|
+| [GUIDE](GUIDE.md) · [CHECKPOINTS](CHECKPOINTS.md) | Hướng dẫn thực hành và các mốc 4 giờ |
+| [RUBRIC](RUBRIC.md) · [RULES](RULES.md) | Cách chấm và quy tắc làm bài |
+| [Data contract](data/README.md) · [Pseudocode](PSEUDOCODE.md) | Định dạng dữ liệu và khung triển khai |
