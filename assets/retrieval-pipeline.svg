@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-labelledby="title desc">
+<title id="title">Pipeline retrieval và context Day 7</title>
+<desc id="desc">Chunks và metadata Day 6 cùng câu hỏi đi vào hai retriever TF-IDF và BM25; hai danh sách có thể được kết hợp bằng RRF. Ba chiến lược được so sánh, sau đó đóng gói top-3 thành context có nguồn và trace.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#60738a"/></marker></defs>
+<rect width="1200" height="500" rx="22" fill="#f6f8fc"/>
+<g font-family="Arial, Helvetica, sans-serif" fill="#15243b">
+<text x="36" y="48" font-size="25" font-weight="700">TỪ DỮ LIỆU DAY 6 ĐẾN CONTEXT CÓ BẰNG CHỨNG</text>
+<text x="36" y="77" font-size="15" fill="#52657d">Cùng chunks · Cùng câu hỏi · Cùng top-k và budget để so sánh công bằng</text>
+<rect x="36" y="129" width="205" height="115" rx="14" fill="#e5edff" stroke="#bbcdfa"/>
+<text x="54" y="161" font-size="17" font-weight="700" fill="#214fba">1  ĐẦU VÀO</text>
+<text x="54" y="190" font-size="16">Chunks + metadata</text><text x="54" y="214" font-size="15" fill="#52657d">ID · nguồn · trang</text>
+<rect x="36" y="270" width="205" height="68" rx="14" fill="#fff" stroke="#cbd5e1"/>
+<text x="54" y="311" font-size="17" font-weight="700">Câu hỏi</text>
+<rect x="305" y="119" width="205" height="84" rx="14" fill="#dff4ec" stroke="#a8dcc7"/>
+<text x="324" y="151" font-size="17" font-weight="700" fill="#096946">TF-IDF + cosine</text><text x="324" y="177" font-size="14" fill="#52657d">hoặc dense embedding thật</text>
+<rect x="305" y="230" width="205" height="84" rx="14" fill="#dff4ec" stroke="#a8dcc7"/>
+<text x="324" y="264" font-size="17" font-weight="700" fill="#096946">BM25</text><text x="324" y="290" font-size="14" fill="#52657d">tìm kiếm từ khóa</text>
+<rect x="574" y="161" width="180" height="108" rx="14" fill="#fff0d9" stroke="#f1ce93"/>
+<text x="594" y="193" font-size="17" font-weight="700" fill="#946000">RRF</text><text x="594" y="220" font-size="14">Gộp theo thứ hạng</text><text x="594" y="243" font-size="14" fill="#52657d">không cộng score</text>
+<rect x="816" y="127" width="168" height="168" rx="14" fill="#eee8fc" stroke="#d1c2f2"/>
+<text x="834" y="159" font-size="16" font-weight="700" fill="#663fb0">2  SO SÁNH</text><text x="834" y="188" font-size="15">TF-IDF / dense</text><text x="834" y="213" font-size="15">BM25</text><text x="834" y="238" font-size="15">RRF</text><text x="834" y="270" font-size="14" fill="#52657d">Top-3 mỗi cách</text>
+<rect x="1010" y="127" width="154" height="168" rx="14" fill="#def3f8" stroke="#a9dbe6"/>
+<text x="1026" y="158" font-size="16" font-weight="700" fill="#11677a">3  CONTEXT</text><text x="1026" y="188" font-size="14">Loại trùng</text><text x="1026" y="212" font-size="14">Giữ nguồn/trang</text><text x="1026" y="236" font-size="14">Budget 800 ký tự</text><text x="1026" y="270" font-size="14" fill="#52657d">+ retrieval trace</text>
+<g fill="none" stroke="#60738a" stroke-width="2.5" marker-end="url(#arrow)"><path d="M241 170 H305"/><path d="M241 211 H275 V272 H305"/><path d="M241 304 H275 V161 H305"/><path d="M510 161 H540 V194 H574"/><path d="M510 272 H540 V238 H574"/><path d="M754 215 H816"/><path d="M510 135 H790 V154 H816"/><path d="M510 300 H790 V268 H816"/><path d="M984 211 H1010"/></g>
+<rect x="36" y="374" width="1128" height="87" rx="14" fill="#ffffff" stroke="#dce4ee"/>
+<text x="57" y="405" font-size="16" font-weight="700">Đo riêng từng strategy</text><text x="57" y="433" font-size="15" fill="#52657d">Hit@1 → Evidence Hit@3 → Context Evidence Hit@3  |  Lưu score, chunks, nguồn và context cuối</text>
+</g></svg>
