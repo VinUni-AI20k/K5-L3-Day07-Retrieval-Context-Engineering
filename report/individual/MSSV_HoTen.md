@@ -3,11 +3,10 @@
 - Họ tên, MSSV, lớp:
 - Repo, nhánh và commit nộp:
 
-## Handoff và setup
+## Handoff và môi trường
 - Nguồn, quyền, snapshot, số trang/chunks, chiến lược chunk Day 6, lệnh adapter:
 - Benchmark: 15 dev/5 test, cách chia, kiểm tra evidence, test đã từng dùng chưa:
-- Agent/phiên bản, instruction, skill, MCP và plugin hoặc lý do fallback:
-- Prompt chính, thay đổi do agent đề xuất, lệnh và kết quả kiểm chứng độc lập:
+- Môi trường, phiên bản thư viện, lệnh chạy và cách kiểm chứng:
 
 ## Cấu hình và thí nghiệm
 - Tokenizer; BM25 / TF-IDF hoặc dense / RRF, k, candidate depth, budget, chi phí:

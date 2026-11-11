@@ -1,8 +1,8 @@
 # Hướng dẫn thực hành
 
-## 0. Thiết lập và kế hoạch (0:00–0:30)
+## 0. Chuẩn bị và kế hoạch (0:00–0:30)
 
-Chọn một agent và thực hiện [AGENT_SETUP](AGENT_SETUP.md). Đọc `AGENTS.md`/`CLAUDE.md`, chạy thử skill và ghi lại bằng chứng. Yêu cầu agent tóm tắt contract và lập kế hoạch; tự đối chiếu với đề, chia việc thành các bước nhỏ. Không đưa dữ liệu mật, key hoặc test bị giữ kín lên dịch vụ không được phép.
+Chuẩn bị môi trường Python, đọc contract và lập kế hoạch theo các checkpoint. Kiểm tra quyền sử dụng dữ liệu và cách chạy benchmark. Tùy chọn: xem [best practices cho coding agent](AGENT_SETUP.md) nếu bạn muốn dùng AI hỗ trợ lập trình.
 
 ## 1. Handoff từ Day 6 (0:30–1:00)
 
@@ -32,4 +32,4 @@ Chấm thủ công cùng 5 câu test cho baseline và cấu hình chọn: contex
 
 ## 5. Demo và nộp (3:30–4:00)
 
-Demo một query thành công, một lỗi hoặc context rỗng, và so sánh trước/sau. Nộp README setup/run, mã, manifest, corpus hoặc cách lấy hợp lệ, benchmark/split, config, script và output, traces, bảng nhãn, report, log agent đã biên tập (prompt chính, thay đổi, lệnh và kết quả kiểm chứng). Bỏ secret, dữ liệu riêng tư và toàn bộ lịch sử không cần thiết. Đảm bảo người khác chạy được mà không dựa vào `solution/`.
+Demo một query thành công, một lỗi hoặc context rỗng, và so sánh trước/sau. Nộp README setup/run, mã, manifest, corpus hoặc cách lấy hợp lệ, benchmark/split, config, script và output, traces, bảng nhãn, report. Bỏ secret, dữ liệu riêng tư và toàn bộ lịch sử không cần thiết. Đảm bảo người khác chạy được mà không dựa vào `solution/`.

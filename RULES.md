@@ -2,7 +2,7 @@
 
 ## Dùng AI và trung thực
 
-Được khuyến khích dùng Codex, Claude Code, Antigravity hoặc công cụ tương đương. Người học chịu trách nhiệm đọc diff, kiểm chứng evidence/metrics, chạy test và giải thích thiết kế. Ghi công cụ, prompt chính và bước kiểm tra trong báo cáo; không nộp kết quả giả hoặc sao chép mà không dẫn nguồn.
+Có thể dùng Codex, Claude Code, Antigravity hoặc công cụ tương đương nhưng không bắt buộc. Người học chịu trách nhiệm kiểm chứng evidence/metrics, chạy test và giải thích thiết kế; không nộp kết quả giả hoặc sao chép mà không dẫn nguồn.
 
 ## Đánh giá công bằng
 
@@ -14,4 +14,4 @@ Dùng dữ liệu có quyền sử dụng; kiểm tra điều kiện chia sẻ, 
 
 ## Sự cố và deadline
 
-Ghi lại lỗi, lệnh và cách xử lý; nếu agent/MCP không chạy, dùng tài liệu chính thức theo [AGENT_SETUP.md](AGENT_SETUP.md). Không dựng số liệu. Deadline và gia hạn theo thông báo của coach; nộp thay đổi sau deadline bằng commit mới nếu được phép.
+Ghi lại lỗi, lệnh và cách xử lý. Không dựng số liệu. Deadline và gia hạn theo thông báo của coach; nộp thay đổi sau deadline bằng commit mới nếu được phép.

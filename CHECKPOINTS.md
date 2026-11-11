@@ -2,12 +2,12 @@
 
 Các mốc dưới đây tính từ lúc bắt đầu lớp (4 giờ); thời gian thực tế theo coach. Xem chi tiết và tiêu chí trong [GUIDE.md](GUIDE.md).
 
-## CP1 — Setup agent và handoff (0:00–1:00)
+## CP1 — Chuẩn bị và handoff (0:00–1:00)
 
-- **Mục tiêu:** có workspace, agent và dữ liệu đầu vào đáng tin.
-- **Cần làm:** đọc instruction; thử skill/MCP hoặc ghi fallback; chuyển chunks và benchmark Day 6, kiểm chứng evidence và split.
-- **Sản phẩm:** manifest, chunks, benchmark, setup log đã biên tập.
-- **Cần hiểu:** instruction, skill, MCP, plugin; test đã dùng để chỉnh không còn là holdout.
+- **Mục tiêu:** có workspace và dữ liệu đầu vào đáng tin.
+- **Cần làm:** chuẩn bị môi trường; chuyển chunks và benchmark Day 6, kiểm chứng evidence và split.
+- **Sản phẩm:** manifest, chunks, benchmark và lệnh chạy.
+- **Cần hiểu:** test đã dùng để chỉnh không còn là holdout.
 - **Tự kiểm tra:** mỗi evidence có ít nhất một chunk hợp lệ, source/page và ID truy vết được; test mới nếu test cũ đã dùng để chọn.
 
 ## CP2 — Ba baseline (1:00–1:55)
@@ -37,6 +37,6 @@ Các mốc dưới đây tính từ lúc bắt đầu lớp (4 giờ); thời gi
 ## CP5 — Demo và nộp (3:30–4:00)
 
 - **Mục tiêu:** người khác tái lập, đọc hiểu và chấm được.
-- **Cần làm:** demo một query thành công, một lỗi/context rỗng; viết báo cáo, ghi cách kiểm chứng agent, push bài cá nhân.
+- **Cần làm:** demo một query thành công, một lỗi/context rỗng; viết báo cáo và push bài cá nhân.
 - **Sản phẩm:** repo và báo cáo theo [SUBMISSION.md](SUBMISSION.md).
 - **Tự kiểm tra:** lệnh chạy, file trace, benchmark, nguồn hợp lệ và quyền đọc repo; không commit secret.

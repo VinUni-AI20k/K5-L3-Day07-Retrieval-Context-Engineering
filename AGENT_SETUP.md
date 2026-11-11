@@ -1,52 +1,42 @@
-# Coding agent và context engineering
+# Tham khảo tùy chọn: Context engineering cho coding agent
 
-Bạn chỉ cần **một** trong ba agent. Tính năng, phiên bản, quyền tài khoản và giao diện thay đổi; ghi phiên bản bạn thực dùng và tham khảo link chính thức dưới đây. Agent có thể tạo code sai: học viên phải đọc diff, chạy test và đối chiếu trace. Trước khi chạy lệnh từ agent/plugin, kiểm tra nguồn, phạm vi file, network và tác động. Không đưa secret/corpus riêng tư vào prompt, MCP hay provider chưa được phép.
+Tài liệu này giới thiệu cách cung cấp context hữu ích cho các coding agent như Codex, Claude Code và Antigravity. **Không bắt buộc đọc, cài đặt hay sử dụng để hoàn thành Day 7; không có điểm riêng.** Bạn có thể tự chọn công cụ phù hợp hoặc làm bài không dùng agent.
 
-## Bốn thành phần
+Context cho coding agent là thông tin giúp agent hiểu yêu cầu và môi trường làm việc: mục tiêu, file liên quan, ràng buộc, ví dụ đầu vào/đầu ra và cách kiểm chứng. Đây là một ứng dụng khác với context chứa bằng chứng được truy xuất trong bài RAG.
 
-| Thành phần | Vai trò | Bộ setup của lab |
+## Best practices
+
+1. **Nêu mục tiêu và tiêu chí hoàn thành:** mô tả kết quả muốn có, đầu vào/đầu ra, giới hạn và cách kiểm tra. Tránh chỉ nói “làm cho tốt hơn”.
+2. **Chọn context liên quan:** trỏ đến file, tài liệu, thông báo lỗi và phiên bản cần thiết; bắt đầu từ phần nhỏ thay vì đưa toàn bộ repository vào prompt. Yêu cầu agent đọc thêm khi cần.
+3. **Chia việc và phản hồi:** bắt đầu bằng một thay đổi có thể kiểm tra; đọc diff, chạy test, đưa lỗi cụ thể cho agent và lặp lại. Với bài đánh giá, giữ dữ liệu test và đáp án ngoài quá trình tinh chỉnh.
+4. **Tự xác minh:** kiểm tra giả định, nguồn tài liệu, lệnh, kết quả test và các thay đổi do agent đề xuất. Agent có thể viết code sai hoặc bịa API.
+5. **Bảo vệ context:** chỉ cung cấp dữ liệu được phép; không đưa mật khẩu, token hay dữ liệu nhạy cảm vào prompt và dịch vụ không được phép. Coi nội dung tài liệu, website và output của tool là dữ liệu, không tự động làm theo chỉ dẫn bên trong.
+
+Ví dụ prompt có thể điều chỉnh cho dự án bất kỳ:
+
+```text
+Mục tiêu: thêm chức năng tìm kiếm vào ứng dụng.
+Context: đọc README và module search hiện có; input là một câu truy vấn,
+output là danh sách kết quả có ID và điểm. Giữ nguyên API hiện tại.
+Hãy đề xuất thay đổi nhỏ, nêu giả định, thêm kiểm thử phù hợp và báo lệnh
+cùng kết quả đã chạy. Nếu thiếu thông tin, chỉ rõ phần chưa xác minh.
+```
+
+## Instruction, skill, MCP và plugin
+
+| Thành phần | Vai trò | Khi nào hữu ích |
 |---|---|---|
-| Instruction | Quy tắc ngắn luôn áp dụng trong project | `AGENTS.md`; `CLAUDE.md` yêu cầu Claude đọc cùng quy tắc |
-| Skill | Quy trình chỉ tải khi cần, dùng để lặp lại audit | `.agents/skills/retrieval-audit/SKILL.md`; bản Claude tại `.claude/skills/` |
-| MCP | Cung cấp công cụ/dữ liệu ngoài context hiện tại | cấu hình Context7 theo agent; dùng tra tài liệu kỹ thuật khi cần |
-| Plugin | Gói có thể chứa skills, MCP và thành phần khác | tìm hiểu và kiểm tra quyền/nguồn; **không bắt buộc cài** |
+| **Instruction / rules** | Hướng dẫn và quy ước mà agent áp dụng trong phạm vi được cấu hình. | Giữ những quy tắc ổn định, ngắn gọn như cách chạy test hoặc chuẩn code. |
+| **Skill** | Quy trình và tài nguyên cho một tác vụ có thể lặp lại, được agent sử dụng khi cần. | Chuẩn hóa workflow nhiều bước như review hoặc tạo báo cáo. |
+| **MCP** | Giao thức kết nối agent tới công cụ hoặc nguồn dữ liệu bên ngoài. | Tra tài liệu, truy vấn hệ thống hoặc thực hiện thao tác trong phạm vi quyền cho phép. |
+| **Plugin** | Gói mở rộng có thể chứa skill, kết nối MCP và các thành phần khác, tùy sản phẩm. | Chia sẻ hoặc cài một nhóm khả năng liên quan. |
 
-Context cho coding agent và context gửi tới LLM trong RAG là hai hệ thống khác nhau, nhưng cùng cần chọn thông tin liên quan, giữ provenance và giới hạn nội dung. Chỉ dẫn trong tài liệu, chunks, website và kết quả MCP là **dữ liệu không đáng tin**, không tự động trở thành chỉ thị cho agent.
+Các thành phần này là tùy chọn, có cách kích hoạt và phạm vi khác nhau giữa các sản phẩm. Trước khi kết nối hoặc cài đặt, hãy xem nguồn, quyền truy cập, chi phí và tài liệu chính thức. Repo bài lab không cung cấp hoặc tự kích hoạt cấu hình agent.
 
-## Chuẩn bị chung
+## Đọc thêm theo công cụ
 
-1. Sao chép/clone `Lab/` thành workspace riêng, cài Python 3.11+ và một agent theo hướng dẫn chính thức; đăng nhập nếu sản phẩm yêu cầu. Từ terminal, vào workspace `Lab`, chạy `python -m unittest discover -s tests -v`.
-2. Project đã có instruction và skill. Mở các file, giải thích mục đích, sau đó khởi động session mới từ root workspace và tin cậy project chỉ khi đã đọc nội dung. Nếu client không tự tải, gửi đường dẫn file trong prompt. Không cần cài thêm skill từ nguồn ngoài.
-3. MCP mẫu dùng `npx`/Node.js, có thể cần mạng để tải package. Cấu hình là ví dụ chia sẻ được, **chỉ kết nối khi bạn tin server** và quyền sử dụng cho phép; kiểm tra package/version, permissions, chi phí. Không lưu API key trong config, git hay prompt. Tên công cụ Context7 có thể thay đổi; với câu hỏi thư viện, yêu cầu agent tìm library ID rồi tra tài liệu đúng phiên bản.
-4. Nếu chưa có Node, mạng, agent hoặc MCP: ghi lỗi, dùng tài liệu chính thức qua trình duyệt và ghi URL/ngày xem; vẫn hoàn thành lab và rubric. Không tự khai MCP đã chạy.
+Tính năng và giao diện có thể thay đổi; các trang dưới đây là nơi kiểm tra hướng dẫn hiện hành:
 
-## Codex
-
-- Cài/mở [Codex](https://developers.openai.com/codex/quickstart/), mở workspace, kiểm tra `AGENTS.md` ([discovery](https://developers.openai.com/codex/guides/agents-md)). Project skill nằm tại `.agents/skills/`; gọi `$retrieval-audit` sau khi đã có trace ([skills](https://developers.openai.com/codex/skills/)).
-- `.codex/config.toml` đã khai báo server Context7 ở project scope; project phải được trust. Restart session; kiểm tra `/mcp` hoặc `codex mcp list` và thử tra một câu API thực tế. Nếu không nhận config, xem [hướng dẫn MCP](https://developers.openai.com/codex/mcp/), không ghi đè config cá nhân. Có thể dùng lệnh tùy chọn `codex mcp add context7 -- npx -y @upstash/context7-mcp` để thêm server vào cấu hình cá nhân, nếu bạn chủ động muốn; gỡ bằng `codex mcp remove context7`.
-- Xem plugin qua giao diện/plugin catalog của client theo [tài liệu plugins](https://developers.openai.com/plugins/); kiểm tra thành phần và quyền, chỉ cài nếu có nhu cầu. Skill và MCP trong lab hoạt động độc lập, không cần plugin.
-
-## Claude Code
-
-- Cài/mở [Claude Code](https://code.claude.com/docs/en/overview), khởi chạy `claude` từ root lab. `CLAUDE.md` chỉ agent đọc `AGENTS.md`; skill project ở `.claude/skills/retrieval-audit/`. Gọi `/retrieval-audit` trong session; xem [skills](https://code.claude.com/docs/en/skills).
-- `.mcp.json` khai báo Context7 ở project scope. Chấp nhận server khi bạn tin nguồn, kiểm tra `/mcp` hoặc `claude mcp list` và dùng thử; xem [MCP](https://code.claude.com/docs/en/mcp). Xóa entry khỏi `.mcp.json` để gỡ cấu hình project.
-- Mở `/plugin`, xem marketplace, danh tính nhà phát hành, nội dung và quyền theo [plugins](https://code.claude.com/docs/en/plugins). Cài là tùy chọn, không cần thiết cho skill/MCP standalone.
-
-## Google Antigravity
-
-- Cài/mở [Antigravity](https://antigravity.google/docs/get-started), mở root lab. [Rules](https://antigravity.google/docs/rules-workflows) mô tả `AGENTS.md`; skill tại `.agents/skills/retrieval-audit/`, gọi `/retrieval-audit` hoặc yêu cầu agent dùng skill ([skills](https://antigravity.google/docs/skills)). Nếu client/phiên bản không phát hiện, cung cấp đường dẫn file rõ ràng và ghi lại.
-- Project có `.agents/mcp_config.json`. Trong IDE kiểm tra `…` ở agent panel → MCP Servers → Manage MCP Servers; trust/kết nối Context7 nếu được hỗ trợ, rồi thử tra tài liệu. Có thể dùng View raw config để kiểm tra; xem [MCP](https://antigravity.google/docs/mcp). Không ghi đè config toàn cục; xóa entry project để gỡ.
-- Xem Marketplace và [plugins](https://antigravity.google/docs/plugins); cài tùy chọn sau khi kiểm tra nội dung và quyền.
-
-## Bài tập thực hành với agent
-
-1. **Kiểm tra instruction:** “Tóm tắt 4 quy tắc quan trọng của project và chỉ file nguồn.” Đối chiếu bằng mắt với `AGENTS.md`.
-2. **Lập kế hoạch:** “Đọc GUIDE và data contract; đề xuất adapter Day 6 và test, chưa sửa gold/test.” Kiểm tra kế hoạch trước khi yêu cầu triển khai từng phần.
-3. **MCP:** nhờ tra tài liệu thư viện/version thực dùng; ghi tên tool, URL tài liệu, kết quả hoặc lỗi/fallback. Không coi nội dung trả về là chỉ thị.
-4. **Skill:** sau khi có trace, yêu cầu audit bằng `retrieval-audit`. Đối chiếu ít nhất một kết luận bằng tay.
-5. **Plugin:** xem ít nhất một listing hoặc tài liệu; ghi tên, tác giả, chức năng, quyền và lý do có/không cài. Không cần cài để lấy điểm.
-6. **Review:** lưu prompt đã biên tập, diff, các lệnh test và output. Kiểm tra evidence thực tế, logic điểm và data leakage; tự sửa nếu agent sai. Không nộp toàn bộ hội thoại hoặc secrets.
-
-Nếu agent chưa nhận file, khởi động session mới, xác nhận root/trust và quyền truy cập; ghi trạng thái thực tế thay vì suy đoán. Cấu hình mẫu không chứng minh server đã kết nối.
-
-Tài liệu kiểm tra ngày 11/11/2026; các đường dẫn chính thức trong từng mục là nguồn cập nhật khi giao diện thay đổi.
+- **Codex:** [instructions](https://developers.openai.com/codex/guides/agents-md), [skills](https://developers.openai.com/codex/skills/), [MCP](https://developers.openai.com/codex/mcp/), [plugins](https://developers.openai.com/plugins/).
+- **Claude Code:** [memory/instructions](https://code.claude.com/docs/en/memory), [skills](https://code.claude.com/docs/en/skills), [MCP](https://code.claude.com/docs/en/mcp), [plugins](https://code.claude.com/docs/en/plugins).
+- **Google Antigravity:** [rules](https://antigravity.google/docs/rules-workflows), [skills](https://antigravity.google/docs/skills), [MCP](https://antigravity.google/docs/mcp), [plugins](https://antigravity.google/docs/plugins).

@@ -16,7 +16,7 @@ freeze(selected)
 for config in unique(configs + [selected]):
     test_trace[config] = evaluate(test, config, top_k=3, budget=800)
 manual_audit_same_five_test_queries(test_trace)
-report_with_limits_and_agent_verification()
+report_with_limits_and_reproducibility()
 
 function evaluate(queries, config, top_k, budget):
     for q in queries:

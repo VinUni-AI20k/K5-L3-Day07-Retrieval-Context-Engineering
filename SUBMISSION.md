@@ -21,7 +21,7 @@ Thay URL khi repo đề bài do coach cung cấp khác. Không push bài vào re
 - Code, test, lệnh setup/run và phiên bản thư viện; cấu hình từng strategy và context packing.
 - Manifest, corpus/chunks nếu được phép chia sẻ, hoặc hướng dẫn lấy và xử lý; benchmark ≥20 câu, split, gold và evidence.
 - Trace từng query, bảng kết quả dev/test, thời gian/chi phí; 5 nhãn audit test và lý do cho baseline cùng cấu hình chọn.
-- Báo cáo cá nhân `report/individual/MSSV_HoTen.md` đã đổi tên theo MSSV và họ tên; ghi agent, prompt đã biên tập, kiểm chứng, lỗi, giả thuyết và cải tiến.
+- Báo cáo cá nhân `report/individual/MSSV_HoTen.md` đã đổi tên theo MSSV và họ tên; ghi cách kiểm chứng, lỗi, giả thuyết và cải tiến.
 - Nếu dữ liệu bị hạn chế, không commit dữ liệu mật; nêu cách người chấm được cấp quyền hoặc tái tạo.
 
 ## Checklist
@@ -30,5 +30,5 @@ Thay URL khi repo đề bài do coach cung cấp khác. Không push bài vào re
 - [ ] Dùng đúng input/split, benchmark evidence được kiểm chứng, không tune bằng test.
 - [ ] Ba baseline và cấu hình cải tiến được chọn có kết quả/trace theo GUIDE.
 - [ ] Context đúng budget, có nguồn; audit và báo cáo dựa trên evidence thật.
-- [ ] Kiểm tra code do agent tạo, ghi lệnh/test thực tế và nguồn tham khảo.
+- [ ] Ghi lệnh/test thực tế và nguồn tham khảo.
 - [ ] Không commit secrets, `.env`, `.venv`, dữ liệu riêng tư hoặc kết quả không có quyền chia sẻ.

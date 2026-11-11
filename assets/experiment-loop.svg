@@ -1,14 +1,14 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 350" role="img" aria-labelledby="title desc">
-<title id="title">Vòng lặp cải thiện dựa trên evidence và coding agent</title>
-<desc id="desc">Học viên cung cấp instruction, skill và MCP cho coding agent, kiểm tra code và kết quả. Các thí nghiệm chạy baseline trên dev, đọc lỗi, thử thay đổi, chọn cấu hình theo dev rồi đánh giá test đã giữ kín.</desc>
+<title id="title">Vòng lặp cải thiện retrieval dựa trên evidence</title>
+<desc id="desc">Các thí nghiệm chạy baseline trên dev, đọc lỗi, thử thay đổi, chọn cấu hình theo dev rồi đánh giá test đã giữ kín.</desc>
 <defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="#60738a"/></marker></defs>
 <rect width="1200" height="350" rx="22" fill="#f6f8fc"/>
 <g font-family="Arial, Helvetica, sans-serif" fill="#15243b">
-<text x="36" y="48" font-size="25" font-weight="700">DÙNG AGENT · KIỂM CHỨNG · CẢI THIỆN</text>
-<text x="36" y="76" font-size="15" fill="#52657d">Agent hỗ trợ lập trình; học viên chịu trách nhiệm với code, dữ liệu và kết quả.</text>
+<text x="36" y="48" font-size="25" font-weight="700">THỰC NGHIỆM · ĐÁNH GIÁ · CẢI THIỆN</text>
+<text x="36" y="76" font-size="15" fill="#52657d">So sánh công bằng, đọc trace và giữ test độc lập trong quá trình lựa chọn.</text>
 <rect x="36" y="106" width="1128" height="71" rx="13" fill="#e5edff" stroke="#bbcdfa"/>
-<text x="55" y="135" font-size="16" font-weight="700" fill="#214fba">CONTEXT CHO CODING AGENT</text>
-<text x="55" y="157" font-size="15" fill="#344a66">Instruction + skill + MCP / plugin tùy chọn  →  Agent hỗ trợ code  →  Học viên review diff và chạy test</text>
+<text x="55" y="135" font-size="16" font-weight="700" fill="#214fba">QUY TẮC SO SÁNH</text>
+<text x="55" y="157" font-size="15" fill="#344a66">Cùng chunks, câu hỏi, top-k và context budget  ·  Ghi cấu hình, trace và kết quả cho từng chiến lược</text>
 <rect x="36" y="212" width="195" height="89" rx="13" fill="#fff" stroke="#cbd5e1"/>
 <text x="52" y="244" font-size="16" font-weight="700">1  Baseline</text><text x="52" y="270" font-size="14" fill="#52657d">Chạy và lưu trace dev</text>
 <rect x="276" y="212" width="195" height="89" rx="13" fill="#fff" stroke="#cbd5e1"/>
