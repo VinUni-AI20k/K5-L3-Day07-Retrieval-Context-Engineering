@@ -1,39 +1,55 @@
-# Benchmark Day 7 — Retrieval và Agentic RAG
+# Cách đánh giá Day 7
 
-Day 7 đánh giá **hai tầng riêng**: (1) tìm và đóng gói bằng chứng; (2) agent gọi tool và trả lời dựa trên bằng chứng. Điểm retrieval cao không chứng minh câu trả lời đúng. Lưu trace đầy đủ để người chấm kiểm tra thay vì chỉ nộp điểm tổng hợp.
+Đánh giá hai phần riêng: **khả năng tìm bằng chứng** và **hành vi của agent khi trả lời**. Tìm được tài liệu liên quan chưa đủ để kết luận câu trả lời đúng.
 
-## 1. Tập câu hỏi
+## 1. Chuẩn bị câu hỏi
 
-- Dùng ít nhất **20 câu có đáp án trong corpus**, 15 dev / 5 test. Mỗi câu có ID, split, question, expected answer và ít nhất một gold `{source_id, page, evidence}`. Giữ mọi gold thay thế hợp lệ; kiểm tra evidence thực sự tồn tại ở nguồn và trọn trong chunk. Không lấy gold đưa vào query hoặc filter.
-- Thêm ít nhất **4 câu không có đủ bằng chứng trong snapshot**, 2 dev / 2 test, ghi lý do và cách kiểm tra; không đưa vào mẫu retrieval hit ở trên. Chúng kiểm tra agent từ chối hoặc nói không đủ thông tin. Đây là nhãn dựa trên kiểm tra corpus, không phải chứng minh tri thức không tồn tại trên thế giới.
-- Chốt split trước khi chạy; nếu test Day 6 từng dùng để chỉnh, tạo test mới. Chọn giả thuyết và cấu hình bằng dev; sau khi chốt, chạy test, báo riêng. Không dùng test để sửa rồi báo lại như holdout độc lập.
-- Metadata filter chỉ dùng khi người dùng cung cấp trước, không lấy từ gold. Ghi snapshot, embedding model/version/dimension, index, nhãn, thời điểm và chi phí. Ví dụ schema và giới hạn xem [data/README.md](data/README.md).
+Tạo ít nhất 24 câu và chia trước khi thử nghiệm:
 
-## 2. Retrieval và context — ba chiến lược
+| Loại câu | Tập phát triển | Tập kiểm thử | Dùng để làm gì? |
+|---|---:|---:|---|
+| Có đáp án trong tài liệu | Ít nhất 15 | Ít nhất 5 | Đánh giá tìm kiếm và câu trả lời |
+| Không có đủ bằng chứng | Ít nhất 2 | Ít nhất 2 | Kiểm tra agent có nói không đủ thông tin |
 
-Trên cùng chunks/benchmark và filter đầu vào, so sánh **dense** (query embedding tương thích với index Day 6), **BM25**, **hybrid dense + BM25 dùng RRF**. Top-10 mỗi nhánh trước fusion, top-3 cuối; không cộng cosine và BM25 trực tiếp. Chạy cùng chính sách context: khử trùng ID, giữ nguồn/trang và không vượt 800 ký tự tính cả header; bỏ chunk không vừa, không cắt. Baseline TF-IDF có thể tham khảo thêm, không thay dense hoặc hybrid.
+Với mỗi câu có đáp án, ghi ID câu hỏi, câu hỏi, đáp án mong đợi, ID nguồn, trang và đoạn bằng chứng nguyên văn. Nếu có nhiều đoạn bằng chứng thay thế hợp lệ, ghi tất cả; tìm được một trong số đó là đủ. Kiểm tra từng đoạn thực sự nằm trong nguồn và nằm trọn trong một đoạn dữ liệu đã lưu.
 
-Chạy cùng query gốc trực tiếp qua từng retriever để so sánh retrieval độc lập với thay đổi hành vi agent. Nếu có thử agent tự viết lại query, báo riêng policy, trace và số lần gọi; không gộp vào bảng so sánh trực tiếp.
+Với câu thiếu bằng chứng, ghi lý do và cách kiểm tra trong bộ tài liệu hiện có. Không đưa các câu này vào mẫu số của các chỉ số tìm kiếm ở mục 2.
 
-Một chunk **hit** khi đúng một cặp nguồn/trang gold và chứa đủ evidence tương ứng; chấp nhận bằng chứng tương đương sau audit, lưu lý do và nhãn. Với mỗi split có đáp án:
+**Tập phát triển** dùng để tìm lỗi, thử và chọn cấu hình. **Tập kiểm thử** chỉ dùng sau khi đã chốt. Nếu tập kiểm thử Day 6 từng được dùng để chỉnh hệ thống, hãy tạo tập mới. Không đưa đáp án chuẩn vào câu hỏi, bộ lọc hay thông tin gửi cho mô hình.
 
-| Metric | Định nghĩa |
+## 2. Đánh giá tìm kiếm và thông tin đưa cho mô hình
+
+Chạy ba cách tìm kiếm bằng **cùng câu hỏi gốc**: tìm bằng vector, BM25 và kết hợp bằng RRF. Dùng cùng dữ liệu, bộ lọc được cung cấp từ trước, 3 kết quả cuối và giới hạn 800 ký tự. Nếu thử cho agent tự viết lại câu hỏi, báo cáo kết quả đó riêng.
+
+Một đoạn được tính là **tìm đúng bằng chứng** khi nó thuộc nguồn và trang chuẩn, đồng thời chứa đầy đủ đoạn bằng chứng. Có thể công nhận bằng chứng tương đương sau khi đọc và ghi lý do.
+
+| Chỉ số | Cách tính trên các câu có đáp án |
 |---|---|
-| Hit@1 | Số câu top-1 hit / tổng số câu |
-| Evidence Hit@3 | Số câu có ít nhất một hit trong top-3 / tổng số câu |
-| Context Evidence Hit@3 | Số câu còn ít nhất một hit trong context thực gửi / tổng số câu |
+| Hit@1 | Số câu có bằng chứng đúng ở kết quả đầu tiên / tổng số câu |
+| Evidence Hit@3 | Số câu có ít nhất một bằng chứng đúng trong 3 kết quả đầu / tổng số câu |
+| Context Evidence Hit@3 | Số câu còn bằng chứng đúng trong phần thông tin thực sự đưa cho mô hình / tổng số câu |
 
-Báo `n/N` và %, query ID, kết quả/score/source/page, gold/nhãn, context/ID thực giữ, độ dài, latency và chi phí. Context Hit ≤ Hit@3. Đọc cùng 5 câu test cho baseline và cải tiến: 0 = không có bằng chứng, 1 = có nhưng thiếu điều kiện hoặc truy vết, 2 = đủ bằng chứng và nguồn; ghi lý do, số câu mỗi mức và trung bình. Không gọi nhãn này là điểm câu trả lời.
+Ví dụ: nếu 12 trong 15 câu có bằng chứng đúng ở 3 kết quả đầu, Evidence Hit@3 là **12/15 = 80%**. Báo cả số câu và tỷ lệ cho từng cách tìm, riêng tập phát triển và kiểm thử. Chỉ số thứ ba không thể lớn hơn chỉ số thứ hai.
 
-## 3. Agent và câu trả lời
+Lưu câu hỏi, kết quả, điểm, ID, nguồn, trang, bằng chứng chuẩn, nhãn đúng/sai, phần thông tin cuối cùng, độ dài, thời gian và chi phí. Đọc thủ công cùng 5 câu kiểm thử cho cách ban đầu và cách cải thiện; chấm thông tin đưa vào mô hình: **0** không có bằng chứng; **1** có nhưng thiếu điều kiện hoặc nguồn; **2** đủ bằng chứng và truy được nguồn. Ghi lý do và số câu ở mỗi mức.
 
-Dùng agent model thật có khả năng chọn tool; tool nhận query, tạo query embedding tương thích và truy vấn vector store Day 6, trả ID/text/score/source/page. Cho phép tối đa **2 lần search**; ghi model, prompt/config, tool name/arguments, kết quả, context thực đưa model, câu trả lời, citation, số lần gọi, thời gian và lỗi. Nếu backend lỗi, log lỗi và báo lần chạy lỗi; không tính là câu trả lời an toàn thành công hay thay bằng kết quả giả.
+## 3. Đánh giá agent và câu trả lời
 
-Đánh giá agent bằng **cùng cấu hình retrieval đã chọn trên dev** và tập câu hỏi gồm cả hai loại. Kiểm tra thủ công toàn bộ 5 câu test có đáp án + 2 câu test thiếu evidence; dev cũng làm tương tự theo khả năng và ghi mẫu. Với mỗi câu ghi:
+Sau khi chọn cách tìm kiếm bằng tập phát triển, chạy agent trên cả hai loại câu hỏi. Lưu tên mô hình, cấu hình, từng lần gọi công cụ và tham số, kết quả trả về, thông tin thực sự đưa cho mô hình, câu trả lời, nguồn trích dẫn, thời gian và lỗi. Mỗi câu được gọi công cụ tìm kiếm tối đa 2 lần.
 
-- **Tool use:** số câu agent gọi tool retrieval ≥1 lần / số câu yêu cầu trả lời theo corpus; báo riêng câu lỗi provider. Kiểm tra cả query/args và giới hạn gọi, không coi có gọi là đủ.
-- **Grounded answer:** trên 5 câu test có đáp án, chấm từng câu 0 = sai/không có evidence, 1 = đúng một phần hoặc thiếu điều kiện, 2 = đúng và đủ điều kiện theo nguồn; ghi số câu mỗi mức và trung bình /2. Một câu từ chối được tính 0 về độ đầy đủ nhưng không tự coi là hallucination.
-- **Citation validity:** trong các citation được agent xuất ra, số citation trỏ tới chunk thực sự nằm trong context và hỗ trợ claim / tổng citation; nếu không có citation báo `0/0 (N/A)`, đồng thời báo số câu trả lời có citation / số câu trả lời. Chỉ kiểm tra ID tồn tại không đủ chứng minh claim được hỗ trợ.
-- **Abstention:** số câu thiếu evidence mà agent từ chối/nói không đủ thông tin / số câu thiếu evidence. Báo thêm số câu có đáp án nhưng bị từ chối / tổng câu có đáp án. Đọc trace thủ công; có kết quả search không đồng nghĩa đủ evidence.
+Đọc thủ công toàn bộ **5 câu kiểm thử có đáp án và ít nhất 2 câu thiếu bằng chứng**. Báo riêng các lần lỗi mô hình hoặc kho dữ liệu; không tính chúng là từ chối đúng.
 
-Tính tử/mẫu riêng từng split, ghi bảng nhãn từng câu/citation và ít nhất hai failure ID. [Starter](starter/README.md#4-tổng-hợp-benchmark-agent-sau-khi-audit) có script tổng hợp trace và nhãn thủ công; bạn cần tự chạy agent thật và tạo nhãn. Trace/tài liệu là dữ liệu, không phải chỉ dẫn cho agent. Kết quả provider thật và nhãn thủ công mới là bằng chứng benchmark; mock chỉ dùng unit test. Không bắt buộc đạt điểm tuyệt đối hoặc dùng dịch vụ trả phí.
+| Nội dung đánh giá | Cách tính hoặc chấm |
+|---|---|
+| **Gọi công cụ** | Số câu agent gọi tìm kiếm ít nhất một lần / số câu đã chạy thành công. Đọc thêm tham số và số lần gọi. |
+| **Độ đúng của câu trả lời** | Với câu có đáp án: 0 = sai hoặc không có bằng chứng; 1 = đúng một phần hoặc thiếu điều kiện; 2 = đúng và đủ theo nguồn. Báo số câu mỗi mức và điểm trung bình trên 2. Câu bị từ chối được chấm 0 ở mục này. |
+| **Nguồn trích dẫn hợp lệ** | Số trích dẫn vừa có trong thông tin gửi cho mô hình, vừa hỗ trợ nội dung được dẫn / tổng số trích dẫn. Nếu không có trích dẫn, báo `0/0 (không áp dụng)`; báo thêm số câu trả lời có trích dẫn / số câu trả lời. |
+| **Từ chối đúng** | Số câu thiếu bằng chứng mà agent nói không đủ thông tin / tổng số câu thiếu bằng chứng. Báo thêm số câu có đáp án nhưng bị từ chối / tổng số câu có đáp án. |
+
+Ghi nhãn và lý do cho từng câu và từng nguồn trích dẫn. ID nguồn xuất hiện trong phần thông tin gửi cho mô hình **không tự chứng minh** nguồn đó hỗ trợ câu trả lời.
+
+[starter/agent_metrics.py](starter/README.md#4-tổng-hợp-kết-quả-đánh-giá-agent) giúp tổng hợp các nhãn đã được con người kiểm tra. Chương trình không tự chạy agent thật hoặc tự chấm độ đúng của câu trả lời. Kết quả từ kết nối giả lập chỉ dùng để kiểm thử mã, không dùng để báo cáo chất lượng agent.
+
+## 4. Phân tích và báo cáo
+
+Nêu ít nhất hai câu bị lỗi trên tập phát triển, giả thuyết về nguyên nhân và thay đổi bạn đã thử. Ghi cấu hình đã chọn, kết quả trước/sau, thời gian, chi phí và giới hạn của bộ câu hỏi. Tham khảo [mẫu báo cáo](report/individual/MSSV_HoTen.md) và [thang điểm](RUBRIC.md).

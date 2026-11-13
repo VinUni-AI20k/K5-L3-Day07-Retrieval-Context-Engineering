@@ -5,20 +5,20 @@
 <rect width="1200" height="350" rx="22" fill="#f6f8fc"/>
 <g font-family="Arial, Helvetica, sans-serif" fill="#15243b">
 <text x="36" y="48" font-size="25" font-weight="700">THỰC NGHIỆM · ĐÁNH GIÁ · CẢI THIỆN</text>
-<text x="36" y="76" font-size="15" fill="#52657d">So sánh công bằng, đọc trace và giữ test độc lập trong quá trình lựa chọn.</text>
+<text x="36" y="76" font-size="15" fill="#52657d">So sánh công bằng và giữ tập kiểm thử độc lập trong quá trình lựa chọn.</text>
 <rect x="36" y="106" width="1128" height="71" rx="13" fill="#e5edff" stroke="#bbcdfa"/>
 <text x="55" y="135" font-size="16" font-weight="700" fill="#214fba">QUY TẮC SO SÁNH</text>
-<text x="55" y="157" font-size="15" fill="#344a66">Cùng chunks, câu hỏi, top-k và context budget  ·  Ghi cấu hình, trace và kết quả cho từng chiến lược</text>
+<text x="55" y="157" font-size="15" fill="#344a66">Cùng dữ liệu, câu hỏi và giới hạn  ·  Ghi cấu hình và kết quả cho từng cách tìm</text>
 <rect x="36" y="212" width="195" height="89" rx="13" fill="#fff" stroke="#cbd5e1"/>
-<text x="52" y="244" font-size="16" font-weight="700">1  Baseline</text><text x="52" y="270" font-size="14" fill="#52657d">Chạy và lưu trace dev</text>
+<text x="52" y="244" font-size="16" font-weight="700">1  Chạy ban đầu</text><text x="52" y="270" font-size="14" fill="#52657d">Lưu kết quả phát triển</text>
 <rect x="276" y="212" width="195" height="89" rx="13" fill="#fff" stroke="#cbd5e1"/>
 <text x="292" y="244" font-size="16" font-weight="700">2  Phân tích lỗi</text><text x="292" y="270" font-size="14" fill="#52657d">Đặt một giả thuyết</text>
 <rect x="516" y="212" width="195" height="89" rx="13" fill="#fff" stroke="#cbd5e1"/>
-<text x="532" y="244" font-size="16" font-weight="700">3  Thử cải tiến</text><text x="532" y="270" font-size="14" fill="#52657d">Đổi một yếu tố, đo dev</text>
+<text x="532" y="244" font-size="16" font-weight="700">3  Thử cải tiến</text><text x="532" y="270" font-size="14" fill="#52657d">Đổi một yếu tố, đo lại</text>
 <rect x="756" y="212" width="195" height="89" rx="13" fill="#e5edff" stroke="#bbcdfa"/>
-<text x="772" y="244" font-size="16" font-weight="700">4  Chốt cấu hình</text><text x="772" y="270" font-size="14" fill="#52657d">Chỉ chọn bằng dev</text>
+<text x="772" y="244" font-size="16" font-weight="700">4  Chốt cấu hình</text><text x="772" y="270" font-size="14" fill="#52657d">Chọn bằng tập phát triển</text>
 <rect x="996" y="212" width="168" height="89" rx="13" fill="#dff4ec" stroke="#a8dcc7"/>
-<text x="1012" y="244" font-size="16" font-weight="700">5  Test</text><text x="1012" y="270" font-size="14" fill="#52657d">Đánh giá sau khi chốt</text>
+<text x="1012" y="244" font-size="16" font-weight="700">5  Kiểm thử</text><text x="1012" y="270" font-size="14" fill="#52657d">Đánh giá sau khi chốt</text>
 <g fill="none" stroke="#60738a" stroke-width="2.5" marker-end="url(#arrow)"><path d="M231 256 H276"/><path d="M471 256 H516"/><path d="M711 256 H756"/><path d="M951 256 H996"/></g>
-<text x="36" y="330" font-size="14" fill="#52657d">Test giữ kín trong quá trình chọn và chỉnh cấu hình. Cải tiến không cần tăng điểm để có giá trị.</text>
+<text x="36" y="330" font-size="14" fill="#52657d">Giữ tập kiểm thử độc lập khi chọn cấu hình. Báo cáo trung thực cả kết quả giảm.</text>
 </g></svg>

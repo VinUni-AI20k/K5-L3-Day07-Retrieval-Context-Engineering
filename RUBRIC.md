@@ -1,15 +1,15 @@
-# Rubric Day 7 — 100 điểm
+# Thang điểm Day 7 — 100 điểm
 
-Chấm theo bằng chứng và khả năng tái lập, không dựa vào điểm tuyệt đối. Coding agent để hỗ trợ lập trình là tùy chọn; agentic RAG là sản phẩm bắt buộc.
+Điểm dựa trên bằng chứng, cách thực hiện và khả năng chạy lại; không yêu cầu hệ thống đạt điểm tìm kiếm tuyệt đối. Agent tìm tài liệu là phần bắt buộc. Công cụ AI hỗ trợ viết mã là tùy chọn.
 
-| Hạng mục | Điểm | Bằng chứng |
+| Hạng mục | Điểm | Người chấm xem gì? |
 |---|---:|---|
-| Handoff và benchmark | 15 | Vector store/model/metadata Day 6 và truy vết (7); benchmark, evidence, split và câu thiếu evidence (8) |
-| Retrieval | 20 | Dense, BM25, hybrid RRF trên cùng corpus/queries (12); ID, score, k, tương thích embedding, xử lý lỗi (8) |
-| Agent và context | 20 | Model chọn/gọi tool thật, số lần giới hạn, trace và xử lý thiếu evidence (10); context budget, nguồn và citation (10) |
-| Evaluation | 20 | Ba metric retrieval/context, trace, so sánh công bằng (10); agent tool use, grounded answer, citation, abstention và nhãn thủ công (10) |
-| Cải thiện có kiểm soát | 15 | Phân tích lỗi/giả thuyết (4); dev selection và test (7); trade-off, giới hạn (4) |
-| Tái lập và báo cáo | 10 | Setup, code, model/index, artifacts hoặc quyền truy cập (6); kết luận, nguồn, chi phí và trình bày (4) |
+| Dữ liệu và bộ câu hỏi | 15 | Kết nối được kho vector Day 6, mô hình và nguồn tài liệu (7); câu hỏi, bằng chứng và cách chia tập hợp lệ (8) |
+| Ba cách tìm kiếm | 20 | Tìm bằng vector, BM25 và kết hợp RRF trên cùng dữ liệu (12); ID, điểm, số kết quả, tính tương thích vector và xử lý lỗi (8) |
+| Agent và thông tin trả lời | 20 | Mô hình thật chọn và gọi công cụ, có giới hạn và ghi lại các bước (10); giới hạn nội dung, nguồn trích dẫn và cách xử lý khi thiếu thông tin (10) |
+| Đánh giá | 20 | Chỉ số tìm kiếm, thông tin đưa vào mô hình và cách so sánh công bằng (10); đánh giá gọi công cụ, câu trả lời, trích dẫn và từ chối, kèm nhãn thủ công (10) |
+| Cải thiện có kiểm soát | 15 | Phân tích lỗi và giả thuyết (4); thử, chọn bằng tập phát triển và kiểm thử sau khi chốt (7); đánh đổi và giới hạn (4) |
+| Chạy lại và báo cáo | 10 | Hướng dẫn, mã, cấu hình mô hình/kho và dữ liệu hoặc cách truy cập (6); kết luận, nguồn, chi phí và cách trình bày (4) |
 | **Tổng** | **100** | |
 
-Không chấm thấp chỉ vì điểm retrieval thấp hoặc cải tiến không tăng. Không tính mock, vector giả, chạy lỗi hoặc test đã dùng để chỉnh như kết quả thực. Model có thể local hoặc API; không yêu cầu trả phí. Không bắt buộc cài coding agent hay plugin.
+Kết quả thấp hoặc một cải tiến không tăng điểm vẫn được ghi nhận nếu làm đúng và phân tích trung thực. Không dùng mô hình, vector hoặc kết quả giả lập để báo chất lượng; không báo tập đã dùng để chỉnh như tập kiểm thử độc lập. Có thể dùng mô hình chạy trên máy hoặc API, không bắt buộc dịch vụ trả phí.

@@ -5,22 +5,22 @@
 <rect width="1200" height="470" rx="22" fill="#f6f8fc"/>
 <g font-family="Arial, Helvetica, sans-serif" fill="#15243b">
 <text x="36" y="48" font-size="25" font-weight="700">AGENTIC RAG: TỪ DAY 6 ĐẾN CÂU TRẢ LỜI CÓ NGUỒN</text>
-<text x="36" y="76" font-size="15" fill="#52657d">Model quyết định gọi tool · Truy xuất bằng chứng · Trả lời hoặc từ chối</text>
+<text x="36" y="76" font-size="15" fill="#52657d">Mô hình chọn công cụ tìm kiếm · Nhận bằng chứng · Trả lời hoặc từ chối</text>
 <rect x="36" y="122" width="175" height="109" rx="14" fill="#e5edff" stroke="#bbcdfa"/>
-<text x="52" y="153" font-size="17" font-weight="700" fill="#214fba">CÂU HỎI</text><text x="52" y="183" font-size="15">Yêu cầu người dùng</text><text x="52" y="207" font-size="14" fill="#52657d">+ filter nếu có</text>
+<text x="52" y="153" font-size="17" font-weight="700" fill="#214fba">CÂU HỎI</text><text x="52" y="183" font-size="15">Yêu cầu người dùng</text><text x="52" y="207" font-size="14" fill="#52657d">+ bộ lọc nếu có</text>
 <rect x="261" y="122" width="175" height="109" rx="14" fill="#eee8fc" stroke="#d1c2f2"/>
-<text x="277" y="153" font-size="17" font-weight="700" fill="#663fb0">AGENT MODEL</text><text x="277" y="183" font-size="15">Quyết định gọi tool</text><text x="277" y="207" font-size="14" fill="#52657d">Tối đa 2 lần search</text>
+<text x="277" y="153" font-size="17" font-weight="700" fill="#663fb0">AGENT</text><text x="277" y="183" font-size="15">Chọn công cụ tìm kiếm</text><text x="277" y="207" font-size="14" fill="#52657d">Tối đa 2 lần tìm</text>
 <rect x="486" y="122" width="190" height="109" rx="14" fill="#dff4ec" stroke="#a8dcc7"/>
-<text x="502" y="153" font-size="17" font-weight="700" fill="#096946">RETRIEVAL TOOL</text><text x="502" y="183" font-size="15">Dense: query embedding</text><text x="502" y="207" font-size="14" fill="#52657d">Dense / BM25 / RRF</text>
+<text x="502" y="153" font-size="17" font-weight="700" fill="#096946">CÔNG CỤ TÌM KIẾM</text><text x="502" y="183" font-size="15">Tạo vector câu hỏi</text><text x="502" y="207" font-size="14" fill="#52657d">Vector / BM25 / RRF</text>
 <rect x="726" y="122" width="194" height="109" rx="14" fill="#fff0d9" stroke="#f1ce93"/>
-<text x="742" y="153" font-size="17" font-weight="700" fill="#946000">DAY 6 STORE</text><text x="742" y="183" font-size="15">Vectors + chunks</text><text x="742" y="207" font-size="14" fill="#52657d">Nguồn · trang · metadata</text>
+<text x="742" y="153" font-size="17" font-weight="700" fill="#946000">KHO DỮ LIỆU DAY 6</text><text x="742" y="183" font-size="15">Vector + đoạn tài liệu</text><text x="742" y="207" font-size="14" fill="#52657d">Nguồn · trang · mô tả</text>
 <rect x="970" y="122" width="194" height="109" rx="14" fill="#def3f8" stroke="#a9dbe6"/>
-<text x="986" y="153" font-size="17" font-weight="700" fill="#11677a">CONTEXT</text><text x="986" y="183" font-size="15">Bằng chứng + ID</text><text x="986" y="207" font-size="14" fill="#52657d">Nguồn / trang · budget</text>
+<text x="986" y="153" font-size="17" font-weight="700" fill="#11677a">THÔNG TIN ĐẦU VÀO</text><text x="986" y="183" font-size="15">Bằng chứng + ID</text><text x="986" y="207" font-size="14" fill="#52657d">Nguồn / trang · giới hạn</text>
 <g fill="none" stroke="#60738a" stroke-width="2.5" marker-end="url(#a)"><path d="M211 177 H261"/><path d="M436 177 H486"/><path d="M676 177 H726"/><path d="M920 177 H970"/><path d="M1067 231 V272 H349 V231"/></g>
 <rect x="261" y="312" width="378" height="88" rx="14" fill="#fff" stroke="#cbd5e1"/>
-<text x="280" y="345" font-size="17" font-weight="700">ĐẦU RA AGENT</text><text x="280" y="374" font-size="15" fill="#52657d">Trả lời + citation hoặc nói không đủ bằng chứng</text>
+<text x="280" y="345" font-size="17" font-weight="700">ĐẦU RA AGENT</text><text x="280" y="374" font-size="15" fill="#52657d">Trả lời có nguồn hoặc nói không đủ bằng chứng</text>
 <path d="M349 231 V312" fill="none" stroke="#60738a" stroke-width="2.5" marker-end="url(#a)"/>
 <rect x="679" y="312" width="485" height="88" rx="14" fill="#fff" stroke="#cbd5e1"/>
-<text x="698" y="345" font-size="17" font-weight="700">BENCHMARK HAI TẦNG</text><text x="698" y="374" font-size="15" fill="#52657d">Retrieval / context + tool use / câu trả lời / citation</text>
-<text x="36" y="443" font-size="14" fill="#52657d">Cùng snapshot và query gốc: so sánh dense, BM25, hybrid RRF; ghi trace từng lần gọi tool.</text>
+<text x="698" y="345" font-size="17" font-weight="700">ĐÁNH GIÁ HAI PHẦN</text><text x="698" y="374" font-size="15" fill="#52657d">Tìm kiếm + gọi công cụ + câu trả lời + nguồn</text>
+<text x="36" y="443" font-size="14" fill="#52657d">Cùng dữ liệu và câu hỏi: so sánh ba cách tìm; ghi lại từng lần gọi công cụ.</text>
 </g></svg>

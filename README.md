@@ -1,41 +1,47 @@
-# Day 7 — Agentic RAG & Context Engineering
+# Day 7 — Agentic RAG: Agent tìm và sử dụng tài liệu
 
-### Từ vector store đến agent trả lời có bằng chứng
+**Bài cá nhân · 4 giờ · Tiếp nối Day 6 · Python 3.11 trở lên**
 
-**Bài cá nhân · 4 giờ · Python 3.11+ · tiếp nối Day 6**
+Ở Day 6, bạn đã chia tài liệu thành các đoạn, tạo vector biểu diễn và lưu chúng vào kho dữ liệu. Ở Day 7, bạn sẽ xây dựng một **agent biết gọi công cụ tìm kiếm** trong kho đó để trả lời câu hỏi có dẫn nguồn. Nếu tài liệu không đủ thông tin, agent cần nói rõ thay vì tự suy đoán.
 
-Day 6 tạo chunks, embeddings và vector store. Day 7 xây một **agent dùng model thật** để quyết định gọi tool truy xuất, lấy bằng chứng từ kho đó và trả lời có nguồn hoặc nói không đủ thông tin.
+> **Gợi ý thêm, không bắt buộc:** Bạn có thể dùng công cụ hỗ trợ lập trình như Codex, Claude Code hoặc Antigravity. Xem [gợi ý cung cấp thông tin cho công cụ lập trình](AGENT_SETUP.md). Phần này không tính điểm.
 
-> **Gợi ý tùy chọn:** Muốn dùng coding agent hỗ trợ lập trình? Xem [best practices về instruction, skill, MCP và plugin](AGENT_SETUP.md). Phần này không bắt buộc và không tính điểm.
+## Bài lab gồm những gì?
 
-## Bạn sẽ làm gì?
+![Sơ đồ agent tìm tài liệu trong kho Day 6 và trả lời có dẫn nguồn](assets/retrieval-pipeline.svg)
 
-![Agent gọi tool truy xuất dữ liệu Day 6 và trả lời dựa trên context](assets/retrieval-pipeline.svg)
+1. **Kết nối kho dữ liệu Day 6.** Dùng lại các đoạn tài liệu, vector, mô hình tạo vector và thông tin nguồn.
+2. **Xây agent.** Cho mô hình quyền gọi công cụ tìm kiếm; giới hạn số lần gọi, lưu lại các bước và yêu cầu câu trả lời có dẫn nguồn.
+3. **So sánh ba cách tìm kiếm.** Thử tìm bằng vector, tìm theo từ khóa BM25 và kết hợp hai cách bằng RRF.
+4. **Đánh giá và cải thiện.** Kiểm tra tài liệu tìm được, câu trả lời, nguồn trích dẫn và cách agent xử lý câu hỏi không có đủ thông tin.
 
-1. **Kết nối Day 6:** tái sử dụng chunks, metadata, embedding model và vector store; query embedding phải tương thích với index.
-2. **Xây agentic RAG:** model quyết định gọi retrieval tool, nhận context có nguồn rồi trả lời có citation hoặc từ chối khi thiếu bằng chứng. Lưu trace và giới hạn số lần gọi tool.
-3. **So sánh retrieval:** chạy dense, BM25 và hybrid dense + BM25 (RRF) trên cùng dữ liệu, câu hỏi và budget. TF-IDF là đối chứng lexical tùy chọn.
-4. **Đánh giá và cải thiện:** benchmark retrieval, context và hành vi agent; phân tích lỗi, thử cải tiến trên dev, chốt rồi đánh giá test.
+## Đánh giá như thế nào?
 
-## Benchmark
+Chuẩn bị ít nhất **20 câu có đáp án trong tài liệu**: 15 câu để phát triển và 5 câu để kiểm thử. Thêm ít nhất **4 câu không có đủ bằng chứng**: 2 câu cho mỗi tập.
 
-[Benchmark Day 7](BENCHMARK.md) có hai tầng: **Hit@1, Evidence Hit@3, Context Evidence Hit@3** cho retrieval/context; **tool use, grounded answer, citation validity, abstention** cho agent. Dùng tối thiểu 15 dev / 5 test có evidence và thêm 2 dev / 2 test thiếu evidence; báo tử số/mẫu số, trace và nhãn thủ công. Giữ test độc lập trong lúc chọn và chỉnh cấu hình.
+Dùng tập phát triển để tìm lỗi và chọn cách cải thiện. Sau khi chốt cấu hình, chạy tập kiểm thử. Đề bài không yêu cầu điểm tìm kiếm tuyệt đối; bạn cần báo cáo trung thực và giải thích kết quả.
 
-![Vòng lặp baseline, phân tích lỗi, cải tiến trên dev và đánh giá test](assets/experiment-loop.svg)
+Chi tiết về câu hỏi, cách tính chỉ số và bảng chấm thủ công có trong [BENCHMARK.md](BENCHMARK.md).
+
+![Các bước chạy thử, phân tích lỗi, cải thiện và kiểm thử](assets/experiment-loop.svg)
 
 ## Bắt đầu
 
-1. Fork hoặc clone repo, tạo repo cá nhân theo [SUBMISSION](SUBMISSION.md). Chuẩn bị output Day 6 và model hỗ trợ tool calling; có thể dùng model local hoặc API.
-2. Đọc [GUIDE](GUIDE.md), [BENCHMARK](BENCHMARK.md) và [CHECKPOINTS](CHECKPOINTS.md). [Starter](starter/README.md) có khung vòng lặp agent, adapter JSON và TF-IDF lexical baseline; bạn cần nối model/vector store thật và bổ sung dense, BM25, RRF.
-3. Chạy `python -m unittest discover -s tests -v` để kiểm tra contract và vòng lặp với fixture. Test dùng fake adapter **không phải benchmark thật**.
+1. Tạo kho bài làm cá nhân theo [hướng dẫn nộp bài](SUBMISSION.md). Chuẩn bị đầu ra Day 6 và một mô hình có khả năng gọi công cụ; có thể dùng mô hình chạy trên máy hoặc qua API.
+2. Đọc [hướng dẫn thực hành](GUIDE.md), [cách đánh giá](BENCHMARK.md) và [các mốc thực hiện](CHECKPOINTS.md).
+3. Tham khảo [bộ khởi đầu](starter/README.md). Bộ này có khung vòng lặp agent và ví dụ tìm kiếm TF-IDF; bạn cần tự kết nối mô hình và kho dữ liệu thật, sau đó bổ sung các cách tìm kiếm theo đề.
+4. Chạy `python -m unittest discover -s tests -v` để kiểm tra bộ khởi đầu. Các phép thử dùng dữ liệu và kết nối giả lập chỉ kiểm tra mã; **không phải kết quả đánh giá agent thật**.
 
-## Nộp bài và tài liệu
+## Tài liệu và bài nộp
 
-Nộp code, cấu hình/model, hướng dẫn kết nối dữ liệu và vector store Day 6, benchmark/gold, trace, kết quả dev/test, nhãn audit và [báo cáo cá nhân](report/individual/MSSV_HoTen.md). Xem [SUBMISSION](SUBMISSION.md) để biết checklist.
+Nộp mã nguồn, cách chạy và kết nối kho dữ liệu, bộ câu hỏi, kết quả từng lần chạy, bảng đánh giá và [báo cáo cá nhân](report/individual/MSSV_HoTen.md). Xem danh sách đầy đủ trong [SUBMISSION.md](SUBMISSION.md).
 
 | Tài liệu | Nội dung |
 |---|---|
-| [GUIDE](GUIDE.md) · [CHECKPOINTS](CHECKPOINTS.md) | Các bước làm lab |
-| [BENCHMARK](BENCHMARK.md) · [RUBRIC](RUBRIC.md) | Cách đo hai tầng và cách chấm |
-| [Starter](starter/README.md) · [Data contract](data/README.md) | Khung agent, baseline và dữ liệu |
-| [RULES](RULES.md) · [Pseudocode](PSEUDOCODE.md) | Quy tắc và khung triển khai |
+| [GUIDE.md](GUIDE.md) | Hướng dẫn từng bước |
+| [BENCHMARK.md](BENCHMARK.md) | Cách chuẩn bị câu hỏi và đánh giá |
+| [RUBRIC.md](RUBRIC.md) | Thang điểm |
+| [CHECKPOINTS.md](CHECKPOINTS.md) | Các mốc trong 4 giờ |
+| [starter/README.md](starter/README.md) | Bộ khởi đầu và giới hạn của nó |
+| [data/README.md](data/README.md) | Định dạng dữ liệu |
+| [RULES.md](RULES.md) · [SUBMISSION.md](SUBMISSION.md) | Quy tắc và cách nộp bài |
