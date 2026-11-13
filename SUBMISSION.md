@@ -1,10 +1,8 @@
-# Submission — Day 7
+# Nộp bài Day 7
 
-## Loại bài và tên repo
+## Tạo repo cá nhân
 
-**Cá nhân.** Tạo repo bài làm từ repo đề bài, đặt tên theo lớp, ví dụ `K5-L3A-DAY07-MSSV-HoTen-RetrievalContext` hoặc `K5-L3B-DAY07-MSSV-HoTen-RetrievalContext` (không dấu, không khoảng trắng). Nộp link repo theo hướng dẫn coach/LMS và cấp quyền xem cho người chấm. Deadline theo thông báo của coach.
-
-Fork repository đề bài nếu được phép; hoặc clone rồi tạo repo cá nhân và đổi remote. Hướng dẫn chung:
+Đặt tên theo lớp, ví dụ `K5-L3A-DAY07-MSSV-HoTen-RetrievalContext` hoặc `K5-L3B-DAY07-MSSV-HoTen-RetrievalContext`. Tên không dấu, không khoảng trắng. Fork repo đề bài hoặc clone rồi đổi địa chỉ repo:
 
 ```bash
 git clone https://github.com/VinUni-AI20k/K5-L3-Day07-Retrieval-Context-Engineering.git <TEN_REPO>
@@ -14,21 +12,14 @@ git remote add origin <URL_REPO_CA_NHAN>
 git push -u origin main
 ```
 
-Thay URL khi repo đề bài do coach cung cấp khác. Không push bài vào repo đề bài.
+Thay các phần trong `< >` bằng tên và địa chỉ thật. Nộp link theo hướng dẫn giảng viên; không push bài vào repo đề bài.
 
-## Deliverable
+## Danh sách bài nộp
 
-- Code agent model thật, retrieval tool/vector-store adapter, test, lệnh setup/run; cấu hình dense/BM25/hybrid và context packing.
-- Manifest, corpus/chunks hoặc hướng dẫn lấy và xử lý; model embedding/index/version/dimension và cách kết nối; benchmark ≥20 câu có evidence cùng ≥4 câu thiếu evidence, split và nhãn.
-- Trace retrieval và agent: tool call/arguments/results, context, câu trả lời/citation, status, thời gian/chi phí; bảng metric và audit theo BENCHMARK.
-- Báo cáo cá nhân `report/individual/MSSV_HoTen.md` đã đổi tên theo MSSV và họ tên; ghi cách kiểm chứng, lỗi, giả thuyết và cải tiến.
-- Nếu dữ liệu bị hạn chế, không commit dữ liệu mật; nêu cách người chấm được cấp quyền hoặc tái tạo.
-
-## Checklist
-
-- [ ] Repo có tên đúng, README chỉ cách chạy, người chấm mở được và link đã nộp.
-- [ ] Dùng đúng input/split, benchmark evidence được kiểm chứng, không tune bằng test.
-- [ ] Dense, BM25, hybrid và cấu hình cải tiến được chọn có kết quả/trace theo GUIDE.
-- [ ] Agent model thật gọi tool; context đúng budget, có nguồn; audit trả lời, citation và abstention dựa trên evidence thật.
-- [ ] Ghi lệnh/test thực tế và nguồn tham khảo.
-- [ ] Không commit secrets, `.env`, `.venv`, dữ liệu riêng tư hoặc kết quả không có quyền chia sẻ.
+- [ ] Mã agent, công cụ tìm kiếm, ba cách tìm, kiểm thử và hướng dẫn chạy.
+- [ ] Thông tin mô hình tạo vector, kho vector, cách kết nối và dữ liệu được phép chia sẻ hoặc cách cấp quyền/tái tạo.
+- [ ] Ít nhất 20 câu có bằng chứng và 4 câu thiếu bằng chứng, đã chia tập.
+- [ ] Kết quả từng lần tìm và gọi công cụ; nội dung đưa vào mô hình, câu trả lời, nguồn, lỗi, thời gian và chi phí.
+- [ ] Bảng đánh giá, nhãn thủ công, phân tích lỗi và cải thiện theo [BENCHMARK.md](BENCHMARK.md).
+- [ ] Sao chép và điền [mẫu báo cáo](report/individual/MSSV_HoTen.md), đổi tên theo MSSV và họ tên.
+- [ ] Người chấm có quyền xem repo; không nộp dữ liệu mật, `.env`, API key hoặc token.

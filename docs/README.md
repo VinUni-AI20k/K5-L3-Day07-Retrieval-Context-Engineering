@@ -1,7 +1,5 @@
 # Tài liệu
 
-- [Tham khảo tùy chọn: best practices cho coding agent](../AGENT_SETUP.md)
-- [Data contract và mẫu](../data/README.md)
-- [Hướng dẫn làm lab](../GUIDE.md)
-- [Benchmark retrieval và agentic RAG](../BENCHMARK.md)
-- [Starter và adapter](../starter/README.md)
+- [Hướng dẫn](../GUIDE.md) · [Đánh giá](../BENCHMARK.md) · [Thang điểm](../RUBRIC.md)
+- [Bộ khởi đầu](../starter/README.md) · [Định dạng dữ liệu](../data/README.md)
+- [Gợi ý dùng AI để lập trình — tùy chọn](../AGENT_SETUP.md)

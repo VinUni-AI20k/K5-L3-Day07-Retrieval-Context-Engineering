@@ -1,32 +1,23 @@
-# Pseudocode
+# Các bước triển khai
 
 ```text
-store, embedder, chunks, benchmark = adapt_day6()
-assert same_embedding_model_and_dimension_for_documents_and_query
-validate_sources_evidence_and_freeze_dev_test(benchmark)
-retrievers = [dense(store, embedder), bm25(chunks), hybrid_rrf(dense, bm25)]
-for retriever in retrievers:
-    dev_trace[retriever] = evaluate_retrieval(dev_answerable, retriever, k=3, budget=800)
-inspect_dev_errors_and_try_controlled_change()
-selected = choose_on_dev_only_and_freeze()
-for retriever in unique(retrievers + [selected]):
-    test_trace[retriever] = evaluate_retrieval(test_answerable, retriever, k=3, budget=800)
+kết_nối_kho_vector_và_mô_hình_Day6()
+kiểm_tra_nguồn_và_chia_tập_câu_hỏi()
 
-# Chạy riêng agent với cấu hình đã chọn, trên câu trả lời được và thiếu evidence.
-function agent(question, supplied_filter):
-    context, trace = empty, []
-    for step in 1..2:
-        decision = model.choose_search_or_answer(question, context)
-        if decision requests search:
-            results = selected.search(decision.query, supplied_filter)
-            context = pack_dedup_with_source(results, total_budget=800)
-            trace.append(tool_args_results_context)
-        else:
-            break
-    return model_answer_with_citations_or_abstain(context), trace
+với mỗi cách tìm: vector, BM25, RRF
+    chạy_các_câu_phát_triển()
+    lưu_đoạn_tìm_được_và_đo_chỉ_số()
 
-audit_grounded_answer_citation_and_abstention()
-report_numerators_denominators_limits_and_reproducibility()
+đọc_lỗi_thử_cải_thiện_và_chốt_cấu_hình()
+chạy_các_câu_kiểm_thử()
+
+với mỗi câu hỏi cho agent
+    mô_hình_chọn_tìm_kiếm_hoặc_dừng()
+    nếu tìm: gọi_công_cụ_và_lưu_kết_quả()  # tối đa 2 lần
+    giữ_đoạn_có_nguồn_trong_giới_hạn_800_ký_tự()
+    trả_lời_có_nguồn_hoặc_nói_không_đủ_thông_tin()
+
+chấm_thủ_công_và_ghi_báo_cáo()
 ```
 
-Pseudocode mô tả mục tiêu; giữ trace của mọi lần search và áp dụng budget cho context tích lũy. Kiểm tra citation ID bằng code chỉ là bước đầu, không thay audit claim so với nguồn.
+Giữ kết quả từng lần tìm. Kiểm tra ID nguồn không thay thế việc đọc xem nguồn có hỗ trợ câu trả lời hay không.

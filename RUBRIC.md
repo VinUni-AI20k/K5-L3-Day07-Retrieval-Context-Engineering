@@ -1,15 +1,13 @@
 # Thang điểm Day 7 — 100 điểm
 
-Điểm dựa trên bằng chứng, cách thực hiện và khả năng chạy lại; không yêu cầu hệ thống đạt điểm tìm kiếm tuyệt đối. Agent tìm tài liệu là phần bắt buộc. Công cụ AI hỗ trợ viết mã là tùy chọn.
-
-| Hạng mục | Điểm | Người chấm xem gì? |
+| Hạng mục | Điểm | Bằng chứng |
 |---|---:|---|
-| Dữ liệu và bộ câu hỏi | 15 | Kết nối được kho vector Day 6, mô hình và nguồn tài liệu (7); câu hỏi, bằng chứng và cách chia tập hợp lệ (8) |
-| Ba cách tìm kiếm | 20 | Tìm bằng vector, BM25 và kết hợp RRF trên cùng dữ liệu (12); ID, điểm, số kết quả, tính tương thích vector và xử lý lỗi (8) |
-| Agent và thông tin trả lời | 20 | Mô hình thật chọn và gọi công cụ, có giới hạn và ghi lại các bước (10); giới hạn nội dung, nguồn trích dẫn và cách xử lý khi thiếu thông tin (10) |
-| Đánh giá | 20 | Chỉ số tìm kiếm, thông tin đưa vào mô hình và cách so sánh công bằng (10); đánh giá gọi công cụ, câu trả lời, trích dẫn và từ chối, kèm nhãn thủ công (10) |
-| Cải thiện có kiểm soát | 15 | Phân tích lỗi và giả thuyết (4); thử, chọn bằng tập phát triển và kiểm thử sau khi chốt (7); đánh đổi và giới hạn (4) |
-| Chạy lại và báo cáo | 10 | Hướng dẫn, mã, cấu hình mô hình/kho và dữ liệu hoặc cách truy cập (6); kết luận, nguồn, chi phí và cách trình bày (4) |
+| Dữ liệu và câu hỏi | 15 | Kho vector, mô hình, nguồn Day 6 (7); bộ câu hỏi và cách chia tập (8) |
+| Ba cách tìm kiếm | 20 | Vector, BM25, RRF trên cùng dữ liệu (12); ID, điểm, số kết quả, vector tương thích và xử lý lỗi (8) |
+| Agent và nội dung đưa vào mô hình | 20 | Mô hình thật gọi công cụ, giới hạn số lần và lưu kết quả (10); giới hạn nội dung, nguồn và cách xử lý khi thiếu bằng chứng (10) |
+| Đánh giá | 20 | Chỉ số tìm kiếm, cách so sánh (10); chấm agent, câu trả lời, nguồn và từ chối (10) |
+| Cải thiện | 15 | Lỗi và giả thuyết (4); thử, chọn trên tập phát triển và kiểm thử (7); đánh đổi và giới hạn (4) |
+| Chạy lại và báo cáo | 10 | Mã, cách chạy, mô hình và dữ liệu (6); kết luận, nguồn, chi phí (4) |
 | **Tổng** | **100** | |
 
-Kết quả thấp hoặc một cải tiến không tăng điểm vẫn được ghi nhận nếu làm đúng và phân tích trung thực. Không dùng mô hình, vector hoặc kết quả giả lập để báo chất lượng; không báo tập đã dùng để chỉnh như tập kiểm thử độc lập. Có thể dùng mô hình chạy trên máy hoặc API, không bắt buộc dịch vụ trả phí.
+Không yêu cầu điểm tìm kiếm tuyệt đối. Kết quả thấp vẫn được ghi nhận nếu làm đúng và phân tích trung thực. Không dùng kết quả giả lập hoặc tập đã dùng để chỉnh làm kết quả kiểm thử. Có thể dùng mô hình trên máy hoặc API; không bắt buộc trả phí.

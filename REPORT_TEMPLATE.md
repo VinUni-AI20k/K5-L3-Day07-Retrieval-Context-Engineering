@@ -1,25 +1,31 @@
-# Báo cáo Day 7 — Agentic RAG
+# Báo cáo Day 7
 
-## Handoff và benchmark
-- Nguồn/quyền/snapshot, chunk ID và metadata, số trang/chunks:
-- Vector store và lệnh kết nối; embedding model/version/dimension và metric; LLM/controller/version:
-- 15 dev / 5 test có evidence, thêm 2 dev / 2 test thiếu evidence; split, kiểm chứng và nguy cơ leakage:
+## Dữ liệu và câu hỏi
 
-## Retrieval và cải tiến
-- Dense / BM25 / hybrid RRF: cấu hình, k, depth, tokenizer, budget:
-- Hai lỗi dev, giả thuyết, yếu tố thay đổi, quy tắc chọn trên dev và cấu hình đã chốt:
+- Nguồn, quyền sử dụng, số trang và số đoạn:
+- Kho vector, cách kết nối; mô hình tạo vector, phiên bản và số chiều:
+- Mô hình agent, phiên bản, cách chạy:
+- Cách chia và kiểm tra câu hỏi có/thiếu bằng chứng:
 
-| Strategy | Split | Hit@1 n/N | Evidence Hit@3 n/N | Context Hit@3 n/N | Median ms | Chi phí |
+Báo số câu / tổng số câu và tỷ lệ cho các chỉ số.
+
+## Tìm kiếm và cải thiện
+
+- Cấu hình vector, BM25, RRF; số kết quả và giới hạn nội dung:
+- Hai lỗi, giả thuyết, thay đổi và lý do chọn cấu hình:
+
+| Cách tìm | Tập | Hit@1 | Evidence Hit@3 | Context Evidence Hit@3 | Thời gian | Chi phí |
 |---|---|---|---|---|---|---|
 
-## Agent và audit
-- Tool, arguments/filter, giới hạn gọi, xử lý không đủ evidence và lỗi:
+## Agent và đánh giá
 
-| Split | Tool use n/N | Grounded 0/1/2 và TB /2 | Citation hợp lệ n/N | Câu trả lời có citation n/N | Abstain đúng n/N | Từ chối nhầm n/N |
+- Công cụ tìm kiếm, bộ lọc, giới hạn số lần gọi và xử lý lỗi:
+
+| Tập | Gọi công cụ | Câu trả lời 0/1/2 và trung bình | Nguồn hợp lệ | Câu có nguồn | Từ chối đúng | Từ chối nhầm |
 |---|---|---|---|---|---|---|
 
-| Query ID | Loại câu | Tool call/args | Kết quả, context ID | Đáp án/citation | Nhãn và lý do |
-|---|---|---|---|---|---|
+| ID câu | Loại câu | Lần gọi và kết quả | Câu trả lời và nguồn | Nhãn, lý do |
+|---|---|---|---|---|
 
-- Trỏ tới trace, nhãn từng câu/citation, latency/chi phí và lệnh tái lập:
-- So sánh trước/sau, ví dụ lỗi và trade-off; giới hạn mẫu, nhãn và model:
+- Đường dẫn kết quả từng câu, nhãn, lệnh chạy và chi phí:
+- Kết quả trước/sau, ví dụ lỗi, đánh đổi và giới hạn:

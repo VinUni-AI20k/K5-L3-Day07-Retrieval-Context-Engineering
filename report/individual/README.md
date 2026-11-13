@@ -1,3 +1,3 @@
 # Báo cáo cá nhân
 
-Copy [MSSV_HoTen.md](MSSV_HoTen.md) thành `MSSV_HoTen.md` với thông tin thật, ví dụ `20241234_NguyenVanAn.md`. Điền đầy đủ evidence, ghi đường dẫn trace và lệnh chạy. Không nộp dữ liệu mật hoặc secret trong báo cáo.
+Sao chép [MSSV_HoTen.md](MSSV_HoTen.md), đổi tên theo MSSV và họ tên, ví dụ `20241234_NguyenVanAn.md`. Ghi đường dẫn kết quả và lệnh chạy; không nộp dữ liệu mật.
