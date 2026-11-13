@@ -2,13 +2,13 @@
 
 ## 0. Chuẩn bị và kế hoạch (0:00–0:30)
 
-Chuẩn bị môi trường Python, đọc contract và lập kế hoạch theo các checkpoint. Kiểm tra quyền sử dụng dữ liệu và cách chạy benchmark. Tùy chọn: xem [best practices cho coding agent](AGENT_SETUP.md) nếu bạn muốn dùng AI hỗ trợ lập trình.
+Chuẩn bị môi trường Python, đọc contract và lập kế hoạch theo các checkpoint. Có thể bắt đầu bằng [baseline TF-IDF](starter/README.md) chạy offline, hoặc tự triển khai. Kiểm tra quyền sử dụng dữ liệu và cách chạy benchmark. Tùy chọn: xem [best practices cho coding agent](AGENT_SETUP.md) nếu bạn muốn dùng AI hỗ trợ lập trình.
 
 ## 1. Handoff từ Day 6 (0:30–1:00)
 
 Xuất **một** cấu hình chunk đã chọn ở Day 6 vào contract `data/README.md`, giữ nội dung, source/page và ID ổn định. Không tạo chunk theo từng strategy. Ghi phiên bản nguồn, phương pháp chunk và cách ánh xạ ID. Dùng benchmark Day 6 (≥20 câu: 15 dev/5 test), chuẩn hóa schema; kiểm tra từng `evidence` có trong nguồn và ít nhất một chunk. Nếu bằng chứng bị cắt, báo và sửa adapter/chunk **trước** thí nghiệm; không thay gold để lấy điểm. Nhiều bằng chứng hợp lệ: liệt kê tất cả; một bằng chứng đầy đủ là đủ để hit. Không đưa gold vào query, filter hoặc context selection.
 
-Nếu đã dùng test Day 6 để chỉnh hệ thống, không gọi đó là holdout mới: tạo ít nhất 5 câu test mới có evidence, ưu tiên chủ đề/trang khác; ghi nguồn và cách chia trước khi chạy. Nếu không có Day 6, chuẩn bị corpus ít nhất 20 trang hợp lệ theo quy tắc Day 6, benchmark ≥20 câu với 15 dev/5 test. Tất cả câu trong metric chính phải trả lời được, bao gồm diễn đạt khác và điều kiện/ngoại lệ. Dữ liệu dùng được/quyền chia sẻ và snapshot phải được ghi rõ. Có thể thêm câu không trả lời được để phân tích, nhưng báo riêng, không tính vào mẫu metric chính.
+Nếu đã dùng test Day 6 để chỉnh hệ thống, không gọi đó là holdout mới: tạo ít nhất 5 câu test mới có evidence, ưu tiên chủ đề/trang khác; ghi nguồn và cách chia trước khi chạy. Nếu không có Day 6, chuẩn bị corpus ít nhất 30 trang nội dung hợp lệ theo quy tắc Day 6, benchmark ≥20 câu với 15 dev/5 test. Tất cả câu trong metric chính phải trả lời được, bao gồm diễn đạt khác và điều kiện/ngoại lệ. Dữ liệu dùng được/quyền chia sẻ và snapshot phải được ghi rõ. Có thể thêm câu không trả lời được để phân tích, nhưng báo riêng, không tính vào mẫu metric chính.
 
 ## 2. Baseline retrieval (1:00–1:55)
 

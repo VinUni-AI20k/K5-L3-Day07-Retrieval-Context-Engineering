@@ -28,7 +28,7 @@ Giữ test độc lập trong lúc thử nghiệm và chọn cấu hình. Một 
 ## Bắt đầu
 
 1. Fork hoặc clone repo và tạo repo bài làm cá nhân theo [SUBMISSION](SUBMISSION.md).
-2. Chuẩn bị Python 3.11+ và dữ liệu Day 6; xem [GUIDE](GUIDE.md) và [CHECKPOINTS](CHECKPOINTS.md) để làm bài theo từng bước. Có thể làm offline, không cần API key hay chatbot.
+2. Chuẩn bị Python 3.11+ và dữ liệu Day 6. Dùng [baseline TF-IDF](starter/README.md) nếu muốn có điểm bắt đầu chạy offline, hoặc tự triển khai; xem [GUIDE](GUIDE.md) và [CHECKPOINTS](CHECKPOINTS.md). Không cần API key hay chatbot.
 3. Kiểm tra fixture mẫu:
 
    ```bash
@@ -45,4 +45,5 @@ Nộp code, cấu hình, dữ liệu được phép chia sẻ hoặc cách tái 
 |---|---|
 | [GUIDE](GUIDE.md) · [CHECKPOINTS](CHECKPOINTS.md) | Hướng dẫn thực hành và các mốc 4 giờ |
 | [RUBRIC](RUBRIC.md) · [RULES](RULES.md) | Cách chấm và quy tắc làm bài |
+| [Baseline TF-IDF](starter/README.md) | Chạy thử và chuyển dữ liệu Day 6 |
 | [Data contract](data/README.md) · [Pseudocode](PSEUDOCODE.md) | Định dạng dữ liệu và khung triển khai |
