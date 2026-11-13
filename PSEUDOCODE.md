@@ -1,23 +1,23 @@
 # Các bước triển khai
 
 ```text
-kết_nối_kho_vector_và_mô_hình_Day6()
-kiểm_tra_nguồn_và_chia_tập_câu_hỏi()
+kết_nối_vector_store_và_embedding_model_Day6()
+kiểm_tra_evidence_và_chia_dev_test()
 
-với mỗi cách tìm: vector, BM25, RRF
-    chạy_các_câu_phát_triển()
-    lưu_đoạn_tìm_được_và_đo_chỉ_số()
+với mỗi strategy: dense, BM25, RRF
+    chạy_các_câu_dev()
+    lưu_kết_quả_và_đo_metrics()
 
-đọc_lỗi_thử_cải_thiện_và_chốt_cấu_hình()
-chạy_các_câu_kiểm_thử()
+đọc_lỗi_thử_cải_thiện_và_chốt_cấu_hình_trên_dev()
+chạy_các_câu_test()
 
 với mỗi câu hỏi cho agent
-    mô_hình_chọn_tìm_kiếm_hoặc_dừng()
-    nếu tìm: gọi_công_cụ_và_lưu_kết_quả()  # tối đa 2 lần
-    giữ_đoạn_có_nguồn_trong_giới_hạn_800_ký_tự()
-    trả_lời_có_nguồn_hoặc_nói_không_đủ_thông_tin()
+    model_chọn_search_hoặc_dừng()
+    nếu search: gọi_tool_và_lưu_kết_quả()  # tối đa 2 lần
+    giữ_chunk_có_nguồn_trong_context_800_ký_tự()
+    trả_lời_có_citation_hoặc_nói_không_đủ_thông_tin()
 
 chấm_thủ_công_và_ghi_báo_cáo()
 ```
 
-Giữ kết quả từng lần tìm. Kiểm tra ID nguồn không thay thế việc đọc xem nguồn có hỗ trợ câu trả lời hay không.
+Giữ kết quả từng lần search. Kiểm tra citation ID không thay thế việc đọc xem nguồn có hỗ trợ câu trả lời hay không.

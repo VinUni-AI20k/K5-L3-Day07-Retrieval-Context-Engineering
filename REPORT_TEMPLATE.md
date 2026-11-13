@@ -1,31 +1,31 @@
 # Báo cáo Day 7
 
-## Dữ liệu và câu hỏi
+## Dữ liệu và benchmark
 
-- Nguồn, quyền sử dụng, số trang và số đoạn:
-- Kho vector, cách kết nối; mô hình tạo vector, phiên bản và số chiều:
-- Mô hình agent, phiên bản, cách chạy:
-- Cách chia và kiểm tra câu hỏi có/thiếu bằng chứng:
+- Nguồn, quyền sử dụng, số trang và số chunk:
+- Vector store, cách kết nối; embedding model, phiên bản và số chiều:
+- Agent model, phiên bản, cách chạy:
+- Cách chia dev/test và kiểm tra câu có/thiếu evidence:
 
-Báo số câu / tổng số câu và tỷ lệ cho các chỉ số.
+Báo số câu / tổng số câu và tỷ lệ cho các metric.
 
-## Tìm kiếm và cải thiện
+## Retrieval và cải thiện
 
-- Cấu hình vector, BM25, RRF; số kết quả và giới hạn nội dung:
-- Hai lỗi, giả thuyết, thay đổi và lý do chọn cấu hình:
+- Cấu hình dense, BM25, RRF; top-k và context budget:
+- Hai lỗi dev, giả thuyết, thay đổi và lý do chọn cấu hình:
 
-| Cách tìm | Tập | Hit@1 | Evidence Hit@3 | Context Evidence Hit@3 | Thời gian | Chi phí |
+| Strategy | Split | Hit@1 | Evidence Hit@3 | Context Evidence Hit@3 | Thời gian | Chi phí |
 |---|---|---|---|---|---|---|
 
 ## Agent và đánh giá
 
-- Công cụ tìm kiếm, bộ lọc, giới hạn số lần gọi và xử lý lỗi:
+- Retrieval tool, filter, giới hạn số lần gọi và xử lý lỗi:
 
-| Tập | Gọi công cụ | Câu trả lời 0/1/2 và trung bình | Nguồn hợp lệ | Câu có nguồn | Từ chối đúng | Từ chối nhầm |
+| Split | Tool use | Grounded answer 0/1/2 và trung bình | Citation hợp lệ | Câu có citation | Abstention đúng | Từ chối nhầm |
 |---|---|---|---|---|---|---|
 
-| ID câu | Loại câu | Lần gọi và kết quả | Câu trả lời và nguồn | Nhãn, lý do |
+| Query ID | Loại câu | Tool call và kết quả | Câu trả lời và citation | Nhãn, lý do |
 |---|---|---|---|---|
 
-- Đường dẫn kết quả từng câu, nhãn, lệnh chạy và chi phí:
+- Đường dẫn trace, nhãn, lệnh chạy và chi phí:
 - Kết quả trước/sau, ví dụ lỗi, đánh đổi và giới hạn:

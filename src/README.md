@@ -1,3 +1,3 @@
-# Mã nguồn
+# Code
 
-Đặt mã của bạn tại đây hoặc mở rộng [bộ khởi đầu](../starter/README.md). Khung agent chưa kết nối mô hình và kho vector thật.
+Đặt code của bạn tại đây hoặc mở rộng [starter](../starter/README.md). Khung agent chưa kết nối model và vector store thật.

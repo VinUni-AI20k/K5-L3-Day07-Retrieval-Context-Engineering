@@ -1,43 +1,48 @@
-# Đánh giá Day 7
+# Benchmark Day 7
 
-Đánh giá riêng **tìm bằng chứng** và **agent trả lời**. Tìm đúng tài liệu không đảm bảo câu trả lời đúng.
+Đánh giá riêng **retrieval/context** và **câu trả lời của agent**. Retrieval tốt không đảm bảo câu trả lời đúng.
 
-## Bộ câu hỏi
+## 1. Bộ câu hỏi
 
-| Loại câu | Tập phát triển | Tập kiểm thử |
+| Loại câu | Dev | Test |
 |---|---:|---:|
 | Có đáp án trong tài liệu | Ít nhất 15 | Ít nhất 5 |
 | Không đủ bằng chứng | Ít nhất 2 | Ít nhất 2 |
+| **Tối thiểu** | **17** | **7** |
 
-Với câu có đáp án, ghi ID, câu hỏi, đáp án, nguồn, trang và đoạn bằng chứng nguyên văn. Kiểm tra bằng chứng nằm trong nguồn và trong một đoạn đã lưu. Nếu có nhiều bằng chứng thay thế hợp lệ, ghi tất cả; tìm được một là đủ.
+Với câu có đáp án, ghi ID, câu hỏi, đáp án, nguồn, trang và evidence nguyên văn. Evidence phải nằm trong nguồn và trọn trong một chunk. Nếu có nhiều evidence thay thế hợp lệ, ghi tất cả; tìm được một là đủ.
 
-Với câu thiếu bằng chứng, ghi cách kiểm tra trong bộ tài liệu. Không tính các câu này vào chỉ số tìm kiếm. Chia tập trước khi thử: dùng tập phát triển để chọn cấu hình, sau đó mới chạy tập kiểm thử. Không đưa đáp án chuẩn vào agent.
+Với câu thiếu bằng chứng, ghi cách kiểm tra trong bộ tài liệu. Không tính chúng vào mẫu số của retrieval metrics.
 
-## Tìm kiếm và thông tin đưa vào mô hình
+Dùng **dev** để tìm lỗi và chọn cấu hình; vai trò này tương tự validation. Dùng **test** sau khi chốt, không dùng để chỉnh. Nếu test Day 6 đã dùng để chỉnh, tạo test mới. Không đưa gold hoặc evidence chuẩn vào agent.
 
-So sánh vector, BM25 và RRF trên cùng câu hỏi gốc, dữ liệu, bộ lọc đầu vào, 3 kết quả cuối và giới hạn 800 ký tự. Báo riêng nếu agent tự viết lại câu hỏi. Một đoạn đúng khi có **đúng nguồn, đúng trang và đủ bằng chứng**; bằng chứng tương đương cần được đọc và ghi lý do.
+## 2. Retrieval và context
 
-| Chỉ số | Cách tính trên câu có đáp án |
+Chạy dense retrieval, BM25 và hybrid RRF với **cùng query gốc**, chunk, filter đầu vào, top-3 và context budget 800 ký tự. Nếu agent tự viết lại query, báo riêng.
+
+Một chunk là **hit** khi đúng nguồn, đúng trang và chứa đủ evidence; evidence tương đương cần được đọc và ghi lý do.
+
+| Metric | Cách tính trên câu có đáp án |
 |---|---|
-| Hit@1 | Số câu có bằng chứng đúng ở kết quả đầu / tổng số câu |
-| Evidence Hit@3 | Số câu có bằng chứng đúng trong 3 kết quả đầu / tổng số câu |
-| Context Evidence Hit@3 | Số câu còn bằng chứng đúng trong thông tin đưa vào mô hình / tổng số câu |
+| Hit@1 | Số câu có hit ở kết quả đầu / tổng số câu |
+| Evidence Hit@3 | Số câu có hit trong top-3 / tổng số câu |
+| Context Evidence Hit@3 | Số câu còn hit trong context gửi cho model / tổng số câu |
 
-Báo số câu và tỷ lệ cho từng cách, riêng từng tập. Ví dụ: `12/15 = 80%`. Chỉ số cuối không thể lớn hơn Hit@3. Lưu câu hỏi, kết quả, điểm, nguồn, trang, nhãn, nội dung đưa vào mô hình, thời gian và chi phí.
+Báo `n/N` và tỷ lệ cho từng strategy, riêng dev và test. Ví dụ `12/15 = 80%`. Context Hit không thể lớn hơn Hit@3. Lưu query, kết quả, score, nguồn, trang, nhãn, context, thời gian và chi phí.
 
-Đọc cùng 5 câu kiểm thử cho cách ban đầu và cách cải thiện. Chấm nội dung đưa vào mô hình: **0** không có bằng chứng; **1** có nhưng thiếu điều kiện hoặc nguồn; **2** đủ bằng chứng và nguồn. Ghi lý do và số câu mỗi mức.
+Đọc cùng 5 câu test cho baseline và cấu hình cải thiện. Chấm context: **0** không có evidence; **1** có nhưng thiếu điều kiện hoặc nguồn; **2** đủ evidence và nguồn. Ghi lý do và số câu mỗi mức.
 
-## Agent và câu trả lời
+## 3. Agent và câu trả lời
 
-Chạy agent thật với cách tìm đã chọn. Ghi mô hình, từng lần gọi công cụ và tham số, kết quả, nội dung đưa vào mô hình, câu trả lời, nguồn, thời gian và lỗi. Tối đa 2 lần tìm mỗi câu. Đọc thủ công ít nhất 5 câu kiểm thử có đáp án và 2 câu thiếu bằng chứng.
+Chạy agent thật với strategy đã chọn trên dev. Lưu model, tool call và tham số, kết quả, context, câu trả lời, citation, thời gian và lỗi. Tối đa 2 lần search mỗi câu. Đọc thủ công ít nhất **5 câu test có đáp án và 2 câu thiếu evidence**.
 
 | Nội dung | Cách đánh giá |
 |---|---|
-| Gọi công cụ | Số câu có gọi tìm kiếm / số câu chạy thành công; kiểm tra thêm tham số và số lần gọi. |
-| Độ đúng câu trả lời | Với câu có đáp án: 0 = sai hoặc không có bằng chứng; 1 = đúng một phần; 2 = đúng và đủ. Báo số câu mỗi mức và trung bình /2. Từ chối câu có đáp án được chấm 0. |
-| Nguồn hợp lệ | Số trích dẫn có trong nội dung gửi cho mô hình **và** hỗ trợ câu trả lời / tổng trích dẫn. Nếu không có trích dẫn, báo `0/0 (không áp dụng)`; báo thêm số câu trả lời có nguồn / số câu trả lời. |
-| Từ chối | Số câu thiếu bằng chứng được từ chối / tổng câu thiếu bằng chứng; báo thêm số câu có đáp án bị từ chối / tổng câu có đáp án. |
+| Tool use | Số câu có gọi retrieval tool / số câu chạy thành công; kiểm tra thêm tham số và số lần gọi. |
+| Grounded answer | Với câu có đáp án: 0 = sai hoặc không có evidence; 1 = đúng một phần; 2 = đúng và đủ. Báo số câu mỗi mức và trung bình /2. Từ chối câu có đáp án chấm 0. |
+| Citation hợp lệ | Số citation có trong context **và** hỗ trợ câu trả lời / tổng citation. Nếu không có, báo `0/0 (không áp dụng)`; báo thêm số câu trả lời có citation / số câu trả lời. |
+| Abstention | Số câu thiếu evidence được từ chối / tổng câu thiếu evidence; báo thêm số câu có đáp án bị từ chối / tổng câu có đáp án. |
 
-Báo kết quả riêng từng tập và nhãn từng câu, từng nguồn. Lỗi mô hình hoặc kho dữ liệu phải được đếm riêng, không tính là từ chối đúng. Kiểm tra ID nguồn thôi chưa đủ: người chấm phải đọc xem nguồn có hỗ trợ câu trả lời không.
+Báo riêng dev và test, ghi nhãn từng câu và từng citation. Lỗi model hoặc vector store phải đếm riêng, không tính là từ chối đúng. Người chấm phải đọc xem citation có hỗ trợ câu trả lời không; ID hợp lệ là chưa đủ.
 
-[Chương trình tổng hợp](starter/README.md#4-tổng-hợp-đánh-giá-agent) dùng nhãn do bạn tự chấm; không tự chạy hay chấm agent. Ghi ít nhất hai lỗi, giả thuyết, kết quả trước/sau và giới hạn trong [báo cáo](report/individual/MSSV_HoTen.md).
+[Script tổng hợp](starter/README.md#4-tổng-hợp-đánh-giá-agent) dùng nhãn do bạn tự chấm, không tự chạy hoặc chấm agent. Ghi ít nhất hai lỗi, giả thuyết, kết quả trước/sau và giới hạn trong [báo cáo](report/individual/MSSV_HoTen.md).
