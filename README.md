@@ -2,7 +2,7 @@
 
 **Bài cá nhân · 4 giờ · Python 3.11+ · tiếp nối Day 6**
 
-Dùng lại embedding và vector store từ Day 6 để xây agent biết tìm tài liệu, trả lời có nguồn hoặc nói rõ khi không đủ bằng chứng.
+Dùng lại embedding và vector store từ Day 6 để xây agent biết tìm tài liệu, trả lời có nguồn hoặc nói rõ khi không đủ bằng chứng. Thời lượng 4 giờ tính từ khi dữ liệu, vector store và model đã sẵn sàng.
 
 > **Tùy chọn:** Xem [gợi ý dùng AI để lập trình](AGENT_SETUP.md). Phần này không bắt buộc và không tính điểm.
 

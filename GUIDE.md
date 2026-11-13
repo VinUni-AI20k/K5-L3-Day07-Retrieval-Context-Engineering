@@ -4,13 +4,13 @@
 
 Dùng lại một phiên bản dữ liệu Day 6: chunk, ID, nguồn, trang, vector store và embedding model. Ghi phiên bản model, số chiều vector và cách kết nối. Query embedding phải tương thích với index; nếu đổi model, hãy tạo lại index.
 
-Nếu chưa hoàn thành Day 6, tự tạo dữ liệu, embedding thật và vector store trước. Nếu chưa có tài liệu, chuẩn bị ít nhất 30 trang nội dung hợp lệ. Không dùng vector ngẫu nhiên để đánh giá.
+Nếu chunk Day 6 không vừa giới hạn 800 ký tự, hãy chọn cấu hình chunk phù hợp đã có hoặc tạo lại index trước khi chốt benchmark; giữ cùng chunk cho mọi strategy. Nếu chưa hoàn thành Day 6, tự tạo dữ liệu, embedding thật và vector store trước. Nếu chưa có tài liệu, chuẩn bị ít nhất 30 trang nội dung hợp lệ. Không dùng vector ngẫu nhiên để đánh giá.
 
 Chuẩn bị benchmark và chia dev/test theo [BENCHMARK.md](BENCHMARK.md). Nếu đã dùng test Day 6 để chỉnh hệ thống, tạo test mới. Không đưa đáp án hay nguồn chuẩn vào query hoặc model.
 
 ## 2. Xây retrieval tool
 
-Viết `search(query, filters, top_k)` trả về ID, nội dung, score, nguồn, trang và metadata. Chỉ dùng filter do người dùng cung cấp từ trước.
+Viết `search(query, filters, top_k)` trả về ID, nội dung, score, nguồn, trang và metadata. Chỉ dùng filter do người dùng cung cấp từ trước hoặc được nêu rõ trong câu hỏi và ánh xạ đáng tin sang metadata. Nếu phạm vi mơ hồ, không tự đoán; ghi filter thực tế trong trace.
 
 So sánh trên cùng chunk và query:
 
@@ -26,7 +26,7 @@ Dùng model thật quyết định gọi retrieval tool, tối đa **2 lần m�
 
 Context đưa vào model tối đa **800 ký tự**, gồm nguồn và dấu phân cách. Loại chunk trùng ID; bỏ chunk không vừa thay vì cắt; giữ nguồn và trang. Lưu từng tool call, kết quả, context, câu trả lời và citation.
 
-Tài liệu tìm được là dữ liệu, không phải chỉ dẫn cho agent. Báo lỗi model hoặc vector store riêng; không thay bằng kết quả giả. Citation có ID hợp lệ chưa chứng minh nguồn đó hỗ trợ câu trả lời.
+Tài liệu tìm được là dữ liệu, không phải chỉ dẫn cho agent. Báo lỗi model hoặc vector store riêng; không thay bằng kết quả giả. Citation có ID hợp lệ hoặc model kiểm tra cho là đúng chưa chứng minh nguồn hỗ trợ câu trả lời; phải tự đọc đối chiếu từng điều kiện. Một chunk dài cũng có thể chiếm hết budget và khiến lần search tiếp theo không thêm được evidence.
 
 [Khung agent](starter/agentic.py) chưa nối model hay vector store thật. Xem [starter](starter/README.md) để hoàn thiện.
 

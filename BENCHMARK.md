@@ -12,13 +12,13 @@
 
 Với câu có đáp án, ghi ID, câu hỏi, đáp án, nguồn, trang và evidence nguyên văn. Evidence phải nằm trong nguồn và trọn trong một chunk. Nếu có nhiều evidence thay thế hợp lệ, ghi tất cả; tìm được một là đủ.
 
-Với câu thiếu bằng chứng, ghi cách kiểm tra trong bộ tài liệu. Không tính chúng vào mẫu số của retrieval metrics.
+Với câu thiếu bằng chứng, ưu tiên câu hỏi gần chủ đề và ghi cách kiểm tra trong bộ tài liệu; không suy ra chắc chắn toàn bộ tài liệu không có thông tin chỉ từ vài kết quả top-k. Không tính chúng vào mẫu số của retrieval metrics.
 
 Dùng **dev** để tìm lỗi và chọn cấu hình; vai trò này tương tự validation. Dùng **test** sau khi chốt, không dùng để chỉnh. Nếu test Day 6 đã dùng để chỉnh, tạo test mới. Không đưa gold hoặc evidence chuẩn vào agent.
 
 ## 2. Retrieval và context
 
-Chạy dense retrieval, BM25 và hybrid RRF với **cùng query gốc**, chunk, filter đầu vào, top-3 và context budget 800 ký tự. Nếu agent tự viết lại query, báo riêng.
+Chạy dense retrieval, BM25 và hybrid RRF với **cùng query gốc**, chunk, filter đầu vào, top-3 và context budget 800 ký tự. Có thể ánh xạ phạm vi nêu rõ trong câu hỏi sang metadata đã kiểm chứng; không đoán khi mơ hồ hoặc dùng gold. Nếu agent tự viết lại query, báo riêng.
 
 Một chunk là **hit** khi đúng nguồn, đúng trang và chứa đủ evidence; evidence tương đương cần được đọc và ghi lý do.
 
@@ -43,6 +43,6 @@ Chạy agent thật với strategy đã chọn trên dev. Lưu model, tool call 
 | Citation hợp lệ | Số citation có trong context **và** hỗ trợ câu trả lời / tổng citation. Nếu không có, báo `0/0 (không áp dụng)`; báo thêm số câu trả lời có citation / số câu trả lời. |
 | Abstention | Số câu thiếu evidence được từ chối / tổng câu thiếu evidence; báo thêm số câu có đáp án bị từ chối / tổng câu có đáp án. |
 
-Báo riêng dev và test, ghi nhãn từng câu và từng citation. Lỗi model hoặc vector store phải đếm riêng, không tính là từ chối đúng. Người chấm phải đọc xem citation có hỗ trợ câu trả lời không; ID hợp lệ là chưa đủ.
+Báo riêng dev và test, ghi nhãn từng câu và từng citation. Lỗi model hoặc vector store phải đếm riêng, không tính là từ chối đúng. Người chấm phải đọc xem citation có hỗ trợ từng điều kiện trong câu trả lời không; ID hợp lệ hoặc verifier model chấp nhận là chưa đủ. Với câu thiếu evidence, xác nhận agent thực sự từ chối và không kèm khẳng định thiếu căn cứ; không chỉ dựa vào nhãn `status`.
 
 [Script tổng hợp](starter/README.md#4-tổng-hợp-đánh-giá-agent) dùng nhãn do bạn tự chấm, không tự chạy hoặc chấm agent. Ghi ít nhất hai lỗi, giả thuyết, kết quả trước/sau và giới hạn trong [báo cáo](report/individual/MSSV_HoTen.md).

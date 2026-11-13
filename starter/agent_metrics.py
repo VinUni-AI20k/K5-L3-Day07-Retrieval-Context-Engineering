@@ -8,7 +8,8 @@ def aggregate(cases, traces, reviews):
     """Cases: id/answerable; traces: query_id/status/events/citations.
 
     Reviews: query_id, answer_grade (0..2 for answerable), citation_support
-    (one boolean per citation). Provider errors are excluded and reported.
+    (one boolean per citation), and abstention_correct (boolean for unanswerable).
+    Provider errors are excluded and reported.
     """
     if len({c['id'] for c in cases}) != len(cases):
         raise ValueError('case ID trùng')
@@ -53,8 +54,13 @@ def aggregate(cases, traces, reviews):
             out['false_abstention']['N'] += 1
             out['false_abstention']['n'] += t['status'] == 'abstain'
         else:
+            correct = r.get('abstention_correct')
+            if type(correct) is not bool:
+                raise ValueError(f'{cid}: cần nhãn abstention_correct do người chấm xác nhận')
+            if correct and t['status'] != 'abstain':
+                raise ValueError(f'{cid}: nhãn từ chối đúng không khớp status')
             out['abstention']['N'] += 1
-            out['abstention']['n'] += t['status'] == 'abstain'
+            out['abstention']['n'] += correct
     g = out['grounded_answer']
     if g['N']: g['mean'] = (g['1'] + 2*g['2']) / g['N']
     return out
