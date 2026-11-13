@@ -1,42 +1,11 @@
 # Checkpoints — Day 7
 
-Các mốc dưới đây tính từ lúc bắt đầu lớp (4 giờ); thời gian thực tế theo coach. Xem chi tiết và tiêu chí trong [GUIDE.md](GUIDE.md).
+Các mốc tính từ lúc bắt đầu lớp; xem [GUIDE](GUIDE.md) và [BENCHMARK](BENCHMARK.md).
 
-## CP1 — Chuẩn bị và handoff (0:00–1:00)
-
-- **Mục tiêu:** có workspace và dữ liệu đầu vào đáng tin.
-- **Cần làm:** chuẩn bị môi trường; chuyển chunks và benchmark Day 6, kiểm chứng evidence và split.
-- **Sản phẩm:** manifest, chunks, benchmark và lệnh chạy.
-- **Cần hiểu:** test đã dùng để chỉnh không còn là holdout.
-- **Tự kiểm tra:** mỗi evidence có ít nhất một chunk hợp lệ, source/page và ID truy vết được; test mới nếu test cũ đã dùng để chọn.
-
-## CP2 — Ba baseline (1:00–1:55)
-
-- **Mục tiêu:** so sánh TF-IDF, BM25, RRF hoặc thay TF-IDF bằng dense embedding thật.
-- **Cần làm:** dùng cùng chunks, build index, lưu tên strategy, score và thứ tự.
-- **Sản phẩm:** code/config và trace dev có top-3.
-- **Cần hiểu:** TF-IDF là lexical; RRF fuse theo rank, không cộng trực tiếp các score.
-- **Tự kiểm tra:** không lặp ID, không vượt k, score sort ổn định và output rỗng được xử lý.
-
-## CP3 — Context (1:55–2:20)
-
-- **Mục tiêu:** đóng gói kết quả thành context có thể truy vết.
-- **Cần làm:** loại trùng, giữ thứ tự/source/page, budget 800 ký tự gồm header và phân cách.
-- **Sản phẩm:** context và danh sách ID được giữ trong trace.
-- **Cần hiểu:** chunk đúng nằm trong top-3 chưa chắc nằm trong context cuối.
-- **Tự kiểm tra:** context không vượt budget, không cắt chunk, có nhánh rỗng.
-
-## CP4 — Đánh giá và cải thiện (2:20–3:30)
-
-- **Mục tiêu:** đo, tìm lỗi và chọn cải tiến dựa trên dev.
-- **Cần làm:** tính Hit@1, Evidence Hit@3 và Context Evidence Hit@3; nêu hai lỗi dev và thử một giả thuyết thay một yếu tố; chốt cấu hình rồi chạy test.
-- **Sản phẩm:** trace, bảng tử/mẫu, cấu hình chọn và audit 5 test cùng mẫu.
-- **Cần hiểu:** test không được dùng chọn cấu hình; kết quả giảm vẫn có giá trị nếu báo trung thực.
-- **Tự kiểm tra:** context hit không vượt hit@3; từng nhãn audit có lý do và nguồn.
-
-## CP5 — Demo và nộp (3:30–4:00)
-
-- **Mục tiêu:** người khác tái lập, đọc hiểu và chấm được.
-- **Cần làm:** demo một query thành công, một lỗi/context rỗng; viết báo cáo và push bài cá nhân.
-- **Sản phẩm:** repo và báo cáo theo [SUBMISSION.md](SUBMISSION.md).
-- **Tự kiểm tra:** lệnh chạy, file trace, benchmark, nguồn hợp lệ và quyền đọc repo; không commit secret.
+| Mốc | Cần hoàn thành | Bằng chứng |
+|---|---|---|
+| 0:00–1:00 | Kết nối model embedding/vector store Day 6; kiểm tra corpus, benchmark và split | Index/model/version, nguồn/page, 15 dev / 5 test có evidence và thêm 2 dev / 2 test thiếu evidence |
+| 1:00–1:55 | Triển khai dense, BM25 và hybrid RRF trên cùng chunks | Kết quả top-3, ID/score/source/page và cấu hình |
+| 1:55–2:35 | Xây agent model thật có tool search, context và citation | Trace tool/args/results, context tối đa 800 ký tự, câu trả lời hoặc abstain |
+| 2:35–3:30 | Đo retrieval và agent, thử cải tiến trên dev rồi chốt trước khi chạy test | Trace, bảng `n/N`, nhãn thủ công, lỗi và lựa chọn |
+| 3:30–4:00 | Demo, hoàn thiện báo cáo và nộp | Lệnh chạy, chi phí, model/index, bài nộp theo [SUBMISSION](SUBMISSION.md) |

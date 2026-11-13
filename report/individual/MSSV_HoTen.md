@@ -1,25 +1,28 @@
-# Báo cáo cá nhân — Day 7
+# Báo cáo cá nhân — Day 7 Agentic RAG
 
 - Họ tên, MSSV, lớp:
 - Repo, nhánh và commit nộp:
 
-## Handoff và môi trường
-- Nguồn, quyền, snapshot, số trang/chunks, chiến lược chunk Day 6, lệnh adapter:
-- Benchmark: 15 dev/5 test, cách chia, kiểm tra evidence, test đã từng dùng chưa:
-- Môi trường, phiên bản thư viện, lệnh chạy và cách kiểm chứng:
+## Handoff và benchmark
+- Nguồn/quyền/snapshot, chunk ID và metadata, số trang/chunks:
+- Vector store và lệnh kết nối; embedding model/version/dimension và metric; LLM/controller/version:
+- 15 dev / 5 test có evidence, thêm 2 dev / 2 test thiếu evidence; split, kiểm chứng và nguy cơ leakage:
 
-## Cấu hình và thí nghiệm
-- Tokenizer; BM25 / TF-IDF hoặc dense / RRF, k, candidate depth, budget, chi phí:
-- Hai lỗi dev (query ID, ranked IDs, lý do):
-- Giả thuyết, baseline, yếu tố thay đổi, cấu hình đã thử, quy tắc chọn trước khi xem test:
+## Retrieval và cải tiến
+- Dense / BM25 / hybrid RRF: cấu hình, k, depth, tokenizer, budget:
+- Hai lỗi dev, giả thuyết, yếu tố thay đổi, quy tắc chọn trên dev và cấu hình đã chốt:
 
-| Strategy | Split | Hit@1 n/N | Evidence Hit@3 n/N | Context Evidence Hit@3 n/N | Context chars trung bình | Median ms | Index s / cost |
-|---|---|---|---|---|---|---|---|
+| Strategy | Split | Hit@1 n/N | Evidence Hit@3 n/N | Context Hit@3 n/N | Median ms | Chi phí |
+|---|---|---|---|---|---|---|
 
-## Audit và phân tích
-| Query ID | Strategy | Context 0/1/2 | Source/page đúng? | Lý do |
-|---|---|---:|---|---|
+## Agent và audit
+- Tool, arguments/filter, giới hạn gọi, xử lý không đủ evidence và lỗi:
 
-- Số câu mỗi mức và trung bình; link trace và nhãn:
-- Kết quả dev → lựa chọn → kết quả test, ví dụ tốt/xấu, trade-off:
-- Giới hạn, nguy cơ leakage/bias, việc sẽ làm tiếp:
+| Split | Tool use n/N | Grounded 0/1/2 và TB /2 | Citation hợp lệ n/N | Câu trả lời có citation n/N | Abstain đúng n/N | Từ chối nhầm n/N |
+|---|---|---|---|---|---|---|
+
+| Query ID | Loại câu | Tool call/args | Kết quả, context ID | Đáp án/citation | Nhãn và lý do |
+|---|---|---|---|---|---|
+
+- Trỏ tới trace, nhãn từng câu/citation, latency/chi phí và lệnh tái lập:
+- So sánh trước/sau, ví dụ lỗi và trade-off; giới hạn mẫu, nhãn và model:

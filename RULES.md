@@ -6,7 +6,7 @@ Có thể dùng Codex, Claude Code, Antigravity hoặc công cụ tương đươ
 
 ## Đánh giá công bằng
 
-Giữ cùng corpus, chunks, câu hỏi, top-k, context budget giữa các baseline. Không đưa gold source/evidence vào query hay filter; chỉ dùng filter được cung cấp trước. Chọn cấu hình dựa trên dev; không chỉnh theo test đã xem rồi coi test là holdout độc lập. Nếu test Day 6 đã dùng, tạo test mới trước khi thí nghiệm và ghi rõ cách tạo. Báo lỗi, trường hợp không cải thiện và hạn chế dữ liệu.
+Giữ cùng corpus, chunks, câu hỏi gốc, top-k và context budget giữa các strategy khi đo retrieval; báo riêng nếu agent viết lại query. Không đưa gold source/evidence vào model, query hay filter; chỉ dùng filter được cung cấp trước. Chọn cấu hình dựa trên dev; không chỉnh theo test đã xem rồi coi test là holdout độc lập. Nếu test Day 6 đã dùng, tạo test mới trước khi thí nghiệm và ghi rõ cách tạo. Báo lỗi, trường hợp không cải thiện và hạn chế dữ liệu.
 
 ## Dữ liệu, secret và tài liệu ngoài
 

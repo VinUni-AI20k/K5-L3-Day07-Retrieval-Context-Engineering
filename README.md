@@ -1,49 +1,41 @@
-# Day 7 — Retrieval & Context Engineering
+# Day 7 — Agentic RAG & Context Engineering
 
-### Từ câu hỏi đến bằng chứng
+### Từ vector store đến agent trả lời có bằng chứng
 
 **Bài cá nhân · 4 giờ · Python 3.11+ · tiếp nối Day 6**
 
-Sử dụng chunks, metadata và benchmark từ Day 6 để tìm bằng chứng phù hợp cho một câu hỏi. Bạn sẽ so sánh các chiến lược retrieval, tạo context có thể truy nguồn và cải thiện pipeline dựa trên kết quả đánh giá.
+Day 6 tạo chunks, embeddings và vector store. Day 7 xây một **agent dùng model thật** để quyết định gọi tool truy xuất, lấy bằng chứng từ kho đó và trả lời có nguồn hoặc nói không đủ thông tin.
 
-> **Gợi ý tùy chọn:** Dùng coding agent để hỗ trợ lập trình? Xem [best practices về instruction, skill, MCP và plugin](AGENT_SETUP.md). Phần này không bắt buộc và không tính điểm.
+> **Gợi ý tùy chọn:** Muốn dùng coding agent hỗ trợ lập trình? Xem [best practices về instruction, skill, MCP và plugin](AGENT_SETUP.md). Phần này không bắt buộc và không tính điểm.
 
 ## Bạn sẽ làm gì?
 
-![Pipeline từ dữ liệu Day 6 qua retrieval đến context có nguồn](assets/retrieval-pipeline.svg)
+![Agent gọi tool truy xuất dữ liệu Day 6 và trả lời dựa trên context](assets/retrieval-pipeline.svg)
 
-1. **Chuẩn bị dữ liệu:** chuyển chunks và benchmark Day 6 theo [data contract](data/README.md), giữ ID, nguồn, trang và evidence. Nếu chưa có đầu ra Day 6, làm theo hướng dẫn chuẩn bị dữ liệu trong [GUIDE](GUIDE.md).
-2. **So sánh retrieval:** chạy TF-IDF + cosine, BM25 và RRF trên cùng chunks và câu hỏi. Có thể dùng dense embedding thật thay TF-IDF.
-3. **Tạo context:** chọn top-3, loại trùng, giữ nguồn/trang và tuân thủ budget 800 ký tự.
-4. **Đánh giá và cải thiện:** đo Hit@1, Evidence Hit@3 và Context Evidence Hit@3; phân tích lỗi, thử một cải tiến trên dev rồi đánh giá cấu hình đã chọn trên test.
+1. **Kết nối Day 6:** tái sử dụng chunks, metadata, embedding model và vector store; query embedding phải tương thích với index.
+2. **Xây agentic RAG:** model quyết định gọi retrieval tool, nhận context có nguồn rồi trả lời có citation hoặc từ chối khi thiếu bằng chứng. Lưu trace và giới hạn số lần gọi tool.
+3. **So sánh retrieval:** chạy dense, BM25 và hybrid dense + BM25 (RRF) trên cùng dữ liệu, câu hỏi và budget. TF-IDF là đối chứng lexical tùy chọn.
+4. **Đánh giá và cải thiện:** benchmark retrieval, context và hành vi agent; phân tích lỗi, thử cải tiến trên dev, chốt rồi đánh giá test.
 
-TF-IDF là phương pháp lexical. RRF kết hợp TF-IDF và BM25 là kết hợp hai phương pháp lexical; xem [GUIDE](GUIDE.md) để biết chi tiết và tiêu chí đánh giá.
+## Benchmark
 
-## Quy trình thực nghiệm
+[Benchmark Day 7](BENCHMARK.md) có hai tầng: **Hit@1, Evidence Hit@3, Context Evidence Hit@3** cho retrieval/context; **tool use, grounded answer, citation validity, abstention** cho agent. Dùng tối thiểu 15 dev / 5 test có evidence và thêm 2 dev / 2 test thiếu evidence; báo tử số/mẫu số, trace và nhãn thủ công. Giữ test độc lập trong lúc chọn và chỉnh cấu hình.
 
 ![Vòng lặp baseline, phân tích lỗi, cải tiến trên dev và đánh giá test](assets/experiment-loop.svg)
 
-Giữ test độc lập trong lúc thử nghiệm và chọn cấu hình. Một cải tiến không tăng điểm vẫn có giá trị nếu bạn phân tích và báo cáo trung thực.
-
 ## Bắt đầu
 
-1. Fork hoặc clone repo và tạo repo bài làm cá nhân theo [SUBMISSION](SUBMISSION.md).
-2. Chuẩn bị Python 3.11+ và dữ liệu Day 6. Dùng [baseline TF-IDF](starter/README.md) nếu muốn có điểm bắt đầu chạy offline, hoặc tự triển khai; xem [GUIDE](GUIDE.md) và [CHECKPOINTS](CHECKPOINTS.md). Không cần API key hay chatbot.
-3. Kiểm tra fixture mẫu:
-
-   ```bash
-   python -m unittest discover -s tests -v
-   ```
-
-   Các file `data/example_*.json` chỉ minh họa schema, không phải benchmark đủ điều kiện nộp.
+1. Fork hoặc clone repo, tạo repo cá nhân theo [SUBMISSION](SUBMISSION.md). Chuẩn bị output Day 6 và model hỗ trợ tool calling; có thể dùng model local hoặc API.
+2. Đọc [GUIDE](GUIDE.md), [BENCHMARK](BENCHMARK.md) và [CHECKPOINTS](CHECKPOINTS.md). [Starter](starter/README.md) có khung vòng lặp agent, adapter JSON và TF-IDF lexical baseline; bạn cần nối model/vector store thật và bổ sung dense, BM25, RRF.
+3. Chạy `python -m unittest discover -s tests -v` để kiểm tra contract và vòng lặp với fixture. Test dùng fake adapter **không phải benchmark thật**.
 
 ## Nộp bài và tài liệu
 
-Nộp code, cấu hình, dữ liệu được phép chia sẻ hoặc cách tái tạo, benchmark và gold, trace, kết quả dev/test, nhãn đánh giá và [báo cáo cá nhân](report/individual/MSSV_HoTen.md). Xem checklist đầy đủ tại [SUBMISSION](SUBMISSION.md).
+Nộp code, cấu hình/model, hướng dẫn kết nối dữ liệu và vector store Day 6, benchmark/gold, trace, kết quả dev/test, nhãn audit và [báo cáo cá nhân](report/individual/MSSV_HoTen.md). Xem [SUBMISSION](SUBMISSION.md) để biết checklist.
 
 | Tài liệu | Nội dung |
 |---|---|
-| [GUIDE](GUIDE.md) · [CHECKPOINTS](CHECKPOINTS.md) | Hướng dẫn thực hành và các mốc 4 giờ |
-| [RUBRIC](RUBRIC.md) · [RULES](RULES.md) | Cách chấm và quy tắc làm bài |
-| [Baseline TF-IDF](starter/README.md) | Chạy thử và chuyển dữ liệu Day 6 |
-| [Data contract](data/README.md) · [Pseudocode](PSEUDOCODE.md) | Định dạng dữ liệu và khung triển khai |
+| [GUIDE](GUIDE.md) · [CHECKPOINTS](CHECKPOINTS.md) | Các bước làm lab |
+| [BENCHMARK](BENCHMARK.md) · [RUBRIC](RUBRIC.md) | Cách đo hai tầng và cách chấm |
+| [Starter](starter/README.md) · [Data contract](data/README.md) | Khung agent, baseline và dữ liệu |
+| [RULES](RULES.md) · [Pseudocode](PSEUDOCODE.md) | Quy tắc và khung triển khai |

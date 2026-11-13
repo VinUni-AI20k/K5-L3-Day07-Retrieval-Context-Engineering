@@ -7,3 +7,5 @@ Chunk: `id` duy nhất ổn định, `text` nguyên văn đã chuẩn hóa, `sou
 Question: `id`, `split` (`dev`/`test`), `question`, `gold` là danh sách các object `{source_id,page,evidence}` chứa các bằng chứng thay thế đầy đủ, `expected_answer`; `filter` tùy chọn là metadata người dùng cung cấp trước, không phải gold. ID câu duy nhất. Ghi manifest và nguồn gốc mỗi trường; không đoán metadata. Trace cần giữ đủ text/source/page, score và context sau packing.
 
 Với JSON xuất từ dataclass và benchmark mẫu Day 6, xem adapter và các giới hạn tại [starter/README.md](../starter/README.md). Schema lưu trong database do từng bài Day 6 tự thiết kế, nên bạn cần tự xuất dữ liệu trước.
+
+**Case agent thiếu evidence:** thêm ít nhất 2 dev / 2 test riêng, mỗi case có `id`, `split`, `question`, `answerable: false`, `expected_behavior: "search_and_abstain"`, `absence_reason`; xem `agent_cases_example.json` (chỉ fixture). Giữ nhãn/gold ngoài model và tool. Case answerable dùng benchmark chính; agent case không thay thế 20 câu có evidence.

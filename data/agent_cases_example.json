@@ -1,0 +1,4 @@
+[
+  {"id":"a1","split":"dev","question":"Hoàn tiền mất bao lâu?","answerable":true,"expected_behavior":"search_and_answer"},
+  {"id":"a2","split":"dev","question":"Chính sách có hỗ trợ đổi chuyến bay không?","answerable":false,"expected_behavior":"search_and_abstain","absence_reason":"Không có bằng chứng trong fixture một chunk."}
+]

@@ -1,35 +1,37 @@
-# Hướng dẫn thực hành
+# Hướng dẫn thực hành — Agentic RAG
 
-## 0. Chuẩn bị và kế hoạch (0:00–0:30)
+## 0. Chuẩn bị (0:00–0:30)
 
-Chuẩn bị môi trường Python, đọc contract và lập kế hoạch theo các checkpoint. Có thể bắt đầu bằng [baseline TF-IDF](starter/README.md) chạy offline, hoặc tự triển khai. Kiểm tra quyền sử dụng dữ liệu và cách chạy benchmark. Tùy chọn: xem [best practices cho coding agent](AGENT_SETUP.md) nếu bạn muốn dùng AI hỗ trợ lập trình.
+Chuẩn bị Python, corpus và vector store Day 6, model có khả năng gọi tool (local hoặc API), kiểm tra quyền dữ liệu và chi phí. Day 6 starter chỉ là khung TODO: nếu bạn chưa hoàn thành, tự hoàn thiện ingestion, real embedding và index trước khi làm Day 7. Không âm thầm dùng vector ngẫu nhiên/mock để đo. Xem [starter](starter/README.md) cho khung agent và lexical baseline tùy chọn.
 
-## 1. Handoff từ Day 6 (0:30–1:00)
+## 1. Handoff Day 6 và benchmark (0:30–1:00)
 
-Xuất **một** cấu hình chunk đã chọn ở Day 6 vào contract `data/README.md`, giữ nội dung, source/page và ID ổn định. Không tạo chunk theo từng strategy. Ghi phiên bản nguồn, phương pháp chunk và cách ánh xạ ID. Dùng benchmark Day 6 (≥20 câu: 15 dev/5 test), chuẩn hóa schema; kiểm tra từng `evidence` có trong nguồn và ít nhất một chunk. Nếu bằng chứng bị cắt, báo và sửa adapter/chunk **trước** thí nghiệm; không thay gold để lấy điểm. Nhiều bằng chứng hợp lệ: liệt kê tất cả; một bằng chứng đầy đủ là đủ để hit. Không đưa gold vào query, filter hoặc context selection.
+Giữ nguyên một snapshot chunks, ID, source/page, metadata, embedding model/version/dimension và vector store đã tạo. Tái sử dụng cùng model/query embedding với index; nếu đổi model phải lập index mới có version, không trộn vector. Day 6 không bắt buộc schema DB: tạo adapter theo hệ thống của bạn; thử 1 query, xác nhận kết quả thực thuộc snapshot và truy được nguồn. Nếu chưa có corpus, chuẩn bị ≥30 trang nội dung hợp lệ theo Day 6.
 
-Nếu đã dùng test Day 6 để chỉnh hệ thống, không gọi đó là holdout mới: tạo ít nhất 5 câu test mới có evidence, ưu tiên chủ đề/trang khác; ghi nguồn và cách chia trước khi chạy. Nếu không có Day 6, chuẩn bị corpus ít nhất 30 trang nội dung hợp lệ theo quy tắc Day 6, benchmark ≥20 câu với 15 dev/5 test. Tất cả câu trong metric chính phải trả lời được, bao gồm diễn đạt khác và điều kiện/ngoại lệ. Dữ liệu dùng được/quyền chia sẻ và snapshot phải được ghi rõ. Có thể thêm câu không trả lời được để phân tích, nhưng báo riêng, không tính vào mẫu metric chính.
+Tạo benchmark theo [BENCHMARK](BENCHMARK.md): ≥15 dev / 5 test answerable có evidence, thêm ≥2 dev / 2 test thiếu evidence, chốt split trước khi chạy. Nếu test Day 6 đã từng dùng để chỉnh hệ thống, tạo test mới; không đưa gold vào model/tool. Tự kiểm tra nhãn evidence với nguồn và chunk. Case thiếu evidence cần ghi cơ sở xác nhận và không đưa vào metric retrieval hit.
 
-## 2. Baseline retrieval (1:00–1:55)
+## 2. Retrieval tool và ba chiến lược (1:00–1:55)
 
-Trên cùng chunks, triển khai **TF-IDF cosine**, **BM25**, **RRF** (top-10 mỗi nhánh → top-3; RRF `sum(1/(60+rank))`, rank từ 1) hoặc thay TF-IDF bằng dense embeddings thật. TF-IDF là lexical; RRF giữa hai lexical baseline **không phải dense–sparse hybrid**. Nêu tokenizer tiếng Việt và xử lý Unicode; ghi model/version nếu dùng dense; index document và query cùng model. Điểm BM25, cosine và RRF không cùng thang đo: không cộng trực tiếp hoặc dùng cùng threshold. Khử ID trùng trong từng danh sách và fuse đúng một lần. Kết quả ít hơn k/không có kết quả phải xử lý an toàn; không tự gán chunk khi tất cả score không có tín hiệu.
+Dựng `search(query, filters, top_k)` kết nối thực vector store + query embedder tương thích. Kết quả gồm chunk ID, text, score, source ID/URL, page và metadata. Cho cùng chunks/queries/snapshot và filter được cung cấp trước, so sánh:
 
-Mỗi kết quả: `id`, `text`, `score`, `source_id`, `source`, `page`, `strategy`, và metadata cần thiết. Thứ tự score giảm dần, hòa điểm ổn định theo ID. Lọc metadata chỉ dùng nếu filter là input hợp lệ sẵn có, không lấy từ gold; index và query phải dùng cùng phạm vi. Ghi rõ thời điểm tạo index, tham số và chi phí. Provider lỗi phải báo lỗi, không âm thầm dùng mock.
+- **Dense:** embedding query → vector store → top-k theo metric đã ghi.
+- **BM25:** lexical search trên chính chunks; ghi tokenizer tiếng Việt.
+- **Hybrid:** dense + BM25, mỗi nhánh top-10 → RRF `sum(1/(60+rank))` với rank bắt đầu từ 1 → top-3; hợp nhất ID và fuse một lần.
 
-## 3. Đóng gói context (1:55–2:20)
+Dùng cùng input/top-3 và context budget cho 3 chiến lược. Không gọi TF-IDF là dense. Không dùng ngưỡng cosine cho BM25/RRF hoặc so sánh score giữa các thang. Không giả định một schema SQL: dùng adapter tương ứng backend Day 6, ghi lại model, metric, cấu hình, thời gian và chi phí.
 
-Chọn top-3; khử trùng theo ID, giữ thứ tự, gắn ID/source/page, phân cách rõ và budget **800 ký tự Unicode** tính cả header và dấu phân cách. Chunk không vừa thì bỏ qua, không cắt evidence; context rỗng là kết quả hợp lệ. Cùng chính sách, budget và k trên mọi strategy. In context và danh sách ID được đưa vào; không gọi context là câu trả lời đã được xác thực. Nếu dùng token thay ký tự phải báo tokenizer và giữ cùng budget giữa các cấu hình; mẫu 800 ký tự dùng để kiểm tra thống nhất.
+## 3. Agent và context (1:55–2:35)
 
-## 4. Đánh giá và cải thiện (2:20–3:30)
+Tạo **agent model thật** có retrieval tool: model quyết định gọi tool hoặc dừng; tool tìm bằng chứng và trả text, ID, source/page, score; model nhận context, trả lời gắn `[chunk-id]` hoặc từ chối nếu không đủ evidence. Cho tối đa 2 lần search. Cho phép model tự viết lại query nhưng chỉ filter do input cung cấp; không cho model truy cập gold/đáp án. Không đủ evidence, nguồn không xác minh hoặc lỗi provider/store phải được báo rõ; lỗi backend không được tính là một lần từ chối thành công. Không cho văn bản truy xuất tự thay đổi instruction.
 
-Chốt thí nghiệm và tiêu chí chọn trước khi xem test. Trên dev, chạy ba baseline, đọc trace, xác định ít nhất hai lỗi với ID câu và đưa ra **một giả thuyết có thể kiểm tra**. Thử một cải tiến, ví dụ metadata filter chỉ khi được cung cấp, tokenizer, query expansion hoặc reranker; thay một yếu tố so với baseline tương ứng. Ghi các cấu hình đã thử và chọn theo Context Evidence Hit@3 trên dev, hòa thì chọn cấu hình đơn giản hơn. Giữ test nguyên vẹn; sau khi chốt cấu hình, chạy 3 baseline và cấu hình cải tiến được chọn trên test một lần, báo riêng split. Nếu cấu hình không được chọn, không cần chạy test nó. Không sửa test sau khi xem kết quả.
+Context tích lũy tối đa **800 ký tự Unicode**, gồm header/dấu phân cách; loại trùng ID, bỏ chunk không vừa thay vì cắt, giữ nguồn/trang. Trace mỗi lần gọi tool gồm query/arguments, kết quả đầy đủ và context thực gửi model; trace cuối có response, citation, status, thời gian, lỗi. Validation ID chỉ kiểm tra citation có trong context; phải audit claim có được nguồn hỗ trợ hay không. [Starter agent](starter/agentic.py) cho khung bounded loop; model/controller và vector retriever do bạn kết nối.
 
-Cho mỗi câu answerable, `hit(chunk)` đúng khi chunk thuộc một nguồn/trang gold và chứa **đầy đủ** đoạn evidence tương ứng, hoặc bằng chứng tương đương được người chấm xác nhận trước khi tính. `Hit@1` = số câu top-1 hit / số câu; `Evidence Hit@3` = số câu có ít nhất một hit top-3 / số câu; `Context Evidence Hit@3` = số câu còn ít nhất một hit trong context cuối / số câu. Đưa numerator/denominator và %; context hit không thể vượt retrieval hit. Không dùng precision/recall nếu chưa có nhãn đầy đủ cho các chunk liên quan.
+## 4. Đo và cải thiện (2:35–3:30)
 
-Ghi trace từng câu: query/split, cấu hình, k, ranked chunks gồm ID/text/score/source/page, gold và nhãn hit, context/ID thực giữ, chiều dài và thời gian retrieval+packing. Báo median latency trên mỗi split và môi trường; tách thời gian xây index, ghi cost thực tế; không so latency giữa các máy như benchmark sản xuất.
+Theo [BENCHMARK](BENCHMARK.md), chạy dense, BM25 và hybrid với **query gốc trực tiếp** để so sánh retrieval không bị nhiễu bởi policy agent; báo Hit@1, Evidence Hit@3, Context Evidence Hit@3 với `n/N` và %. Ghi top-3, context, latency, chi phí. Đọc ít nhất hai lỗi dev, thử một cải tiến có kiểm soát và chọn trên dev theo Context Evidence Hit@3, hòa chọn cấu hình đơn giản. Chốt cấu hình trước khi chạy test; báo cả kết quả thấp.
 
-Chấm thủ công cùng 5 câu test cho baseline và cấu hình chọn: context có đúng nguồn/trang và đủ bằng chứng/điều kiện không? Nhãn 0 = không có, 1 = có nhưng thiếu điều kiện hoặc truy vết, 2 = đủ và truy nguồn; nêu lý do, số từng mức và trung bình. Thêm hai ví dụ lỗi và một đánh đổi (context budget, thời gian, chất lượng, metadata). Nhãn tác giả có thể thiên lệch. Không coi nhãn này là chất lượng câu trả lời LLM.
+Với cấu hình chọn, chạy agent trên answerable và thiếu evidence, đo tool use, grounded answer, citation validity và abstention; audit cùng 5 câu test answerable và ít nhất 2 câu test thiếu evidence. Ghi nhãn từng câu/citation, lý do, trace, case lỗi và trade-off. Kiểm tra citation tồn tại không chứng minh nội dung được hỗ trợ. Không tính test mock hay provider lỗi vào điểm chất lượng.
 
 ## 5. Demo và nộp (3:30–4:00)
 
-Demo một query thành công, một lỗi hoặc context rỗng, và so sánh trước/sau. Nộp README setup/run, mã, manifest, corpus hoặc cách lấy hợp lệ, benchmark/split, config, script và output, traces, bảng nhãn, report. Bỏ secret, dữ liệu riêng tư và toàn bộ lịch sử không cần thiết. Đảm bảo người khác chạy được mà không dựa vào `solution/`.
+Demo một query có evidence (tool call, context, câu trả lời, citation), một query thiếu evidence và một lỗi/giới hạn. Nộp mã, lệnh setup/run, model/index và cách kết nối, manifest/corpus hoặc hướng dẫn truy cập hợp lệ, benchmark/split, config, output, traces, nhãn và báo cáo. Không nộp secret, dữ liệu mật hoặc lịch sử không cần thiết; xem [SUBMISSION](SUBMISSION.md).

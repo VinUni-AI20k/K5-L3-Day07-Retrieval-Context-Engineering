@@ -18,9 +18,9 @@ Thay URL khi repo đề bài do coach cung cấp khác. Không push bài vào re
 
 ## Deliverable
 
-- Code, test, lệnh setup/run và phiên bản thư viện; cấu hình từng strategy và context packing.
-- Manifest, corpus/chunks nếu được phép chia sẻ, hoặc hướng dẫn lấy và xử lý; benchmark ≥20 câu, split, gold và evidence.
-- Trace từng query, bảng kết quả dev/test, thời gian/chi phí; 5 nhãn audit test và lý do cho baseline cùng cấu hình chọn.
+- Code agent model thật, retrieval tool/vector-store adapter, test, lệnh setup/run; cấu hình dense/BM25/hybrid và context packing.
+- Manifest, corpus/chunks hoặc hướng dẫn lấy và xử lý; model embedding/index/version/dimension và cách kết nối; benchmark ≥20 câu có evidence cùng ≥4 câu thiếu evidence, split và nhãn.
+- Trace retrieval và agent: tool call/arguments/results, context, câu trả lời/citation, status, thời gian/chi phí; bảng metric và audit theo BENCHMARK.
 - Báo cáo cá nhân `report/individual/MSSV_HoTen.md` đã đổi tên theo MSSV và họ tên; ghi cách kiểm chứng, lỗi, giả thuyết và cải tiến.
 - Nếu dữ liệu bị hạn chế, không commit dữ liệu mật; nêu cách người chấm được cấp quyền hoặc tái tạo.
 
@@ -28,7 +28,7 @@ Thay URL khi repo đề bài do coach cung cấp khác. Không push bài vào re
 
 - [ ] Repo có tên đúng, README chỉ cách chạy, người chấm mở được và link đã nộp.
 - [ ] Dùng đúng input/split, benchmark evidence được kiểm chứng, không tune bằng test.
-- [ ] Ba baseline và cấu hình cải tiến được chọn có kết quả/trace theo GUIDE.
-- [ ] Context đúng budget, có nguồn; audit và báo cáo dựa trên evidence thật.
+- [ ] Dense, BM25, hybrid và cấu hình cải tiến được chọn có kết quả/trace theo GUIDE.
+- [ ] Agent model thật gọi tool; context đúng budget, có nguồn; audit trả lời, citation và abstention dựa trên evidence thật.
 - [ ] Ghi lệnh/test thực tế và nguồn tham khảo.
 - [ ] Không commit secrets, `.env`, `.venv`, dữ liệu riêng tư hoặc kết quả không có quyền chia sẻ.
