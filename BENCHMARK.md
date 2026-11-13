@@ -1,6 +1,6 @@
 # Benchmark Day 7
 
-Đánh giá riêng retrieval, context và câu trả lời của agent. Retrieval tốt chưa đảm bảo câu trả lời đúng.
+Đây là benchmark phần cơ bản. Thử thách tài liệu từ 100 trang có [benchmark và ngưỡng đạt riêng](ADVANCED.md#2-benchmark). Đánh giá riêng retrieval, context và câu trả lời của agent. Retrieval tốt chưa đảm bảo câu trả lời đúng.
 
 ## 1. Bộ câu hỏi
 

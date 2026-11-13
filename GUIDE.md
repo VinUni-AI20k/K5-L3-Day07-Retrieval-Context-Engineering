@@ -40,3 +40,7 @@ So sánh ít nhất 3 phương pháp trên cùng bộ dev, ghi cấu hình và �
 ## 5. Nộp và trình bày
 
 Trình bày ít nhất một câu trả lời có bằng chứng, một câu thiếu bằng chứng và một lỗi. Nộp theo [SUBMISSION.md](SUBMISSION.md), kèm bảng so sánh, trace và lý do chọn cấu hình.
+
+## Thử thách nâng cao (tùy chọn)
+
+Muốn nhận thêm 15 điểm, index tài liệu từ 100 trang có bảng, ảnh và biểu đồ, rồi đạt ít nhất 90% benchmark test theo [yêu cầu nâng cao](ADVANCED.md). Phần này có bộ câu hỏi, bằng chứng và cách chấm riêng.

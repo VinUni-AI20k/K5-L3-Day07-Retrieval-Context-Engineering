@@ -10,3 +10,5 @@ Thời gian tùy theo lớp và mức độ sẵn sàng của Day 6. Một lịc
 | 3:30–4:00 | Đánh giá test, tổng hợp và trình bày | Metrics, trace và báo cáo |
 
 Với các thử nghiệm cần nhiều thời gian hoặc chạy API, chuẩn bị trước và tiếp tục sau buổi lab theo hướng dẫn giảng viên. Chi tiết: [GUIDE.md](GUIDE.md) · [BENCHMARK.md](BENCHMARK.md) · [SUBMISSION.md](SUBMISSION.md).
+
+Thử thách nâng cao là tùy chọn và cần thêm thời gian ngoài lịch gợi ý trên: [ADVANCED.md](ADVANCED.md).
