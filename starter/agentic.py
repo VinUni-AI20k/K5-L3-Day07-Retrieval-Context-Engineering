@@ -1,4 +1,4 @@
-"""Bounded agent loop; connect a real model and the Day 6 retriever via adapters.
+"""Example agent loop; connect a real model and the Day 6 retriever via adapters.
 
 Adapters are intentionally not provided: Day 6 has no fixed database schema and
 model providers differ. Never use fake adapters to report benchmark quality.
@@ -29,15 +29,16 @@ class Retriever(Protocol):
 
 
 def run_agent(question: str, controller: Controller, retriever: Retriever, *,
-              filters: dict[str, Any] | None = None, max_searches: int = 2, budget: int = 800) -> dict[str, Any]:
+              filters: dict[str, Any] | None = None, max_searches: int = 4,
+              top_k: int = 3, budget: int = 800) -> dict[str, Any]:
     """Return answer, citation IDs and trace; no benchmark gold enters this loop.
 
     A final answer without valid citations, an empty context, and a search limit
     lead to abstention. This only checks citation IDs, not semantic grounding.
     Provider/retriever errors propagate; no silent mock fallback.
     """
-    if not question.strip() or max_searches < 1 or budget < 1:
-        raise ValueError('question, max_searches hoặc budget không hợp lệ')
+    if not question.strip() or max_searches < 1 or top_k < 1 or budget < 1:
+        raise ValueError('question, max_searches, top_k hoặc budget không hợp lệ')
     history: list[dict[str, Any]] = []
     chunks: dict[str, dict[str, Any]] = {}
     candidates: list[dict[str, Any]] = []
@@ -50,9 +51,9 @@ def run_agent(question: str, controller: Controller, retriever: Retriever, *,
             query = action.get('query')
             if not isinstance(query, str) or not query.strip():
                 raise ValueError('search query phải là chuỗi không rỗng')
-            results = retriever.search(query, filters=filters, top_k=3)
-            if len(results) > 3 or len({r['id'] for r in results}) != len(results):
-                raise ValueError('retriever phải trả tối đa 3 chunk ID duy nhất')
+            results = retriever.search(query, filters=filters, top_k=top_k)
+            if len(results) > top_k or len({r['id'] for r in results}) != len(results):
+                raise ValueError('retriever phải trả tối đa top_k chunk ID duy nhất')
             candidates.extend(results)
             context, ids = pack_context(candidates, budget=budget)
             chunks = {c['id']: c for c in candidates if c['id'] in ids}

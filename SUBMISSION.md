@@ -16,10 +16,10 @@ Thay phần trong `< >` bằng tên và địa chỉ thật. Nộp link theo hư
 
 ## Danh sách bài nộp
 
-- [ ] Code agent, retrieval tool, ba strategy, test và hướng dẫn chạy.
+- [ ] Code agent, ít nhất 3 phương pháp retrieval (gồm dense), test và hướng dẫn chạy.
 - [ ] Embedding model, vector store, cách kết nối và dữ liệu được phép chia sẻ hoặc cách cấp quyền/tái tạo.
 - [ ] Benchmark gồm ít nhất 20 câu có evidence và 4 câu thiếu evidence, đã chia dev/test.
 - [ ] Kết quả từng query và tool call; context, câu trả lời, citation, lỗi, thời gian và chi phí.
-- [ ] Metrics, nhãn thủ công, phân tích lỗi và cải thiện theo [BENCHMARK.md](BENCHMARK.md).
+- [ ] Ít nhất 2 cấu hình cải thiện; bảng benchmark, nhãn, phân tích lỗi và lý do chọn theo [BENCHMARK.md](BENCHMARK.md).
 - [ ] Sao chép và điền [mẫu báo cáo](report/individual/MSSV_HoTen.md), đổi tên theo MSSV và họ tên.
 - [ ] Người chấm có quyền xem repo; không nộp dữ liệu mật, `.env`, API key hoặc token.

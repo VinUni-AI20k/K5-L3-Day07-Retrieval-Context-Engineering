@@ -56,6 +56,15 @@ class AgentTests(unittest.TestCase):
         self.assertEqual(result['status'], 'answered')
         self.assertTrue(all(len(e['context']) <= 90 for e in result['events'] if e['event'] == 'search'))
 
+    def test_configurable_retrieval_allows_more_than_two_calls(self):
+        c = Controller([{'action': 'search', 'query': str(i)} for i in range(3)] +
+                       [{'action': 'answer', 'answer': '7 ngày [c1]', 'citations': ['c1']}])
+        r = Retriever([CHUNK])
+        result = run_agent('q', c, r, max_searches=3, top_k=7, budget=1200)
+        self.assertEqual(result['status'], 'answered')
+        self.assertEqual(len(r.calls), 3)
+        self.assertTrue(all(call[2] == 7 for call in r.calls))
+
     def test_tool_errors_are_not_hidden(self):
         class Broken:
             def search(self, query, *, filters, top_k): raise ConnectionError('database unavailable')

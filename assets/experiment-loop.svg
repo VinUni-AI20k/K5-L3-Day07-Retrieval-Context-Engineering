@@ -8,7 +8,7 @@
 <text x="36" y="76" font-size="15" fill="#52657d">So sánh công bằng và giữ tập kiểm thử độc lập trong quá trình lựa chọn.</text>
 <rect x="36" y="106" width="1128" height="71" rx="13" fill="#e5edff" stroke="#bbcdfa"/>
 <text x="55" y="135" font-size="16" font-weight="700" fill="#214fba">QUY TẮC SO SÁNH</text>
-<text x="55" y="157" font-size="15" fill="#344a66">Cùng dữ liệu, câu hỏi và giới hạn  ·  Ghi cấu hình và kết quả cho từng cách tìm</text>
+<text x="55" y="157" font-size="15" fill="#344a66">Cùng dữ liệu, câu hỏi và cách chấm  ·  Ghi cấu hình và kết quả cho từng cách tìm</text>
 <rect x="36" y="212" width="195" height="89" rx="13" fill="#fff" stroke="#cbd5e1"/>
 <text x="52" y="244" font-size="16" font-weight="700">1  Chạy ban đầu</text><text x="52" y="270" font-size="14" fill="#52657d">Lưu kết quả phát triển</text>
 <rect x="276" y="212" width="195" height="89" rx="13" fill="#fff" stroke="#cbd5e1"/>

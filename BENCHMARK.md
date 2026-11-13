@@ -1,6 +1,6 @@
 # Benchmark Day 7
 
-Đánh giá riêng **retrieval/context** và **câu trả lời của agent**. Retrieval tốt không đảm bảo câu trả lời đúng.
+Đánh giá riêng retrieval, context và câu trả lời của agent. Retrieval tốt chưa đảm bảo câu trả lời đúng.
 
 ## 1. Bộ câu hỏi
 
@@ -10,39 +10,33 @@
 | Không đủ bằng chứng | Ít nhất 2 | Ít nhất 2 |
 | **Tối thiểu** | **17** | **7** |
 
-Với câu có đáp án, ghi ID, câu hỏi, đáp án, nguồn, trang và evidence nguyên văn. Evidence phải nằm trong nguồn và trọn trong một chunk. Nếu có nhiều evidence thay thế hợp lệ, ghi tất cả; tìm được một là đủ.
+Với câu có đáp án, ghi ID, câu hỏi, đáp án, nguồn, trang và evidence. Nếu nhiều đoạn thay thế hợp lệ, ghi rõ. Có thể thêm câu cần nhiều đoạn; ghi rõ tập evidence cần có và cách chấm, báo riêng nếu metric đơn giản không hỗ trợ.
 
-Với câu thiếu bằng chứng, ưu tiên câu hỏi gần chủ đề và ghi cách kiểm tra trong bộ tài liệu; không suy ra chắc chắn toàn bộ tài liệu không có thông tin chỉ từ vài kết quả top-k. Không tính chúng vào mẫu số của retrieval metrics.
+Với câu thiếu bằng chứng, ưu tiên câu gần chủ đề và ghi cách kiểm tra trong bộ tài liệu. Không kết luận toàn bộ tài liệu thiếu thông tin chỉ vì top-k không tìm thấy. Không đưa các câu này vào mẫu số retrieval metrics.
 
-Dùng **dev** để tìm lỗi và chọn cấu hình; vai trò này tương tự validation. Dùng **test** sau khi chốt, không dùng để chỉnh. Nếu test Day 6 đã dùng để chỉnh, tạo test mới. Không đưa gold hoặc evidence chuẩn vào agent.
+Dùng **dev** để thử và chọn cấu hình. Chốt cấu hình và tiêu chí chọn trước khi chạy **test**; nếu test đã dùng để chỉnh, cần test mới để đánh giá độc lập. Không đưa gold vào agent hoặc query.
 
-## 2. Retrieval và context
+## 2. So sánh retrieval và context
 
-Chạy dense retrieval, BM25 và hybrid RRF với **cùng query gốc**, chunk, filter đầu vào, top-3 và context budget 800 ký tự. Có thể ánh xạ phạm vi nêu rõ trong câu hỏi sang metadata đã kiểm chứng; không đoán khi mơ hồ hoặc dùng gold. Nếu agent tự viết lại query, báo riêng.
+Chạy ít nhất 3 phương pháp trên cùng corpus, phiên bản index, câu hỏi và bộ nhãn dev; nếu một thí nghiệm cần index khác, ghi rõ thay đổi và chi phí. Ghi filter và cách tạo query. Báo kết quả query gốc; với query viết lại hoặc multi-hop, báo thêm kết quả của pipeline và trace từng bước.
 
-Một chunk là **hit** khi đúng nguồn, đúng trang và chứa đủ evidence; evidence tương đương cần được đọc và ghi lý do.
+Để so sánh ranking, báo **Hit@1** và **Evidence Hit@3** với cùng định nghĩa hit và cùng cutoff: số câu có evidence hợp lệ trong top-1 hoặc top-3 chia số câu có đáp án. Nếu pipeline dùng top-k khác 3, vẫn xuất top-3 để so sánh; có thể báo thêm Hit@k, Recall@k hoặc MRR. Nếu không thể xuất ranking tương đương, giải thích và báo riêng.
 
-| Metric | Cách tính trên câu có đáp án |
-|---|---|
-| Hit@1 | Số câu có hit ở kết quả đầu / tổng số câu |
-| Evidence Hit@3 | Số câu có hit trong top-3 / tổng số câu |
-| Context Evidence Hit@3 | Số câu còn hit trong context gửi cho model / tổng số câu |
+Báo **Context Evidence Rate**: số câu có đủ evidence hợp lệ trong context cuối gửi model / số câu có đáp án. Context có thể được tạo từ nhiều lượt tìm, nên chỉ số này không nhất thiết nhỏ hơn Hit@3 của một lượt. Ghi context budget, đơn vị đo, cách chọn context, số candidate và token/chi phí. Đối với câu cần nhiều evidence, quy định rõ thế nào là đủ.
 
-Báo `n/N` và tỷ lệ cho từng strategy, riêng dev và test. Ví dụ `12/15 = 80%`. Context Hit không thể lớn hơn Hit@3. Lưu query, kết quả, score, nguồn, trang, nhãn, context, thời gian và chi phí.
-
-Đọc cùng 5 câu test cho baseline và cấu hình cải thiện. Chấm context: **0** không có evidence; **1** có nhưng thiếu điều kiện hoặc nguồn; **2** đủ evidence và nguồn. Ghi lý do và số câu mỗi mức.
+Báo `n/N` và tỷ lệ, thời gian và chi phí theo từng cấu hình. Đọc ít nhất 5 câu test có đáp án cho baseline và cấu hình được chọn, chấm context **0** = không có evidence; **1** = có nhưng thiếu điều kiện hoặc nguồn; **2** = đủ evidence và nguồn. Ghi lý do, trace và số câu ở từng mức.
 
 ## 3. Agent và câu trả lời
 
-Chạy agent thật với strategy đã chọn trên dev. Lưu model, tool call và tham số, kết quả, context, câu trả lời, citation, thời gian và lỗi. Tối đa 2 lần search mỗi câu. Đọc thủ công ít nhất **5 câu test có đáp án và 2 câu thiếu evidence**.
+Chạy agent thật trên dev cho các cấu hình cần so sánh; sau khi chốt, chạy baseline và cấu hình chọn trên cùng test. Lưu model, tool call, tham số, kết quả, context, câu trả lời, citation, số lượt gọi, thời gian, chi phí và lỗi. Đọc ít nhất **5 câu test có đáp án và 2 câu thiếu evidence**.
 
 | Nội dung | Cách đánh giá |
 |---|---|
-| Tool use | Số câu có gọi retrieval tool / số câu chạy thành công; kiểm tra thêm tham số và số lần gọi. |
-| Grounded answer | Với câu có đáp án: 0 = sai hoặc không có evidence; 1 = đúng một phần; 2 = đúng và đủ. Báo số câu mỗi mức và trung bình /2. Từ chối câu có đáp án chấm 0. |
+| Tool use | Số câu có gọi retrieval tool / số câu chạy thành công; báo phân bố số lượt gọi và cách xử lý lỗi. |
+| Grounded answer | Với câu có đáp án: 0 = sai hoặc thiếu evidence; 1 = đúng một phần; 2 = đúng và đủ. Báo số câu mỗi mức và trung bình /2. Từ chối câu có đáp án chấm 0. |
 | Citation hợp lệ | Số citation có trong context **và** hỗ trợ câu trả lời / tổng citation. Nếu không có, báo `0/0 (không áp dụng)`; báo thêm số câu trả lời có citation / số câu trả lời. |
 | Abstention | Số câu thiếu evidence được từ chối / tổng câu thiếu evidence; báo thêm số câu có đáp án bị từ chối / tổng câu có đáp án. |
 
-Báo riêng dev và test, ghi nhãn từng câu và từng citation. Lỗi model hoặc vector store phải đếm riêng, không tính là từ chối đúng. Người chấm phải đọc xem citation có hỗ trợ từng điều kiện trong câu trả lời không; ID hợp lệ hoặc verifier model chấp nhận là chưa đủ. Với câu thiếu evidence, xác nhận agent thực sự từ chối và không kèm khẳng định thiếu căn cứ; không chỉ dựa vào nhãn `status`.
+Ghi nhãn và lý do cho từng câu, citation; báo lỗi model hoặc vector store riêng. Đọc citation để xác nhận nguồn hỗ trợ từng điều kiện; ID hợp lệ hoặc verifier model chấp nhận là chưa đủ. Với câu thiếu evidence, kiểm tra agent thực sự từ chối, không thêm khẳng định vô căn cứ.
 
-[Script tổng hợp](starter/README.md#4-tổng-hợp-đánh-giá-agent) dùng nhãn do bạn tự chấm, không tự chạy hoặc chấm agent. Ghi ít nhất hai lỗi, giả thuyết, kết quả trước/sau và giới hạn trong [báo cáo](report/individual/MSSV_HoTen.md).
+[Script tổng hợp](starter/README.md#4-tổng-hợp-đánh-giá-agent) chỉ tổng hợp nhãn đã chấm. Ghi ít nhất hai lỗi dev, giả thuyết, kết quả trước/sau và giới hạn trong [báo cáo](report/individual/MSSV_HoTen.md).
