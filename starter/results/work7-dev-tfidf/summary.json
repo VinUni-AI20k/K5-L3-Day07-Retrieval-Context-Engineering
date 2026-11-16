@@ -1,0 +1,16 @@
+{
+  "strategy": "tfidf",
+  "split": "dev",
+  "n": 18,
+  "questions_total": 20,
+  "unanswerable_n": 2,
+  "hit1": 4,
+  "hit3": 11,
+  "context_hit": 6,
+  "avg_context_chars": 449.35,
+  "median_ms": 0.15900004655122757,
+  "index_seconds": 5.200039595365524e-06,
+  "embedding_requests": 0,
+  "embedding_tokens": 0,
+  "service_cost_usd": 0
+}
