@@ -1,0 +1,674 @@
+[
+  {
+    "query_id": "DAY7-T01",
+    "split": "test",
+    "question": "Theo phần Properties of quadratics, tổng và tích hai nghiệm r1, r2 lần lượt được biểu diễn bằng những công thức nào?",
+    "answerable": true,
+    "strategy": "hybrid_rrf",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u004",
+        "evidence": "r_1 + r_2 = -b/a.\nr_1 . r_2 = c/a."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "7a3a852090064e9ecd78ceb2",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u004",
+        "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+        "text": "Properties of quadratics\nr_1 = -b/2a + ([b^2 - 4ac]^(1/2))/(2a).\nr_2 = -b/2a - ([b^2 - 4ac]^(1/2))/(2a).\nThen\nr_1 + r_2 = -b/a.\nr_1 . r_2 = c/a.\nDiscriminant, b^2 - 4ac, and its discussion.\nNature or character of the roots.\n\n~Simultaneous Quadratics~\n\nCASE I.\n\nOne equation linear.\n\nThe other quadratic.\n3x - y = 12,\nx^2 - y^2 = 16.\n\nCASE II.\n\nBoth equations homogeneous and of the second degree.\nx^2 - xy + y^2 = 21,\ny^2 - 2xy = -15.\n\nCASE III.\n\nAny two of the quantities x + y, x^2 + y^2, xy, x^3 + y^3,\nx^3 - y^3, x - y, x^2 +- xy + y^2, etc., given.\nx^2 + y^2 = 41,\nx + y = 9.\n\nCASE IV.\nBoth equations symmetrical or symmetrical except for sign.\nUsually one equation of high degree, the other of the first\ndegree.\nx^5 + y^5 = 242,\nx + y = 2.\n\nCASE V. Special Devices\n\nI. Solve for a compound unknown, like xy, x + y, (1)/(xy),\netc., first.\nx^2y^2 + xy = 6,\nx + 2y = -5.",
+        "metadata": {
+          "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+          "char_end": 873,
+          "char_start": 0,
+          "source_end_line": 487,
+          "source_start_line": 413
+        },
+        "score": 0.03252247488101534,
+        "id": "7a3a852090064e9ecd78ceb2",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 1,
+        "lexical_rank": 2,
+        "hit": true
+      },
+      {
+        "chunk_id": "00aa64ca2e9c24619494db79",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u025",
+        "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+        "text": "OUTLINE OF SIMULTANEOUS QUADRATICS\n\n~Simultaneous Quadratics~\n\nCASE I.\n\nOne equation linear.\nThe other quadratic.\n2x + y = 7,\nx^2 + 2y^2 = 22.\n\nMETHOD: Solve for x as in terms of y, or _vice versa_, in the\nlinear and substitute in the quadratic.",
+        "metadata": {
+          "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+          "char_end": 1534,
+          "char_start": 1289,
+          "source_end_line": 1931,
+          "source_start_line": 1852
+        },
+        "score": 0.031544957774465976,
+        "id": "00aa64ca2e9c24619494db79",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 6,
+        "lexical_rank": 1,
+        "hit": false
+      },
+      {
+        "chunk_id": "9200aa955303b8ac26925d06",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u050",
+        "section": "ALGEBRA TO QUADRATICS",
+        "text": "ALGEBRA TO QUADRATICS\n\n1. Simplify\n(ab^(-2)c^2)^(1/2) . (a^3b^2c^(-3))^(1/3) + [(a^6)/(b)]^(1/3).\n\n2. Simplify\na/[(a - b)(a - c)] + b/[(b - c)(b - a)] + c/[(c - a)(c - b)].\n\n3. Factor (_a_) x^4 - 10x^2 + 9.\n\n(_b_) x^2 + 2xy - a^2 - 2ay.\n\n(_c_) (a + b)^2 + (a + c)^2 - (c + d)^2 - (b + d)^2.\n\n4. Find H. C. F. of x^4 - x^3 + 2x^2 + x + 3 and (x + 2)(x^3 - 1).\n\n5. Solve\nx/(x - 2) + (x - 9)/(x - 7) = (x + 1)/(x - 1) + (x - 8)/(x - 6).\n\n6. The sum of three numbers is 51; if the first number be divided by\nthe second, the quotient is 2 and the remainder 5; if the second\nnumber be divided by the third, the quotient is 3 and the remainder\n2. What are the numbers?",
+        "metadata": {
+          "section": "ALGEBRA TO QUADRATICS",
+          "char_end": 1345,
+          "char_start": 684,
+          "source_end_line": 3324,
+          "source_start_line": 3269
+        },
+        "score": 0.030090497737556562,
+        "id": "9200aa955303b8ac26925d06",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 5,
+        "lexical_rank": 8,
+        "hit": false
+      }
+    ],
+    "context": "[00aa64ca2e9c24619494db79 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u025]\nOUTLINE OF SIMULTANEOUS QUADRATICS\n\n~Simultaneous Quadratics~\n\nCASE I.\n\nOne equation linear.\nThe other quadratic.\n2x + y = 7,\nx^2 + 2y^2 = 22.\n\nMETHOD: Solve for x as in terms of y, or _vice versa_, in the\nlinear and substitute in the quadratic.",
+    "context_ids": [
+      "00aa64ca2e9c24619494db79"
+    ],
+    "context_chars": 351,
+    "elapsed_ms": 1886.7445000214502,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "DAY7-T02",
+    "split": "test",
+    "question": "Trong mục Arithmetical Progression, tài liệu viết tổng S theo số hạng đầu a, số hạng cuối l và số hạng n thế nào?",
+    "answerable": true,
+    "strategy": "hybrid_rrf",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": {
+      "field": "section",
+      "value": "ARITHMETICAL PROGRESSION",
+      "provided_by": "question"
+    },
+    "retrieval_filter": {
+      "section": "ARITHMETICAL PROGRESSION"
+    },
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u029",
+        "evidence": "S = (n/2)(a + l),"
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "8c0f8293d16fb26be53982e2",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u029",
+        "section": "ARITHMETICAL PROGRESSION",
+        "text": "~ARITHMETICAL PROGRESSION~\n\n1. Define an arithmetical progression.\n\nLearn to derive the three formulas in arithmetical progression:\n\nl = a + (n - 1)d,\nS = (n/2)(a + l),\nS = (n/2)[2a + (n - 1)d].\n\n2. Find the sum of the first 50 odd numbers.\n\n3. In the series 2, 5, 8, ..., which term is 92?\n\n4. How many terms must be taken from the series 3, 5, 7, ..., to\nmake a total of 255?\n\n5. Insert 5 arithmetical means between 11 and 32.\n\n6. Insert 9 arithmetical means between 7-1/2 and 30.\n\n7. Find x, if 3 + 2x, 5 + 6x, 9 + 5x are in A. P.\n\n8. The 7th term of an arithmetical progression is 17, and the 13th\nterm is 59. Find the 4th term.\n\n9. How can you turn an A. P. into an equation?\n\n10. Given a = -5/3, n = 20, S = -5/3, find d and l.\n\n11. Find the sum of the first n odd numbers.",
+        "metadata": {
+          "section": "ARITHMETICAL PROGRESSION",
+          "char_end": 1489,
+          "char_start": 710,
+          "source_end_line": 2210,
+          "source_start_line": 2152
+        },
+        "score": 0.03278688524590164,
+        "id": "8c0f8293d16fb26be53982e2",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 1,
+        "lexical_rank": 1,
+        "hit": true
+      },
+      {
+        "chunk_id": "45bae7fd39a180cee9e2140d",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u029",
+        "section": "ARITHMETICAL PROGRESSION",
+        "text": "12. An arithmetical progression consists of 21 terms. The sum of the\nthree terms in the middle is 129; the sum of the last three terms\nis 237. Find the series. (Look up the short method for such\nproblems.)                          (_Mass. Inst. of Technology._)",
+        "metadata": {
+          "section": "ARITHMETICAL PROGRESSION",
+          "char_end": 1752,
+          "char_start": 1491,
+          "source_end_line": 2210,
+          "source_start_line": 2152
+        },
+        "score": 0.03225806451612903,
+        "id": "45bae7fd39a180cee9e2140d",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 2,
+        "lexical_rank": 2,
+        "hit": false
+      },
+      {
+        "chunk_id": "a2f3535a0d30c82cb70ccfc9",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u030",
+        "section": "ARITHMETICAL PROGRESSION",
+        "text": "13. B travels 3 miles the first day, 7 miles the second day, 11 miles\nthe third day, etc. In how many days will B overtake A who started\nfrom the same point 8 days in advance and who travels uniformly 15\nmiles a day?\n\n~Reference:~ The chapter on Arithmetical Progression in any algebra.",
+        "metadata": {
+          "section": "ARITHMETICAL PROGRESSION",
+          "char_end": 286,
+          "char_start": 0,
+          "source_end_line": 2264,
+          "source_start_line": 2212
+        },
+        "score": 0.031746031746031744,
+        "id": "a2f3535a0d30c82cb70ccfc9",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 3,
+        "lexical_rank": 3,
+        "hit": false
+      }
+    ],
+    "context": "[45bae7fd39a180cee9e2140d | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u029]\n12. An arithmetical progression consists of 21 terms. The sum of the\nthree terms in the middle is 129; the sum of the last three terms\nis 237. Find the series. (Look up the short method for such\nproblems.)                          (_Mass. Inst. of Technology._)\n\n[a2f3535a0d30c82cb70ccfc9 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u030]\n13. B travels 3 miles the first day, 7 miles the second day, 11 miles\nthe third day, etc. In how many days will B overtake A who started\nfrom the same point 8 days in advance and who travels uniformly 15\nmiles a day?\n\n~Reference:~ The chapter on Arithmetical Progression in any algebra.",
+    "context_ids": [
+      "45bae7fd39a180cee9e2140d",
+      "a2f3535a0d30c82cb70ccfc9"
+    ],
+    "context_chars": 761,
+    "elapsed_ms": 874.8020000057295,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "DAY7-T03",
+    "split": "test",
+    "question": "Trong mục Geometrical Progression, số hạng thứ n (ký hiệu l) được biểu diễn theo a, r và n bằng công thức nào?",
+    "answerable": true,
+    "strategy": "hybrid_rrf",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": {
+      "field": "section",
+      "value": "GEOMETRICAL PROGRESSION",
+      "provided_by": "question"
+    },
+    "retrieval_filter": {
+      "section": "GEOMETRICAL PROGRESSION"
+    },
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u030",
+        "evidence": "I. l = ar^(n - 1)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "9618b85728334bff895c4ca3",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u030",
+        "section": "GEOMETRICAL PROGRESSION",
+        "text": "~GEOMETRICAL PROGRESSION~\n\n1. Define a geometrical progression.\n\nLearn to derive the four formulas in geometrical progression:\n\n{ I. l = ar^(n - 1).\n{II. S = (ar^n - a)/(r - 1).\n\n{III. S = (rl - a)/(r - 1).\n{ IV. S_{[infinity]} = (a)/(1 - r).\n\n2. How many terms must be taken from the series 9, 18, 36, ... to\nmake a total of 567?\n\n3. In the G. P. 2, 6, 18, ..., which term is 486?\n\n4. Find x, if 2x - 4, 5x - 7, 10x + 4 are in geometrical progression.\n\n5. How can you turn a G. P. into an equation?\n\n6. Insert 4 geometrical means between 4 and 972.\n\n7. Insert 6 geometrical means between 5/16 and 5120.\n\n8. Given a = -2, n = 5, l = -32; find r and S.\n\n9. If the first term of a geometrical progression is 12 and the sum to\ninfinity is 36, find the 4th term.\n\n10. If the series 3-1/3, 2-1/2, ... be an A. P., find the 97th term.\nIf a G. P., find the sum to infinity.",
+        "metadata": {
+          "section": "GEOMETRICAL PROGRESSION",
+          "char_end": 1154,
+          "char_start": 288,
+          "source_end_line": 2264,
+          "source_start_line": 2212
+        },
+        "score": 0.03278688524590164,
+        "id": "9618b85728334bff895c4ca3",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 1,
+        "lexical_rank": 1,
+        "hit": true
+      },
+      {
+        "chunk_id": "a667aa7d348a2afc85d49373",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u031",
+        "section": "GEOMETRICAL PROGRESSION",
+        "text": "~Reference:~ The chapter on Geometrical Progression in any algebra.",
+        "metadata": {
+          "section": "GEOMETRICAL PROGRESSION",
+          "char_end": 67,
+          "char_start": 0,
+          "source_end_line": 2333,
+          "source_start_line": 2266
+        },
+        "score": 0.03225806451612903,
+        "id": "a667aa7d348a2afc85d49373",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 2,
+        "lexical_rank": 2,
+        "hit": false
+      },
+      {
+        "chunk_id": "15f35acabda89b56b494b900",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u030",
+        "section": "GEOMETRICAL PROGRESSION",
+        "text": "11. The third term of a geometrical progression is 36; the 6th term is\n972. Find the first and second terms.\n\n12. Insert between 6 and 16 two numbers, such that the first three of\nthe four shall be in arithmetical progression, and the last three\nin geometrical progression.\n\n13. A rubber ball falls from a height of 40 inches and on each rebound\nrises 40% of the previous height. Find by formula how far it falls\non its eighth descent.                                   (_Yale._)",
+        "metadata": {
+          "section": "GEOMETRICAL PROGRESSION",
+          "char_end": 1635,
+          "char_start": 1156,
+          "source_end_line": 2264,
+          "source_start_line": 2212
+        },
+        "score": 0.031746031746031744,
+        "id": "15f35acabda89b56b494b900",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 3,
+        "lexical_rank": 3,
+        "hit": false
+      }
+    ],
+    "context": "[a667aa7d348a2afc85d49373 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u031]\n~Reference:~ The chapter on Geometrical Progression in any algebra.\n\n[15f35acabda89b56b494b900 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u030]\n11. The third term of a geometrical progression is 36; the 6th term is\n972. Find the first and second terms.\n\n12. Insert between 6 and 16 two numbers, such that the first three of\nthe four shall be in arithmetical progression, and the last three\nin geometrical progression.\n\n13. A rubber ball falls from a height of 40 inches and on each rebound\nrises 40% of the previous height. Find by formula how far it falls\non its eighth descent.                                   (_Yale._)",
+    "context_ids": [
+      "a667aa7d348a2afc85d49373",
+      "15f35acabda89b56b494b900"
+    ],
+    "context_chars": 760,
+    "elapsed_ms": 1049.5032999897376,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "DAY7-T04",
+    "split": "test",
+    "question": "Trong Geometrical Progression, công thức tổng S của n số hạng đầu theo a, r và n được ghi như thế nào?",
+    "answerable": true,
+    "strategy": "hybrid_rrf",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": {
+      "field": "section",
+      "value": "GEOMETRICAL PROGRESSION",
+      "provided_by": "question"
+    },
+    "retrieval_filter": {
+      "section": "GEOMETRICAL PROGRESSION"
+    },
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u030",
+        "evidence": "II. S = (ar^n - a)/(r - 1)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "9618b85728334bff895c4ca3",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u030",
+        "section": "GEOMETRICAL PROGRESSION",
+        "text": "~GEOMETRICAL PROGRESSION~\n\n1. Define a geometrical progression.\n\nLearn to derive the four formulas in geometrical progression:\n\n{ I. l = ar^(n - 1).\n{II. S = (ar^n - a)/(r - 1).\n\n{III. S = (rl - a)/(r - 1).\n{ IV. S_{[infinity]} = (a)/(1 - r).\n\n2. How many terms must be taken from the series 9, 18, 36, ... to\nmake a total of 567?\n\n3. In the G. P. 2, 6, 18, ..., which term is 486?\n\n4. Find x, if 2x - 4, 5x - 7, 10x + 4 are in geometrical progression.\n\n5. How can you turn a G. P. into an equation?\n\n6. Insert 4 geometrical means between 4 and 972.\n\n7. Insert 6 geometrical means between 5/16 and 5120.\n\n8. Given a = -2, n = 5, l = -32; find r and S.\n\n9. If the first term of a geometrical progression is 12 and the sum to\ninfinity is 36, find the 4th term.\n\n10. If the series 3-1/3, 2-1/2, ... be an A. P., find the 97th term.\nIf a G. P., find the sum to infinity.",
+        "metadata": {
+          "section": "GEOMETRICAL PROGRESSION",
+          "char_end": 1154,
+          "char_start": 288,
+          "source_end_line": 2264,
+          "source_start_line": 2212
+        },
+        "score": 0.03278688524590164,
+        "id": "9618b85728334bff895c4ca3",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 1,
+        "lexical_rank": 1,
+        "hit": true
+      },
+      {
+        "chunk_id": "a667aa7d348a2afc85d49373",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u031",
+        "section": "GEOMETRICAL PROGRESSION",
+        "text": "~Reference:~ The chapter on Geometrical Progression in any algebra.",
+        "metadata": {
+          "section": "GEOMETRICAL PROGRESSION",
+          "char_end": 67,
+          "char_start": 0,
+          "source_end_line": 2333,
+          "source_start_line": 2266
+        },
+        "score": 0.03225806451612903,
+        "id": "a667aa7d348a2afc85d49373",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 2,
+        "lexical_rank": 2,
+        "hit": false
+      },
+      {
+        "chunk_id": "15f35acabda89b56b494b900",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u030",
+        "section": "GEOMETRICAL PROGRESSION",
+        "text": "11. The third term of a geometrical progression is 36; the 6th term is\n972. Find the first and second terms.\n\n12. Insert between 6 and 16 two numbers, such that the first three of\nthe four shall be in arithmetical progression, and the last three\nin geometrical progression.\n\n13. A rubber ball falls from a height of 40 inches and on each rebound\nrises 40% of the previous height. Find by formula how far it falls\non its eighth descent.                                   (_Yale._)",
+        "metadata": {
+          "section": "GEOMETRICAL PROGRESSION",
+          "char_end": 1635,
+          "char_start": 1156,
+          "source_end_line": 2264,
+          "source_start_line": 2212
+        },
+        "score": 0.031746031746031744,
+        "id": "15f35acabda89b56b494b900",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 3,
+        "lexical_rank": 3,
+        "hit": false
+      }
+    ],
+    "context": "[a667aa7d348a2afc85d49373 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u031]\n~Reference:~ The chapter on Geometrical Progression in any algebra.\n\n[15f35acabda89b56b494b900 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u030]\n11. The third term of a geometrical progression is 36; the 6th term is\n972. Find the first and second terms.\n\n12. Insert between 6 and 16 two numbers, such that the first three of\nthe four shall be in arithmetical progression, and the last three\nin geometrical progression.\n\n13. A rubber ball falls from a height of 40 inches and on each rebound\nrises 40% of the previous height. Find by formula how far it falls\non its eighth descent.                                   (_Yale._)",
+    "context_ids": [
+      "a667aa7d348a2afc85d49373",
+      "15f35acabda89b56b494b900"
+    ],
+    "context_chars": 760,
+    "elapsed_ms": 1703.578100015875,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "DAY7-T05",
+    "split": "test",
+    "question": "Trong phần Simultaneous Quadratics, CASE I gồm một phương trình thuộc dạng nào và phương trình còn lại thuộc dạng nào?",
+    "answerable": true,
+    "strategy": "hybrid_rrf",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u004",
+        "evidence": "One equation linear.\n\nThe other quadratic."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "00aa64ca2e9c24619494db79",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u025",
+        "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+        "text": "OUTLINE OF SIMULTANEOUS QUADRATICS\n\n~Simultaneous Quadratics~\n\nCASE I.\n\nOne equation linear.\nThe other quadratic.\n2x + y = 7,\nx^2 + 2y^2 = 22.\n\nMETHOD: Solve for x as in terms of y, or _vice versa_, in the\nlinear and substitute in the quadratic.",
+        "metadata": {
+          "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+          "char_end": 1534,
+          "char_start": 1289,
+          "source_end_line": 1931,
+          "source_start_line": 1852
+        },
+        "score": 0.03278688524590164,
+        "id": "00aa64ca2e9c24619494db79",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 1,
+        "lexical_rank": 1,
+        "hit": false
+      },
+      {
+        "chunk_id": "7a3a852090064e9ecd78ceb2",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u004",
+        "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+        "text": "Properties of quadratics\nr_1 = -b/2a + ([b^2 - 4ac]^(1/2))/(2a).\nr_2 = -b/2a - ([b^2 - 4ac]^(1/2))/(2a).\nThen\nr_1 + r_2 = -b/a.\nr_1 . r_2 = c/a.\nDiscriminant, b^2 - 4ac, and its discussion.\nNature or character of the roots.\n\n~Simultaneous Quadratics~\n\nCASE I.\n\nOne equation linear.\n\nThe other quadratic.\n3x - y = 12,\nx^2 - y^2 = 16.\n\nCASE II.\n\nBoth equations homogeneous and of the second degree.\nx^2 - xy + y^2 = 21,\ny^2 - 2xy = -15.\n\nCASE III.\n\nAny two of the quantities x + y, x^2 + y^2, xy, x^3 + y^3,\nx^3 - y^3, x - y, x^2 +- xy + y^2, etc., given.\nx^2 + y^2 = 41,\nx + y = 9.\n\nCASE IV.\nBoth equations symmetrical or symmetrical except for sign.\nUsually one equation of high degree, the other of the first\ndegree.\nx^5 + y^5 = 242,\nx + y = 2.\n\nCASE V. Special Devices\n\nI. Solve for a compound unknown, like xy, x + y, (1)/(xy),\netc., first.\nx^2y^2 + xy = 6,\nx + 2y = -5.",
+        "metadata": {
+          "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+          "char_end": 873,
+          "char_start": 0,
+          "source_end_line": 487,
+          "source_start_line": 413
+        },
+        "score": 0.03225806451612903,
+        "id": "7a3a852090064e9ecd78ceb2",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 2,
+        "lexical_rank": 2,
+        "hit": true
+      },
+      {
+        "chunk_id": "3d6eb4fe1242af9b242af8ca",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u006",
+        "section": "CASES IN FACTORING",
+        "text": "CASES IN FACTORING\n\nThe number of terms in an expression usually gives the clue to the\npossible cases under which it may come. By applying the _test_ for each\nand eliminating the _possible_ cases one by one, the right case is\nreadily found. Hence, the number of terms in the expression and a ready\nand accurate knowledge of the Cases in Factoring are the real keys to\nsuccess in this vitally important part of algebra.\n\nCASE I. A common monomial factor. Applies to any number of terms.\n\n5cx - 5ct + 5cv - 15 c^2 m + 25 c^3 m^2\n= 5c(x - t + v - 3cm + 5c^2 m^2).\n\nCASE II. A trinomial that is a perfect square. Three terms.\n\nx^2 +- 2xm + m^2 = (x +- m)^2.",
+        "metadata": {
+          "section": "CASES IN FACTORING",
+          "char_end": 1504,
+          "char_start": 851,
+          "source_end_line": 639,
+          "source_start_line": 570
+        },
+        "score": 0.030776515151515152,
+        "id": "3d6eb4fe1242af9b242af8ca",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 6,
+        "lexical_rank": 4,
+        "hit": false
+      }
+    ],
+    "context": "[00aa64ca2e9c24619494db79 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u025]\nOUTLINE OF SIMULTANEOUS QUADRATICS\n\n~Simultaneous Quadratics~\n\nCASE I.\n\nOne equation linear.\nThe other quadratic.\n2x + y = 7,\nx^2 + 2y^2 = 22.\n\nMETHOD: Solve for x as in terms of y, or _vice versa_, in the\nlinear and substitute in the quadratic.",
+    "context_ids": [
+      "00aa64ca2e9c24619494db79"
+    ],
+    "context_chars": 351,
+    "elapsed_ms": 1109.0993999969214,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "DAY7-T06",
+    "split": "test",
+    "question": "Theo phần về lũy thừa, tài liệu nêu quy tắc nào để khai triển logarit của tích xy thành các logarit thành phần?",
+    "answerable": false,
+    "strategy": "hybrid_rrf",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [],
+    "results": [
+      {
+        "chunk_id": "f49515978e12d9e74d883b0c",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u026",
+        "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+        "text": "I. Consider some compound quantity like xy, [x - y]^(1/2),\n[xy]^(1/2), x/y, etc., as the unknown, at first. Solve\nfor the compound unknown, and combine the resulting\nequation with the simpler original equation.\n\nx^2 y^2 + xy = 6,\nx + 2y = -5.\n\nII. Divide the equations member by member. Then solve by\nCase I, II, or III.\n\nx^3 - y^3 = 152,\nx - y = 2.\n\nIII. Eliminate the quadratic terms. Then solve by Case I,\nII, or III.\n\nxy + x = 15,\nxy + y = 16.",
+        "metadata": {
+          "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+          "char_end": 1184,
+          "char_start": 737,
+          "source_end_line": 2028,
+          "source_start_line": 1933
+        },
+        "score": 0.03131881575727918,
+        "id": "f49515978e12d9e74d883b0c",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 7,
+        "lexical_rank": 1,
+        "hit": false
+      },
+      {
+        "chunk_id": "d19c3b308f5b452ba932d0b4",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u018",
+        "section": "RADICALS",
+        "text": "17. a - b (factor as difference of two squares).\n\n18. a - b (factor as difference of two cubes).\n\n19. a - b (factor as difference of two fourth powers).\n\n20. Find the H. C. F. and L. C. M. of\nx^2 + xy^(1/2) - 2y,\n2x^2 + 5xy^(1/2) + 2y,\n2x^2 - xy^(1/2) - y.\n\n21. Solve (short method)\n(x - 7)/(x - 8) - (x - 8)/(x - 9)\n= (x - 4)/(x - 5) - (x - 5)/(x - 6).\n\n22. Simplify\n(ab/c + bc/a + ca/b)/(a/bc + b/ca + c/ab)\nx [((a + b + c)^2)/(ab + bc + ca) - 2].         (_Princeton._)\n\n1. Solve for p: 2^(p - 3) = 128.\n\n2. Solve for t: t^(3/2) = -27.\n\n3. Find the square root of 8114.4064. What, then, is the square root\nof .0081144064? of 811440.64? From any of the above can you\ndetermine the square root of .081144064?",
+        "metadata": {
+          "section": "RADICALS",
+          "char_end": 1564,
+          "char_start": 855,
+          "source_end_line": 1487,
+          "source_start_line": 1404
+        },
+        "score": 0.030303030303030304,
+        "id": "d19c3b308f5b452ba932d0b4",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 6,
+        "lexical_rank": 6,
+        "hit": false
+      },
+      {
+        "chunk_id": "b6ef2c30d7099dd596b394f0",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u010",
+        "section": "FRACTIONS",
+        "text": "7. 72/121 x 55/56 x 77/90.\n\n8. (b - y)/(a^3 + y^3) x (ca + cy)/(b^2 + by)\nx (b^6 + y^6)/(b^2 + y^2) x b/c.\n\nDivide:\n\n9. (12/25) / (6/50).\n\n10. [1 - (ab)/(a^2 - ab + b^2)] [1 - (ab)/(a^2 + 2ab + b^2)]\n/ (a^3 - b^3)/(a^3 + b^3).                           (_Yale._)\n\n11. [(x^4 - y^4)/(x^2 - y^2) / (x + y)/(x^2 - xy)]\n/ [(x^2 + y^2)/(x - y) / (x + y)/(xy - y^2)].   (_Sheffield._)\n\nSimplify:\n\n12. [(4y)/x - (15y^2)/(x^2) + 4] / [4 - (16y)/x + (15y^2)/(x^2)]\nx [3 - (4x + 20y)/(2x + 5y)].\n\n~Reference:~ The chapter on Fractions in any algebra.",
+        "metadata": {
+          "section": "FRACTIONS",
+          "char_end": 539,
+          "char_start": 0,
+          "source_end_line": 934,
+          "source_start_line": 868
+        },
+        "score": 0.029211087420042643,
+        "id": "b6ef2c30d7099dd596b394f0",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 10,
+        "lexical_rank": 7,
+        "hit": false
+      }
+    ],
+    "context": "[f49515978e12d9e74d883b0c | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u026]\nI. Consider some compound quantity like xy, [x - y]^(1/2),\n[xy]^(1/2), x/y, etc., as the unknown, at first. Solve\nfor the compound unknown, and combine the resulting\nequation with the simpler original equation.\n\nx^2 y^2 + xy = 6,\nx + 2y = -5.\n\nII. Divide the equations member by member. Then solve by\nCase I, II, or III.\n\nx^3 - y^3 = 152,\nx - y = 2.\n\nIII. Eliminate the quadratic terms. Then solve by Case I,\nII, or III.\n\nxy + x = 15,\nxy + y = 16.",
+    "context_ids": [
+      "f49515978e12d9e74d883b0c"
+    ],
+    "context_chars": 553,
+    "elapsed_ms": 2101.081900007557,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "DAY7-T07",
+    "split": "test",
+    "question": "Trong phần giải hệ phương trình đồng thời, công thức Cramer/định thức nào được nêu để tìm nghiệm của hệ hai ẩn?",
+    "answerable": false,
+    "strategy": "hybrid_rrf",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [],
+    "results": [
+      {
+        "chunk_id": "9f0424856b49f03b5470a338",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u009",
+        "section": "HIGHEST COMMON FACTOR AND LOWEST COMMON MULTIPLE",
+        "text": "5. x^5 - 2x^4 + x^2,\n2x^4 - 4x^3 - 4x + 6.                                 (_Yale._)\n\n6. x^2 + a^2 - b^2 + 2ax,\nx^2 - a^2 + b^2 + 2bx,\nx^2 - a^2 - b^2 - 2ab.                             (_Harvard._)\n\n7. 2x^2 - x - 15,\n3x^2 - 11x + 6,\n2x^3 - x^2 - 13x - 6.               (_College Entrance Board._)\n\n8. (tv - v^2)^3,\nv^3 - t^2v,\nt^3 - v^3,\nv^2 - 2vt + t^2.\n\nPick out the H. C. F. and the L. C. M. of the following:\n\n9. 8(x^2 + y)^(32) (t^2 + z)^(19) (m - n^3)^(14),\n12(x^2 + y)^(23) (t^2 + z)^(41) (m - n^3)^(17),\n18(m - n^3)^(11) (x^2 + y)^(39) (t^2 + z)^(37).\n\n10. 17ax^3 (y + z)^(10) (y - x)^(19) (x + z)^(27),\n34a^2 x^4 (y + z)^(11) (y - x)^(21) (x + z)^(13),\n51a^3 x^5 (y + z)^4 (x + z)^(32) (y - x)^(29).\n\n~Reference:~ The chapter on H. C. F. and L. C. M. in any algebra.",
+        "metadata": {
+          "section": "HIGHEST COMMON FACTOR AND LOWEST COMMON MULTIPLE",
+          "char_end": 776,
+          "char_start": 0,
+          "source_end_line": 866,
+          "source_start_line": 796
+        },
+        "score": 0.01639344262295082,
+        "id": "9f0424856b49f03b5470a338",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 1,
+        "lexical_rank": null,
+        "hit": false
+      },
+      {
+        "chunk_id": "57c253d65ab3fd51d5ed35b6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u026",
+        "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+        "text": "CASE II.\n\nBoth equations homogeneous and of the second degree.\nx^2 - xy + y^2 = 39,\n2x^2 - 3xy + 2y^2 = 43.\n\nMETHOD: Let y = vx, and substitute in both equations.\n\nALTERNATE METHOD: Solve for x in terms of y in one equation and substitute in the other.\n\nCASE III.\n\nAny two of the quantities\nx + y\nx^2 + y^2\nxy\nx - y\nx^3 + y^3\nx^3 - y^3\nx^2 + xy + y^2\nx^2 - xy + y^2\ngiven.\n\nx + y = 5,\nx^2 - xy + y^2 = 7.\n\nMETHOD: Solve for x + y and x - y; then add to get x, subtract\nto get y.\n\nCASE IV.\n\nBoth equations symmetrical or symmetrical except for sign.\nUsually one equation of high degree, the other of the first\ndegree.\nx^5 + y^5 = 242,\nx + y = 2.\n\nMETHOD: Let x = u + v and y = u - v, and substitute in both\nequations.\n\n~Special Devices~",
+        "metadata": {
+          "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+          "char_end": 735,
+          "char_start": 0,
+          "source_end_line": 2028,
+          "source_start_line": 1933
+        },
+        "score": 0.016129032258064516,
+        "id": "57c253d65ab3fd51d5ed35b6",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 2,
+        "lexical_rank": null,
+        "hit": false
+      },
+      {
+        "chunk_id": "f651a6e189fa0cd7887ce635",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u007",
+        "section": "CASES IN FACTORING",
+        "text": "CASE III. The difference of two squares.\n\n_A._ Two terms. x^2 - y^2 = (x + y)(x - y).\n\n_B._ Four terms.\n\nx^2 + 2xy + y^2 - m^2 = (x^2 + 2xy + y^2) - m^2\n= (x + y + m)(x + y - m)\n\n_C._ Six terms. x^2 - 2xy + y^2 - m^2 - 2mn - n^2\n= (x^2 - 2xy + y^2) - (m^2 + 2mn + n^2)\n= (x - y)^2 - (m + n)^2\n= [(x - y) + (m + n)][(x - y) - (m + n)].\n\n_D._ An incomplete square. Three terms, and\n4th powers or multiples of 4.\n\nc^4 + c^2 d^2 + d^4 = c^4 + 2c^2 d^2 + d^4 - c^2 d^2\n= (c^2 + d^2)^2 - c^2 d^2\n= (c^2 + d^2 + cd)(c^2 + d^2 - cd).\n\nCASE IV. A trinomial of the form x^2 + bx + c. Three terms.\n\nx^2 + x - 30 = (x + 6)(x - 5).\n\nCASE V. A trinomial of the form ax^2 + bx + c. Three terms.\n\n20x^2 + 7x - 6 = (4x + 3)(5x - 2).\n\nCASE VI.\n\n_A._ The sum or difference of two cubes. Two terms.\n\nx^3 + y^3 = (x + y)(x^2 - xy + y^2);\nx^3 - y^3 = (x - y)(x^2 + xy + y^2).",
+        "metadata": {
+          "section": "CASES IN FACTORING",
+          "char_end": 853,
+          "char_start": 0,
+          "source_end_line": 707,
+          "source_start_line": 641
+        },
+        "score": 0.015873015873015872,
+        "id": "f651a6e189fa0cd7887ce635",
+        "source_id": "gutenberg-38536",
+        "strategy": "hybrid_rrf",
+        "dense_rank": 3,
+        "lexical_rank": null,
+        "hit": false
+      }
+    ],
+    "context": "",
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1097.642700013239,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  }
+]
