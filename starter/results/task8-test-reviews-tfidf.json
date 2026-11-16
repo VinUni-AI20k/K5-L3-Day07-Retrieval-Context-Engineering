@@ -1,0 +1,8 @@
+[
+  {"query_id": "DAY7-T01", "answer_grade": 0, "citation_support": [], "reason": "Agent abstained on an answerable question; final context contained no gold evidence."},
+  {"query_id": "DAY7-T02", "answer_grade": 0, "citation_support": [], "reason": "Agent abstained on an answerable question; matching retrieval chunk was not packed into final context."},
+  {"query_id": "DAY7-T03", "answer_grade": 0, "citation_support": [], "reason": "Agent abstained on an answerable question; matching retrieval chunk was not packed into final context."},
+  {"query_id": "DAY7-T04", "answer_grade": 0, "citation_support": [], "reason": "Agent abstained on an answerable question; matching retrieval chunk was not packed into final context."},
+  {"query_id": "DAY7-T05", "answer_grade": 0, "citation_support": [], "reason": "Agent abstained on an answerable question; matching retrieval chunk was not packed into final context."},
+  {"query_id": "DAY7-T07", "citation_support": [], "abstention_correct": true, "reason": "Corpus and retrieved context do not provide Cramer's rule; agent abstained."}
+]

@@ -1,0 +1,9 @@
+[
+  {"id": "DAY7-T01", "split": "test", "answerable": true},
+  {"id": "DAY7-T02", "split": "test", "answerable": true},
+  {"id": "DAY7-T03", "split": "test", "answerable": true},
+  {"id": "DAY7-T04", "split": "test", "answerable": true},
+  {"id": "DAY7-T05", "split": "test", "answerable": true},
+  {"id": "DAY7-T06", "split": "test", "answerable": false},
+  {"id": "DAY7-T07", "split": "test", "answerable": false}
+]
