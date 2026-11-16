@@ -1,0 +1,359 @@
+[
+  {
+    "id": "D01",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "m(x + y - z).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u001",
+        "evidence": "mx + my - mz = m(x + y - z)."
+      }
+    ]
+  },
+  {
+    "id": "D02",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "(x + y)(x - y).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "x^2 - y^2 = (x + y)(x - y)."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u007",
+        "evidence": "x^2 - y^2 = (x + y)(x - y)."
+      }
+    ]
+  },
+  {
+    "id": "D03",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "(x - 2)(x - 3).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "x^2 - 5x + 6 = (x - 2)(x - 3)."
+      }
+    ]
+  },
+  {
+    "id": "D04",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "(x - 1)(x^2 + x + 18).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "x^3 + 17x - 18 = (x - 1)(x^2 + x + 18)."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u007",
+        "evidence": "x^3 + 17x - 18 = (x - 1)(x^2 + x + 18)."
+      }
+    ]
+  },
+  {
+    "id": "D05",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "Cộng hoặc trừ, thế, và so sánh.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "Solved by\naddition or subtraction.\nsubstitution.\ncomparison."
+      }
+    ]
+  },
+  {
+    "id": "D06",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "Cộng các số mũ.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "To multiply quantities having the same base, add exponents."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "To multiply quantities having the same base, add exponents."
+      }
+    ]
+  },
+  {
+    "id": "D07",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "Lấy số mũ của đại lượng bị chia trừ số mũ của đại lượng chia (quy tắc trong sách: subtract exponents).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "To divide quantities having the same base, subtract exponents."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "To divide quantities having the same base, subtract\nexponents."
+      }
+    ]
+  },
+  {
+    "id": "D08",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "Nhân các số mũ.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "To raise a quantity to a power, multiply exponents."
+      }
+    ]
+  },
+  {
+    "id": "D09",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "Chia số mũ của lũy thừa cho chỉ số căn.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "To extract a root, divide the exponent of the power by the\nindex of the root."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "To extract a root, divide the exponent of the power by the\nindex of the root."
+      }
+    ]
+  },
+  {
+    "id": "D10",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "Tử số biểu thị lũy thừa; mẫu số biểu thị căn.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "numerator of a fractional exponent indicates the power, the\ndenominator indicates the root"
+      }
+    ]
+  },
+  {
+    "id": "D11",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "1.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "Therefore a^0 = 1. Axiom I."
+      }
+    ]
+  },
+  {
+    "id": "D12",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "1/(a^m).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "Therefore a^(-m) = 1/(a^m)."
+      }
+    ]
+  },
+  {
+    "id": "D13",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "[a^2]^(1/3), tức căn bậc ba của a^2.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "Therefore a^(2/3) = [a^2]^(1/3)."
+      }
+    ]
+  },
+  {
+    "id": "D14",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "a^(1/n) . b^(1/n) = [ab]^(1/n).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "a^(1/n) . b^(1/n) = [ab]^(1/n)."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u017",
+        "evidence": "a^(1/n) . b^(1/n) = [ab]^(1/n)."
+      }
+    ]
+  },
+  {
+    "id": "D15",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "Luôn kiểm tra lại kết quả để tránh nghiệm ngoại lai.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "Radical equations. _Always_ check results to avoid extraneous roots."
+      }
+    ]
+  },
+  {
+    "id": "D16",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "Số hạng của biểu thức thường gợi ý trường hợp có thể áp dụng.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u006",
+        "evidence": "The number of terms in an expression usually gives the clue to the\npossible cases under which it may come."
+      }
+    ]
+  },
+  {
+    "id": "D17",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "H.C.F. = a + 3; L.C.M. = (a + 3)(a - 1)(a + 4)a(a^2 - 3a + 9).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "H. C. F. = a + 3.\n\nL. C. M. = (a + 3)(a - 1)(a + 4)a(a^2 - 3a + 9)."
+      }
+    ]
+  },
+  {
+    "id": "D18",
+    "split": "dev",
+    "answerable": true,
+    "expected_answer": "x^2 + xy + y^2.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u001",
+        "evidence": "(x^3 - y^3)/(x - y) = x^2 + xy + y^2."
+      }
+    ]
+  },
+  {
+    "id": "D19",
+    "split": "dev",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Đã rà soát toàn bộ 54 đơn vị văn bản và mục Theory of Exponents: tài liệu có quy tắc số mũ nhưng không có logarithm hoặc công thức đổi cơ số."
+  },
+  {
+    "id": "D20",
+    "split": "dev",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Đã rà soát toàn bộ 54 đơn vị văn bản và các mục về nghiệm/phương trình bậc hai; corpus không nêu hệ thức Viète cho đa thức bậc ba."
+  },
+  {
+    "id": "DAY7-T01",
+    "split": "test",
+    "answerable": true,
+    "expected_answer": "r_1 + r_2 = -b/a; r_1 . r_2 = c/a.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u004",
+        "evidence": "r_1 + r_2 = -b/a.\nr_1 . r_2 = c/a."
+      }
+    ]
+  },
+  {
+    "id": "DAY7-T02",
+    "split": "test",
+    "answerable": true,
+    "expected_answer": "S = (n/2)(a + l).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u029",
+        "evidence": "S = (n/2)(a + l),"
+      }
+    ]
+  },
+  {
+    "id": "DAY7-T03",
+    "split": "test",
+    "answerable": true,
+    "expected_answer": "l = ar^(n - 1).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u030",
+        "evidence": "I. l = ar^(n - 1)."
+      }
+    ]
+  },
+  {
+    "id": "DAY7-T04",
+    "split": "test",
+    "answerable": true,
+    "expected_answer": "S = (ar^n - a)/(r - 1).",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u030",
+        "evidence": "II. S = (ar^n - a)/(r - 1)."
+      }
+    ]
+  },
+  {
+    "id": "DAY7-T05",
+    "split": "test",
+    "answerable": true,
+    "expected_answer": "Một phương trình tuyến tính và phương trình còn lại là bậc hai.",
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u004",
+        "evidence": "One equation linear.\n\nThe other quadratic."
+      }
+    ]
+  },
+  {
+    "id": "DAY7-T06",
+    "split": "test",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Đã rà soát toàn bộ 54 đơn vị văn bản, gồm mục Theory of Exponents; corpus chỉ có quy tắc lũy thừa và không trình bày logarit hoặc quy tắc logarit của tích."
+  },
+  {
+    "id": "DAY7-T07",
+    "split": "test",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Đã rà soát toàn bộ 54 đơn vị văn bản và các đoạn về simultaneous equations; corpus nêu cộng/trừ, thế, so sánh và một số thủ thuật khác nhưng không có định thức hoặc quy tắc Cramer."
+  }
+]

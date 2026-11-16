@@ -1,0 +1,172 @@
+[
+  {
+    "id": "D01",
+    "split": "dev",
+    "question": "Theo ví dụ trong tài liệu, đặt nhân tử chung ra ngoài biểu thức mx + my - mz thì được kết quả nào?"
+  },
+  {
+    "id": "D02",
+    "split": "dev",
+    "question": "Tài liệu phân tích hiệu hai bình phương x^2 - y^2 thành tích nào?"
+  },
+  {
+    "id": "D03",
+    "split": "dev",
+    "question": "Theo ví dụ về tam thức dạng x^2 + bx + c, x^2 - 5x + 6 được phân tích thành gì?"
+  },
+  {
+    "id": "D04",
+    "split": "dev",
+    "question": "Kết quả phân tích được nêu cho x^3 + 17x - 18 theo Factor Theorem là gì?"
+  },
+  {
+    "id": "D05",
+    "split": "dev",
+    "question": "Tài liệu liệt kê những phương pháp nào để giải hệ phương trình đồng thời?"
+  },
+  {
+    "id": "D06",
+    "split": "dev",
+    "question": "Trong mục Theory of Exponents, khi nhân hai lũy thừa cùng cơ số thì phải xử lý số mũ thế nào?",
+    "filter": {
+      "field": "section",
+      "value": "THEORY OF EXPONENTS",
+      "provided_by": "question"
+    }
+  },
+  {
+    "id": "D07",
+    "split": "dev",
+    "question": "Trong mục Theory of Exponents, nếu chia hai đại lượng có cùng cơ số thì số mũ của kết quả được xác định ra sao?",
+    "filter": {
+      "field": "section",
+      "value": "THEORY OF EXPONENTS",
+      "provided_by": "question"
+    }
+  },
+  {
+    "id": "D08",
+    "split": "dev",
+    "question": "Theo quy tắc trong phần số mũ, khi nâng một lũy thừa lên lũy thừa khác thì kết hợp hai số mũ như thế nào?"
+  },
+  {
+    "id": "D09",
+    "split": "dev",
+    "question": "Trong mục Theory of Exponents, muốn lấy căn của một lũy thừa thì số mũ được điều chỉnh theo chỉ số căn thế nào?",
+    "filter": {
+      "field": "section",
+      "value": "THEORY OF EXPONENTS",
+      "provided_by": "question"
+    }
+  },
+  {
+    "id": "D10",
+    "split": "dev",
+    "question": "Theo phần giải thích về số mũ phân số, tử số và mẫu số lần lượt biểu thị điều gì?"
+  },
+  {
+    "id": "D11",
+    "split": "dev",
+    "question": "Cuốn sách kết luận a^0 bằng bao nhiêu?"
+  },
+  {
+    "id": "D12",
+    "split": "dev",
+    "question": "Dựa theo định nghĩa số mũ âm của tài liệu, a^(-m) được viết thành phân số nào?"
+  },
+  {
+    "id": "D13",
+    "split": "dev",
+    "question": "Theo ví dụ của số mũ phân số, a^(2/3) được biểu diễn dưới dạng căn nào?"
+  },
+  {
+    "id": "D14",
+    "split": "dev",
+    "question": "Trong mục Radicals, công thức nhân hai căn bậc n của a và b được viết như thế nào?"
+  },
+  {
+    "id": "D15",
+    "split": "dev",
+    "question": "Trong mục Radicals, sau khi giải một phương trình chứa căn, cần làm gì để tránh chấp nhận nghiệm không hợp lệ?",
+    "filter": {
+      "field": "section",
+      "value": "RADICALS",
+      "provided_by": "question"
+    }
+  },
+  {
+    "id": "D16",
+    "split": "dev",
+    "question": "Theo phần giải thích về chọn trường hợp phân tích nhân tử, dấu hiệu ban đầu nào thường gợi ý các trường hợp có thể áp dụng?"
+  },
+  {
+    "id": "D17",
+    "split": "dev",
+    "question": "Trong ví dụ tìm H.C.F. và L.C.M., tài liệu cho kết quả nào cho hai biểu thức a^2 + 2a - 3 và a^2 + 7a + 12 (cùng với thừa số a^4 + 27a)?"
+  },
+  {
+    "id": "D18",
+    "split": "dev",
+    "question": "Tài liệu cho thương (x^3 - y^3)/(x - y) bằng biểu thức nào?"
+  },
+  {
+    "id": "D19",
+    "split": "dev",
+    "question": "Trong mục Theory of Exponents, tài liệu nêu công thức đổi cơ số nào để viết log_b(x) bằng logarit cơ số a?"
+  },
+  {
+    "id": "D20",
+    "split": "dev",
+    "question": "Trong phần về phương trình bậc hai, sách có nêu công thức liên hệ tổng các nghiệm của ax^3 + bx^2 + cx + d = 0 với các hệ số không? Nếu có, công thức là gì?"
+  },
+  {
+    "id": "DAY7-T01",
+    "split": "test",
+    "question": "Theo phần Properties of quadratics, tổng và tích hai nghiệm r1, r2 lần lượt được biểu diễn bằng những công thức nào?"
+  },
+  {
+    "id": "DAY7-T02",
+    "split": "test",
+    "question": "Trong mục Arithmetical Progression, tài liệu viết tổng S theo số hạng đầu a, số hạng cuối l và số hạng n thế nào?",
+    "filter": {
+      "field": "section",
+      "value": "ARITHMETICAL PROGRESSION",
+      "provided_by": "question"
+    }
+  },
+  {
+    "id": "DAY7-T03",
+    "split": "test",
+    "question": "Trong mục Geometrical Progression, số hạng thứ n (ký hiệu l) được biểu diễn theo a, r và n bằng công thức nào?",
+    "filter": {
+      "field": "section",
+      "value": "GEOMETRICAL PROGRESSION",
+      "provided_by": "question"
+    }
+  },
+  {
+    "id": "DAY7-T04",
+    "split": "test",
+    "question": "Trong Geometrical Progression, công thức tổng S của n số hạng đầu theo a, r và n được ghi như thế nào?",
+    "filter": {
+      "field": "section",
+      "value": "GEOMETRICAL PROGRESSION",
+      "provided_by": "question"
+    }
+  },
+  {
+    "id": "DAY7-T05",
+    "split": "test",
+    "question": "Trong phần Simultaneous Quadratics, CASE I gồm một phương trình thuộc dạng nào và phương trình còn lại thuộc dạng nào?"
+  },
+  {
+    "id": "DAY7-T06",
+    "split": "test",
+    "question": "Theo phần về lũy thừa, tài liệu nêu quy tắc nào để khai triển logarit của tích xy thành các logarit thành phần?"
+  },
+  {
+    "id": "DAY7-T07",
+    "split": "test",
+    "question": "Trong phần giải hệ phương trình đồng thời, công thức Cramer/định thức nào được nêu để tìm nghiệm của hệ hai ẩn?"
+  }
+]
