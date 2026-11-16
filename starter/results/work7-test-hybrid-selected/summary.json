@@ -1,0 +1,17 @@
+{
+  "strategy": "hybrid_rrf",
+  "split": "test",
+  "n": 5,
+  "questions_total": 7,
+  "unanswerable_n": 2,
+  "hit1": 4,
+  "hit3": 5,
+  "context_hit": 0,
+  "avg_context_chars": 505.14285714285717,
+  "budget_chars": 800,
+  "median_ms": 1156.7773999995552,
+  "index_seconds": 0.2729242999921553,
+  "embedding_requests": 7,
+  "embedding_tokens": 344,
+  "service_cost_usd": null
+}
