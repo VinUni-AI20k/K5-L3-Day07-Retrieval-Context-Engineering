@@ -4,5 +4,8 @@ rank-bm25==0.2.2
 google-genai==3.3.0
 python-dotenv==1.2.4
 numpy==2.5.4
+# scripts/ingest_pdf.py (your own PDFs); fonttools lets pypdf decode the Type1 fonts of LaTeX PDFs
+pypdf==7.1.0
+fonttools==4.68.0
 # torch (CPU) is pulled in by sentence-transformers; the venv uses torch 2.15.0+cpu
 # optional smaller install: pip install torch --index-url https://download.pytorch.org/whl/cpu

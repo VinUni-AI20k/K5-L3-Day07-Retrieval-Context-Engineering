@@ -14,7 +14,10 @@ from __future__ import annotations
 
 import json
 import os
+import unicodedata
 from pathlib import Path
+
+from src import local_docs as LD  # user PDFs ingested by scripts/ingest_pdf.py (own embedding model per collection)
 
 DEFAULT_DAY6_DIR = Path(__file__).resolve().parents[2] / "K5-L3B-Day06-TranThanhVinh-2A202603821-DataIngestion"
 MODEL_NAME = "BAAI/bge-small-en-v1.5"
@@ -24,6 +27,7 @@ EXPECTED_DIM = 384
 COLLECTIONS = {"soc3e_A": "chunks_A.jsonl", "soc3e_B": "chunks_B.jsonl"}
 
 _model = None
+_doc_models: dict[str, object] = {}  # embedding models of local document collections, by model name
 _clients: dict[str, object] = {}
 
 
@@ -58,8 +62,8 @@ def day6_dir() -> Path:
 
 def collection_name(name: str | None = None) -> str:
     name = name or os.environ.get("DAY6_COLLECTION", "soc3e_B")
-    if name not in COLLECTIONS:
-        raise ValueError(f"unknown collection {name!r}; choose {list(COLLECTIONS)}")
+    if name not in COLLECTIONS and LD.manifest(name) is None:
+        raise ValueError(f"unknown collection {name!r}; choose {list(COLLECTIONS) + LD.names()}")
     return name
 
 
@@ -72,6 +76,8 @@ def _to_chunk(row: dict) -> dict:
 def load_chunks(name: str | None = None) -> list[dict]:
     """All chunks of a collection in Day 7 format: id, text, source_id, source, page, metadata."""
     name = collection_name(name)
+    if name not in COLLECTIONS:
+        return LD.load_chunks(name)
     d6 = Path(os.environ.get("DAY6_DIR", DEFAULT_DAY6_DIR)) / "results" / COLLECTIONS[name]
     if name == "soc3e_B" and LOCAL_CHUNKS.exists() and not d6.exists():
         return json.loads(LOCAL_CHUNKS.read_text(encoding="utf-8"))  # already in Day 7 format
@@ -87,7 +93,24 @@ def get_collection(name: str | None = None):
     return _clients[root].get_collection(collection_name(name))
 
 
-def embed_query(query: str) -> list[float]:
+def doc_model(model_name: str):
+    """Embedding model of a local document collection (loaded once, CPU)."""
+    if model_name not in _doc_models:
+        from sentence_transformers import SentenceTransformer
+        _doc_models[model_name] = SentenceTransformer(model_name, device="cpu")
+    return _doc_models[model_name]
+
+
+def embed_query(query: str, collection: str | None = None) -> list[float]:
+    """Query vector for `collection`. Textbook collections (and None) use the Day 6 BGE model unchanged;
+    local document collections use the model and query prefix recorded in their manifest."""
+    m = LD.manifest(collection)
+    if m is not None:
+        q = unicodedata.normalize("NFC", m.get("query_prefix", "") + query)
+        v = doc_model(m["embed_model"]).encode([q], normalize_embeddings=True, convert_to_numpy=True, show_progress_bar=False)
+        if v.shape != (1, m["dim"]):
+            raise RuntimeError(f"query embedding shape {v.shape} != (1, {m['dim']}) for collection {collection}")
+        return v[0].tolist()
     global _model
     if _model is None:
         from sentence_transformers import SentenceTransformer
@@ -102,7 +125,7 @@ def embed_query(query: str) -> list[float]:
 def dense_search(query: str, top_k: int = 3, where: dict | None = None, collection: str | None = None) -> list[dict]:
     """Dense (cosine) nearest-neighbour search. `where` is a Chroma metadata filter, e.g. {"chapter": 7}.
     Returns top_k dicts: id, text, score (=1-cosine distance), rank (1-based), source_id, source, page, metadata."""
-    r = get_collection(collection).query(query_embeddings=[embed_query(query)], n_results=top_k, where=where,
+    r = get_collection(collection).query(query_embeddings=[embed_query(query, collection)], n_results=top_k, where=where,
                                          include=["documents", "metadatas", "distances"])
     out = []
     for i, (cid, doc, m, d) in enumerate(zip(r["ids"][0], r["documents"][0], r["metadatas"][0], r["distances"][0])):

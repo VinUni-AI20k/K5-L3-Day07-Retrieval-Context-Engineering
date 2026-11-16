@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>RAG Agent Tester</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/static/app.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#question">Skip to question</a>
+  <div class="app">
+    <aside class="sidebar drawer" id="sidebar" aria-label="Settings">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true" data-icon="layers"></span>
+        <div>
+          <h1>RAG Agent Tester</h1>
+          <p id="brand-sub">—</p>
+        </div>
+        <button class="icon-btn drawer-close" type="button" data-close="sidebar" aria-label="Close settings"><span data-icon="x"></span></button>
+      </div>
+
+      <section class="panel">
+        <label class="label" for="config">Search</label>
+        <div class="select-wrap"><select id="config"></select></div>
+        <dl class="kv" id="config-details"></dl>
+      </section>
+
+      <section class="panel">
+        <h2 class="label">Environment</h2>
+        <ul class="health" id="health"></ul>
+      </section>
+
+      <section class="panel samples">
+        <h2 class="label">Sample questions <span class="label-note" id="samples-source"></span></h2>
+        <input class="input" type="search" id="sample-filter" placeholder="Filter by id or text" aria-label="Filter sample questions">
+        <ul class="sample-list" id="samples"></ul>
+      </section>
+
+      <button class="btn ghost" type="button" id="clear"><span data-icon="trash"></span>Clear conversation</button>
+    </aside>
+
+    <main class="chat">
+      <header class="topbar">
+        <button class="icon-btn only-narrow" type="button" id="open-sidebar" aria-label="Open settings" aria-controls="sidebar" aria-expanded="false"><span data-icon="menu"></span></button>
+        <div class="topbar-title">
+          <span class="mono" id="topbar-config">—</span>
+          <span class="topbar-sub" id="topbar-sub">loading…</span>
+        </div>
+        <span class="pill" id="topbar-state" role="status"></span>
+        <button class="icon-btn only-narrow-inspector" type="button" id="open-inspector" aria-label="Open trace inspector" aria-controls="inspector" aria-expanded="false"><span data-icon="panel"></span></button>
+      </header>
+
+      <div class="banner" id="banner" role="alert" hidden></div>
+
+      <section class="thread" id="thread" aria-label="Conversation" aria-live="polite">
+        <div class="empty" id="empty">
+          <span class="empty-mark" aria-hidden="true" data-icon="search"></span>
+          <h2>Ask the agent a question</h2>
+          <p>It searches the document behind the selected config (<span id="empty-doc">—</span>), then answers with citations or abstains when the evidence is missing. Pick a sample from the left, or type your own.</p>
+          <ul class="empty-hints">
+            <li><kbd>Enter</kbd> send</li>
+            <li><kbd>Shift</kbd>+<kbd>Enter</kbd> new line</li>
+            <li>Click a citation to open its source</li>
+          </ul>
+        </div>
+      </section>
+
+      <form class="composer" id="composer" autocomplete="off">
+        <label class="sr-only" for="question">Question</label>
+        <textarea id="question" rows="1" maxlength="2000" placeholder="Ask a question…"></textarea>
+        <div class="composer-row">
+          <span class="composer-hint" id="composer-hint">Free tier is paced: expect 10–40 s per answer.</span>
+          <span class="counter mono" id="counter" aria-live="off">0 / 2000</span>
+          <button class="btn primary" type="submit" id="send"><span data-icon="send"></span>Send</button>
+        </div>
+      </form>
+    </main>
+
+    <aside class="inspector drawer drawer-right" id="inspector" aria-label="Trace inspector">
+      <div class="inspector-head">
+        <div>
+          <h2 class="label">Trace inspector</h2>
+          <p class="inspector-q" id="inspector-q">Select an answer to inspect it.</p>
+        </div>
+        <button class="icon-btn drawer-close" type="button" data-close="inspector" aria-label="Close inspector"><span data-icon="x"></span></button>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Trace sections" id="tabs">
+        <button role="tab" id="tab-sources" aria-controls="tabpanel" aria-selected="true" data-tab="sources">Sources</button>
+        <button role="tab" id="tab-timeline" aria-controls="tabpanel" aria-selected="false" tabindex="-1" data-tab="timeline">Timeline</button>
+        <button role="tab" id="tab-context" aria-controls="tabpanel" aria-selected="false" tabindex="-1" data-tab="context">Context</button>
+        <button role="tab" id="tab-tokens" aria-controls="tabpanel" aria-selected="false" tabindex="-1" data-tab="tokens">Tokens</button>
+        <button role="tab" id="tab-raw" aria-controls="tabpanel" aria-selected="false" tabindex="-1" data-tab="raw">Raw</button>
+      </div>
+      <div class="tabpanel" id="tabpanel" role="tabpanel" aria-labelledby="tab-sources" tabindex="0"></div>
+    </aside>
+  </div>
+  <div class="scrim" id="scrim" hidden></div>
+</body>
+</html>

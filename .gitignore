@@ -12,3 +12,7 @@ starter/results/
 
 # Rebuilt locally by scripts/build_index.py (not committed)
 vectorstore/
+results/ui/
+
+# Text extracted from your own PDFs by scripts/ingest_pdf.py (may be copyrighted; not committed)
+data/local_docs/

@@ -3,7 +3,7 @@
     search(query, top_k=5, method="dense"|"bm25"|"hybrid"|"hybrid_rerank"|"dense_rerank", **opts)
         -> list of {id, text, score, rank, source, page, metadata, method}
 
-opts: collection (soc3e_A/soc3e_B), chapter (int or None), infer_chapter (bool; filter derived
+opts: collection (soc3e_A/soc3e_B, or a local document collection from scripts/ingest_pdf.py), chapter (int or None), infer_chapter (bool; filter derived
 from the query text only), depth (candidates per retriever before fusion/rerank, default 20),
 rrf_k (60), demote_backmatter (push key_terms/summary/review_questions chunks below body chunks), fuse_depth (candidates sent to the reranker, default 20), reranker (cross-encoder name).
 Errors raise RetrievalError (empty query, store failure); there is no fake fallback.
@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import re
 import sys
+import unicodedata
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
@@ -41,8 +42,34 @@ def stem(w: str) -> str:
     return w
 
 
-def tokenize(text: str) -> list[str]:
+def tokenize(text: str, lang: str = "en") -> list[str]:
+    if lang == "vi":
+        return tokenize_vi(text)
+    if lang == "multi":
+        return tokenize_multi(text)
     return [stem(t) for t in re.findall(r"[a-z0-9]+", text.lower()) if t not in STOP]
+
+
+def tokenize_multi(text: str) -> list[str]:
+    """Mixed English + Vietnamese (the library collection): Unicode words; plain-ASCII words get the English stemmer,
+    words with Vietnamese letters are kept as is; plus adjacent-word pairs. Used for both chunks and queries."""
+    words = re.findall(r"\w+", unicodedata.normalize("NFC", text).lower())
+    stop = STOP | VI_STOP
+    return [stem(w) if w.isascii() else w for w in words if w not in stop] + \
+        [f"{a}_{b}" for a, b in zip(words, words[1:]) if a not in stop and b not in stop]
+
+
+# Vietnamese (local document collections with language "vi"): words are written as space-separated syllables,
+# so index each syllable plus each adjacent syllable pair ("ma trận" -> "ma", "trận", "ma_trận"). No stemming.
+# "không" is deliberately not a stopword: it is part of terms such as "không gian" (space).
+VI_STOP = set("""và của là các có được cho trong với một những thì ta này đó khi nếu để từ theo cũng như đã sẽ ra
+vào lại rằng hay hoặc mà nào gì sao thế bằng hãy""".split())
+
+
+def tokenize_vi(text: str) -> list[str]:
+    syl = re.findall(r"\w+", unicodedata.normalize("NFC", text).lower())
+    return [t for t in syl if t not in VI_STOP] + \
+        [f"{a}_{b}" for a, b in zip(syl, syl[1:]) if a not in VI_STOP and b not in VI_STOP]
 
 
 # --- query-only chapter inference -------------------------------------------------------------
@@ -79,11 +106,19 @@ _bm25_cache: dict = {}
 
 def _bm25(collection):
     key = d6.collection_name(collection)
-    if key not in _bm25_cache:
+    ver = d6.LD.version(key) if d6.LD.manifest(key) else None  # local collections: rebuilt when re-ingested
+    if key not in _bm25_cache or _bm25_cache[key][0] != ver:
         from rank_bm25 import BM25Okapi
         chunks = d6.load_chunks(key)
-        _bm25_cache[key] = (BM25Okapi([tokenize(c["text"]) for c in chunks]), chunks)
-    return _bm25_cache[key]
+        lang = collection_lang(key)
+        _bm25_cache[key] = (ver, BM25Okapi([tokenize(c["text"], lang) for c in chunks]), chunks)
+    return _bm25_cache[key][1:]
+
+
+def collection_lang(collection) -> str:
+    """Tokenizer language: a local document collection's manifest language, else English (textbook)."""
+    m = d6.LD.manifest(d6.collection_name(collection))
+    return (m or {}).get("language", "en")
 
 
 def _fmt(c: dict, score: float, rank: int, method: str) -> dict:
@@ -108,7 +143,7 @@ def _bm25_search(query, n, collection, chapter):
         bm, chunks = _bm25(collection)
     except Exception as e:
         raise RetrievalError(f"bm25 index failed: {type(e).__name__}: {e}") from e
-    toks = tokenize(query)
+    toks = tokenize(query, collection_lang(collection))
     if not toks:
         raise RetrievalError("query has no content tokens after stopword removal")
     scores = bm.get_scores(toks)

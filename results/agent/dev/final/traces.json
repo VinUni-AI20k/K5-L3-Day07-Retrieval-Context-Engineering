@@ -1,0 +1,465 @@
+[
+ {
+  "query_id": "d01",
+  "question": "What did Charles Cooley mean by the looking glass self?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "Charles Cooley asserted that the \"looking glass self\" is a process in which people's self-understanding is constructed, in part, by their perception of how others view them [B-soc3e-p0134-003].",
+  "citations": [
+   "B-soc3e-p0134-003"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.12,
+    "retries": 0,
+    "usage": {
+     "prompt": 704,
+     "output": 46,
+     "thoughts": 59,
+     "total": 809
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Charles Cooley looking glass self",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 5
+    },
+    "filter_reason": "Socialization topic, Charles Cooley is a socialization theorist.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0134-003",
+      "score": 7.8367,
+      "rank": 1,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0134-000",
+      "score": -10.9721,
+      "rank": 2,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0133-003",
+      "score": -11.0783,
+      "rank": 3,
+      "page": 133
+     },
+     {
+      "id": "B-soc3e-p0134-002",
+      "score": -11.1247,
+      "rank": 4,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0133-004",
+      "score": -11.1858,
+      "rank": 5,
+      "page": 133
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0134-003",
+     "B-soc3e-p0134-000",
+     "B-soc3e-p0133-003",
+     "B-soc3e-p0134-002",
+     "B-soc3e-p0133-004"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 15.277,
+    "context_chars_used": 4739
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 1.593,
+    "retries": 0,
+    "usage": {
+     "prompt": 2022,
+     "output": 138,
+     "thoughts": 211,
+     "total": 2371
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0134-003"
+    ],
+    "answer": "Charles Cooley asserted that the \"looking glass self\" is a process in which people's self-understanding is constructed, in part, by their perception of how others view them [B-soc3e-p0134-003].",
+    "evidence_quote": "He asserted that people’s self understanding is constructed, in part, by their perception of how others view them—a process termed “the looking glass self” (Cooley 1902)."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2726,
+   "output": 184,
+   "thoughts": 270,
+   "total": 3180
+  },
+  "latency_s": 18.01,
+  "context_ids": [
+   "B-soc3e-p0134-003",
+   "B-soc3e-p0134-000",
+   "B-soc3e-p0133-003",
+   "B-soc3e-p0134-002",
+   "B-soc3e-p0133-004"
+  ],
+  "context_chars": 4739,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0134-003",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": 7.83668327331543,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nOne of the pioneering contributors to sociological perspectives was Charles Cooley (1864–1929). He asserted that people’s self understanding is constructed, in part, by their perception of how others view them—a process termed “the looking glass self” (Cooley 1902).\nLater, George Herbert Mead (1863–1931) studied the self, a person’s distinct identity that is developed through social interaction. In order to engage in this process of “self,” an individual has to be able to view him or herself through the eyes of others. That’s not an ability that we are born with (Mead 1934). Through socialization we learn to put ourselves in someone else's shoes and look at the world through their perspective. This assists us in becoming self-aware, as we look at ourselves from the perspective of the \"other.\" The case of Danielle, for example, illustrates what happens when social interaction is absent from early experience: Danielle had no ability to see herself as others would see her. From Mead’s point of view, she had no “self.”"
+   },
+   {
+    "id": "B-soc3e-p0134-000",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -10.972082138061523,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nJean Piaget (1896–1980) was a psychologist who focused on the role of social interactions in child development. He recognized that the development of self evolved through a negotiation between the world as it exists in one’s mind and the world that exists as it is experienced socially (Piaget 1954). All three of these thinkers have contributed to our modern understanding of self-development.\nSociology or Psychology: What’s the Difference? You might be wondering: if sociologists and psychologists are both interested in people and their behavior, how are these two disciplines different? What do they agree on, and where do their ideas diverge? The answers are complicated, but the distinction is important to scholars in both fields."
+   },
+   {
+    "id": "B-soc3e-p0133-003",
+    "page": 133,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.078306198120117,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nLEARNING OBJECTIVES\nBy the end of this section, you should be able to:\n• Differentiate psychological and sociological theories of self-development • Explain the process of moral development\nWhen we are born, we have a genetic makeup and biological traits. However, who we are as human beings develops through social interaction. Many scholars, both in the fields of psychology and in sociology, have described the process of self-development as a precursor to understanding how that “self” becomes socialized.\nPsychological Perspectives on Self-Development\nPsychoanalyst Sigmund Freud (1856–1939) was one of the most influential modern scientists to put forth a theory about how people develop a sense of self. He divided the maturation process into stages, and posited that people’s self-development is closely linked to their early stages of development.\nAccording to Freud, failure to properly engage in or disengage from a specific stage results in emotional and psychological consequences throughout adulthood."
+   },
+   {
+    "id": "B-soc3e-p0134-002",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.124677658081055,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nÉmile Durkheim (1858–1917) was the first to make this distinction in research, when he attributed differences in suicide rates among people to social causes (religious differences) rather than to psychological causes (like their mental wellbeing) (Durkheim 1897). Today, we see this same distinction. For example, a sociologist studying how a couple gets to the point of their first kiss on a date might focus her research on cultural norms for dating, social patterns of sexual activity over time, or how this process is different for seniors than for teens. A psychologist would more likely be interested in the person’s earliest sexual awareness or the mental processing of sexual desire.\nSometimes sociologists and psychologists have collaborated to increase knowledge. In recent decades, however, their fields have become more clearly separated as sociologists increasingly focus on large societal issues and patterns, while psychologists remain honed in on the human mind. Both disciplines make valuable contributions through different approaches that provide us with different types of useful insights.\nSociological Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0133-004",
+    "page": 133,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.185762405395508,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nPsychologist Erik Erikson (1902–1994) created a theory of personality development based, in part, on the work of Freud. However, Erikson believed the personality continued to change over time and was never truly finished. His theory includes eight stages of development, beginning with birth and ending with death. According to Erikson, people move through these stages throughout their lives. In contrast to Freud’s focus on psychosexual stages and basic human urges, Erikson’s view of self-development gave credit to more social aspects, like the way we negotiate between our own base desires and what is socially accepted (Erikson 1982)."
+   }
+  ],
+  "config_name": "final",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d17",
+  "question": "According to Piaget, at what age do children reach the formal operational stage?",
+  "status": "abstain",
+  "reason": "model_abstain",
+  "answer": "There is not enough evidence in the provided chunks to determine the age at which children reach Piaget's formal operational stage.",
+  "citations": [],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 0.992,
+    "retries": 0,
+    "usage": {
+     "prompt": 708,
+     "output": 50,
+     "thoughts": 78,
+     "total": 836
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Piaget formal operational stage age children",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 5
+    },
+    "filter_reason": "Piaget's stages of cognitive development are typically covered in Chapter 5 (Socialization).",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0134-000",
+      "score": -4.9157,
+      "rank": 1,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0135-000",
+      "score": -9.8191,
+      "rank": 2,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0135-002",
+      "score": -9.9018,
+      "rank": 3,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0134-004",
+      "score": -10.9567,
+      "rank": 4,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0143-002",
+      "score": -11.1373,
+      "rank": 5,
+      "page": 143
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0134-000",
+     "B-soc3e-p0135-000",
+     "B-soc3e-p0135-002",
+     "B-soc3e-p0134-004",
+     "B-soc3e-p0143-002"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.419,
+    "context_chars_used": 4408
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 0.878,
+    "retries": 0,
+    "usage": {
+     "prompt": 1972,
+     "output": 19,
+     "thoughts": 45,
+     "total": 2036
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Piaget formal operational stage age",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": null,
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0134-000",
+      "score": -5.0371,
+      "rank": 1,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0135-002",
+      "score": -10.9206,
+      "rank": 2,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0143-002",
+      "score": -10.9977,
+      "rank": 3,
+      "page": 143
+     },
+     {
+      "id": "B-soc3e-p0135-000",
+      "score": -11.0927,
+      "rank": 4,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0173-001",
+      "score": -11.1973,
+      "rank": 5,
+      "page": 173
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0173-001"
+    ],
+    "duplicates": [
+     "B-soc3e-p0134-000",
+     "B-soc3e-p0135-002",
+     "B-soc3e-p0143-002",
+     "B-soc3e-p0135-000"
+    ],
+    "budget_dropped": [],
+    "latency_s": 0.858,
+    "context_chars_used": 5096
+   },
+   {
+    "event": "model_call",
+    "n": 3,
+    "latency_s": 1.41,
+    "retries": 0,
+    "usage": {
+     "prompt": 2285,
+     "output": 52,
+     "thoughts": 37,
+     "total": 2374
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": true,
+    "citations": [],
+    "answer": "There is not enough evidence in the provided chunks to determine the age at which children reach Piaget's formal operational stage.",
+    "evidence_quote": ""
+   },
+   {
+    "event": "abstain",
+    "reason": "model_abstain"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 2,
+  "llm_calls": 3,
+  "tokens": {
+   "prompt": 4965,
+   "output": 121,
+   "thoughts": 160,
+   "total": 5246
+  },
+  "latency_s": 22.796,
+  "context_ids": [
+   "B-soc3e-p0134-000",
+   "B-soc3e-p0135-000",
+   "B-soc3e-p0135-002",
+   "B-soc3e-p0134-004",
+   "B-soc3e-p0143-002",
+   "B-soc3e-p0173-001"
+  ],
+  "context_chars": 5096,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0134-000",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -4.91565465927124,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nJean Piaget (1896–1980) was a psychologist who focused on the role of social interactions in child development. He recognized that the development of self evolved through a negotiation between the world as it exists in one’s mind and the world that exists as it is experienced socially (Piaget 1954). All three of these thinkers have contributed to our modern understanding of self-development.\nSociology or Psychology: What’s the Difference? You might be wondering: if sociologists and psychologists are both interested in people and their behavior, how are these two disciplines different? What do they agree on, and where do their ideas diverge? The answers are complicated, but the distinction is important to scholars in both fields."
+   },
+   {
+    "id": "B-soc3e-p0135-000",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -9.819122314453125,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nacting out “grownup” behavior, like playing dress-up and acting out the “mom” role, or talking on a toy telephone the way they see adults do.\nDuring the game stage, children learn to consider several roles at the same time and how those roles interact with each other. They learn to understand interactions involving different people with a variety of purposes. For example, a child at this stage is likely to be aware of the different responsibilities of people in a restaurant who together make for a smooth dining experience (someone seats you, another takes your order, someone else cooks the food, while yet another clears away dirty dishes).\nFinally, children develop, understand, and learn the idea of the generalized other, the common behavioral expectations of general society. By this stage of development, an individual is able to imagine how he or she is viewed by one or many others—and thus, from a sociological perspective, to have a “self” (Mead 1934; Mead 1964).\nKohlberg’s Theory of Moral Development"
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -9.901779174804688,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nIn the preconventional stage, young children, who lack a higher level of cognitive ability, experience the world around them only through their senses. It isn’t until the teen years that the conventional theory develops, when youngsters become increasingly aware of others’ feelings and take those into consideration when determining what’s “good” and “bad.” The final stage, called postconventional, is when people begin to think of morality in abstract terms, such as Americans believing that everyone has the right to life, liberty, and the pursuit of happiness. At this stage, people also recognize that legality and morality do not always match up evenly (Kohlberg 1981). When hundreds of thousands of Egyptians turned out in 2011 to protest government corruption, they were using postconventional morality. They understood that although their government was legal, it was not morally correct.\nGilligan’s Theory of Moral Development and Gender"
+   },
+   {
+    "id": "B-soc3e-p0134-004",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -10.956713676452637,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nHow do we go from being newborns to being humans with “selves?” Mead believed that there is a specific path of development that all people go through. During the preparatory stage, children are only capable of imitation: they have no ability to imagine how others see things. They copy the actions of people with whom they regularly interact, such as their caregivers. This is followed by the play stage, during which children begin to take on the role that one other person might have. Thus, children might try on a parent’s point of view by\nSOCIOLOGICAL RESEARCH"
+   },
+   {
+    "id": "B-soc3e-p0143-002",
+    "page": 143,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": -11.137271881103516,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nDifferent jobs require different types of socialization. In the past, many people worked a single job until retirement. Today, the trend is to switch jobs at least once a decade. Between the ages of eighteen and forty-six, the average Baby Boomer of the younger set held 11.3 different jobs (U.S. Bureau of Labor Statistics, 2014). This means that people must become socialized to, and socialized by, a variety of work environments.\nReligion\nWhile some religions are informal institutions, here we focus on practices followed by formal institutions. Religion is an important avenue of socialization for many people. The United States is full of synagogues, temples, churches, mosques, and similar religious communities where people gather to worship and learn. Like other institutions, these places teach participants how to interact with the religion’s material culture (like a mezuzah, a prayer rug, or a communion wafer). For some people, important ceremonies related to family"
+   },
+   {
+    "id": "B-soc3e-p0173-001",
+    "page": 173,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -11.197299003601074,
+    "rank": 5,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nThere are several positive aspects of bureaucracies. They are intended to improve efficiency, ensure equal opportunities, and serve a large population. And there are times when rigid hierarchies are needed. But remember that many of our bureaucracies grew large at the same time that our school model was developed––during the Industrial Revolution. Young workers were trained, and organizations were built for mass production, assembly line work, and factory jobs. In these scenarios, a clear chain of command was critical. Now, in the information age, this kind of rigid training and adherence to protocol can actually decrease both productivity and efficiency."
+   }
+  ],
+  "config_name": "final",
+  "model": "gemini-3.5-flash-lite"
+ }
+]

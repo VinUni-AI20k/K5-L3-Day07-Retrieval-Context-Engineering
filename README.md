@@ -31,3 +31,43 @@ Index một tài liệu thực tế từ **100 trang** có bảng, ảnh và bi�
 ![Các bước thử nghiệm trên dev và đánh giá trên test](assets/experiment-loop.svg)
 
 Nộp code, cách chạy, cấu hình, benchmark, trace và [báo cáo](report/individual/MSSV_HoTen.md). Thời gian ở [checkpoints](CHECKPOINTS.md) là gợi ý, có thể điều chỉnh theo lớp và phạm vi thử nghiệm.
+
+## Test UI
+
+A local web page to try the agent: answer with clickable citations, status, source chunks, a tool-call timeline,
+the final context, and tokens/latency. Python stdlib server plus plain HTML/CSS/JS, so it needs nothing beyond `requirements.txt`.
+
+```powershell
+.venv\Scripts\python app\server.py            # options: --port 8000  --no-warm
+```
+
+Open http://localhost:8000. Needs `.env` with `GEMINI_API_KEY` and the vector store (`python scripts/build_index.py`).
+The server binds to 127.0.0.1 only and uses the same code path as `scripts/run_agent.py` (`src.agent.run_query`).
+Each interaction trace is saved to `results/ui/<timestamp>.json` (git-ignored). Sample questions come from `benchmark/questions.json`
+(textbook configs) or from the `examples` of your own document (below).
+
+### Your own PDFs and the "All documents" library
+
+Text PDFs (no OCR) can be added next to the textbook; the benchmark, `configs/final.json` and the `soc3e_B` index are
+not touched.
+
+```powershell
+.venv\Scripts\python scripts\ingest_pdf.py C:\path\Dai-So.pdf --name dai_so --title "Đại số tuyến tính" --lang vi --math --skip-pages 1-5
+# preview chunking without the model or the store:  ... --dry-run chunks_preview.json
+```
+
+This extracts text per page (with a fix for VnTeX PDFs whose copied accents are wrong), removes running headers and page
+numbers, chunks by chapter/§ section (~1000 chars, 150 overlap), embeds with `intfloat/multilingual-e5-small` into the
+Chroma collection `dai_so`, then rebuilds the **library** (`scripts/build_library.py`). Extracted text goes to
+`data/local_docs/` (git-ignored).
+
+The library is one Chroma collection (`library`, cosine) holding every document: the textbook chunks plus all ingested
+PDFs, embedded with the same multilingual model, and one BM25 index over the same chunks. The UI's default search mode
+**All documents** uses it: each question runs one hybrid search (cosine similarity + BM25, fused with RRF) over
+everything, so the search, not a config, decides which document the answer comes from. The agent's prompt does not
+name the documents and its search tool has no document or chapter filter; each retrieved chunk shows its document.
+The benchmark configs (`final`, `base`, ...) are still listed under "Benchmark configs" and search their one collection.
+
+Vietnamese text uses a syllable + syllable-pair BM25 tokenizer (the library uses a mixed English/Vietnamese one);
+`--math` tells the agent that formulas were flattened by PDF extraction (`A−1` = A⁻¹, matrices as rows of numbers).
+Sample questions for the UI: `"examples": [{"question": "..."}]` in `data/local_docs/<name>/collection.json`.
