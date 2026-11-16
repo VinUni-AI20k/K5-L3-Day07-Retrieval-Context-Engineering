@@ -39,7 +39,11 @@ def aggregate(cases, traces, reviews):
         if not isinstance(support, list) or len(support) != len(citations) or any(type(v) is not bool for v in support):
             raise ValueError(f'{cid}: cần một nhãn boolean cho mỗi citation')
         out['tool_use']['N'] += 1
-        out['tool_use']['n'] += any(e.get('event') == 'search' for e in events)
+        out['tool_use']['n'] += any(
+            e.get('event') == 'search'
+            or (e.get('event') == 'tool_call' and e.get('tool') == 'search')
+            for e in events
+        )
         out['citation_validity']['n'] += sum(support)
         out['citation_validity']['N'] += len(citations)
         if t['status'] == 'answered':
