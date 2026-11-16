@@ -9,3 +9,6 @@ __pycache__/
 # Local datasets and generated output; share permitted artifacts deliberately
 starter/data/
 starter/results/
+
+# Rebuilt locally by scripts/build_index.py (not committed)
+vectorstore/

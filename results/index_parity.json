@@ -1,0 +1,26 @@
+{
+  "model": "BAAI/bge-small-en-v1.5",
+  "revision": "5c38ec7c405ec4b44b94cc5a9bb96e735b38267a",
+  "collection": "soc3e_B",
+  "count_day6": 241,
+  "count_day7": 241,
+  "ids_equal": true,
+  "collection_metadata_day6": {
+    "hnsw:space": "cosine"
+  },
+  "collection_metadata_day7": {
+    "hnsw:space": "cosine"
+  },
+  "documents_equal": true,
+  "metadata_equal": true,
+  "embedding_max_abs_diff": 0.0,
+  "embedding_min_cosine": 0.9999999999999998,
+  "queries": {
+    "n": 30,
+    "top10_identical_order": 30,
+    "top10_same_set": 30,
+    "max_abs_score_diff_when_identical": 0.0,
+    "differences": []
+  },
+  "passed": true
+}
