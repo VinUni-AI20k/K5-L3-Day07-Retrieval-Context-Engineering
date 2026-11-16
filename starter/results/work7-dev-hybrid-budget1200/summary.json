@@ -1,0 +1,17 @@
+{
+  "strategy": "hybrid_rrf",
+  "split": "dev",
+  "n": 18,
+  "questions_total": 20,
+  "unanswerable_n": 2,
+  "hit1": 5,
+  "hit3": 11,
+  "context_hit": 5,
+  "avg_context_chars": 817.2,
+  "budget_chars": 1200,
+  "median_ms": 1132.233649987029,
+  "index_seconds": 0.2689237000304274,
+  "embedding_requests": 20,
+  "embedding_tokens": 889,
+  "service_cost_usd": null
+}
