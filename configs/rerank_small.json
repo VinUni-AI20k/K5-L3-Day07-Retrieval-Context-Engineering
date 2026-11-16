@@ -1,0 +1,1 @@
+{"prompt_version":"v1","model":"gemini-3.5-flash-lite","method":"hybrid_rerank","collection":"soc3e_B","top_k":5,"depth":30,"fuse_depth":30,"rrf_k":60,"demote_backmatter":true,"max_tool_calls":3,"context_budget_chars":3000,"neighbors":false,"allow_chapter_filter":true}
