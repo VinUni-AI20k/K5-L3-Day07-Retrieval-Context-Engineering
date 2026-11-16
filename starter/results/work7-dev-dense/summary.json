@@ -1,0 +1,16 @@
+{
+  "strategy": "dense_day6",
+  "split": "dev",
+  "n": 18,
+  "questions_total": 20,
+  "unanswerable_n": 2,
+  "hit1": 4,
+  "hit3": 10,
+  "context_hit": 6,
+  "avg_context_chars": 534.2,
+  "median_ms": 1158.170449984027,
+  "index_seconds": 0.32726170000387356,
+  "embedding_requests": 20,
+  "embedding_tokens": 889,
+  "service_cost_usd": null
+}
