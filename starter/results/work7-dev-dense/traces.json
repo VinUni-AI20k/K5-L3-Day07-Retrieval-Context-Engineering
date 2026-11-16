@@ -1,0 +1,1821 @@
+[
+  {
+    "query_id": "D01",
+    "split": "dev",
+    "question": "Theo ví dụ trong tài liệu, đặt nhân tử chung ra ngoài biểu thức mx + my - mz thì được kết quả nào?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u001",
+        "evidence": "mx + my - mz = m(x + y - z)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "7f6b9011b8a13ff4ff427537",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u001",
+        "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+        "text": "2. Square of the difference of two quantities.\n(x - y)^2.\n\n3. Product of the sum and difference of two quantities.\n(s + t)(s - t).\n\n4. Product of two binomials having a common term.\n(x + r)(x + m).\n\n5. Product of two binomials whose corresponding terms are similar.\n(3x + 2t)(2x - 5t).\n\n6. Square of a polynomial.\n(m - n/3 + k)^2.\n\n7. Sum of two cubes.\n(x^3 + y^3)/(x + y) = x^2 - xy + y^2.\n\n8. Difference of two cubes.\n(x^3 - y^3)/(x - y) = x^2 + xy + y^2.\n\n9. Sum or difference of two like powers.\n(x^7 + y^7)/(x + y),\n(x^5 - y^5)/(x - y),\n(x^4 - y^4)/(x - y),\n(x^4 - y^4)/(x + y).\n\n~Cases in Factoring~\n\n1. Common monomial factor.\nmx + my - mz = m(x + y - z).",
+        "metadata": {
+          "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+          "char_end": 1553,
+          "char_start": 891,
+          "source_end_line": 256,
+          "source_start_line": 202
+        },
+        "score": 0.34949361591947703,
+        "id": "7f6b9011b8a13ff4ff427537",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      },
+      {
+        "chunk_id": "57c253d65ab3fd51d5ed35b6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u026",
+        "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+        "text": "CASE II.\n\nBoth equations homogeneous and of the second degree.\nx^2 - xy + y^2 = 39,\n2x^2 - 3xy + 2y^2 = 43.\n\nMETHOD: Let y = vx, and substitute in both equations.\n\nALTERNATE METHOD: Solve for x in terms of y in one equation and substitute in the other.\n\nCASE III.\n\nAny two of the quantities\nx + y\nx^2 + y^2\nxy\nx - y\nx^3 + y^3\nx^3 - y^3\nx^2 + xy + y^2\nx^2 - xy + y^2\ngiven.\n\nx + y = 5,\nx^2 - xy + y^2 = 7.\n\nMETHOD: Solve for x + y and x - y; then add to get x, subtract\nto get y.\n\nCASE IV.\n\nBoth equations symmetrical or symmetrical except for sign.\nUsually one equation of high degree, the other of the first\ndegree.\nx^5 + y^5 = 242,\nx + y = 2.\n\nMETHOD: Let x = u + v and y = u - v, and substitute in both\nequations.\n\n~Special Devices~",
+        "metadata": {
+          "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+          "char_end": 735,
+          "char_start": 0,
+          "source_end_line": 2028,
+          "source_start_line": 1933
+        },
+        "score": 0.3250749387214046,
+        "id": "57c253d65ab3fd51d5ed35b6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "b261479c1ac0a8861a0b5b54",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u008",
+        "section": "FACTORING",
+        "text": "4. m^2 + n^2 - (1 + 2mn).\n\n5. -x^2 + 2x - 1 + x^4.\n\n6. x^(16) - y^(16).  (Five factors.)\n\n7. (x + 1)^2 - 5x - 29.\n\n8. x^4 + x^2 y^2 + y^4.\n\n9. x^4 - 11x^2 + 1.\n\n10. x^(2m) + 2 + 1/(x^(2m)).\n\n11. x^(6m) + 13x^(3m) + 12.\n\n12. 4a^2 b^2 - (a^2 + b^2 - c^2)^2.\n\n13. (x^2 - x - 6)(x^2 - x - 20).\n\n14. a^4 - 8a - a^3 + 8.\n\n15. p^3 + 7p^2 + 14p + 8.\n\n16. 18a^2 b + 60ab^2 + 50b^3.\n\n17. x^3 - 7x + 6.\n\n18. 24c^2 d^2 - 47cd - 75.\n\n19. (a^2 - b^2)^2 - (a^2 - ab)^2.\n\n20. a^2 x^3 - (8a^2)/(y^3) - x^3 + 8/(y^3).\n\n21. gt - gk + gl^2 + xt - xk + xl^2.\n\n22. (m - n)(2a^2 - 2ab) + (n - m)(2ab - 2b^2).\n\n23. a^2 - x^2 - y^2 + b^2 + 2ab + 2xy.\n\n24. (2c^2 + 3d^2)a + (2a^2 + 3c^2)d.\n\n25. (n(n - 1))/(1 . 2) a^(n - 2) b^2\n+ (n(n - 1)(n - 2))/(1 . 2 . 3) a^(n - 3) b^3.\n\n26. (x - x^2)^3 + (x^2 - 1)^3 + (1 - x)^3.            (_M. I. T._)\n\n27. (27y^3)^2 - 2(27y^3)(8b^3) + (8b^3)^2.          (_Princeton._)",
+        "metadata": {
+          "section": "FACTORING",
+          "char_end": 884,
+          "char_start": 0,
+          "source_end_line": 794,
+          "source_start_line": 709
+        },
+        "score": 0.3235456862345615,
+        "id": "b261479c1ac0a8861a0b5b54",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[7f6b9011b8a13ff4ff427537 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u001]\n2. Square of the difference of two quantities.\n(x - y)^2.\n\n3. Product of the sum and difference of two quantities.\n(s + t)(s - t).\n\n4. Product of two binomials having a common term.\n(x + r)(x + m).\n\n5. Product of two binomials whose corresponding terms are similar.\n(3x + 2t)(2x - 5t).\n\n6. Square of a polynomial.\n(m - n/3 + k)^2.\n\n7. Sum of two cubes.\n(x^3 + y^3)/(x + y) = x^2 - xy + y^2.\n\n8. Difference of two cubes.\n(x^3 - y^3)/(x - y) = x^2 + xy + y^2.\n\n9. Sum or difference of two like powers.\n(x^7 + y^7)/(x + y),\n(x^5 - y^5)/(x - y),\n(x^4 - y^4)/(x - y),\n(x^4 - y^4)/(x + y).\n\n~Cases in Factoring~\n\n1. Common monomial factor.\nmx + my - mz = m(x + y - z).",
+    "context_ids": [
+      "7f6b9011b8a13ff4ff427537"
+    ],
+    "context_chars": 768,
+    "elapsed_ms": 1752.3337000166066,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "D02",
+    "split": "dev",
+    "question": "Tài liệu phân tích hiệu hai bình phương x^2 - y^2 thành tích nào?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "x^2 - y^2 = (x + y)(x - y)."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u007",
+        "evidence": "x^2 - y^2 = (x + y)(x - y)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "57c253d65ab3fd51d5ed35b6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u026",
+        "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+        "text": "CASE II.\n\nBoth equations homogeneous and of the second degree.\nx^2 - xy + y^2 = 39,\n2x^2 - 3xy + 2y^2 = 43.\n\nMETHOD: Let y = vx, and substitute in both equations.\n\nALTERNATE METHOD: Solve for x in terms of y in one equation and substitute in the other.\n\nCASE III.\n\nAny two of the quantities\nx + y\nx^2 + y^2\nxy\nx - y\nx^3 + y^3\nx^3 - y^3\nx^2 + xy + y^2\nx^2 - xy + y^2\ngiven.\n\nx + y = 5,\nx^2 - xy + y^2 = 7.\n\nMETHOD: Solve for x + y and x - y; then add to get x, subtract\nto get y.\n\nCASE IV.\n\nBoth equations symmetrical or symmetrical except for sign.\nUsually one equation of high degree, the other of the first\ndegree.\nx^5 + y^5 = 242,\nx + y = 2.\n\nMETHOD: Let x = u + v and y = u - v, and substitute in both\nequations.\n\n~Special Devices~",
+        "metadata": {
+          "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+          "char_end": 735,
+          "char_start": 0,
+          "source_end_line": 2028,
+          "source_start_line": 1933
+        },
+        "score": 0.4298248751243875,
+        "id": "57c253d65ab3fd51d5ed35b6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "f651a6e189fa0cd7887ce635",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u007",
+        "section": "CASES IN FACTORING",
+        "text": "CASE III. The difference of two squares.\n\n_A._ Two terms. x^2 - y^2 = (x + y)(x - y).\n\n_B._ Four terms.\n\nx^2 + 2xy + y^2 - m^2 = (x^2 + 2xy + y^2) - m^2\n= (x + y + m)(x + y - m)\n\n_C._ Six terms. x^2 - 2xy + y^2 - m^2 - 2mn - n^2\n= (x^2 - 2xy + y^2) - (m^2 + 2mn + n^2)\n= (x - y)^2 - (m + n)^2\n= [(x - y) + (m + n)][(x - y) - (m + n)].\n\n_D._ An incomplete square. Three terms, and\n4th powers or multiples of 4.\n\nc^4 + c^2 d^2 + d^4 = c^4 + 2c^2 d^2 + d^4 - c^2 d^2\n= (c^2 + d^2)^2 - c^2 d^2\n= (c^2 + d^2 + cd)(c^2 + d^2 - cd).\n\nCASE IV. A trinomial of the form x^2 + bx + c. Three terms.\n\nx^2 + x - 30 = (x + 6)(x - 5).\n\nCASE V. A trinomial of the form ax^2 + bx + c. Three terms.\n\n20x^2 + 7x - 6 = (4x + 3)(5x - 2).\n\nCASE VI.\n\n_A._ The sum or difference of two cubes. Two terms.\n\nx^3 + y^3 = (x + y)(x^2 - xy + y^2);\nx^3 - y^3 = (x - y)(x^2 + xy + y^2).",
+        "metadata": {
+          "section": "CASES IN FACTORING",
+          "char_end": 853,
+          "char_start": 0,
+          "source_end_line": 707,
+          "source_start_line": 641
+        },
+        "score": 0.4135594105608056,
+        "id": "f651a6e189fa0cd7887ce635",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      },
+      {
+        "chunk_id": "1d7e63da6699a3740b9f977d",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u026",
+        "section": "SIMULTANEOUS QUADRATICS",
+        "text": "SIMULTANEOUS QUADRATICS\n\nSolve:\n\n1. x + y = 7,\nx^2 + 4xy = 57.\n\n2. 2x^2 = 46 + y^2,\nxy + y^2 = 14.\n\n3. x^2 + y^2 = 25,\nx + y = 1.\n\n4. x^4 + y^4 = 2,\nx - y = 2.\n\n5. x^3 + y^3 = 28,\nx + y = 4.\n\n6. x^2 y^2 + xy - 12 = 0,\nx + y = 4.\n\n7. 2xy - x + 2y = 16,\n3xy + 2x - 4y = 10.\n\n8. (3x - 2y)(2x - 3y) = 26,\nx + 1 = 2y.\n\n9. 4x^2 + 3xy + 2y^2 = 18,\n3x^2 + 2xy - y^2 = 3.",
+        "metadata": {
+          "section": "SIMULTANEOUS QUADRATICS",
+          "char_end": 1548,
+          "char_start": 1186,
+          "source_end_line": 2028,
+          "source_start_line": 1933
+        },
+        "score": 0.41010675407282005,
+        "id": "1d7e63da6699a3740b9f977d",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[1d7e63da6699a3740b9f977d | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u026]\nSIMULTANEOUS QUADRATICS\n\nSolve:\n\n1. x + y = 7,\nx^2 + 4xy = 57.\n\n2. 2x^2 = 46 + y^2,\nxy + y^2 = 14.\n\n3. x^2 + y^2 = 25,\nx + y = 1.\n\n4. x^4 + y^4 = 2,\nx - y = 2.\n\n5. x^3 + y^3 = 28,\nx + y = 4.\n\n6. x^2 y^2 + xy - 12 = 0,\nx + y = 4.\n\n7. 2xy - x + 2y = 16,\n3xy + 2x - 4y = 10.\n\n8. (3x - 2y)(2x - 3y) = 26,\nx + 1 = 2y.\n\n9. 4x^2 + 3xy + 2y^2 = 18,\n3x^2 + 2xy - y^2 = 3.",
+    "context_ids": [
+      "1d7e63da6699a3740b9f977d"
+    ],
+    "context_chars": 468,
+    "elapsed_ms": 1219.5311000104994,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "D03",
+    "split": "dev",
+    "question": "Theo ví dụ về tam thức dạng x^2 + bx + c, x^2 - 5x + 6 được phân tích thành gì?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "x^2 - 5x + 6 = (x - 2)(x - 3)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "9f0424856b49f03b5470a338",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u009",
+        "section": "HIGHEST COMMON FACTOR AND LOWEST COMMON MULTIPLE",
+        "text": "5. x^5 - 2x^4 + x^2,\n2x^4 - 4x^3 - 4x + 6.                                 (_Yale._)\n\n6. x^2 + a^2 - b^2 + 2ax,\nx^2 - a^2 + b^2 + 2bx,\nx^2 - a^2 - b^2 - 2ab.                             (_Harvard._)\n\n7. 2x^2 - x - 15,\n3x^2 - 11x + 6,\n2x^3 - x^2 - 13x - 6.               (_College Entrance Board._)\n\n8. (tv - v^2)^3,\nv^3 - t^2v,\nt^3 - v^3,\nv^2 - 2vt + t^2.\n\nPick out the H. C. F. and the L. C. M. of the following:\n\n9. 8(x^2 + y)^(32) (t^2 + z)^(19) (m - n^3)^(14),\n12(x^2 + y)^(23) (t^2 + z)^(41) (m - n^3)^(17),\n18(m - n^3)^(11) (x^2 + y)^(39) (t^2 + z)^(37).\n\n10. 17ax^3 (y + z)^(10) (y - x)^(19) (x + z)^(27),\n34a^2 x^4 (y + z)^(11) (y - x)^(21) (x + z)^(13),\n51a^3 x^5 (y + z)^4 (x + z)^(32) (y - x)^(29).\n\n~Reference:~ The chapter on H. C. F. and L. C. M. in any algebra.",
+        "metadata": {
+          "section": "HIGHEST COMMON FACTOR AND LOWEST COMMON MULTIPLE",
+          "char_end": 776,
+          "char_start": 0,
+          "source_end_line": 866,
+          "source_start_line": 796
+        },
+        "score": 0.4786891640057148,
+        "id": "9f0424856b49f03b5470a338",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "1131ae7eb942d4f6f9e8186e",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u040",
+        "section": "ELEMENTARY ALGEBRA",
+        "text": "7. Solve the equations { bx - ay = b^2 - ab,\n{ y - b = 2(x - 2a).\n\n8. Solve (2x + 1)(3x - 2) - (5x - 7)(x - 2) = 41.",
+        "metadata": {
+          "section": "ELEMENTARY ALGEBRA",
+          "char_end": 116,
+          "char_start": 0,
+          "source_end_line": 2739,
+          "source_start_line": 2672
+        },
+        "score": 0.4731653895008041,
+        "id": "1131ae7eb942d4f6f9e8186e",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "f651a6e189fa0cd7887ce635",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u007",
+        "section": "CASES IN FACTORING",
+        "text": "CASE III. The difference of two squares.\n\n_A._ Two terms. x^2 - y^2 = (x + y)(x - y).\n\n_B._ Four terms.\n\nx^2 + 2xy + y^2 - m^2 = (x^2 + 2xy + y^2) - m^2\n= (x + y + m)(x + y - m)\n\n_C._ Six terms. x^2 - 2xy + y^2 - m^2 - 2mn - n^2\n= (x^2 - 2xy + y^2) - (m^2 + 2mn + n^2)\n= (x - y)^2 - (m + n)^2\n= [(x - y) + (m + n)][(x - y) - (m + n)].\n\n_D._ An incomplete square. Three terms, and\n4th powers or multiples of 4.\n\nc^4 + c^2 d^2 + d^4 = c^4 + 2c^2 d^2 + d^4 - c^2 d^2\n= (c^2 + d^2)^2 - c^2 d^2\n= (c^2 + d^2 + cd)(c^2 + d^2 - cd).\n\nCASE IV. A trinomial of the form x^2 + bx + c. Three terms.\n\nx^2 + x - 30 = (x + 6)(x - 5).\n\nCASE V. A trinomial of the form ax^2 + bx + c. Three terms.\n\n20x^2 + 7x - 6 = (4x + 3)(5x - 2).\n\nCASE VI.\n\n_A._ The sum or difference of two cubes. Two terms.\n\nx^3 + y^3 = (x + y)(x^2 - xy + y^2);\nx^3 - y^3 = (x - y)(x^2 + xy + y^2).",
+        "metadata": {
+          "section": "CASES IN FACTORING",
+          "char_end": 853,
+          "char_start": 0,
+          "source_end_line": 707,
+          "source_start_line": 641
+        },
+        "score": 0.47272825784983974,
+        "id": "f651a6e189fa0cd7887ce635",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[1131ae7eb942d4f6f9e8186e | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u040]\n7. Solve the equations { bx - ay = b^2 - ab,\n{ y - b = 2(x - 2a).\n\n8. Solve (2x + 1)(3x - 2) - (5x - 7)(x - 2) = 41.",
+    "context_ids": [
+      "1131ae7eb942d4f6f9e8186e"
+    ],
+    "context_chars": 222,
+    "elapsed_ms": 1220.825100026559,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "D04",
+    "split": "dev",
+    "question": "Kết quả phân tích được nêu cho x^3 + 17x - 18 theo Factor Theorem là gì?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "x^3 + 17x - 18 = (x - 1)(x^2 + x + 18)."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u007",
+        "evidence": "x^3 + 17x - 18 = (x - 1)(x^2 + x + 18)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "b86fe258c5ff3b37e978c5ae",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u007",
+        "section": "CASES IN FACTORING",
+        "text": "_B._ The sum or difference of two like powers. Two terms.\n\nx^4 - y^4 = (x - y)(x^3 + x^2y + xy^2 + y^3);\nx^5 + y^5 = (x + y)(x^4 - x^3y + x^2 y^2 - xy^3 + y^4).\n\nCASE VII. A common polynomial factor. Any _composite_ number of terms.\n\nt^2 p + t^2 q - t^2 r - g^2 p - g^2 q + g^2 r\n= t^2 (p + q - r) - g^2 (p + q -r)\n= (p + q - r)(t^2 - g^2)\n= (p + q - r)(t + g)(t - g).\n\nCASE VIII. The Factor Theorem. Any number of terms.\n\nx^3 + 17x - 18 = (x - 1)(x^2 + x + 18).",
+        "metadata": {
+          "section": "CASES IN FACTORING",
+          "char_end": 1317,
+          "char_start": 855,
+          "source_end_line": 707,
+          "source_start_line": 641
+        },
+        "score": 0.43299252774050756,
+        "id": "b86fe258c5ff3b37e978c5ae",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      },
+      {
+        "chunk_id": "d428078d433c71582e0e1e6a",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u007",
+        "section": "FACTORING",
+        "text": "FACTORING\n\nReview the _Cases in Factoring_ (see Outline on preceding pages) and\nwrite out the prime factors of the following:\n\n1. 8a^(13) + am^(12).\n\n2. x^7 + y^7.\n\n3. 4x^2 + 11x - 3.",
+        "metadata": {
+          "section": "FACTORING",
+          "char_end": 1502,
+          "char_start": 1319,
+          "source_end_line": 707,
+          "source_start_line": 641
+        },
+        "score": 0.4270735783018995,
+        "id": "d428078d433c71582e0e1e6a",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "d35b0cc087b27eda7497091e",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u008",
+        "section": "FACTORING",
+        "text": "28. (a^3 + 8b^3)(a + b) - 6ab(a^2 - 2ab + 4b^2).      (_M. I. T._)\n\nSolve by factoring:\n\n29. x^3 = x.\n\n30. z^2 - 4z - 45 = 0.\n\n31. x^3 - x^2 = 4x - 4.\n\n~Reference:~ The chapter on Factoring in any algebra.",
+        "metadata": {
+          "section": "FACTORING",
+          "char_end": 1091,
+          "char_start": 886,
+          "source_end_line": 794,
+          "source_start_line": 709
+        },
+        "score": 0.4158442431888789,
+        "id": "d35b0cc087b27eda7497091e",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[b86fe258c5ff3b37e978c5ae | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u007]\n_B._ The sum or difference of two like powers. Two terms.\n\nx^4 - y^4 = (x - y)(x^3 + x^2y + xy^2 + y^3);\nx^5 + y^5 = (x + y)(x^4 - x^3y + x^2 y^2 - xy^3 + y^4).\n\nCASE VII. A common polynomial factor. Any _composite_ number of terms.\n\nt^2 p + t^2 q - t^2 r - g^2 p - g^2 q + g^2 r\n= t^2 (p + q - r) - g^2 (p + q -r)\n= (p + q - r)(t^2 - g^2)\n= (p + q - r)(t + g)(t - g).\n\nCASE VIII. The Factor Theorem. Any number of terms.\n\nx^3 + 17x - 18 = (x - 1)(x^2 + x + 18).",
+    "context_ids": [
+      "b86fe258c5ff3b37e978c5ae"
+    ],
+    "context_chars": 568,
+    "elapsed_ms": 1155.2674999693409,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "D05",
+    "split": "dev",
+    "question": "Tài liệu liệt kê những phương pháp nào để giải hệ phương trình đồng thời?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "Solved by\naddition or subtraction.\nsubstitution.\ncomparison."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "7796001a28e79c82c3d76381",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u012",
+        "section": "SIMULTANEOUS EQUATIONS AND INVOLUTION",
+        "text": "SIMULTANEOUS EQUATIONS AND INVOLUTION\n\n1. Solve    (3/4)x - (5/3)y = 11-1/2,\n(5/8)x - (3/2)y = 10-1/4.\n\nLook up the method of solving when the unknowns are in the\ndenominator. Should you clear of fractions?\n\n2. Solve    1/x - 1/y - 1/z = 1/a,\n1/y - 1/z - 1/x = 1/b,\n1/z - 1/x - 1/y = 1/c.\n\n3. Solve graphically and algebraically\n2x - y = 4,\n2x + 3y = 12.\n\n4. Solve graphically and algebraically\n3x + 7y = 5,\n8x + 3y = -18.\n\nReview:\n\n5. The squares of the numbers from 1 to 25.\n\n6. The cubes of the numbers from 1 to 12.",
+        "metadata": {
+          "section": "SIMULTANEOUS EQUATIONS AND INVOLUTION",
+          "char_end": 1539,
+          "char_start": 1020,
+          "source_end_line": 1052,
+          "source_start_line": 988
+        },
+        "score": 0.3249235585442296,
+        "id": "7796001a28e79c82c3d76381",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "ba208f9a0e96ea5f8ff88aa2",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u054",
+        "section": "ALGEBRA A",
+        "text": "5. Solve the simultaneous equations\n{ x^(-1/2) + 2y^(-1/2) = 7/6,\n{ 2x^(-1/2) - y^(-1/2) = 2/3.\n\n_Group III_\n\n6. Two numbers are in the ratio of c : d. If a be added to the first\nand subtracted from the second, the results will be in the ratio\nof 3 : 2. Find the numbers.\n\n7. A dealer has two kinds of coffee, worth 30 and 40 cents per pound.\nHow many pounds of each must be taken to make a mixture of 70\npounds, worth 36 cents per pound?\n\n8. A, B, and C can do a piece of work in 30 hours. A can do half as\nmuch again as B, and B two thirds as much again as C. How long\nwould each require to do the work alone?",
+        "metadata": {
+          "section": "ALGEBRA A",
+          "char_end": 611,
+          "char_start": 0,
+          "source_end_line": 3602,
+          "source_start_line": 3529
+        },
+        "score": 0.3193607614761733,
+        "id": "ba208f9a0e96ea5f8ff88aa2",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "3e6dee7db5a3957cbca5e109",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u032",
+        "section": "THE BINOMIAL THEOREM",
+        "text": "11. If a : b = c : d, prove that\na + b : c + d = [a^2 + b^2]^(1/2) : [c^2 + d^2]^(1/2).\n(_College Entrance Board._)\n\n12. Given a : b = c : d. Prove that\na^2 + b^2 : (a^3)/(a + b) = c^2 + d^2 : (c^3)/(c + d).\n(_Sheffield._)\n\n13. The 9th term of an arithmetical progression is 1/6; the 16th term\nis 5/2. Find the first term.                          (_Regents._)\n\nSolve graphically:\n\n1. x^2 - x - 6 = 0.\n\n2. x^2 + 3x - 10 = 0.\n\n3. Find four numbers in arithmetical progression, such that the sum of\nthe first two is 1, and the sum of the last two is -19.\n\n4. What number added to 2, 20, 9, 34, will make the results\nproportional?\n\n5. Find the middle term of [3a^5 + (b^(3/4))/(2)]^8.",
+        "metadata": {
+          "section": "THE BINOMIAL THEOREM",
+          "char_end": 1531,
+          "char_start": 850,
+          "source_end_line": 2381,
+          "source_start_line": 2335
+        },
+        "score": 0.3179024010358702,
+        "id": "3e6dee7db5a3957cbca5e109",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[7796001a28e79c82c3d76381 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u012]\nSIMULTANEOUS EQUATIONS AND INVOLUTION\n\n1. Solve    (3/4)x - (5/3)y = 11-1/2,\n(5/8)x - (3/2)y = 10-1/4.\n\nLook up the method of solving when the unknowns are in the\ndenominator. Should you clear of fractions?\n\n2. Solve    1/x - 1/y - 1/z = 1/a,\n1/y - 1/z - 1/x = 1/b,\n1/z - 1/x - 1/y = 1/c.\n\n3. Solve graphically and algebraically\n2x - y = 4,\n2x + 3y = 12.\n\n4. Solve graphically and algebraically\n3x + 7y = 5,\n8x + 3y = -18.\n\nReview:\n\n5. The squares of the numbers from 1 to 25.\n\n6. The cubes of the numbers from 1 to 12.",
+    "context_ids": [
+      "7796001a28e79c82c3d76381"
+    ],
+    "context_chars": 625,
+    "elapsed_ms": 1131.886899995152,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "D06",
+    "split": "dev",
+    "question": "Trong mục Theory of Exponents, khi nhân hai lũy thừa cùng cơ số thì phải xử lý số mũ thế nào?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": {
+      "field": "section",
+      "value": "THEORY OF EXPONENTS",
+      "provided_by": "question"
+    },
+    "retrieval_filter": {
+      "section": "THEORY OF EXPONENTS"
+    },
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "To multiply quantities having the same base, add exponents."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "To multiply quantities having the same base, add exponents."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "f58a3bc8d9a8f1e54a4087f1",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u014",
+        "section": "THEORY OF EXPONENTS",
+        "text": "THEORY OF EXPONENTS\n\nReview the proofs, for positive integral exponents, of:\n\nI. a^m x a^n = a^(m + n).\n\nII. (a^m)/(a^n) = a^(m - n).\n\nIII. (a^m)^n = a^(mn).\n\nIV. [a^(mn)]^(1/n) = a^m.\n\nV. [a/b]^n = (a^n)/(b^n).\n\nVI. (abc)^n = a^n b^n c^n.\n\n~To find the meaning of a fractional exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^(2/3) . a^(2/3) . a^(2/3) = a^(6/3) = a^2.\n\nHence, a^(2/3) is _one of the three equal factors_ (hence the cube root)\nof a^2.\n\nTherefore a^(2/3) = [a^2]^(1/3).\n\nIn the same way,\n\na^(4/5) . a^(4/5) . a^(4/5) . a^(4/5) . a^(4/5) = a^(20/5) = a^4.\n\nHence, a^(4/5) is _one of the five equal factors_ (hence the fifth root)\nof a^4.\n\nTherefore a^(4/5) = [a^4]^(1/5).\n\nIn the same way, in general, a^(p/q) = [a^p]^(1/q).\n\nHence, _the numerator of a fractional exponent indicates the power, the\ndenominator indicates the root_.",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 920,
+          "char_start": 57,
+          "source_end_line": 1197,
+          "source_start_line": 1120
+        },
+        "score": 0.4600201547386108,
+        "id": "f58a3bc8d9a8f1e54a4087f1",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "96e8be7f8192cf3e0ef6c6d6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u014",
+        "section": "THEORY OF EXPONENTS",
+        "text": "~To find the meaning of a zero exponent.~\n\nAssume that Law II holds for _all_ exponents.\n\nIf so, (a^m)/(a^m) = a^(m - m) = a^0. But by division, (a^m)/(a^m) = 1.\n\nTherefore a^0 = 1. Axiom I.\n\n~To find the meaning of a negative exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^m x a^(-m) = a^(m - m) = a^0 = 1.\n\nHence, a^m x a^(-m) = 1.\n\nTherefore a^(-m) = 1/(a^m).\n\nRules:\n\n_To multiply quantities having the same base, add exponents._\n\n_To divide quantities having the same base, subtract exponents._\n\n_To raise a quantity to a power, multiply exponents._\n\n_To extract a root, divide the exponent of the power by the\nindex of the root._",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 1577,
+          "char_start": 922,
+          "source_end_line": 1197,
+          "source_start_line": 1120
+        },
+        "score": 0.4365569128279513,
+        "id": "96e8be7f8192cf3e0ef6c6d6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      },
+      {
+        "chunk_id": "1f2185287256631062c66ddb",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u016",
+        "section": "THEORY OF EXPONENTS",
+        "text": "12. Express as a power of 2: 8^3; 4^5; 4^3 . 8^(2/3) . 16^(3/4).\n\n13. Simplify\n{[(x^(a + 1))/(x^(1 - a))]^a\n/ [(x^a)/(x^(1 - a))]^(a - 1)}^(1/(3a - 1)).\n\n14. Simplify\n[(x^(5/2) y^(4/3))/(z^(-5/4)) . (z^4)/(x^(-3) y^(-5/3))\n/ (y^(-2) z^(1/4))/(x^(-1/2))]^(1/5).\n\n15. Expand (a^(1/2) + b^(1/3))^4, writing the result with fractional\nexponents.\n\n~Reference:~ The chapter on Theory of Exponents in any algebra.",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 406,
+          "char_start": 0,
+          "source_end_line": 1332,
+          "source_start_line": 1265
+        },
+        "score": 0.42895982896456375,
+        "id": "1f2185287256631062c66ddb",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[96e8be7f8192cf3e0ef6c6d6 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u014]\n~To find the meaning of a zero exponent.~\n\nAssume that Law II holds for _all_ exponents.\n\nIf so, (a^m)/(a^m) = a^(m - m) = a^0. But by division, (a^m)/(a^m) = 1.\n\nTherefore a^0 = 1. Axiom I.\n\n~To find the meaning of a negative exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^m x a^(-m) = a^(m - m) = a^0 = 1.\n\nHence, a^m x a^(-m) = 1.\n\nTherefore a^(-m) = 1/(a^m).\n\nRules:\n\n_To multiply quantities having the same base, add exponents._\n\n_To divide quantities having the same base, subtract exponents._\n\n_To raise a quantity to a power, multiply exponents._\n\n_To extract a root, divide the exponent of the power by the\nindex of the root._",
+    "context_ids": [
+      "96e8be7f8192cf3e0ef6c6d6"
+    ],
+    "context_chars": 761,
+    "elapsed_ms": 1189.60350000998,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "D07",
+    "split": "dev",
+    "question": "Trong mục Theory of Exponents, nếu chia hai đại lượng có cùng cơ số thì số mũ của kết quả được xác định ra sao?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": {
+      "field": "section",
+      "value": "THEORY OF EXPONENTS",
+      "provided_by": "question"
+    },
+    "retrieval_filter": {
+      "section": "THEORY OF EXPONENTS"
+    },
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "To divide quantities having the same base, subtract exponents."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "To divide quantities having the same base, subtract\nexponents."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "f58a3bc8d9a8f1e54a4087f1",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u014",
+        "section": "THEORY OF EXPONENTS",
+        "text": "THEORY OF EXPONENTS\n\nReview the proofs, for positive integral exponents, of:\n\nI. a^m x a^n = a^(m + n).\n\nII. (a^m)/(a^n) = a^(m - n).\n\nIII. (a^m)^n = a^(mn).\n\nIV. [a^(mn)]^(1/n) = a^m.\n\nV. [a/b]^n = (a^n)/(b^n).\n\nVI. (abc)^n = a^n b^n c^n.\n\n~To find the meaning of a fractional exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^(2/3) . a^(2/3) . a^(2/3) = a^(6/3) = a^2.\n\nHence, a^(2/3) is _one of the three equal factors_ (hence the cube root)\nof a^2.\n\nTherefore a^(2/3) = [a^2]^(1/3).\n\nIn the same way,\n\na^(4/5) . a^(4/5) . a^(4/5) . a^(4/5) . a^(4/5) = a^(20/5) = a^4.\n\nHence, a^(4/5) is _one of the five equal factors_ (hence the fifth root)\nof a^4.\n\nTherefore a^(4/5) = [a^4]^(1/5).\n\nIn the same way, in general, a^(p/q) = [a^p]^(1/q).\n\nHence, _the numerator of a fractional exponent indicates the power, the\ndenominator indicates the root_.",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 920,
+          "char_start": 57,
+          "source_end_line": 1197,
+          "source_start_line": 1120
+        },
+        "score": 0.48152671451754536,
+        "id": "f58a3bc8d9a8f1e54a4087f1",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "96e8be7f8192cf3e0ef6c6d6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u014",
+        "section": "THEORY OF EXPONENTS",
+        "text": "~To find the meaning of a zero exponent.~\n\nAssume that Law II holds for _all_ exponents.\n\nIf so, (a^m)/(a^m) = a^(m - m) = a^0. But by division, (a^m)/(a^m) = 1.\n\nTherefore a^0 = 1. Axiom I.\n\n~To find the meaning of a negative exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^m x a^(-m) = a^(m - m) = a^0 = 1.\n\nHence, a^m x a^(-m) = 1.\n\nTherefore a^(-m) = 1/(a^m).\n\nRules:\n\n_To multiply quantities having the same base, add exponents._\n\n_To divide quantities having the same base, subtract exponents._\n\n_To raise a quantity to a power, multiply exponents._\n\n_To extract a root, divide the exponent of the power by the\nindex of the root._",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 1577,
+          "char_start": 922,
+          "source_end_line": 1197,
+          "source_start_line": 1120
+        },
+        "score": 0.4433037078611587,
+        "id": "96e8be7f8192cf3e0ef6c6d6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      },
+      {
+        "chunk_id": "1f2185287256631062c66ddb",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u016",
+        "section": "THEORY OF EXPONENTS",
+        "text": "12. Express as a power of 2: 8^3; 4^5; 4^3 . 8^(2/3) . 16^(3/4).\n\n13. Simplify\n{[(x^(a + 1))/(x^(1 - a))]^a\n/ [(x^a)/(x^(1 - a))]^(a - 1)}^(1/(3a - 1)).\n\n14. Simplify\n[(x^(5/2) y^(4/3))/(z^(-5/4)) . (z^4)/(x^(-3) y^(-5/3))\n/ (y^(-2) z^(1/4))/(x^(-1/2))]^(1/5).\n\n15. Expand (a^(1/2) + b^(1/3))^4, writing the result with fractional\nexponents.\n\n~Reference:~ The chapter on Theory of Exponents in any algebra.",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 406,
+          "char_start": 0,
+          "source_end_line": 1332,
+          "source_start_line": 1265
+        },
+        "score": 0.4162872361213398,
+        "id": "1f2185287256631062c66ddb",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[96e8be7f8192cf3e0ef6c6d6 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u014]\n~To find the meaning of a zero exponent.~\n\nAssume that Law II holds for _all_ exponents.\n\nIf so, (a^m)/(a^m) = a^(m - m) = a^0. But by division, (a^m)/(a^m) = 1.\n\nTherefore a^0 = 1. Axiom I.\n\n~To find the meaning of a negative exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^m x a^(-m) = a^(m - m) = a^0 = 1.\n\nHence, a^m x a^(-m) = 1.\n\nTherefore a^(-m) = 1/(a^m).\n\nRules:\n\n_To multiply quantities having the same base, add exponents._\n\n_To divide quantities having the same base, subtract exponents._\n\n_To raise a quantity to a power, multiply exponents._\n\n_To extract a root, divide the exponent of the power by the\nindex of the root._",
+    "context_ids": [
+      "96e8be7f8192cf3e0ef6c6d6"
+    ],
+    "context_chars": 761,
+    "elapsed_ms": 1242.0773999765515,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "D08",
+    "split": "dev",
+    "question": "Theo quy tắc trong phần số mũ, khi nâng một lũy thừa lên lũy thừa khác thì kết hợp hai số mũ như thế nào?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "To raise a quantity to a power, multiply exponents."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "57c253d65ab3fd51d5ed35b6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u026",
+        "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+        "text": "CASE II.\n\nBoth equations homogeneous and of the second degree.\nx^2 - xy + y^2 = 39,\n2x^2 - 3xy + 2y^2 = 43.\n\nMETHOD: Let y = vx, and substitute in both equations.\n\nALTERNATE METHOD: Solve for x in terms of y in one equation and substitute in the other.\n\nCASE III.\n\nAny two of the quantities\nx + y\nx^2 + y^2\nxy\nx - y\nx^3 + y^3\nx^3 - y^3\nx^2 + xy + y^2\nx^2 - xy + y^2\ngiven.\n\nx + y = 5,\nx^2 - xy + y^2 = 7.\n\nMETHOD: Solve for x + y and x - y; then add to get x, subtract\nto get y.\n\nCASE IV.\n\nBoth equations symmetrical or symmetrical except for sign.\nUsually one equation of high degree, the other of the first\ndegree.\nx^5 + y^5 = 242,\nx + y = 2.\n\nMETHOD: Let x = u + v and y = u - v, and substitute in both\nequations.\n\n~Special Devices~",
+        "metadata": {
+          "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+          "char_end": 735,
+          "char_start": 0,
+          "source_end_line": 2028,
+          "source_start_line": 1933
+        },
+        "score": 0.3347117646375256,
+        "id": "57c253d65ab3fd51d5ed35b6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "05bc811da755b706402ae426",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u002",
+        "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+        "text": "2. Trinomial that is a perfect square.\nx^2 +- 2xy + y^2 = (x +- y)^2.\n\n3. The difference of two squares.\n(a) Two terms.\nx^2 - y^2 = (x + y)(x - y).\n(b) Four terms.\nx^2 + 2xy + y^2 - m^2 = (x + y + m)(x + y - m).\n(c) Six terms.\nx^2 + 2xy + y^2 - p^2 - 2pq - q^2\n= [(x + y) + (p + q)][(x + y) - (p + q)].\n(d) Incomplete square.\nx^4 + x^2 y^2 + y^4\n= x^4 + 2x^2 y^2 + y^4 - x^2 y^2\n= (x^2 + y^2 + xy)(x^2 + y^2 - xy).\n\n4. Trinomial of the form x^2 + bx + c.\nx^2 - 5x + 6 = (x - 2)(x - 3).\n\n5. Trinomial of the form ax^2 + bx + c.\n20x^2 + 7x - 6 = (4x + 3)(5x - 2).\n\n6. Sum or difference of\ntwo cubes. See \"Special Rules,\" 7 and 8.\ntwo like powers. See \"Special Rules,\" 9.\n\n7. Common polynomial factor. Grouping.\nt^2 p + t^2 q - 2mp - 2mq\n= t^2(p + q) - 2m(p + q) = (p + q)(t^2 - 2m).\n\n8. Factor Theorem.\nx^3 + 17x - 18 = (x - 1)(x^2 + x + 18).\n\n~H. C. F. and L. C. M.~\n\na^2 + 2a - 3 = (a + 3)(a - 1).",
+        "metadata": {
+          "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+          "char_end": 897,
+          "char_start": 0,
+          "source_end_line": 332,
+          "source_start_line": 258
+        },
+        "score": 0.33271329790710225,
+        "id": "05bc811da755b706402ae426",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "15f35acabda89b56b494b900",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u030",
+        "section": "GEOMETRICAL PROGRESSION",
+        "text": "11. The third term of a geometrical progression is 36; the 6th term is\n972. Find the first and second terms.\n\n12. Insert between 6 and 16 two numbers, such that the first three of\nthe four shall be in arithmetical progression, and the last three\nin geometrical progression.\n\n13. A rubber ball falls from a height of 40 inches and on each rebound\nrises 40% of the previous height. Find by formula how far it falls\non its eighth descent.                                   (_Yale._)",
+        "metadata": {
+          "section": "GEOMETRICAL PROGRESSION",
+          "char_end": 1635,
+          "char_start": 1156,
+          "source_end_line": 2264,
+          "source_start_line": 2212
+        },
+        "score": 0.3217850206280155,
+        "id": "15f35acabda89b56b494b900",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[15f35acabda89b56b494b900 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u030]\n11. The third term of a geometrical progression is 36; the 6th term is\n972. Find the first and second terms.\n\n12. Insert between 6 and 16 two numbers, such that the first three of\nthe four shall be in arithmetical progression, and the last three\nin geometrical progression.\n\n13. A rubber ball falls from a height of 40 inches and on each rebound\nrises 40% of the previous height. Find by formula how far it falls\non its eighth descent.                                   (_Yale._)",
+    "context_ids": [
+      "15f35acabda89b56b494b900"
+    ],
+    "context_chars": 585,
+    "elapsed_ms": 1244.471100042574,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "D09",
+    "split": "dev",
+    "question": "Trong mục Theory of Exponents, muốn lấy căn của một lũy thừa thì số mũ được điều chỉnh theo chỉ số căn thế nào?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": {
+      "field": "section",
+      "value": "THEORY OF EXPONENTS",
+      "provided_by": "question"
+    },
+    "retrieval_filter": {
+      "section": "THEORY OF EXPONENTS"
+    },
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "To extract a root, divide the exponent of the power by the\nindex of the root."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "To extract a root, divide the exponent of the power by the\nindex of the root."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "f58a3bc8d9a8f1e54a4087f1",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u014",
+        "section": "THEORY OF EXPONENTS",
+        "text": "THEORY OF EXPONENTS\n\nReview the proofs, for positive integral exponents, of:\n\nI. a^m x a^n = a^(m + n).\n\nII. (a^m)/(a^n) = a^(m - n).\n\nIII. (a^m)^n = a^(mn).\n\nIV. [a^(mn)]^(1/n) = a^m.\n\nV. [a/b]^n = (a^n)/(b^n).\n\nVI. (abc)^n = a^n b^n c^n.\n\n~To find the meaning of a fractional exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^(2/3) . a^(2/3) . a^(2/3) = a^(6/3) = a^2.\n\nHence, a^(2/3) is _one of the three equal factors_ (hence the cube root)\nof a^2.\n\nTherefore a^(2/3) = [a^2]^(1/3).\n\nIn the same way,\n\na^(4/5) . a^(4/5) . a^(4/5) . a^(4/5) . a^(4/5) = a^(20/5) = a^4.\n\nHence, a^(4/5) is _one of the five equal factors_ (hence the fifth root)\nof a^4.\n\nTherefore a^(4/5) = [a^4]^(1/5).\n\nIn the same way, in general, a^(p/q) = [a^p]^(1/q).\n\nHence, _the numerator of a fractional exponent indicates the power, the\ndenominator indicates the root_.",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 920,
+          "char_start": 57,
+          "source_end_line": 1197,
+          "source_start_line": 1120
+        },
+        "score": 0.4129377147565563,
+        "id": "f58a3bc8d9a8f1e54a4087f1",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "1f2185287256631062c66ddb",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u016",
+        "section": "THEORY OF EXPONENTS",
+        "text": "12. Express as a power of 2: 8^3; 4^5; 4^3 . 8^(2/3) . 16^(3/4).\n\n13. Simplify\n{[(x^(a + 1))/(x^(1 - a))]^a\n/ [(x^a)/(x^(1 - a))]^(a - 1)}^(1/(3a - 1)).\n\n14. Simplify\n[(x^(5/2) y^(4/3))/(z^(-5/4)) . (z^4)/(x^(-3) y^(-5/3))\n/ (y^(-2) z^(1/4))/(x^(-1/2))]^(1/5).\n\n15. Expand (a^(1/2) + b^(1/3))^4, writing the result with fractional\nexponents.\n\n~Reference:~ The chapter on Theory of Exponents in any algebra.",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 406,
+          "char_start": 0,
+          "source_end_line": 1332,
+          "source_start_line": 1265
+        },
+        "score": 0.37954534364949,
+        "id": "1f2185287256631062c66ddb",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "96e8be7f8192cf3e0ef6c6d6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u014",
+        "section": "THEORY OF EXPONENTS",
+        "text": "~To find the meaning of a zero exponent.~\n\nAssume that Law II holds for _all_ exponents.\n\nIf so, (a^m)/(a^m) = a^(m - m) = a^0. But by division, (a^m)/(a^m) = 1.\n\nTherefore a^0 = 1. Axiom I.\n\n~To find the meaning of a negative exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^m x a^(-m) = a^(m - m) = a^0 = 1.\n\nHence, a^m x a^(-m) = 1.\n\nTherefore a^(-m) = 1/(a^m).\n\nRules:\n\n_To multiply quantities having the same base, add exponents._\n\n_To divide quantities having the same base, subtract exponents._\n\n_To raise a quantity to a power, multiply exponents._\n\n_To extract a root, divide the exponent of the power by the\nindex of the root._",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 1577,
+          "char_start": 922,
+          "source_end_line": 1197,
+          "source_start_line": 1120
+        },
+        "score": 0.3706228971557236,
+        "id": "96e8be7f8192cf3e0ef6c6d6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      }
+    ],
+    "context": "[1f2185287256631062c66ddb | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u016]\n12. Express as a power of 2: 8^3; 4^5; 4^3 . 8^(2/3) . 16^(3/4).\n\n13. Simplify\n{[(x^(a + 1))/(x^(1 - a))]^a\n/ [(x^a)/(x^(1 - a))]^(a - 1)}^(1/(3a - 1)).\n\n14. Simplify\n[(x^(5/2) y^(4/3))/(z^(-5/4)) . (z^4)/(x^(-3) y^(-5/3))\n/ (y^(-2) z^(1/4))/(x^(-1/2))]^(1/5).\n\n15. Expand (a^(1/2) + b^(1/3))^4, writing the result with fractional\nexponents.\n\n~Reference:~ The chapter on Theory of Exponents in any algebra.",
+    "context_ids": [
+      "1f2185287256631062c66ddb"
+    ],
+    "context_chars": 512,
+    "elapsed_ms": 1130.4191999952309,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "D10",
+    "split": "dev",
+    "question": "Theo phần giải thích về số mũ phân số, tử số và mẫu số lần lượt biểu thị điều gì?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "numerator of a fractional exponent indicates the power, the\ndenominator indicates the root"
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "54626cecd08c45032f08ad74",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u031",
+        "section": "THE BINOMIAL THEOREM",
+        "text": "~THE BINOMIAL THEOREM~\n\n1. Review the Binomial Theorem laws. (See Involution.)\n\nExpand:\n\n2. (b - n)^7.\n\n3. (x + x^(-1))^5.\n\n4. [a/x - x/a]^6.\n\n5. [x/2y - [xy]^(1/2)]^5.\n\n6. (x^2 - x + 2)^3.\n\n7. [(2[b^2]^(1/3))/(y) + (3[y^(1/2)])/(b^3)]^4.\n\n8. (a + b)^n = a^n + na^(n - 1)b + [n(n - 1)]/(1.2) a^(n - 2)b^2\n+ [n(n - 1)(n - 2)]/(1.2.3) a^(n - 3)b^3\n+ [n(n - 1)(n - 2)(n - 3)]/(1.2.3.4) a^(n - 4) b^4 + ....\n\nShow by observation that the formula for the\n\n(r + 1)th term\n= [n(n - 1)(n - 2)...(n - r + 1)]/[1.2.3.4 ... r] a^(n - r)b^r.\n\n9. Indicate what the 97th term of (a + b)^n would be.\n\n10. Using the expansion of (a + b)^n in (8), derive a formula for the\nrth term by observing how each term is made up, then generalizing.\n\nUsing either the formula in (8) or (10), whichever you are familiar\nwith, find:\n\n11. The 4th term of [a + 1/a]^(30).\n\n12. The 8th term of (1 + x[y^(1/2)])^(13).",
+        "metadata": {
+          "section": "THE BINOMIAL THEOREM",
+          "char_end": 953,
+          "char_start": 69,
+          "source_end_line": 2333,
+          "source_start_line": 2266
+        },
+        "score": 0.41162866497917394,
+        "id": "54626cecd08c45032f08ad74",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "9bc466c7648ab95defb08562",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u013",
+        "section": "SIMULTANEOUS EQUATIONS AND INVOLUTION",
+        "text": "7. The fourth powers of the numbers from 1 to 5.\n\n8. The fifth powers of the numbers from 1 to 3.\n\n9. The binomial theorem laws. (See Involution.)\n\nExpand: (Indicate first, then reduce.)\n\n10. (b + y)^7.\n\n11. [(2a)/3 - 1]^5.\n\n12. (x^2 + 2a)^5.\n\n13. (x - y + 2z)^3.\n\n14. A train lost one sixth of its passengers at the first stop, 25 at\nthe second stop, 20% of the remainder at the third stop, three\nquarters of the remainder at the fourth stop; 25 remain. What was\nthe original number?                                  (_M. I. T._)\n\n~References:~ The chapter on Involution in any algebra. Also the\nreferences on the preceding page.",
+        "metadata": {
+          "section": "SIMULTANEOUS EQUATIONS AND INVOLUTION",
+          "char_end": 630,
+          "char_start": 0,
+          "source_end_line": 1118,
+          "source_start_line": 1054
+        },
+        "score": 0.4025847833605021,
+        "id": "9bc466c7648ab95defb08562",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "96cbb04e5e0bed46fd1571d8",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u027",
+        "section": "RATIO AND PROPORTION",
+        "text": "RATIO AND PROPORTION\n\n1. Define ratio, proportion, mean proportional, third proportional,\nfourth proportional.\n\n2. Find a mean proportional between 4 and 16; 18 and 50; 12m^2n\nand 3mn^2.\n\n3. Find a third proportional to 4 and 7; 5 and 10; a^2 - 9 and a - 3.\n\n4. Find a fourth proportional to 2, 5, and 4; 35, 20, and 14.\n\n5. Write out the proofs for the following, stating the theorem in\nfull in each case:\n\n(_a_) The product of the extremes equals etc.\n\n(_b_) If the product of two numbers equals the product of two other\nnumbers, either pair etc.\n\n(_c_) Alternation.\n\n(_d_) Inversion.\n\n(_e_) Composition.\n\n(_f_) Division.\n\n(_g_) Composition and division.\n\n(_h_) In a series of equal ratios, the sum of the antecedents is to\nthe sum of the consequents etc.",
+        "metadata": {
+          "section": "RATIO AND PROPORTION",
+          "char_end": 1588,
+          "char_start": 831,
+          "source_end_line": 2095,
+          "source_start_line": 2030
+        },
+        "score": 0.37488526405073097,
+        "id": "96cbb04e5e0bed46fd1571d8",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[9bc466c7648ab95defb08562 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u013]\n7. The fourth powers of the numbers from 1 to 5.\n\n8. The fifth powers of the numbers from 1 to 3.\n\n9. The binomial theorem laws. (See Involution.)\n\nExpand: (Indicate first, then reduce.)\n\n10. (b + y)^7.\n\n11. [(2a)/3 - 1]^5.\n\n12. (x^2 + 2a)^5.\n\n13. (x - y + 2z)^3.\n\n14. A train lost one sixth of its passengers at the first stop, 25 at\nthe second stop, 20% of the remainder at the third stop, three\nquarters of the remainder at the fourth stop; 25 remain. What was\nthe original number?                                  (_M. I. T._)\n\n~References:~ The chapter on Involution in any algebra. Also the\nreferences on the preceding page.",
+    "context_ids": [
+      "9bc466c7648ab95defb08562"
+    ],
+    "context_chars": 736,
+    "elapsed_ms": 1140.263099980075,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "D11",
+    "split": "dev",
+    "question": "Cuốn sách kết luận a^0 bằng bao nhiêu?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "Therefore a^0 = 1. Axiom I."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "60b9385117f60f5e3f85aaa5",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u044",
+        "section": "ELEMENTARY ALGEBRA",
+        "text": "4. Reduce the following expression to a polynomial in a and b:\n(6a^3 + 7ab^2 + 12b^3)/(3a^2 - 5ab - 4b^2)\n- 1/[3/19b - (5a + 4b)/(19a^2)].\n\n5. The cost of publishing a book consists of two main items: first,\nthe fixed expense of setting up the type; and, second, the running\nexpenses of presswork, binding, etc., which may be assumed to be\nproportional to the number of copies. A certain book costs 35 cents\na copy if 1000 copies are published at one time, but only 19 cents\na copy if 5000 copies are published at one time. Find (_a_) the\ncost of setting up the type for the book, and (_b_) the cost of\npresswork, binding, etc., per thousand copies.",
+        "metadata": {
+          "section": "ELEMENTARY ALGEBRA",
+          "char_end": 649,
+          "char_start": 0,
+          "source_end_line": 2971,
+          "source_start_line": 2922
+        },
+        "score": 0.39708148670210264,
+        "id": "60b9385117f60f5e3f85aaa5",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "d35b0cc087b27eda7497091e",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u008",
+        "section": "FACTORING",
+        "text": "28. (a^3 + 8b^3)(a + b) - 6ab(a^2 - 2ab + 4b^2).      (_M. I. T._)\n\nSolve by factoring:\n\n29. x^3 = x.\n\n30. z^2 - 4z - 45 = 0.\n\n31. x^3 - x^2 = 4x - 4.\n\n~Reference:~ The chapter on Factoring in any algebra.",
+        "metadata": {
+          "section": "FACTORING",
+          "char_end": 1091,
+          "char_start": 886,
+          "source_end_line": 794,
+          "source_start_line": 709
+        },
+        "score": 0.35662767785732385,
+        "id": "d35b0cc087b27eda7497091e",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "f651a6e189fa0cd7887ce635",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u007",
+        "section": "CASES IN FACTORING",
+        "text": "CASE III. The difference of two squares.\n\n_A._ Two terms. x^2 - y^2 = (x + y)(x - y).\n\n_B._ Four terms.\n\nx^2 + 2xy + y^2 - m^2 = (x^2 + 2xy + y^2) - m^2\n= (x + y + m)(x + y - m)\n\n_C._ Six terms. x^2 - 2xy + y^2 - m^2 - 2mn - n^2\n= (x^2 - 2xy + y^2) - (m^2 + 2mn + n^2)\n= (x - y)^2 - (m + n)^2\n= [(x - y) + (m + n)][(x - y) - (m + n)].\n\n_D._ An incomplete square. Three terms, and\n4th powers or multiples of 4.\n\nc^4 + c^2 d^2 + d^4 = c^4 + 2c^2 d^2 + d^4 - c^2 d^2\n= (c^2 + d^2)^2 - c^2 d^2\n= (c^2 + d^2 + cd)(c^2 + d^2 - cd).\n\nCASE IV. A trinomial of the form x^2 + bx + c. Three terms.\n\nx^2 + x - 30 = (x + 6)(x - 5).\n\nCASE V. A trinomial of the form ax^2 + bx + c. Three terms.\n\n20x^2 + 7x - 6 = (4x + 3)(5x - 2).\n\nCASE VI.\n\n_A._ The sum or difference of two cubes. Two terms.\n\nx^3 + y^3 = (x + y)(x^2 - xy + y^2);\nx^3 - y^3 = (x - y)(x^2 + xy + y^2).",
+        "metadata": {
+          "section": "CASES IN FACTORING",
+          "char_end": 853,
+          "char_start": 0,
+          "source_end_line": 707,
+          "source_start_line": 641
+        },
+        "score": 0.35157453253095516,
+        "id": "f651a6e189fa0cd7887ce635",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[60b9385117f60f5e3f85aaa5 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u044]\n4. Reduce the following expression to a polynomial in a and b:\n(6a^3 + 7ab^2 + 12b^3)/(3a^2 - 5ab - 4b^2)\n- 1/[3/19b - (5a + 4b)/(19a^2)].\n\n5. The cost of publishing a book consists of two main items: first,\nthe fixed expense of setting up the type; and, second, the running\nexpenses of presswork, binding, etc., which may be assumed to be\nproportional to the number of copies. A certain book costs 35 cents\na copy if 1000 copies are published at one time, but only 19 cents\na copy if 5000 copies are published at one time. Find (_a_) the\ncost of setting up the type for the book, and (_b_) the cost of\npresswork, binding, etc., per thousand copies.",
+    "context_ids": [
+      "60b9385117f60f5e3f85aaa5"
+    ],
+    "context_chars": 755,
+    "elapsed_ms": 1129.7301999875344,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "D12",
+    "split": "dev",
+    "question": "Dựa theo định nghĩa số mũ âm của tài liệu, a^(-m) được viết thành phân số nào?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "Therefore a^(-m) = 1/(a^m)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "96e8be7f8192cf3e0ef6c6d6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u014",
+        "section": "THEORY OF EXPONENTS",
+        "text": "~To find the meaning of a zero exponent.~\n\nAssume that Law II holds for _all_ exponents.\n\nIf so, (a^m)/(a^m) = a^(m - m) = a^0. But by division, (a^m)/(a^m) = 1.\n\nTherefore a^0 = 1. Axiom I.\n\n~To find the meaning of a negative exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^m x a^(-m) = a^(m - m) = a^0 = 1.\n\nHence, a^m x a^(-m) = 1.\n\nTherefore a^(-m) = 1/(a^m).\n\nRules:\n\n_To multiply quantities having the same base, add exponents._\n\n_To divide quantities having the same base, subtract exponents._\n\n_To raise a quantity to a power, multiply exponents._\n\n_To extract a root, divide the exponent of the power by the\nindex of the root._",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 1577,
+          "char_start": 922,
+          "source_end_line": 1197,
+          "source_start_line": 1120
+        },
+        "score": 0.4260009231337607,
+        "id": "96e8be7f8192cf3e0ef6c6d6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      },
+      {
+        "chunk_id": "e774f72837625b487d12122c",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u053",
+        "section": "ELEMENTARY AND INTERMEDIATE ALGEBRA",
+        "text": "(_a_) 7x^(1/4) - 3x^(1/2) = 2.\n\n(_b_) (x^2 + 2)^(5/2) + 3/{[x^2 + 2]^(1/2)} = 4x^2 + 8.",
+        "metadata": {
+          "section": "ELEMENTARY AND INTERMEDIATE ALGEBRA",
+          "char_end": 967,
+          "char_start": 880,
+          "source_end_line": 3527,
+          "source_start_line": 3466
+        },
+        "score": 0.39127070321190793,
+        "id": "e774f72837625b487d12122c",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "4c16cc086765187157ba115e",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u047",
+        "section": "ELEMENTARY ALGEBRA",
+        "text": "(_b_) Determine the value of m for which the roots of\n2x^2 + 4x + m = 0 are (i) equal, (ii) real, (iii) imaginary.\n\n(_c_) Form the quadratic equation whose roots are\n2 + 3^(1/2) and 2 - 3^(1/2).\n\n7. A page is to have a margin of 1 inch, and is to contain 35 square\ninches of printing. How large must the page be, if the length is to\nexceed the width by 2 inches?\n\n8. (_a_) In an arithmetical progression the sum of the first six terms\nis 261, and the sum of the first nine terms is 297. Find the\ncommon difference.",
+        "metadata": {
+          "section": "ELEMENTARY ALGEBRA",
+          "char_end": 1594,
+          "char_start": 1080,
+          "source_end_line": 3155,
+          "source_start_line": 3090
+        },
+        "score": 0.37932676392839215,
+        "id": "4c16cc086765187157ba115e",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[96e8be7f8192cf3e0ef6c6d6 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u014]\n~To find the meaning of a zero exponent.~\n\nAssume that Law II holds for _all_ exponents.\n\nIf so, (a^m)/(a^m) = a^(m - m) = a^0. But by division, (a^m)/(a^m) = 1.\n\nTherefore a^0 = 1. Axiom I.\n\n~To find the meaning of a negative exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^m x a^(-m) = a^(m - m) = a^0 = 1.\n\nHence, a^m x a^(-m) = 1.\n\nTherefore a^(-m) = 1/(a^m).\n\nRules:\n\n_To multiply quantities having the same base, add exponents._\n\n_To divide quantities having the same base, subtract exponents._\n\n_To raise a quantity to a power, multiply exponents._\n\n_To extract a root, divide the exponent of the power by the\nindex of the root._",
+    "context_ids": [
+      "96e8be7f8192cf3e0ef6c6d6"
+    ],
+    "context_chars": 761,
+    "elapsed_ms": 1108.047199959401,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "D13",
+    "split": "dev",
+    "question": "Theo ví dụ của số mũ phân số, a^(2/3) được biểu diễn dưới dạng căn nào?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u014",
+        "evidence": "Therefore a^(2/3) = [a^2]^(1/3)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "b261479c1ac0a8861a0b5b54",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u008",
+        "section": "FACTORING",
+        "text": "4. m^2 + n^2 - (1 + 2mn).\n\n5. -x^2 + 2x - 1 + x^4.\n\n6. x^(16) - y^(16).  (Five factors.)\n\n7. (x + 1)^2 - 5x - 29.\n\n8. x^4 + x^2 y^2 + y^4.\n\n9. x^4 - 11x^2 + 1.\n\n10. x^(2m) + 2 + 1/(x^(2m)).\n\n11. x^(6m) + 13x^(3m) + 12.\n\n12. 4a^2 b^2 - (a^2 + b^2 - c^2)^2.\n\n13. (x^2 - x - 6)(x^2 - x - 20).\n\n14. a^4 - 8a - a^3 + 8.\n\n15. p^3 + 7p^2 + 14p + 8.\n\n16. 18a^2 b + 60ab^2 + 50b^3.\n\n17. x^3 - 7x + 6.\n\n18. 24c^2 d^2 - 47cd - 75.\n\n19. (a^2 - b^2)^2 - (a^2 - ab)^2.\n\n20. a^2 x^3 - (8a^2)/(y^3) - x^3 + 8/(y^3).\n\n21. gt - gk + gl^2 + xt - xk + xl^2.\n\n22. (m - n)(2a^2 - 2ab) + (n - m)(2ab - 2b^2).\n\n23. a^2 - x^2 - y^2 + b^2 + 2ab + 2xy.\n\n24. (2c^2 + 3d^2)a + (2a^2 + 3c^2)d.\n\n25. (n(n - 1))/(1 . 2) a^(n - 2) b^2\n+ (n(n - 1)(n - 2))/(1 . 2 . 3) a^(n - 3) b^3.\n\n26. (x - x^2)^3 + (x^2 - 1)^3 + (1 - x)^3.            (_M. I. T._)\n\n27. (27y^3)^2 - 2(27y^3)(8b^3) + (8b^3)^2.          (_Princeton._)",
+        "metadata": {
+          "section": "FACTORING",
+          "char_end": 884,
+          "char_start": 0,
+          "source_end_line": 794,
+          "source_start_line": 709
+        },
+        "score": 0.4136931405699483,
+        "id": "b261479c1ac0a8861a0b5b54",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "f85190e11de58e7856327ad0",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u029",
+        "section": "RATIO AND PROPORTION",
+        "text": "2. a^2 + 3b^2 : a^2 - 3b^2 = c^2 + 3d^2 : c^2 - 3d^2.\n\n3. a^2 + 2b^2 : 2b^2 = ac + 2bd : 2bd.\n\n4. 2a + 3c : 2a - 3c = 8b + 12d : 8b - 12d.\n\n5. a^2 - ab + b^2 : (a^3 - b^3)/a = c^2 - cd + d^2 : (c^3 - d^3)/c.\n\n6. The second of three numbers is a mean proportional between the\nother two. The third number exceeds the sum of the other two by 20;\nand the sum of the first and third exceeds three times the second\nby 4. Find the numbers.\n\n7. Three numbers are proportional to 5, 7, and 9; and their sum is 14.\nFind the numbers.                       (_College Entrance Board._)\n\n8. A triangular field has the sides 15, 18, and 27 rods, respectively.\nFind the dimensions of a similar field having 4 times the area.",
+        "metadata": {
+          "section": "RATIO AND PROPORTION",
+          "char_end": 708,
+          "char_start": 0,
+          "source_end_line": 2210,
+          "source_start_line": 2152
+        },
+        "score": 0.40153787121400597,
+        "id": "f85190e11de58e7856327ad0",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "f651a6e189fa0cd7887ce635",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u007",
+        "section": "CASES IN FACTORING",
+        "text": "CASE III. The difference of two squares.\n\n_A._ Two terms. x^2 - y^2 = (x + y)(x - y).\n\n_B._ Four terms.\n\nx^2 + 2xy + y^2 - m^2 = (x^2 + 2xy + y^2) - m^2\n= (x + y + m)(x + y - m)\n\n_C._ Six terms. x^2 - 2xy + y^2 - m^2 - 2mn - n^2\n= (x^2 - 2xy + y^2) - (m^2 + 2mn + n^2)\n= (x - y)^2 - (m + n)^2\n= [(x - y) + (m + n)][(x - y) - (m + n)].\n\n_D._ An incomplete square. Three terms, and\n4th powers or multiples of 4.\n\nc^4 + c^2 d^2 + d^4 = c^4 + 2c^2 d^2 + d^4 - c^2 d^2\n= (c^2 + d^2)^2 - c^2 d^2\n= (c^2 + d^2 + cd)(c^2 + d^2 - cd).\n\nCASE IV. A trinomial of the form x^2 + bx + c. Three terms.\n\nx^2 + x - 30 = (x + 6)(x - 5).\n\nCASE V. A trinomial of the form ax^2 + bx + c. Three terms.\n\n20x^2 + 7x - 6 = (4x + 3)(5x - 2).\n\nCASE VI.\n\n_A._ The sum or difference of two cubes. Two terms.\n\nx^3 + y^3 = (x + y)(x^2 - xy + y^2);\nx^3 - y^3 = (x - y)(x^2 + xy + y^2).",
+        "metadata": {
+          "section": "CASES IN FACTORING",
+          "char_end": 853,
+          "char_start": 0,
+          "source_end_line": 707,
+          "source_start_line": 641
+        },
+        "score": 0.398679626387878,
+        "id": "f651a6e189fa0cd7887ce635",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "",
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1161.0733999987133,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "D14",
+    "split": "dev",
+    "question": "Trong mục Radicals, công thức nhân hai căn bậc n của a và b được viết như thế nào?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "a^(1/n) . b^(1/n) = [ab]^(1/n)."
+      },
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u017",
+        "evidence": "a^(1/n) . b^(1/n) = [ab]^(1/n)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "ecd27e66c5dc198ff4a6fcce",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u017",
+        "section": "RADICALS",
+        "text": "9. 2[5/3]^(1/2) + (1/6)60^(1/2) + 15^(1/2) + [3/5]^(1/2).\n\n10. [(m - n)^2a]^(1/2) + [(m + n)^2a]^(1/2) - [am^2]^(1/2)\n+ [a(n - m)^2]^(1/2) - a^(1/2).\n\n11. A and B each shoot thirty arrows at a target. B makes twice as\nmany hits as A, and A makes three times as many misses as B.\nFind the number of hits and misses of each.      (_Univ. of Cal._)\n\n~Reference:~ The chapter on Radicals in any algebra (first part of the\nchapter).\n\nThe most important principle in Radicals is the following:\n\n(ab)^(1/n) = a^(1/n) b^(1/n).\n\nHence [ab]^(1/n) = a^(1/n) . b^(1/n).\n\nOr, a^(1/n) . b^(1/n) = [ab]^(1/n).\n\nFrom this also ([ab]^(1/n))/(a^(1/n)) = b^(1/n).\n\nMultiply:\n\n1. 2[4^(1/3)] by 3[6^(1/3)].\n\n2. 2^(1/2) by 3^(1/3).\n\n3. 2^(1/4) by 4^(1/6).\n\n4. [a + x^(1/2)]^(1/2) by [a - x^(1/2)]^(1/2).\n\n5. 2^(1/2) + 3^(1/2) - 5^(1/2) by 2^(1/2) - 3^(1/2) + 5^(1/2).",
+        "metadata": {
+          "section": "RADICALS",
+          "char_end": 845,
+          "char_start": 0,
+          "source_end_line": 1402,
+          "source_start_line": 1334
+        },
+        "score": 0.5223335986214273,
+        "id": "ecd27e66c5dc198ff4a6fcce",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      },
+      {
+        "chunk_id": "56a5b46efedba8d6f3dfa5f3",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u023",
+        "section": "THE THEORY OF QUADRATIC EQUATIONS",
+        "text": "Also,            r_1 = -b/2a + [[b^2 - 4ac]^(1/2)]/(2a).\nr_2 = -b/2a - [[b^2 - 4ac]^(1/2)]/(2a).\n-------------------------------------------\nMultiplying, r_1 r_2 = (b^2)/(4a^2) - (b^2 - 4ac)/(4a^2)\n= (b^2 - b^2 + 4ac)/(4a^2)\n= (4ac)/(4a^2) = c/a.               (4)\n\nHence we have shown that\n\nr_1 + r_2 = -b/a,\nand r_1 r_2 = c/a.\n\nOr, referring to equation (2) above, we have the following rule:\n\n_When the coefficient of x^2 is unity, the sum of the roots is\nthe coefficient of x with the sign changed; the product of the\nroots is the independent term._\n\nEXAMPLES:",
+        "metadata": {
+          "section": "THE THEORY OF QUADRATIC EQUATIONS",
+          "char_end": 1500,
+          "char_start": 936,
+          "source_end_line": 1788,
+          "source_start_line": 1730
+        },
+        "score": 0.4931010709355942,
+        "id": "56a5b46efedba8d6f3dfa5f3",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "e0b41da4794a83d1350af84b",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u016",
+        "section": "RADICALS",
+        "text": "RADICALS\n\n1. Review all definitions in Radicals, also the methods of\ntransforming and simplifying radicals. When is _a radical in its\nsimplest form_?\n\n2. Simplify (to simplest form):\n[2/3]^(1/2);\n[1/11]^(1/2);\n[3/5]^(1/3);\n3[5/6]^(1/2);\n(2a/b)[(8b^2)/(27a)]^(1/2);\n[5/(x^n)]^(1/2n);\n(a + b)^2 [(-a^4)/((a + b)^5)]^(1/3);\n27^(1/2);\n[54]^(1/3);\n-5[125^(1/2)].\n\n3. Reduce to entire surds:\n2[3^(1/2)];\n2[3^(1/4)];\n6[2^(1/3)];\na[[b^2]^(1/n)];\n-3[2^(1/3)];\n3a[[(a + 2)/(6a^2)]^(1/3)];\n(a + 2y)[(a - 2y)/(a + 2y)]^(1/2).\n\n4. Reduce to radicals of lower order (or simplify indices):\n[a^2]^(1/4);\n[a^3]^(1/6);\n[27a^3]^(1/6);\n[81 a^4 x^8]^(1/12);\n[9x^2 y^4 z^10]^(1/2n).\n\n5. Reduce to radicals of the same degree (order, or index):\n7^(1/2) and [11]^(1/3);\n5^(1/3) and 3^(1/4);\n7^(1/6) and 3^(1/2);\n[x^m]^(1/n) and [x^n]^(1/m);\n[c^y]^(1/x), [c^z]^(1/y), and [c^x]^(1/z).",
+        "metadata": {
+          "section": "RADICALS",
+          "char_end": 1267,
+          "char_start": 408,
+          "source_end_line": 1332,
+          "source_start_line": 1265
+        },
+        "score": 0.4635477595106745,
+        "id": "e0b41da4794a83d1350af84b",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[56a5b46efedba8d6f3dfa5f3 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u023]\nAlso,            r_1 = -b/2a + [[b^2 - 4ac]^(1/2)]/(2a).\nr_2 = -b/2a - [[b^2 - 4ac]^(1/2)]/(2a).\n-------------------------------------------\nMultiplying, r_1 r_2 = (b^2)/(4a^2) - (b^2 - 4ac)/(4a^2)\n= (b^2 - b^2 + 4ac)/(4a^2)\n= (4ac)/(4a^2) = c/a.               (4)\n\nHence we have shown that\n\nr_1 + r_2 = -b/a,\nand r_1 r_2 = c/a.\n\nOr, referring to equation (2) above, we have the following rule:\n\n_When the coefficient of x^2 is unity, the sum of the roots is\nthe coefficient of x with the sign changed; the product of the\nroots is the independent term._\n\nEXAMPLES:",
+    "context_ids": [
+      "56a5b46efedba8d6f3dfa5f3"
+    ],
+    "context_chars": 670,
+    "elapsed_ms": 1497.1372000291012,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "D15",
+    "split": "dev",
+    "question": "Trong mục Radicals, sau khi giải một phương trình chứa căn, cần làm gì để tránh chấp nhận nghiệm không hợp lệ?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": {
+      "field": "section",
+      "value": "RADICALS",
+      "provided_by": "question"
+    },
+    "retrieval_filter": {
+      "section": "RADICALS"
+    },
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u003",
+        "evidence": "Radical equations. _Always_ check results to avoid extraneous roots."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "ecd27e66c5dc198ff4a6fcce",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u017",
+        "section": "RADICALS",
+        "text": "9. 2[5/3]^(1/2) + (1/6)60^(1/2) + 15^(1/2) + [3/5]^(1/2).\n\n10. [(m - n)^2a]^(1/2) + [(m + n)^2a]^(1/2) - [am^2]^(1/2)\n+ [a(n - m)^2]^(1/2) - a^(1/2).\n\n11. A and B each shoot thirty arrows at a target. B makes twice as\nmany hits as A, and A makes three times as many misses as B.\nFind the number of hits and misses of each.      (_Univ. of Cal._)\n\n~Reference:~ The chapter on Radicals in any algebra (first part of the\nchapter).\n\nThe most important principle in Radicals is the following:\n\n(ab)^(1/n) = a^(1/n) b^(1/n).\n\nHence [ab]^(1/n) = a^(1/n) . b^(1/n).\n\nOr, a^(1/n) . b^(1/n) = [ab]^(1/n).\n\nFrom this also ([ab]^(1/n))/(a^(1/n)) = b^(1/n).\n\nMultiply:\n\n1. 2[4^(1/3)] by 3[6^(1/3)].\n\n2. 2^(1/2) by 3^(1/3).\n\n3. 2^(1/4) by 4^(1/6).\n\n4. [a + x^(1/2)]^(1/2) by [a - x^(1/2)]^(1/2).\n\n5. 2^(1/2) + 3^(1/2) - 5^(1/2) by 2^(1/2) - 3^(1/2) + 5^(1/2).",
+        "metadata": {
+          "section": "RADICALS",
+          "char_end": 845,
+          "char_start": 0,
+          "source_end_line": 1402,
+          "source_start_line": 1334
+        },
+        "score": 0.4563058061718144,
+        "id": "ecd27e66c5dc198ff4a6fcce",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "e0b41da4794a83d1350af84b",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u016",
+        "section": "RADICALS",
+        "text": "RADICALS\n\n1. Review all definitions in Radicals, also the methods of\ntransforming and simplifying radicals. When is _a radical in its\nsimplest form_?\n\n2. Simplify (to simplest form):\n[2/3]^(1/2);\n[1/11]^(1/2);\n[3/5]^(1/3);\n3[5/6]^(1/2);\n(2a/b)[(8b^2)/(27a)]^(1/2);\n[5/(x^n)]^(1/2n);\n(a + b)^2 [(-a^4)/((a + b)^5)]^(1/3);\n27^(1/2);\n[54]^(1/3);\n-5[125^(1/2)].\n\n3. Reduce to entire surds:\n2[3^(1/2)];\n2[3^(1/4)];\n6[2^(1/3)];\na[[b^2]^(1/n)];\n-3[2^(1/3)];\n3a[[(a + 2)/(6a^2)]^(1/3)];\n(a + 2y)[(a - 2y)/(a + 2y)]^(1/2).\n\n4. Reduce to radicals of lower order (or simplify indices):\n[a^2]^(1/4);\n[a^3]^(1/6);\n[27a^3]^(1/6);\n[81 a^4 x^8]^(1/12);\n[9x^2 y^4 z^10]^(1/2n).\n\n5. Reduce to radicals of the same degree (order, or index):\n7^(1/2) and [11]^(1/3);\n5^(1/3) and 3^(1/4);\n7^(1/6) and 3^(1/2);\n[x^m]^(1/n) and [x^n]^(1/m);\n[c^y]^(1/x), [c^z]^(1/y), and [c^x]^(1/z).",
+        "metadata": {
+          "section": "RADICALS",
+          "char_end": 1267,
+          "char_start": 408,
+          "source_end_line": 1332,
+          "source_start_line": 1265
+        },
+        "score": 0.4448105153549391,
+        "id": "e0b41da4794a83d1350af84b",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "6983d591991f5869fcf69102",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u018",
+        "section": "RADICALS",
+        "text": "16. 5 + 2[6^(1/2)].\n\n17. 17 - 12[2^(1/2)].\n\n18. 7 - 33^(1/2).\n\n~Reference:~ The chapter on Radicals in any algebra, beginning at\nAddition and Subtraction of Radicals.\n\nMISCELLANEOUS EXAMPLES, ALGEBRA TO QUADRATICS\n\nResults by inspection, examples 1-10.\n\nDivide:\n\n1. (x^(5/17) + y^(5/17))/(x^(1/17) + y^(1/17)).\n\n2. (x - y)/(x^(1/3) - y^(1/3)).\n\n3. (m^2 + n^2)/(m^(2/3) + n^(2/3)).\n\n4. (x - y^2)/(x^(1/3) - [y^2]^(1/3)).\n\nMultiply:\n\n5. [a^(-3/4) + 2/(m^(1/2))]^2.\n\n6. (K^(-2/7) - g^(-11/25))^2.\n\n7. (r^(2s) + l^(-3m))(r^(2s) - l^(-3m)).\n\n8. [a^(-2) + b^(-3) - 1/(c^2)]^2.\n\n9. (3K^x + 4t^(-3))(3K^x - 7t^(-3)).\n\n10. (2y^(2/7) - 40K^3)(3y^(2/7) + 55K^3).\n\nFactor:\n\n11. x^(2/3) - 64.\n\n12. y^(3/5) + 27.\n\n13. b^(3/2) - 8m^(-1).\n\n14. 3p - 8p^(1/2) - 35.\n\nFactor, using radicals instead of exponents:\n\n15. 60 - 7[3b^(1/2)] - 6b.\n\n16. 15m - 2[[mn]^(1/2)] - 24n.",
+        "metadata": {
+          "section": "RADICALS",
+          "char_end": 853,
+          "char_start": 0,
+          "source_end_line": 1487,
+          "source_start_line": 1404
+        },
+        "score": 0.43442238781229503,
+        "id": "6983d591991f5869fcf69102",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "",
+    "context_ids": [],
+    "context_chars": 0,
+    "elapsed_ms": 1451.9551999983378,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "D16",
+    "split": "dev",
+    "question": "Theo phần giải thích về chọn trường hợp phân tích nhân tử, dấu hiệu ban đầu nào thường gợi ý các trường hợp có thể áp dụng?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u006",
+        "evidence": "The number of terms in an expression usually gives the clue to the\npossible cases under which it may come."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "54626cecd08c45032f08ad74",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u031",
+        "section": "THE BINOMIAL THEOREM",
+        "text": "~THE BINOMIAL THEOREM~\n\n1. Review the Binomial Theorem laws. (See Involution.)\n\nExpand:\n\n2. (b - n)^7.\n\n3. (x + x^(-1))^5.\n\n4. [a/x - x/a]^6.\n\n5. [x/2y - [xy]^(1/2)]^5.\n\n6. (x^2 - x + 2)^3.\n\n7. [(2[b^2]^(1/3))/(y) + (3[y^(1/2)])/(b^3)]^4.\n\n8. (a + b)^n = a^n + na^(n - 1)b + [n(n - 1)]/(1.2) a^(n - 2)b^2\n+ [n(n - 1)(n - 2)]/(1.2.3) a^(n - 3)b^3\n+ [n(n - 1)(n - 2)(n - 3)]/(1.2.3.4) a^(n - 4) b^4 + ....\n\nShow by observation that the formula for the\n\n(r + 1)th term\n= [n(n - 1)(n - 2)...(n - r + 1)]/[1.2.3.4 ... r] a^(n - r)b^r.\n\n9. Indicate what the 97th term of (a + b)^n would be.\n\n10. Using the expansion of (a + b)^n in (8), derive a formula for the\nrth term by observing how each term is made up, then generalizing.\n\nUsing either the formula in (8) or (10), whichever you are familiar\nwith, find:\n\n11. The 4th term of [a + 1/a]^(30).\n\n12. The 8th term of (1 + x[y^(1/2)])^(13).",
+        "metadata": {
+          "section": "THE BINOMIAL THEOREM",
+          "char_end": 953,
+          "char_start": 69,
+          "source_end_line": 2333,
+          "source_start_line": 2266
+        },
+        "score": 0.3023992162914768,
+        "id": "54626cecd08c45032f08ad74",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "3d6eb4fe1242af9b242af8ca",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u006",
+        "section": "CASES IN FACTORING",
+        "text": "CASES IN FACTORING\n\nThe number of terms in an expression usually gives the clue to the\npossible cases under which it may come. By applying the _test_ for each\nand eliminating the _possible_ cases one by one, the right case is\nreadily found. Hence, the number of terms in the expression and a ready\nand accurate knowledge of the Cases in Factoring are the real keys to\nsuccess in this vitally important part of algebra.\n\nCASE I. A common monomial factor. Applies to any number of terms.\n\n5cx - 5ct + 5cv - 15 c^2 m + 25 c^3 m^2\n= 5c(x - t + v - 3cm + 5c^2 m^2).\n\nCASE II. A trinomial that is a perfect square. Three terms.\n\nx^2 +- 2xm + m^2 = (x +- m)^2.",
+        "metadata": {
+          "section": "CASES IN FACTORING",
+          "char_end": 1504,
+          "char_start": 851,
+          "source_end_line": 639,
+          "source_start_line": 570
+        },
+        "score": 0.29349969490906647,
+        "id": "3d6eb4fe1242af9b242af8ca",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      },
+      {
+        "chunk_id": "c4790072bce7a08f4c4196e2",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u039",
+        "section": "COLLEGE ENTRANCE EXAMINATIONS",
+        "text": "COLLEGE ENTRANCE EXAMINATIONS",
+        "metadata": {
+          "section": "COLLEGE ENTRANCE EXAMINATIONS",
+          "char_end": 806,
+          "char_start": 777,
+          "source_end_line": 2670,
+          "source_start_line": 2620
+        },
+        "score": 0.27680229162149916,
+        "id": "c4790072bce7a08f4c4196e2",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[3d6eb4fe1242af9b242af8ca | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u006]\nCASES IN FACTORING\n\nThe number of terms in an expression usually gives the clue to the\npossible cases under which it may come. By applying the _test_ for each\nand eliminating the _possible_ cases one by one, the right case is\nreadily found. Hence, the number of terms in the expression and a ready\nand accurate knowledge of the Cases in Factoring are the real keys to\nsuccess in this vitally important part of algebra.\n\nCASE I. A common monomial factor. Applies to any number of terms.\n\n5cx - 5ct + 5cv - 15 c^2 m + 25 c^3 m^2\n= 5c(x - t + v - 3cm + 5c^2 m^2).\n\nCASE II. A trinomial that is a perfect square. Three terms.\n\nx^2 +- 2xm + m^2 = (x +- m)^2.",
+    "context_ids": [
+      "3d6eb4fe1242af9b242af8ca"
+    ],
+    "context_chars": 759,
+    "elapsed_ms": 1149.6374999987893,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "D17",
+    "split": "dev",
+    "question": "Trong ví dụ tìm H.C.F. và L.C.M., tài liệu cho kết quả nào cho hai biểu thức a^2 + 2a - 3 và a^2 + 7a + 12 (cùng với thừa số a^4 + 27a)?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u002",
+        "evidence": "H. C. F. = a + 3.\n\nL. C. M. = (a + 3)(a - 1)(a + 4)a(a^2 - 3a + 9)."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "e774f72837625b487d12122c",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u053",
+        "section": "ELEMENTARY AND INTERMEDIATE ALGEBRA",
+        "text": "(_a_) 7x^(1/4) - 3x^(1/2) = 2.\n\n(_b_) (x^2 + 2)^(5/2) + 3/{[x^2 + 2]^(1/2)} = 4x^2 + 8.",
+        "metadata": {
+          "section": "ELEMENTARY AND INTERMEDIATE ALGEBRA",
+          "char_end": 967,
+          "char_start": 880,
+          "source_end_line": 3527,
+          "source_start_line": 3466
+        },
+        "score": 0.49475091344019817,
+        "id": "e774f72837625b487d12122c",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "f726ecaa39ae519fb5ee8a23",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u002",
+        "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+        "text": "a^2 + 7a + 12 = (a + 3)(a + 4).\n\na^4 + 27a = a(a + 3)(a^2 - 3a + 9).\n\nH. C. F. = a + 3.\n\nL. C. M. = (a + 3)(a - 1)(a + 4)a(a^2 - 3a + 9).\n\n~Fractions~\n\nReduction to lowest terms.\n\nReduction of a mixed number to an improper fraction.\n\nReduction of an improper fraction to a mixed number.\n\nAddition and subtraction of fractions.\n\nMultiplication and division of fractions.\n\nLaw of signs in division, changing signs of factors, etc.\n\nComplex fractions.\n\n~Simultaneous Equations~\n\nSolved by\naddition or subtraction.\nsubstitution.\ncomparison.\n\nGraphical representation.\n\n~Involution~\n\nLaw of signs.\n\nBinomial theorem laws.",
+        "metadata": {
+          "section": "OUTLINE OF ELEMENTARY AND INTERMEDIATE ALGEBRA",
+          "char_end": 1515,
+          "char_start": 899,
+          "source_end_line": 332,
+          "source_start_line": 258
+        },
+        "score": 0.4830886114190398,
+        "id": "f726ecaa39ae519fb5ee8a23",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": true
+      },
+      {
+        "chunk_id": "96fb4692347f243caed0ffde",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u005",
+        "section": "A REVIEW OF ALGEBRA",
+        "text": "10. 3c^2 + c(2a - [6c - {3a + c - 4a}]).",
+        "metadata": {
+          "section": "A REVIEW OF ALGEBRA",
+          "char_end": 1386,
+          "char_start": 1346,
+          "source_end_line": 568,
+          "source_start_line": 489
+        },
+        "score": 0.4811777138186981,
+        "id": "96fb4692347f243caed0ffde",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[e774f72837625b487d12122c | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u053]\n(_a_) 7x^(1/4) - 3x^(1/2) = 2.\n\n(_b_) (x^2 + 2)^(5/2) + 3/{[x^2 + 2]^(1/2)} = 4x^2 + 8.\n\n[96fb4692347f243caed0ffde | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u005]\n10. 3c^2 + c(2a - [6c - {3a + c - 4a}]).",
+    "context_ids": [
+      "e774f72837625b487d12122c",
+      "96fb4692347f243caed0ffde"
+    ],
+    "context_chars": 341,
+    "elapsed_ms": 1165.1203999645077,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": false
+  },
+  {
+    "query_id": "D18",
+    "split": "dev",
+    "question": "Tài liệu cho thương (x^3 - y^3)/(x - y) bằng biểu thức nào?",
+    "answerable": true,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [
+      {
+        "source_id": "gutenberg-38536",
+        "page": "gutenberg-38536-u001",
+        "evidence": "(x^3 - y^3)/(x - y) = x^2 + xy + y^2."
+      }
+    ],
+    "results": [
+      {
+        "chunk_id": "b6ef2c30d7099dd596b394f0",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u010",
+        "section": "FRACTIONS",
+        "text": "7. 72/121 x 55/56 x 77/90.\n\n8. (b - y)/(a^3 + y^3) x (ca + cy)/(b^2 + by)\nx (b^6 + y^6)/(b^2 + y^2) x b/c.\n\nDivide:\n\n9. (12/25) / (6/50).\n\n10. [1 - (ab)/(a^2 - ab + b^2)] [1 - (ab)/(a^2 + 2ab + b^2)]\n/ (a^3 - b^3)/(a^3 + b^3).                           (_Yale._)\n\n11. [(x^4 - y^4)/(x^2 - y^2) / (x + y)/(x^2 - xy)]\n/ [(x^2 + y^2)/(x - y) / (x + y)/(xy - y^2)].   (_Sheffield._)\n\nSimplify:\n\n12. [(4y)/x - (15y^2)/(x^2) + 4] / [4 - (16y)/x + (15y^2)/(x^2)]\nx [3 - (4x + 20y)/(2x + 5y)].\n\n~Reference:~ The chapter on Fractions in any algebra.",
+        "metadata": {
+          "section": "FRACTIONS",
+          "char_end": 539,
+          "char_start": 0,
+          "source_end_line": 934,
+          "source_start_line": 868
+        },
+        "score": 0.4551869135281834,
+        "id": "b6ef2c30d7099dd596b394f0",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "57c253d65ab3fd51d5ed35b6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u026",
+        "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+        "text": "CASE II.\n\nBoth equations homogeneous and of the second degree.\nx^2 - xy + y^2 = 39,\n2x^2 - 3xy + 2y^2 = 43.\n\nMETHOD: Let y = vx, and substitute in both equations.\n\nALTERNATE METHOD: Solve for x in terms of y in one equation and substitute in the other.\n\nCASE III.\n\nAny two of the quantities\nx + y\nx^2 + y^2\nxy\nx - y\nx^3 + y^3\nx^3 - y^3\nx^2 + xy + y^2\nx^2 - xy + y^2\ngiven.\n\nx + y = 5,\nx^2 - xy + y^2 = 7.\n\nMETHOD: Solve for x + y and x - y; then add to get x, subtract\nto get y.\n\nCASE IV.\n\nBoth equations symmetrical or symmetrical except for sign.\nUsually one equation of high degree, the other of the first\ndegree.\nx^5 + y^5 = 242,\nx + y = 2.\n\nMETHOD: Let x = u + v and y = u - v, and substitute in both\nequations.\n\n~Special Devices~",
+        "metadata": {
+          "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+          "char_end": 735,
+          "char_start": 0,
+          "source_end_line": 2028,
+          "source_start_line": 1933
+        },
+        "score": 0.443855703512648,
+        "id": "57c253d65ab3fd51d5ed35b6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "f49515978e12d9e74d883b0c",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u026",
+        "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+        "text": "I. Consider some compound quantity like xy, [x - y]^(1/2),\n[xy]^(1/2), x/y, etc., as the unknown, at first. Solve\nfor the compound unknown, and combine the resulting\nequation with the simpler original equation.\n\nx^2 y^2 + xy = 6,\nx + 2y = -5.\n\nII. Divide the equations member by member. Then solve by\nCase I, II, or III.\n\nx^3 - y^3 = 152,\nx - y = 2.\n\nIII. Eliminate the quadratic terms. Then solve by Case I,\nII, or III.\n\nxy + x = 15,\nxy + y = 16.",
+        "metadata": {
+          "section": "OUTLINE OF SIMULTANEOUS QUADRATICS",
+          "char_end": 1184,
+          "char_start": 737,
+          "source_end_line": 2028,
+          "source_start_line": 1933
+        },
+        "score": 0.43203059474642935,
+        "id": "f49515978e12d9e74d883b0c",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[b6ef2c30d7099dd596b394f0 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u010]\n7. 72/121 x 55/56 x 77/90.\n\n8. (b - y)/(a^3 + y^3) x (ca + cy)/(b^2 + by)\nx (b^6 + y^6)/(b^2 + y^2) x b/c.\n\nDivide:\n\n9. (12/25) / (6/50).\n\n10. [1 - (ab)/(a^2 - ab + b^2)] [1 - (ab)/(a^2 + 2ab + b^2)]\n/ (a^3 - b^3)/(a^3 + b^3).                           (_Yale._)\n\n11. [(x^4 - y^4)/(x^2 - y^2) / (x + y)/(x^2 - xy)]\n/ [(x^2 + y^2)/(x - y) / (x + y)/(xy - y^2)].   (_Sheffield._)\n\nSimplify:\n\n12. [(4y)/x - (15y^2)/(x^2) + 4] / [4 - (16y)/x + (15y^2)/(x^2)]\nx [3 - (4x + 20y)/(2x + 5y)].\n\n~Reference:~ The chapter on Fractions in any algebra.",
+    "context_ids": [
+      "b6ef2c30d7099dd596b394f0"
+    ],
+    "context_chars": 645,
+    "elapsed_ms": 1128.8497999776155,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "D19",
+    "split": "dev",
+    "question": "Trong mục Theory of Exponents, tài liệu nêu công thức đổi cơ số nào để viết log_b(x) bằng logarit cơ số a?",
+    "answerable": false,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [],
+    "results": [
+      {
+        "chunk_id": "f58a3bc8d9a8f1e54a4087f1",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u014",
+        "section": "THEORY OF EXPONENTS",
+        "text": "THEORY OF EXPONENTS\n\nReview the proofs, for positive integral exponents, of:\n\nI. a^m x a^n = a^(m + n).\n\nII. (a^m)/(a^n) = a^(m - n).\n\nIII. (a^m)^n = a^(mn).\n\nIV. [a^(mn)]^(1/n) = a^m.\n\nV. [a/b]^n = (a^n)/(b^n).\n\nVI. (abc)^n = a^n b^n c^n.\n\n~To find the meaning of a fractional exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^(2/3) . a^(2/3) . a^(2/3) = a^(6/3) = a^2.\n\nHence, a^(2/3) is _one of the three equal factors_ (hence the cube root)\nof a^2.\n\nTherefore a^(2/3) = [a^2]^(1/3).\n\nIn the same way,\n\na^(4/5) . a^(4/5) . a^(4/5) . a^(4/5) . a^(4/5) = a^(20/5) = a^4.\n\nHence, a^(4/5) is _one of the five equal factors_ (hence the fifth root)\nof a^4.\n\nTherefore a^(4/5) = [a^4]^(1/5).\n\nIn the same way, in general, a^(p/q) = [a^p]^(1/q).\n\nHence, _the numerator of a fractional exponent indicates the power, the\ndenominator indicates the root_.",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 920,
+          "char_start": 57,
+          "source_end_line": 1197,
+          "source_start_line": 1120
+        },
+        "score": 0.519920277777399,
+        "id": "f58a3bc8d9a8f1e54a4087f1",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "1f2185287256631062c66ddb",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u016",
+        "section": "THEORY OF EXPONENTS",
+        "text": "12. Express as a power of 2: 8^3; 4^5; 4^3 . 8^(2/3) . 16^(3/4).\n\n13. Simplify\n{[(x^(a + 1))/(x^(1 - a))]^a\n/ [(x^a)/(x^(1 - a))]^(a - 1)}^(1/(3a - 1)).\n\n14. Simplify\n[(x^(5/2) y^(4/3))/(z^(-5/4)) . (z^4)/(x^(-3) y^(-5/3))\n/ (y^(-2) z^(1/4))/(x^(-1/2))]^(1/5).\n\n15. Expand (a^(1/2) + b^(1/3))^4, writing the result with fractional\nexponents.\n\n~Reference:~ The chapter on Theory of Exponents in any algebra.",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 406,
+          "char_start": 0,
+          "source_end_line": 1332,
+          "source_start_line": 1265
+        },
+        "score": 0.502606274302431,
+        "id": "1f2185287256631062c66ddb",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "96e8be7f8192cf3e0ef6c6d6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u014",
+        "section": "THEORY OF EXPONENTS",
+        "text": "~To find the meaning of a zero exponent.~\n\nAssume that Law II holds for _all_ exponents.\n\nIf so, (a^m)/(a^m) = a^(m - m) = a^0. But by division, (a^m)/(a^m) = 1.\n\nTherefore a^0 = 1. Axiom I.\n\n~To find the meaning of a negative exponent.~\n\nAssume that Law I holds for _all_ exponents.\n\nIf so, a^m x a^(-m) = a^(m - m) = a^0 = 1.\n\nHence, a^m x a^(-m) = 1.\n\nTherefore a^(-m) = 1/(a^m).\n\nRules:\n\n_To multiply quantities having the same base, add exponents._\n\n_To divide quantities having the same base, subtract exponents._\n\n_To raise a quantity to a power, multiply exponents._\n\n_To extract a root, divide the exponent of the power by the\nindex of the root._",
+        "metadata": {
+          "section": "THEORY OF EXPONENTS",
+          "char_end": 1577,
+          "char_start": 922,
+          "source_end_line": 1197,
+          "source_start_line": 1120
+        },
+        "score": 0.4975998894547442,
+        "id": "96e8be7f8192cf3e0ef6c6d6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[1f2185287256631062c66ddb | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u016]\n12. Express as a power of 2: 8^3; 4^5; 4^3 . 8^(2/3) . 16^(3/4).\n\n13. Simplify\n{[(x^(a + 1))/(x^(1 - a))]^a\n/ [(x^a)/(x^(1 - a))]^(a - 1)}^(1/(3a - 1)).\n\n14. Simplify\n[(x^(5/2) y^(4/3))/(z^(-5/4)) . (z^4)/(x^(-3) y^(-5/3))\n/ (y^(-2) z^(1/4))/(x^(-1/2))]^(1/5).\n\n15. Expand (a^(1/2) + b^(1/3))^4, writing the result with fractional\nexponents.\n\n~Reference:~ The chapter on Theory of Exponents in any algebra.",
+    "context_ids": [
+      "1f2185287256631062c66ddb"
+    ],
+    "context_chars": 512,
+    "elapsed_ms": 1129.6659999643452,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "D20",
+    "split": "dev",
+    "question": "Trong phần về phương trình bậc hai, sách có nêu công thức liên hệ tổng các nghiệm của ax^3 + bx^2 + cx + d = 0 với các hệ số không? Nếu có, công thức là gì?",
+    "answerable": false,
+    "strategy": "dense_day6",
+    "top_k": 3,
+    "budget_chars": 800,
+    "filter": null,
+    "retrieval_filter": null,
+    "gold": [],
+    "results": [
+      {
+        "chunk_id": "be9c253f279a52b144957391",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u012",
+        "section": "SIMULTANEOUS EQUATIONS",
+        "text": "8. 2d^(10) - 1024d.\n\n9. 2(x^3 - 1) - 7(x^2 - 1).\n\n~References:~ The chapters on Simultaneous Equations and Graphs in any\nalgebra.",
+        "metadata": {
+          "section": "SIMULTANEOUS EQUATIONS",
+          "char_end": 1018,
+          "char_start": 889,
+          "source_end_line": 1052,
+          "source_start_line": 988
+        },
+        "score": 0.43521690881861674,
+        "id": "be9c253f279a52b144957391",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "87899ce40e00ddf7730f23e6",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u023",
+        "section": "THE THEORY OF QUADRATIC EQUATIONS",
+        "text": "THE THEORY OF QUADRATIC EQUATIONS\n\n~I. To find the sum and the product of the roots.~\n\nThe general quadratic equation is\n\nax^2 + bx + c = 0.                                   (1)\n\nOr, x^2 + (b/a)x + c/a = 0.                              (2)\n\nTo derive the formula, we have by transposing\n\nx^2 + (b/a)x = -c/a.\n\nCompleting the square,\n\nx^2 + (b/a)x + [b/2a]^2 = (b^2)/(4a^2) - c/a = (b^2 - 4ac)/(4a^2).\n\nExtracting square root, x + b/2a = [+-[b^2 - 4ac]^(1/2)]/(2a).\n\nTransposing, x = -b/2a +- [[b^2 - 4ac]^(1/2)]/(2a).\n\nHence, x = [-b +- [b^2 - 4ac]^(1/2)]/(2a).\n\nThese two values of x we call _roots_.\n\nFor convenience represent them by r_1 and r_2.\n\nHence,        r_1 = -b/2a + [[b^2 - 4ac]^(1/2)]/(2a).\nr_2 = -b/2a - [[b^2 - 4ac]^(1/2)]/(2a).\n---------------------------------------------\nAdding, r_1 + r_2 = -(2b)/(2a) = -b/a.                   (3)",
+        "metadata": {
+          "section": "THE THEORY OF QUADRATIC EQUATIONS",
+          "char_end": 934,
+          "char_start": 82,
+          "source_end_line": 1788,
+          "source_start_line": 1730
+        },
+        "score": 0.43363644788756206,
+        "id": "87899ce40e00ddf7730f23e6",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      },
+      {
+        "chunk_id": "f85190e11de58e7856327ad0",
+        "document_id": "gutenberg-38536",
+        "source": "https://www.gutenberg.org/ebooks/38536.txt.utf-8",
+        "page": "gutenberg-38536-u029",
+        "section": "RATIO AND PROPORTION",
+        "text": "2. a^2 + 3b^2 : a^2 - 3b^2 = c^2 + 3d^2 : c^2 - 3d^2.\n\n3. a^2 + 2b^2 : 2b^2 = ac + 2bd : 2bd.\n\n4. 2a + 3c : 2a - 3c = 8b + 12d : 8b - 12d.\n\n5. a^2 - ab + b^2 : (a^3 - b^3)/a = c^2 - cd + d^2 : (c^3 - d^3)/c.\n\n6. The second of three numbers is a mean proportional between the\nother two. The third number exceeds the sum of the other two by 20;\nand the sum of the first and third exceeds three times the second\nby 4. Find the numbers.\n\n7. Three numbers are proportional to 5, 7, and 9; and their sum is 14.\nFind the numbers.                       (_College Entrance Board._)\n\n8. A triangular field has the sides 15, 18, and 27 rods, respectively.\nFind the dimensions of a similar field having 4 times the area.",
+        "metadata": {
+          "section": "RATIO AND PROPORTION",
+          "char_end": 708,
+          "char_start": 0,
+          "source_end_line": 2210,
+          "source_start_line": 2152
+        },
+        "score": 0.4331612213441415,
+        "id": "f85190e11de58e7856327ad0",
+        "source_id": "gutenberg-38536",
+        "strategy": "dense_day6",
+        "hit": false
+      }
+    ],
+    "context": "[be9c253f279a52b144957391 | https://www.gutenberg.org/ebooks/38536.txt.utf-8 | page gutenberg-38536-u012]\n8. 2d^(10) - 1024d.\n\n9. 2(x^3 - 1) - 7(x^2 - 1).\n\n~References:~ The chapters on Simultaneous Equations and Graphs in any\nalgebra.",
+    "context_ids": [
+      "be9c253f279a52b144957391"
+    ],
+    "context_chars": 235,
+    "elapsed_ms": 943.515999999363,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  }
+]
