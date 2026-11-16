@@ -1,0 +1,152 @@
+[
+  {
+    "id": "d01",
+    "split": "dev",
+    "question": "What did Charles Cooley mean by the looking glass self?"
+  },
+  {
+    "id": "d02",
+    "split": "dev",
+    "question": "In George Herbert Mead's account of self development, what can children do during the preparatory stage?"
+  },
+  {
+    "id": "d03",
+    "split": "dev",
+    "question": "In Kohlberg's theory of moral development, at which stage do young children experience the world around them only through their senses?"
+  },
+  {
+    "id": "d04",
+    "split": "dev",
+    "question": "What is the Egalia preschool in Sweden trying to do about gender socialization?"
+  },
+  {
+    "id": "d05",
+    "split": "dev",
+    "question": "How many days of subsidized time off for families with newborns does the Swedish government policy provide?"
+  },
+  {
+    "id": "d06",
+    "split": "dev",
+    "question": "What do sociologists call the informal teaching done by schools?"
+  },
+  {
+    "id": "d07",
+    "split": "dev",
+    "question": "What is anticipatory socialization?"
+  },
+  {
+    "id": "d08",
+    "split": "dev",
+    "question": "What must new members of an institution go through first in the two-part resocialization process?"
+  },
+  {
+    "id": "d09",
+    "split": "dev",
+    "question": "According to the textbook, what is the minimum number of people needed to form a group?"
+  },
+  {
+    "id": "d10",
+    "split": "dev",
+    "question": "What is a reference group?"
+  },
+  {
+    "id": "d11",
+    "split": "dev",
+    "question": "Which leadership style issues orders and assigns tasks with little to no feedback from group members?"
+  },
+  {
+    "id": "d12",
+    "split": "dev",
+    "question": "In Asch's conformity study, how many of the fifty test subjects gave an obviously erroneous answer at least once?"
+  },
+  {
+    "id": "d13",
+    "split": "dev",
+    "question": "According to Etzioni, what are the three categories of formal organizations?"
+  },
+  {
+    "id": "d14",
+    "split": "dev",
+    "question": "What four characteristics did Max Weber attribute to a bureaucracy?"
+  },
+  {
+    "id": "d15",
+    "split": "dev",
+    "question": "How many ways did Robert Merton define people respond to the gap between a socially accepted goal and no socially accepted means to reach it?"
+  },
+  {
+    "id": "d16",
+    "split": "dev",
+    "question": "In Edwin Lemert's work, what is primary deviance?"
+  },
+  {
+    "id": "t01",
+    "split": "test",
+    "question": "How many stages of development does Erik Erikson's theory include?"
+  },
+  {
+    "id": "t02",
+    "split": "test",
+    "question": "What did Emile Durkheim attribute differences in suicide rates to?"
+  },
+  {
+    "id": "t03",
+    "split": "test",
+    "question": "Which pair of reunited twins is described as an example for studying the impact of nature?"
+  },
+  {
+    "id": "t04",
+    "split": "test",
+    "question": "How does the textbook define a peer group?"
+  },
+  {
+    "id": "t05",
+    "split": "test",
+    "question": "Who is associated with the term McDonaldization of society, and what does it refer to?"
+  },
+  {
+    "id": "t06",
+    "split": "test",
+    "question": "What theory did Edwin Sutherland establish about how deviant behavior develops?"
+  },
+  {
+    "id": "t07",
+    "split": "test",
+    "question": "What is the difference between a prison and a jail?"
+  },
+  {
+    "id": "t08",
+    "split": "test",
+    "question": "Which reports a higher crime rate, the FBI's Uniform Crime Reports or the National Crime Victimization Survey, and why?"
+  },
+  {
+    "id": "d17",
+    "split": "dev",
+    "question": "According to Piaget, at what age do children reach the formal operational stage?"
+  },
+  {
+    "id": "d18",
+    "split": "dev",
+    "question": "What is the average recidivism rate of released US prisoners within five years?"
+  },
+  {
+    "id": "d19",
+    "split": "dev",
+    "question": "What does Vygotsky's zone of proximal development say about how children learn?"
+  },
+  {
+    "id": "t09",
+    "split": "test",
+    "question": "What happened to the participants in Zimbardo's Stanford prison experiment?"
+  },
+  {
+    "id": "t10",
+    "split": "test",
+    "question": "How many states still use the death penalty according to the textbook?"
+  },
+  {
+    "id": "t11",
+    "split": "test",
+    "question": "How many children attend the Egalia preschool in Sweden?"
+  }
+]
