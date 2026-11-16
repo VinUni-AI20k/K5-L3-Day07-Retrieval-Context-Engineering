@@ -74,3 +74,26 @@ Sanity checks run: `python scripts/build_benchmark.py` -> all 26 distinct gold c
 - Day 6 was built on one English textbook; corpus is single-source, so metadata filters are limited to `chapter`/`section`/`document_type`. Questions are in English; Day 7 docs are in English.
 - Day 6 vector store lives outside this repo and is gitignored there; graders need `DAY6_DIR` or a rebuild with Day 6 code (local model, free).
 - Gold lives in `benchmark/gold/`; keep it out of any code path that builds prompts or filters.
+
+## 6. Self-contained index
+
+The Day 7 repo can rebuild the vector store itself from `data/chunks.json`, so Day 6 is no longer required at run time.
+
+```bash
+python scripts/build_index.py --rebuild     # writes ./vectorstore (gitignored); idempotent without --rebuild
+python scripts/verify_index.py              # parity vs Day 6 store (needs Day 6 repo; writes results/index_parity.json)
+```
+
+- Same recipe as Day 6: `BAAI/bge-small-en-v1.5` pinned to revision `5c38ec7c405ec4b44b94cc5a9bb96e735b38267a`, documents without prefix, L2-normalised, CPU, collection `soc3e_B` with `hnsw:space=cosine`, ids/documents/metadata from the chunk file.
+- Time: about 29 s on CPU (incl. model load, 241 chunks). Cost: 0 USD (local model).
+- Parity with the Day 6 collection (`results/index_parity.json`): 241 = 241 ids, documents and metadata identical, embeddings max abs diff 0.0 (min cosine 1.0), top-10 ids and scores identical for all 30 benchmark questions (30/30, score diff 0.0). Dense k=5 dev metrics on the new store equal the Day 6-store results (only latency differs; output in `results/retrieval/dev/dense_k5_day7index`).
+- Store resolution order (`src/day6_store.py`, `store_path()` shows the active one): env `VECTORSTORE_DIR` -> `<Day7>/vectorstore` if present -> `<DAY6_DIR>/vectorstore`. `load_chunks` falls back to `data/chunks.json` when Day 6 is absent.
+
+### How to run from a fresh clone
+
+```bash
+python -m venv .venv && source .venv/bin/activate    # Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+python scripts/build_index.py
+python scripts/eval_retrieval.py --split dev --configs dense_k5
+```

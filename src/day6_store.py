@@ -3,6 +3,9 @@
 Nothing is copied from Day 6; it is referenced by path. Configure with env vars:
   DAY6_DIR         path of the Day 6 repo (default: sibling folder, see DEFAULT_DAY6_DIR)
   DAY6_COLLECTION  soc3e_B (default; 241 chunks) or soc3e_A (468 chunks)
+  VECTORSTORE_DIR  explicit Chroma store directory (highest priority)
+Store resolution: VECTORSTORE_DIR -> <Day7>/vectorstore (built by scripts/build_index.py, parity-verified
+with Day 6) -> <DAY6_DIR>/vectorstore. Use store_path() to see which one is active.
 Requires chromadb 1.5.x and sentence-transformers (the Day 6 .venv has both).
 Query embedding = same model as the index (BAAI/bge-small-en-v1.5, 384-d, normalised, BGE query
 instruction). Failures raise; there is no random/mock fallback. This module never reads gold files.
@@ -22,6 +25,28 @@ COLLECTIONS = {"soc3e_A": "chunks_A.jsonl", "soc3e_B": "chunks_B.jsonl"}
 
 _model = None
 _clients: dict[str, object] = {}
+
+
+DAY7_ROOT = Path(__file__).resolve().parents[1]
+LOCAL_STORE = DAY7_ROOT / "vectorstore"
+LOCAL_CHUNKS = DAY7_ROOT / "data" / "chunks.json"
+
+
+def store_path() -> Path:
+    """Active Chroma directory: env VECTORSTORE_DIR, else local Day 7 vectorstore, else Day 6's."""
+    env = os.environ.get("VECTORSTORE_DIR")
+    if env:
+        p = Path(env)
+        if not (p / "chroma.sqlite3").exists():
+            raise FileNotFoundError(f"VECTORSTORE_DIR={p} has no chroma.sqlite3; run `python scripts/build_index.py`")
+        return p
+    if (LOCAL_STORE / "chroma.sqlite3").exists():
+        return LOCAL_STORE
+    p = Path(os.environ.get("DAY6_DIR", DEFAULT_DAY6_DIR)) / "vectorstore"
+    if (p / "chroma.sqlite3").exists():
+        return p
+    raise FileNotFoundError("No vector store found (checked VECTORSTORE_DIR, ./vectorstore, Day 6). "
+                            "Run `python scripts/build_index.py`")
 
 
 def day6_dir() -> Path:
@@ -46,14 +71,17 @@ def _to_chunk(row: dict) -> dict:
 
 def load_chunks(name: str | None = None) -> list[dict]:
     """All chunks of a collection in Day 7 format: id, text, source_id, source, page, metadata."""
-    path = day6_dir() / "results" / COLLECTIONS[collection_name(name)]
-    with open(path, encoding="utf-8") as f:
+    name = collection_name(name)
+    d6 = Path(os.environ.get("DAY6_DIR", DEFAULT_DAY6_DIR)) / "results" / COLLECTIONS[name]
+    if name == "soc3e_B" and LOCAL_CHUNKS.exists() and not d6.exists():
+        return json.loads(LOCAL_CHUNKS.read_text(encoding="utf-8"))  # already in Day 7 format
+    with open(d6, encoding="utf-8") as f:
         return [_to_chunk(json.loads(line)) for line in f if line.strip()]
 
 
 def get_collection(name: str | None = None):
     import chromadb
-    root = str(day6_dir() / "vectorstore")
+    root = str(store_path())
     if root not in _clients:
         _clients[root] = chromadb.PersistentClient(path=root)
     return _clients[root].get_collection(collection_name(name))
@@ -96,6 +124,7 @@ if __name__ == "__main__":
     import sys
     q = " ".join(sys.argv[1:]) or "What is a total institution?"
     col = get_collection()
+    print(f"store={store_path()}")
     print(f"collection={col.name} count={col.count()} chunks_loaded={len(load_chunks())}")
     for h in dense_search(q, 3):
         print(f"{h['rank']} {h['id']} score={h['score']:.4f} p{h['page']} [{h['metadata']['section']}] {h['text'][:80]!r}")
