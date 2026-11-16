@@ -6,7 +6,7 @@ Nothing is copied from Day 6; it is referenced by path. Configure with env vars:
   VECTORSTORE_DIR  explicit Chroma store directory (highest priority)
 Store resolution: VECTORSTORE_DIR -> <Day7>/vectorstore (built by scripts/build_index.py, parity-verified
 with Day 6) -> <DAY6_DIR>/vectorstore. Use store_path() to see which one is active.
-Requires chromadb 1.5.x and sentence-transformers (the Day 6 .venv has both).
+Requires chromadb 1.5.x and sentence-transformers (install via requirements.txt in the Day 7 .venv).
 Query embedding = same model as the index (BAAI/bge-small-en-v1.5, 384-d, normalised, BGE query
 instruction). Failures raise; there is no random/mock fallback. This module never reads gold files.
 """

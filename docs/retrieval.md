@@ -24,7 +24,7 @@ First run showed hybrid/dense/bm25 all fail d09 and hybrid_rerank (pool 20) too,
 
 ## 1. Methods (`src/retrievers.py`)
 
-Common interface `search(query, top_k, method, **opts) -> [{id, text, score, rank, source, page, metadata, method}]`; `safe_search` returns `{ok, error, results}`. Empty query, bad `top_k`, unknown method, Chroma/embedding failure or reranker failure raise `RetrievalError` (never fake results). Run with the Day 6 venv (`rank_bm25 0.2.2` was pip-installed there). Retrieval code never reads gold; only `scripts/eval_retrieval.py` does.
+Common interface `search(query, top_k, method, **opts) -> [{id, text, score, rank, source, page, metadata, method}]`; `safe_search` returns `{ok, error, results}`. Empty query, bad `top_k`, unknown method, Chroma/embedding failure or reranker failure raise `RetrievalError` (never fake results). Run with the Day 7 `.venv` (`pip install -r requirements.txt`). Retrieval code never reads gold; only `scripts/eval_retrieval.py` does.
 
 | method | description |
 |---|---|

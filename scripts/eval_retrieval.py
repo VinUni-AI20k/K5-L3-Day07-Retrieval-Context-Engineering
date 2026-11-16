@@ -1,6 +1,6 @@
 """Retrieval evaluator (the ONLY retrieval-side code that reads benchmark/gold/gold.json).
 
-Usage (Day 6 venv):  python scripts/eval_retrieval.py [--configs name1,name2] [--split dev]
+Usage (Day 7 .venv):  python scripts/eval_retrieval.py [--configs name1,name2] [--split dev]
 Writes results/retrieval/<split>/<config>/{traces.json,summary.json} and comparison.md.
 The test split is refused unless --allow-test is passed (reserved until the config is frozen).
 

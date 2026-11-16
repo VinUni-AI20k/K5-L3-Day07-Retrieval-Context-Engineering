@@ -24,18 +24,18 @@ No random vectors, no mock fallback anywhere; query embedding uses the same mode
 - `dense_search(query, top_k=3, where=None, collection=None)` -> list of `{id, text, score, rank, source_id, source, page, metadata}`; `where` is a Chroma metadata filter, e.g. `{"chapter": 7}`
 - `export_chunks(out_dir)` -> `chunks.json` for `starter/baseline.py` (default target `starter/data/converted/`, gitignored)
 
-Environment: `chromadb==1.5.9` and `sentence-transformers` are needed. The Day 6 `.venv` already has them (system Python does not). Quick check:
+Environment: `chromadb==1.5.9` and `sentence-transformers` are needed. Create the Day 7 `.venv` and `pip install -r requirements.txt` (system Python lacks them). Quick check:
 
 ```bash
 # Windows, from the Day 7 root
-"<DAY6_DIR>\.venv\Scripts\python.exe" src\day6_store.py "What is a total institution?"
+.venv\Scripts\python.exe src\day6_store.py "What is a total institution?"
 ```
 
 Optional install in a Day 7 venv: `pip install torch --index-url https://download.pytorch.org/whl/cpu` then `pip install chromadb==1.5.9 sentence-transformers==6.3.0`. `load_chunks` needs neither package.
 
 ## 3. Smoke test (real query embedding + nearest-neighbour search)
 
-Query `What is a total institution?`, collection `soc3e_B`, top-3 (run 2026-11-16 with the Day 6 venv):
+Query `What is a total institution?`, collection `soc3e_B`, top-3 (run 2026-11-16 with the Day 6 venv; Day 7 venv should match):
 
 | rank | chunk | score | page / section |
 |---|---|---|---|

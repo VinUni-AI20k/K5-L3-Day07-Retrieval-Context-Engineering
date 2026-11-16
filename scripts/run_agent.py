@@ -1,6 +1,6 @@
 """Run the agent on a benchmark split and write results/agent/<split>/<config>/traces.json.
 
-Usage (Day 6 venv): python scripts/run_agent.py --split dev --config base [--resume] [--ids d01,d02]
+Usage (Day 7 .venv): python scripts/run_agent.py --split dev --config base [--resume] [--ids d01,d02]
 The config is configs/<name>.json (overrides src/agent.py DEFAULT_CONFIG). Reads ONLY benchmark/questions.json
 (id/split/question); never reads gold. The test split is refused unless --allow-test.
 Traces are saved after every query; --resume keeps non-error traces and re-runs errored/missing ones.
