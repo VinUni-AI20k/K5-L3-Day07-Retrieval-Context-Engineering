@@ -1,0 +1,218 @@
+[
+  {
+    "id": "d01",
+    "split": "dev",
+    "question": "What did Charles Cooley mean by the looking glass self?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d02",
+    "split": "dev",
+    "question": "In George Herbert Mead's account of self development, what can children do during the preparatory stage?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d03",
+    "split": "dev",
+    "question": "In Kohlberg's theory of moral development, at which stage do young children experience the world around them only through their senses?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d04",
+    "split": "dev",
+    "question": "What is the Egalia preschool in Sweden trying to do about gender socialization?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d05",
+    "split": "dev",
+    "question": "How many days of subsidized time off for families with newborns does the Swedish government policy provide?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d06",
+    "split": "dev",
+    "question": "What do sociologists call the informal teaching done by schools?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d07",
+    "split": "dev",
+    "question": "What is anticipatory socialization?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d08",
+    "split": "dev",
+    "question": "What must new members of an institution go through first in the two-part resocialization process?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d09",
+    "split": "dev",
+    "question": "According to the textbook, what is the minimum number of people needed to form a group?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d10",
+    "split": "dev",
+    "question": "What is a reference group?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d11",
+    "split": "dev",
+    "question": "Which leadership style issues orders and assigns tasks with little to no feedback from group members?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d12",
+    "split": "dev",
+    "question": "In Asch's conformity study, how many of the fifty test subjects gave an obviously erroneous answer at least once?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d13",
+    "split": "dev",
+    "question": "According to Etzioni, what are the three categories of formal organizations?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d14",
+    "split": "dev",
+    "question": "What four characteristics did Max Weber attribute to a bureaucracy?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d15",
+    "split": "dev",
+    "question": "How many ways did Robert Merton define people respond to the gap between a socially accepted goal and no socially accepted means to reach it?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d16",
+    "split": "dev",
+    "question": "In Edwin Lemert's work, what is primary deviance?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t01",
+    "split": "test",
+    "question": "How many stages of development does Erik Erikson's theory include?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t02",
+    "split": "test",
+    "question": "What did Emile Durkheim attribute differences in suicide rates to?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t03",
+    "split": "test",
+    "question": "Which pair of reunited twins is described as an example for studying the impact of nature?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t04",
+    "split": "test",
+    "question": "How does the textbook define a peer group?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t05",
+    "split": "test",
+    "question": "Who is associated with the term McDonaldization of society, and what does it refer to?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t06",
+    "split": "test",
+    "question": "What theory did Edwin Sutherland establish about how deviant behavior develops?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t07",
+    "split": "test",
+    "question": "What is the difference between a prison and a jail?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "t08",
+    "split": "test",
+    "question": "Which reports a higher crime rate, the FBI's Uniform Crime Reports or the National Crime Victimization Survey, and why?",
+    "answerable": true,
+    "expected_behavior": "search_and_answer"
+  },
+  {
+    "id": "d17",
+    "split": "dev",
+    "question": "According to Piaget, at what age do children reach the formal operational stage?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Piaget is mentioned (p134) only as a psychologist focused on social interaction; his stages and ages are never given."
+  },
+  {
+    "id": "d18",
+    "split": "dev",
+    "question": "What is the average recidivism rate of released US prisoners within five years?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Corrections, prisons, parole and probation are covered (p203), but no recidivism figure exists."
+  },
+  {
+    "id": "d19",
+    "split": "dev",
+    "question": "What does Vygotsky's zone of proximal development say about how children learn?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Self-development theorists are covered (Erikson, Piaget, Mead, Kohlberg, Gilligan) but Vygotsky is never mentioned."
+  },
+  {
+    "id": "t09",
+    "split": "test",
+    "question": "What happened to the participants in Zimbardo's Stanford prison experiment?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Total institutions and resocialization are covered (p148), but the Stanford prison experiment is never mentioned."
+  },
+  {
+    "id": "t10",
+    "split": "test",
+    "question": "How many states still use the death penalty according to the textbook?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Crime, courts and corrections are covered (p201-203), but the death penalty is never discussed."
+  },
+  {
+    "id": "t11",
+    "split": "test",
+    "question": "How many children attend the Egalia preschool in Sweden?",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Egalia is described (p136) but no enrollment number is given anywhere in the corpus."
+  }
+]

@@ -1,0 +1,422 @@
+[
+  {
+    "id": "d01",
+    "split": "dev",
+    "question": "What did Charles Cooley mean by the looking glass self?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 134,
+        "evidence": "self understanding is constructed, in part, by their perception of how others view them",
+        "chunk_id": "B-soc3e-p0134-003"
+      }
+    ],
+    "expected_answer": "People's self understanding is constructed, in part, by their perception of how others view them.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d02",
+    "split": "dev",
+    "question": "In George Herbert Mead's account of self development, what can children do during the preparatory stage?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 134,
+        "evidence": "During the preparatory stage, children are only capable of imitation",
+        "chunk_id": "B-soc3e-p0134-004"
+      }
+    ],
+    "expected_answer": "They are only capable of imitation: they copy the actions of people they regularly interact with, such as caregivers.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d03",
+    "split": "dev",
+    "question": "In Kohlberg's theory of moral development, at which stage do young children experience the world around them only through their senses?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 135,
+        "evidence": "In the preconventional stage, young children, who lack a higher level of cognitive ability, experience the world around them only through their senses",
+        "chunk_id": "B-soc3e-p0135-002"
+      }
+    ],
+    "expected_answer": "The preconventional stage.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d04",
+    "split": "dev",
+    "question": "What is the Egalia preschool in Sweden trying to do about gender socialization?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 136,
+        "evidence": "Egalia preschool in Sweden, where children develop in a genderless environment",
+        "chunk_id": "B-soc3e-p0136-002"
+      }
+    ],
+    "expected_answer": "It lets children develop in a genderless environment, using neutral terms like 'friend' and setting up play areas and toys to avoid reinforcing gender expectations.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d05",
+    "split": "dev",
+    "question": "How many days of subsidized time off for families with newborns does the Swedish government policy provide?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 140,
+        "evidence": "480 days for families with newborns",
+        "chunk_id": "B-soc3e-p0140-003"
+      }
+    ],
+    "expected_answer": "480 days, which can be shared between mothers and fathers.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d06",
+    "split": "dev",
+    "question": "What do sociologists call the informal teaching done by schools?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 142,
+        "evidence": "the hidden curriculum, the informal teaching done by schools",
+        "chunk_id": "B-soc3e-p0142-000"
+      }
+    ],
+    "expected_answer": "The hidden curriculum.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d07",
+    "split": "dev",
+    "question": "What is anticipatory socialization?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 147,
+        "evidence": "anticipatory socialization, the preparation for future life roles",
+        "chunk_id": "B-soc3e-p0147-003"
+      }
+    ],
+    "expected_answer": "The preparation for future life roles, e.g. a couple cohabiting before marriage or soon-to-be parents reading infant care books.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d08",
+    "split": "dev",
+    "question": "What must new members of an institution go through first in the two-part resocialization process?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 148,
+        "evidence": "must leave behind their old identity through what is known as a degradation ceremony",
+        "chunk_id": "B-soc3e-p0148-001"
+      }
+    ],
+    "expected_answer": "A degradation ceremony, in which they leave behind their old identity and are given a new one.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d09",
+    "split": "dev",
+    "question": "According to the textbook, what is the minimum number of people needed to form a group?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 161,
+        "evidence": "any collection of at least two people who interact with some frequency",
+        "chunk_id": "B-soc3e-p0161-001"
+      }
+    ],
+    "expected_answer": "At least two people who interact with some frequency and share a sense that their identity is somehow attached to the group.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d10",
+    "split": "dev",
+    "question": "What is a reference group?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 164,
+        "evidence": "A reference group is a group that people compare themselves to",
+        "chunk_id": "B-soc3e-p0164-000"
+      }
+    ],
+    "expected_answer": "A group that people compare themselves to; it provides a standard of measurement.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d11",
+    "split": "dev",
+    "question": "Which leadership style issues orders and assigns tasks with little to no feedback from group members?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 167,
+        "evidence": "authoritarian leaders issue orders and assign tasks with little to no feedback from group members",
+        "chunk_id": "B-soc3e-p0167-002"
+      }
+    ],
+    "expected_answer": "Authoritarian leadership.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d12",
+    "split": "dev",
+    "question": "In Asch's conformity study, how many of the fifty test subjects gave an obviously erroneous answer at least once?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 170,
+        "evidence": "thirty-seven out of fifty test subjects",
+        "chunk_id": "B-soc3e-p0170-002"
+      }
+    ],
+    "expected_answer": "Thirty-seven out of fifty.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d13",
+    "split": "dev",
+    "question": "According to Etzioni, what are the three categories of formal organizations?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 171,
+        "evidence": "formal organizations fall into three categories",
+        "chunk_id": "B-soc3e-p0171-003"
+      },
+      {
+        "source_id": "soc3e",
+        "page": 172,
+        "evidence": "The third type is utilitarian organizations",
+        "chunk_id": "B-soc3e-p0172-000"
+      }
+    ],
+    "expected_answer": "Normative (voluntary), coercive and utilitarian organizations.",
+    "filter": {},
+    "type": "multi-hop",
+    "evidence_mode": "all"
+  },
+  {
+    "id": "d14",
+    "split": "dev",
+    "question": "What four characteristics did Max Weber attribute to a bureaucracy?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 172,
+        "evidence": "hierarchy of authority, a clear division of labor, explicit rules, and impersonality",
+        "chunk_id": "B-soc3e-p0172-001"
+      }
+    ],
+    "expected_answer": "A hierarchy of authority, a clear division of labor, explicit rules, and impersonality.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d15",
+    "split": "dev",
+    "question": "How many ways did Robert Merton define people respond to the gap between a socially accepted goal and no socially accepted means to reach it?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 191,
+        "evidence": "Merton defined five ways people respond to this gap",
+        "chunk_id": "B-soc3e-p0191-003"
+      }
+    ],
+    "expected_answer": "Five (conformity, innovation, and the others listed in his strain theory).",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "d16",
+    "split": "dev",
+    "question": "In Edwin Lemert's work, what is primary deviance?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 194,
+        "evidence": "Primary deviance is a violation of norms that does not result in any long-term effects",
+        "chunk_id": "B-soc3e-p0194-001"
+      }
+    ],
+    "expected_answer": "A violation of norms that does not result in any long-term effects on the individual's self-image or interactions with others.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "t01",
+    "split": "test",
+    "question": "How many stages of development does Erik Erikson's theory include?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 133,
+        "evidence": "His theory includes eight stages of development",
+        "chunk_id": "B-soc3e-p0133-004"
+      }
+    ],
+    "expected_answer": "Eight stages, from birth to death.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "t02",
+    "split": "test",
+    "question": "What did Emile Durkheim attribute differences in suicide rates to?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 134,
+        "evidence": "attributed differences in suicide rates among people to social causes",
+        "chunk_id": "B-soc3e-p0134-002"
+      }
+    ],
+    "expected_answer": "Social causes (religious differences) rather than psychological causes.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "t03",
+    "split": "test",
+    "question": "Which pair of reunited twins is described as an example for studying the impact of nature?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 137,
+        "evidence": "Elyse Schein and Paula Bernstein",
+        "chunk_id": "B-soc3e-p0137-002"
+      }
+    ],
+    "expected_answer": "Elyse Schein and Paula Bernstein, reunited at age thirty-five in 2003.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "t04",
+    "split": "test",
+    "question": "How does the textbook define a peer group?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 141,
+        "evidence": "A peer group is made up of people who are similar in age and social status and who share interests",
+        "chunk_id": "B-soc3e-p0141-000"
+      }
+    ],
+    "expected_answer": "People who are similar in age and social status and who share interests.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "t05",
+    "split": "test",
+    "question": "Who is associated with the term McDonaldization of society, and what does it refer to?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 174,
+        "evidence": "The McDonaldization of Society (Ritzer 1993) refers to the increasing presence of the fast food business model",
+        "chunk_id": "B-soc3e-p0174-000"
+      }
+    ],
+    "expected_answer": "Ritzer (1993); the increasing presence of the fast food business model (efficiency, predictability, calculability, control) in social institutions.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "t06",
+    "split": "test",
+    "question": "What theory did Edwin Sutherland establish about how deviant behavior develops?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 196,
+        "evidence": "established differential association theory",
+        "chunk_id": "B-soc3e-p0196-001"
+      }
+    ],
+    "expected_answer": "Differential association theory: individuals learn deviant behavior from those close to them who model it.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "t07",
+    "split": "test",
+    "question": "What is the difference between a prison and a jail?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 203,
+        "evidence": "Prisons are facilities built for individuals serving sentences of more than a year",
+        "chunk_id": "B-soc3e-p0203-002"
+      }
+    ],
+    "expected_answer": "A jail provides temporary confinement (small, local); prisons are large state or federal facilities for sentences of more than a year.",
+    "filter": {},
+    "type": "direct",
+    "evidence_mode": "any"
+  },
+  {
+    "id": "t08",
+    "split": "test",
+    "question": "Which reports a higher crime rate, the FBI's Uniform Crime Reports or the National Crime Victimization Survey, and why?",
+    "gold": [
+      {
+        "source_id": "soc3e",
+        "page": 200,
+        "evidence": "fails to account for the many crimes that go unreported",
+        "chunk_id": "B-soc3e-p0200-001"
+      },
+      {
+        "source_id": "soc3e",
+        "page": 201,
+        "evidence": "The NCVS reports a higher rate of crime than the UCR",
+        "chunk_id": "B-soc3e-p0201-000"
+      }
+    ],
+    "expected_answer": "The NCVS, because as a victim survey it likely picks up crimes that were never reported to the police, which the UCR (police reports) misses.",
+    "filter": {},
+    "type": "multi-hop",
+    "evidence_mode": "all"
+  }
+]
