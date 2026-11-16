@@ -7,7 +7,7 @@ from agent_metrics import aggregate
 class AgentMetricTests(unittest.TestCase):
     def test_counts_and_errors_are_separate(self):
         cases = [{'id':'a','answerable':True}, {'id':'b','answerable':False}, {'id':'c','answerable':True}]
-        traces = [{'query_id':'a','status':'answered','events':[{'event':'search'}],'citations':['c1','c2']},
+        traces = [{'query_id':'a','status':'answered','events':[{'event':'tool_call','tool':'search'}],'citations':['c1','c2']},
                   {'query_id':'b','status':'abstain','events':[{'event':'search'}],'citations':[]},
                   {'query_id':'c','status':'error','events':[],'citations':[]}]
         reviews = [{'query_id':'a','answer_grade':1,'citation_support':[True,False]},
