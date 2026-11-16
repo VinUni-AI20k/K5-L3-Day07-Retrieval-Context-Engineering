@@ -1,0 +1,28 @@
+{
+  "split": "test",
+  "method": "hybrid_rrf",
+  "model": "openai/gpt-4o-mini",
+  "questions": 7,
+  "statuses": {
+    "answered": 0,
+    "abstain": 7,
+    "error": 0
+  },
+  "median_ms_per_question": 5236.462600005325,
+  "model_calls": 18,
+  "model_prompt_tokens": 139900,
+  "model_completion_tokens": 759,
+  "model_total_tokens": 140659,
+  "model_cost_usd": 0.0185988,
+  "embedding_requests": 11,
+  "embedding_tokens": 186,
+  "embedding_cost_usd": null,
+  "parameters": {
+    "day6_strategy": "C",
+    "candidate_k": 10,
+    "top_k": 3,
+    "budget_chars": 800,
+    "max_searches": 4,
+    "filter": null
+  }
+}
