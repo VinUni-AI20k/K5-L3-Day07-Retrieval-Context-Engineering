@@ -1,0 +1,168 @@
+[
+ {
+  "query_id": "d01",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d02",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d03",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d04",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d05",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d06",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d07",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d08",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d09",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d10",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "cited chunks 0164-000 (definition), 0164-001 and 0169-001 (reference groups guide behaviour/norms) all support the claims"
+ },
+ {
+  "query_id": "d11",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d12",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d13",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true,
+   true
+  ],
+  "note": "both Etzioni chunks cited; normative/coercive in 0171-003, utilitarian in 0172-000 (multi-hop, mode all)"
+ },
+ {
+  "query_id": "d14",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d15",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d16",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "answer_grade": 2,
+  "citation_support": [
+   true
+  ],
+  "note": "answer matches expected answer; cited chunk contains the stated fact"
+ },
+ {
+  "query_id": "d17",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "no answer in corpus (absence_reason in gold); agent abstained without unsupported claims"
+ },
+ {
+  "query_id": "d18",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "no answer in corpus (absence_reason in gold); agent abstained without unsupported claims"
+ },
+ {
+  "query_id": "d19",
+  "labeler": "AI-assisted (Claude); student spot-check required",
+  "citation_support": [],
+  "abstention_correct": true,
+  "note": "no answer in corpus (absence_reason in gold); agent abstained without unsupported claims"
+ }
+]

@@ -1,0 +1,4226 @@
+[
+ {
+  "query_id": "d01",
+  "question": "What did Charles Cooley mean by the looking glass self?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "Charles Cooley used the term \"the looking glass self\" to mean that people's self-understanding is constructed, in part, by their perception of how others view them [B-soc3e-p0134-003].",
+  "citations": [
+   "B-soc3e-p0134-003"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.226,
+    "retries": 0,
+    "usage": {
+     "prompt": 704,
+     "output": 47,
+     "thoughts": 51,
+     "total": 802
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Charles Cooley looking glass self",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 5
+    },
+    "filter_reason": "Chapter 5 covers socialization and key theorists like Charles Cooley and the looking-glass self.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0134-003",
+      "score": 7.8367,
+      "rank": 1,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0134-000",
+      "score": -10.9721,
+      "rank": 2,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0133-003",
+      "score": -11.0783,
+      "rank": 3,
+      "page": 133
+     },
+     {
+      "id": "B-soc3e-p0134-002",
+      "score": -11.1247,
+      "rank": 4,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0133-004",
+      "score": -11.1858,
+      "rank": 5,
+      "page": 133
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0134-003",
+     "B-soc3e-p0134-000",
+     "B-soc3e-p0133-003",
+     "B-soc3e-p0134-002",
+     "B-soc3e-p0133-004"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 40.874,
+    "context_chars_used": 4739
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 3.356,
+    "retries": 0,
+    "usage": {
+     "prompt": 2015,
+     "output": 125,
+     "thoughts": 395,
+     "total": 2535
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0134-003"
+    ],
+    "evidence_quote": "people’s self understanding is constructed, in part, by their perception of how others view them—a process termed “the looking glass self”"
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2719,
+   "output": 172,
+   "thoughts": 446,
+   "total": 3337
+  },
+  "latency_s": 45.476,
+  "context_ids": [
+   "B-soc3e-p0134-003",
+   "B-soc3e-p0134-000",
+   "B-soc3e-p0133-003",
+   "B-soc3e-p0134-002",
+   "B-soc3e-p0133-004"
+  ],
+  "context_chars": 4739,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0134-003",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": 7.83668327331543,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nOne of the pioneering contributors to sociological perspectives was Charles Cooley (1864–1929). He asserted that people’s self understanding is constructed, in part, by their perception of how others view them—a process termed “the looking glass self” (Cooley 1902).\nLater, George Herbert Mead (1863–1931) studied the self, a person’s distinct identity that is developed through social interaction. In order to engage in this process of “self,” an individual has to be able to view him or herself through the eyes of others. That’s not an ability that we are born with (Mead 1934). Through socialization we learn to put ourselves in someone else's shoes and look at the world through their perspective. This assists us in becoming self-aware, as we look at ourselves from the perspective of the \"other.\" The case of Danielle, for example, illustrates what happens when social interaction is absent from early experience: Danielle had no ability to see herself as others would see her. From Mead’s point of view, she had no “self.”"
+   },
+   {
+    "id": "B-soc3e-p0134-000",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -10.972082138061523,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nJean Piaget (1896–1980) was a psychologist who focused on the role of social interactions in child development. He recognized that the development of self evolved through a negotiation between the world as it exists in one’s mind and the world that exists as it is experienced socially (Piaget 1954). All three of these thinkers have contributed to our modern understanding of self-development.\nSociology or Psychology: What’s the Difference? You might be wondering: if sociologists and psychologists are both interested in people and their behavior, how are these two disciplines different? What do they agree on, and where do their ideas diverge? The answers are complicated, but the distinction is important to scholars in both fields."
+   },
+   {
+    "id": "B-soc3e-p0133-003",
+    "page": 133,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.078306198120117,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nLEARNING OBJECTIVES\nBy the end of this section, you should be able to:\n• Differentiate psychological and sociological theories of self-development • Explain the process of moral development\nWhen we are born, we have a genetic makeup and biological traits. However, who we are as human beings develops through social interaction. Many scholars, both in the fields of psychology and in sociology, have described the process of self-development as a precursor to understanding how that “self” becomes socialized.\nPsychological Perspectives on Self-Development\nPsychoanalyst Sigmund Freud (1856–1939) was one of the most influential modern scientists to put forth a theory about how people develop a sense of self. He divided the maturation process into stages, and posited that people’s self-development is closely linked to their early stages of development.\nAccording to Freud, failure to properly engage in or disengage from a specific stage results in emotional and psychological consequences throughout adulthood."
+   },
+   {
+    "id": "B-soc3e-p0134-002",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.124677658081055,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nÉmile Durkheim (1858–1917) was the first to make this distinction in research, when he attributed differences in suicide rates among people to social causes (religious differences) rather than to psychological causes (like their mental wellbeing) (Durkheim 1897). Today, we see this same distinction. For example, a sociologist studying how a couple gets to the point of their first kiss on a date might focus her research on cultural norms for dating, social patterns of sexual activity over time, or how this process is different for seniors than for teens. A psychologist would more likely be interested in the person’s earliest sexual awareness or the mental processing of sexual desire.\nSometimes sociologists and psychologists have collaborated to increase knowledge. In recent decades, however, their fields have become more clearly separated as sociologists increasingly focus on large societal issues and patterns, while psychologists remain honed in on the human mind. Both disciplines make valuable contributions through different approaches that provide us with different types of useful insights.\nSociological Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0133-004",
+    "page": 133,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.185762405395508,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nPsychologist Erik Erikson (1902–1994) created a theory of personality development based, in part, on the work of Freud. However, Erikson believed the personality continued to change over time and was never truly finished. His theory includes eight stages of development, beginning with birth and ending with death. According to Erikson, people move through these stages throughout their lives. In contrast to Freud’s focus on psychosexual stages and basic human urges, Erikson’s view of self-development gave credit to more social aspects, like the way we negotiate between our own base desires and what is socially accepted (Erikson 1982)."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d02",
+  "question": "In George Herbert Mead's account of self development, what can children do during the preparatory stage?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "During the preparatory stage, children are capable only of imitation, meaning they copy the actions of people they regularly interact with (such as caregivers) without being able to imagine how others see things [B-soc3e-p0134-004].",
+  "citations": [
+   "B-soc3e-p0134-004"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.958,
+    "retries": 0,
+    "usage": {
+     "prompt": 713,
+     "output": 55,
+     "thoughts": 85,
+     "total": 853
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "George Herbert Mead preparatory stage children",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 5
+    },
+    "filter_reason": "George Herbert Mead's stages of self development are discussed in Chapter 5 (Socialization).",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0134-004",
+      "score": 4.4642,
+      "rank": 1,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0134-003",
+      "score": -4.1344,
+      "rank": 2,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0135-000",
+      "score": -6.5257,
+      "rank": 3,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0135-002",
+      "score": -10.5288,
+      "rank": 4,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0133-001",
+      "score": -11.0683,
+      "rank": 5,
+      "page": 133
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0134-004",
+     "B-soc3e-p0134-003",
+     "B-soc3e-p0135-000",
+     "B-soc3e-p0135-002",
+     "B-soc3e-p0133-001"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 0.921,
+    "context_chars_used": 4709
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 2.219,
+    "retries": 0,
+    "usage": {
+     "prompt": 2050,
+     "output": 139,
+     "thoughts": 199,
+     "total": 2388
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0134-004"
+    ],
+    "evidence_quote": "During the preparatory stage, children are only capable of imitation: they have no ability to imagine how others see things. They copy the actions of people with whom they regularly interact, such as their caregivers."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2763,
+   "output": 194,
+   "thoughts": 284,
+   "total": 3241
+  },
+  "latency_s": 17.199,
+  "context_ids": [
+   "B-soc3e-p0134-004",
+   "B-soc3e-p0134-003",
+   "B-soc3e-p0135-000",
+   "B-soc3e-p0135-002",
+   "B-soc3e-p0133-001"
+  ],
+  "context_chars": 4709,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0134-004",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": 4.464195728302002,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nHow do we go from being newborns to being humans with “selves?” Mead believed that there is a specific path of development that all people go through. During the preparatory stage, children are only capable of imitation: they have no ability to imagine how others see things. They copy the actions of people with whom they regularly interact, such as their caregivers. This is followed by the play stage, during which children begin to take on the role that one other person might have. Thus, children might try on a parent’s point of view by\nSOCIOLOGICAL RESEARCH"
+   },
+   {
+    "id": "B-soc3e-p0134-003",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -4.134369850158691,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nOne of the pioneering contributors to sociological perspectives was Charles Cooley (1864–1929). He asserted that people’s self understanding is constructed, in part, by their perception of how others view them—a process termed “the looking glass self” (Cooley 1902).\nLater, George Herbert Mead (1863–1931) studied the self, a person’s distinct identity that is developed through social interaction. In order to engage in this process of “self,” an individual has to be able to view him or herself through the eyes of others. That’s not an ability that we are born with (Mead 1934). Through socialization we learn to put ourselves in someone else's shoes and look at the world through their perspective. This assists us in becoming self-aware, as we look at ourselves from the perspective of the \"other.\" The case of Danielle, for example, illustrates what happens when social interaction is absent from early experience: Danielle had no ability to see herself as others would see her. From Mead’s point of view, she had no “self.”"
+   },
+   {
+    "id": "B-soc3e-p0135-000",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -6.525734901428223,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nacting out “grownup” behavior, like playing dress-up and acting out the “mom” role, or talking on a toy telephone the way they see adults do.\nDuring the game stage, children learn to consider several roles at the same time and how those roles interact with each other. They learn to understand interactions involving different people with a variety of purposes. For example, a child at this stage is likely to be aware of the different responsibilities of people in a restaurant who together make for a smooth dining experience (someone seats you, another takes your order, someone else cooks the food, while yet another clears away dirty dishes).\nFinally, children develop, understand, and learn the idea of the generalized other, the common behavioral expectations of general society. By this stage of development, an individual is able to imagine how he or she is viewed by one or many others—and thus, from a sociological perspective, to have a “self” (Mead 1934; Mead 1964).\nKohlberg’s Theory of Moral Development"
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -10.528847694396973,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nIn the preconventional stage, young children, who lack a higher level of cognitive ability, experience the world around them only through their senses. It isn’t until the teen years that the conventional theory develops, when youngsters become increasingly aware of others’ feelings and take those into consideration when determining what’s “good” and “bad.” The final stage, called postconventional, is when people begin to think of morality in abstract terms, such as Americans believing that everyone has the right to life, liberty, and the pursuit of happiness. At this stage, people also recognize that legality and morality do not always match up evenly (Kohlberg 1981). When hundreds of thousands of Egyptians turned out in 2011 to protest government corruption, they were using postconventional morality. They understood that although their government was legal, it was not morally correct.\nGilligan’s Theory of Moral Development and Gender"
+   },
+   {
+    "id": "B-soc3e-p0133-001",
+    "page": 133,
+    "source": "soc3e",
+    "section": "Introduction",
+    "chapter": 5,
+    "score": -11.068269729614258,
+    "rank": 5,
+    "origin": "search",
+    "text": "Introduction\nSocialization is the process through which people are taught to be proficient members of a society. It describes the ways that people come to understand societal norms and expectations, to accept society’s beliefs, and to be aware of societal values. Socialization is not the same as socializing (interacting with others, like family and friends); to be precise, it is a sociological process that occurs through socializing.\nWhile Noel's story is about a relatively advanced stage of life, socialization is crucial for early childhood. Even the most basic of human activities are learned. Learning to crawl and then walk are major milestones, but as any parent, guardian, or family member of a toddler knows, other minor accomplishments can be life-altering for the child: climbing stairs, safely getting out of bed, sitting in a regular chair, and drinking from a regular cup. Likewise, family behaviors and values must be learned, sometimes through observation and sometimes through active instruction."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d03",
+  "question": "In Kohlberg's theory of moral development, at which stage do young children experience the world around them only through their senses?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "In Kohlberg's theory of moral development, young children experience the world around them only through their senses during the preconventional stage [B-soc3e-p0135-002].",
+  "citations": [
+   "B-soc3e-p0135-002"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.379,
+    "retries": 0,
+    "usage": {
+     "prompt": 719,
+     "output": 20,
+     "thoughts": 126,
+     "total": 865
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Kohlberg theory moral development senses",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": null,
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0135-001",
+      "score": 5.466,
+      "rank": 1,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0135-002",
+      "score": 4.7524,
+      "rank": 2,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0135-004",
+      "score": 2.8589,
+      "rank": 3,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0135-003",
+      "score": 1.7232,
+      "rank": 4,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0133-003",
+      "score": -1.8169,
+      "rank": 5,
+      "page": 133
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0135-001",
+     "B-soc3e-p0135-002",
+     "B-soc3e-p0135-004",
+     "B-soc3e-p0135-003",
+     "B-soc3e-p0133-003"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 0.957,
+    "context_chars_used": 4510
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 2.226,
+    "retries": 0,
+    "usage": {
+     "prompt": 1969,
+     "output": 116,
+     "thoughts": 281,
+     "total": 2366
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0135-002"
+    ],
+    "evidence_quote": "In the preconventional stage, young children, who lack a higher level of cognitive ability, experience the world around them only through their senses."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2688,
+   "output": 136,
+   "thoughts": 407,
+   "total": 3231
+  },
+  "latency_s": 16.615,
+  "context_ids": [
+   "B-soc3e-p0135-001",
+   "B-soc3e-p0135-002",
+   "B-soc3e-p0135-004",
+   "B-soc3e-p0135-003",
+   "B-soc3e-p0133-003"
+  ],
+  "context_chars": 4510,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0135-001",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": 5.466011047363281,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nMoral development is an important part of the socialization process. The term refers to the way people learn what society considered to be “good” and “bad,” which is important for a smoothly functioning society. Moral development prevents people from acting on unchecked urges, instead considering what is right for society and good for others. Lawrence Kohlberg (1927–1987) was interested in how people learn to decide what is right and what is wrong. To understand this topic, he developed a theory of moral development that includes three levels: preconventional, conventional, and postconventional."
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": 4.752410411834717,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nIn the preconventional stage, young children, who lack a higher level of cognitive ability, experience the world around them only through their senses. It isn’t until the teen years that the conventional theory develops, when youngsters become increasingly aware of others’ feelings and take those into consideration when determining what’s “good” and “bad.” The final stage, called postconventional, is when people begin to think of morality in abstract terms, such as Americans believing that everyone has the right to life, liberty, and the pursuit of happiness. At this stage, people also recognize that legality and morality do not always match up evenly (Kohlberg 1981). When hundreds of thousands of Egyptians turned out in 2011 to protest government corruption, they were using postconventional morality. They understood that although their government was legal, it was not morally correct.\nGilligan’s Theory of Moral Development and Gender"
+   },
+   {
+    "id": "B-soc3e-p0135-004",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": 2.8588945865631104,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nWhile Gilligan is correct that Kohlberg’s research should have included both male and female subjects, her study has been scientifically discredited due to its small sample size. The results Gilligan noted in this study also have not been replicated by subsequent researchers. The differences Gilligan observed were not an issue of the development of morality, but an issue of socialization. Differences in behavior between males and females is the result of gender socialization that teaches boys and girls societal norms and behaviors expected of them based on their sex (see “What a Pretty Little Lady”).\nGilligan also recognized that Kohlberg’s theory rested on the assumption that the justice perspective was the right, or better, perspective. Gilligan, in contrast, theorized that neither perspective was “better”: the two norms of justice served different purposes. Ultimately, she explained that boys are socialized for a work environment where rules make operations run smoothly, while girls are socialized for a home environment"
+   },
+   {
+    "id": "B-soc3e-p0135-003",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": 1.7231907844543457,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nAnother sociologist, Carol Gilligan (1936–), recognized that Kohlberg’s theory might show gender bias since his research was only conducted on male subjects. Would females study subjects have responded differently? Would a female social scientist notice different patterns when analyzing the research? To answer the first question, she set out to study differences between how boys and girls developed morality. Gilligan’s research suggested that boys and girls do have different understandings of morality. Boys appeared to have a justice perspective, by placing emphasis on rules and laws. Girls, on the other hand, seem to have a care and responsibility perspective; they consider people’s reasons behind behavior that seems morally wrong."
+   },
+   {
+    "id": "B-soc3e-p0133-003",
+    "page": 133,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -1.8169289827346802,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nLEARNING OBJECTIVES\nBy the end of this section, you should be able to:\n• Differentiate psychological and sociological theories of self-development • Explain the process of moral development\nWhen we are born, we have a genetic makeup and biological traits. However, who we are as human beings develops through social interaction. Many scholars, both in the fields of psychology and in sociology, have described the process of self-development as a precursor to understanding how that “self” becomes socialized.\nPsychological Perspectives on Self-Development\nPsychoanalyst Sigmund Freud (1856–1939) was one of the most influential modern scientists to put forth a theory about how people develop a sense of self. He divided the maturation process into stages, and posited that people’s self-development is closely linked to their early stages of development.\nAccording to Freud, failure to properly engage in or disengage from a specific stage results in emotional and psychological consequences throughout adulthood."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d04",
+  "question": "What is the Egalia preschool in Sweden trying to do about gender socialization?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "At the Egalia preschool in Sweden, children develop in a genderless environment designed to eliminate all societal gender norms [B-soc3e-p0136-002]. Children are referred to using neutral terms like \"friend\" instead of \"he\" or \"she,\" and play areas and toys are intentionally arranged to avoid reinforcing gender expectations [B-soc3e-p0136-002].",
+  "citations": [
+   "B-soc3e-p0136-002"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.225,
+    "retries": 0,
+    "usage": {
+     "prompt": 708,
+     "output": 48,
+     "thoughts": 48,
+     "total": 804
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Egalia preschool Sweden gender socialization",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 5
+    },
+    "filter_reason": "Egalia preschool relates to gender socialization, which is covered in Chapter 5.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0136-002",
+      "score": 8.2927,
+      "rank": 1,
+      "page": 136
+     },
+     {
+      "id": "B-soc3e-p0140-003",
+      "score": -0.7546,
+      "rank": 2,
+      "page": 140
+     },
+     {
+      "id": "B-soc3e-p0133-001",
+      "score": -7.3158,
+      "rank": 3,
+      "page": 133
+     },
+     {
+      "id": "B-soc3e-p0146-002",
+      "score": -7.8764,
+      "rank": 4,
+      "page": 146
+     },
+     {
+      "id": "B-soc3e-p0136-001",
+      "score": -8.3749,
+      "rank": 5,
+      "page": 136
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0136-002",
+     "B-soc3e-p0140-003",
+     "B-soc3e-p0133-001",
+     "B-soc3e-p0146-002",
+     "B-soc3e-p0136-001"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.011,
+    "context_chars_used": 4598
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 2.321,
+    "retries": 1,
+    "usage": {
+     "prompt": 1989,
+     "output": 152,
+     "thoughts": 396,
+     "total": 2537
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0136-002"
+    ],
+    "evidence_quote": "Egalia strives to eliminate all societal gender norms from these children’s preschool world."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2697,
+   "output": 200,
+   "thoughts": 444,
+   "total": 3341
+  },
+  "latency_s": 52.059,
+  "context_ids": [
+   "B-soc3e-p0136-002",
+   "B-soc3e-p0140-003",
+   "B-soc3e-p0133-001",
+   "B-soc3e-p0146-002",
+   "B-soc3e-p0136-001"
+  ],
+  "context_chars": 4598,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0136-002",
+    "page": 136,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": 8.292671203613281,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nOne solution to this type of gender socialization is being experimented with at the Egalia preschool in Sweden, where children develop in a genderless environment. All the children at Egalia are referred to with neutral terms like “friend” instead of “he” or “she.” Play areas and toys are consciously set up to eliminate any reinforcement of gender expectations (Haney 2011). Egalia strives to eliminate all societal gender norms from these children’s preschool world.\nExtreme? Perhaps. So what is the middle ground? Bloom suggests that we start with simple steps: when introduced to a young girl, ask about her favorite book or what she likes. In short, engage with her mind ... not her outward appearance (Bloom 2011)."
+   },
+   {
+    "id": "B-soc3e-p0140-003",
+    "page": 140,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": -0.7546162605285645,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nIn Sweden, for instance, stay-at-home fathers are an accepted part of the social landscape. A government policy provides subsidized time off work—480 days for families with newborns—with the option of the paid leave being shared between mothers and fathers. As one stay-at-home dad says, being home to take care of his baby son “is a real fatherly thing to do. I think that’s very masculine” (Associated Press 2011). Close to 90 percent of Swedish fathers use their paternity leave (about 340,000 dads); on average they take seven weeks per birth (The Economist, 2014). How do U.S. policies—and our society’s expected gender roles—compare? How will Swedish children raised this way be socialized to parental gender norms? How might that be different from parental gender norms in the United States?"
+   },
+   {
+    "id": "B-soc3e-p0133-001",
+    "page": 133,
+    "source": "soc3e",
+    "section": "Introduction",
+    "chapter": 5,
+    "score": -7.315810680389404,
+    "rank": 3,
+    "origin": "search",
+    "text": "Introduction\nSocialization is the process through which people are taught to be proficient members of a society. It describes the ways that people come to understand societal norms and expectations, to accept society’s beliefs, and to be aware of societal values. Socialization is not the same as socializing (interacting with others, like family and friends); to be precise, it is a sociological process that occurs through socializing.\nWhile Noel's story is about a relatively advanced stage of life, socialization is crucial for early childhood. Even the most basic of human activities are learned. Learning to crawl and then walk are major milestones, but as any parent, guardian, or family member of a toddler knows, other minor accomplishments can be life-altering for the child: climbing stairs, safely getting out of bed, sitting in a regular chair, and drinking from a regular cup. Likewise, family behaviors and values must be learned, sometimes through observation and sometimes through active instruction."
+   },
+   {
+    "id": "B-soc3e-p0146-002",
+    "page": 146,
+    "source": "soc3e",
+    "section": "5.4 Socialization Across the Life Course",
+    "chapter": 5,
+    "score": -7.876363277435303,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.4 Socialization Across the Life Course\nIn the United States, this life transition point is socialized quite differently. Taking a year off much less common than some other countries, but has certainly picked up in recent years. In most cases, U.S. youth are encouraged to select a few target colleges or potential workforce options by their late teens, and to get started on those pathways soon after high school. As mentioned above, many U.S. students do not attend college, but most of those students are in the workforce (including the military).\nOther nations have entirely different approaches based on available educational institutions, financial circumstances, and family needs. In some nations, students often go to college soon after high school, but do so in other countries (including the U.S.). Dozens of nations require military conscription—military service—for men, and a few (such as Sweden, Israel, Norway, Eritrea, and Venezuela) for women as well.\nHow might your life be different if you lived in one of these other countries? Can you think of similar social norms—related to life age-transition points—that vary from country to country?"
+   },
+   {
+    "id": "B-soc3e-p0136-001",
+    "page": 136,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -8.374937057495117,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nBloom asserts that we are too focused on the appearance of young girls, and as a result, our society is socializing them to believe that how they look is of vital importance. And Bloom may be on to something. How often do you tell a little boy how attractive his outfit is, how nice looking his shoes are, or how handsome he looks today? To support her assertions, Bloom cites, as one example, that about 50 percent of girls ages three to six worry about being fat (Bloom 2011). We’re talking about kindergarteners who are concerned about their body image. Sociologists are acutely interested in of this type of gender socialization, by which societal expectations of how boys and girls should be—how they should behave, what toys and colors they should like, and how important their attire is—are reinforced."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d05",
+  "question": "How many days of subsidized time off for families with newborns does the Swedish government policy provide?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "The Swedish government policy provides 480 days of subsidized time off work for families with newborns, with the option to share the paid leave between mothers and fathers [B-soc3e-p0140-003].",
+  "citations": [
+   "B-soc3e-p0140-003"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.707,
+    "retries": 0,
+    "usage": {
+     "prompt": 711,
+     "output": 20,
+     "thoughts": 111,
+     "total": 842
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Sweden subsidized time off families newborns days",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": null,
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0140-003",
+      "score": 6.8499,
+      "rank": 1,
+      "page": 140
+     },
+     {
+      "id": "B-soc3e-p0146-002",
+      "score": -10.778,
+      "rank": 2,
+      "page": 146
+     },
+     {
+      "id": "B-soc3e-p0136-002",
+      "score": -10.935,
+      "rank": 3,
+      "page": 136
+     },
+     {
+      "id": "B-soc3e-p0144-001",
+      "score": -11.2407,
+      "rank": 4,
+      "page": 144
+     },
+     {
+      "id": "B-soc3e-p0138-002",
+      "score": -11.2756,
+      "rank": 5,
+      "page": 138
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0140-003",
+     "B-soc3e-p0146-002",
+     "B-soc3e-p0136-002",
+     "B-soc3e-p0144-001",
+     "B-soc3e-p0138-002"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.284,
+    "context_chars_used": 5053
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 1.655,
+    "retries": 0,
+    "usage": {
+     "prompt": 2111,
+     "output": 126,
+     "thoughts": 241,
+     "total": 2478
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0140-003"
+    ],
+    "evidence_quote": "A government policy provides subsidized time off work—480 days for families with newborns—with the option of the paid leave being shared between mothers and fathers."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2822,
+   "output": 146,
+   "thoughts": 352,
+   "total": 3320
+  },
+  "latency_s": 16.377,
+  "context_ids": [
+   "B-soc3e-p0140-003",
+   "B-soc3e-p0146-002",
+   "B-soc3e-p0136-002",
+   "B-soc3e-p0144-001",
+   "B-soc3e-p0138-002"
+  ],
+  "context_chars": 5053,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0140-003",
+    "page": 140,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": 6.849881649017334,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nIn Sweden, for instance, stay-at-home fathers are an accepted part of the social landscape. A government policy provides subsidized time off work—480 days for families with newborns—with the option of the paid leave being shared between mothers and fathers. As one stay-at-home dad says, being home to take care of his baby son “is a real fatherly thing to do. I think that’s very masculine” (Associated Press 2011). Close to 90 percent of Swedish fathers use their paternity leave (about 340,000 dads); on average they take seven weeks per birth (The Economist, 2014). How do U.S. policies—and our society’s expected gender roles—compare? How will Swedish children raised this way be socialized to parental gender norms? How might that be different from parental gender norms in the United States?"
+   },
+   {
+    "id": "B-soc3e-p0146-002",
+    "page": 146,
+    "source": "soc3e",
+    "section": "5.4 Socialization Across the Life Course",
+    "chapter": 5,
+    "score": -10.778007507324219,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.4 Socialization Across the Life Course\nIn the United States, this life transition point is socialized quite differently. Taking a year off much less common than some other countries, but has certainly picked up in recent years. In most cases, U.S. youth are encouraged to select a few target colleges or potential workforce options by their late teens, and to get started on those pathways soon after high school. As mentioned above, many U.S. students do not attend college, but most of those students are in the workforce (including the military).\nOther nations have entirely different approaches based on available educational institutions, financial circumstances, and family needs. In some nations, students often go to college soon after high school, but do so in other countries (including the U.S.). Dozens of nations require military conscription—military service—for men, and a few (such as Sweden, Israel, Norway, Eritrea, and Venezuela) for women as well.\nHow might your life be different if you lived in one of these other countries? Can you think of similar social norms—related to life age-transition points—that vary from country to country?"
+   },
+   {
+    "id": "B-soc3e-p0136-002",
+    "page": 136,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -10.934995651245117,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nOne solution to this type of gender socialization is being experimented with at the Egalia preschool in Sweden, where children develop in a genderless environment. All the children at Egalia are referred to with neutral terms like “friend” instead of “he” or “she.” Play areas and toys are consciously set up to eliminate any reinforcement of gender expectations (Haney 2011). Egalia strives to eliminate all societal gender norms from these children’s preschool world.\nExtreme? Perhaps. So what is the middle ground? Bloom suggests that we start with simple steps: when introduced to a young girl, ask about her favorite book or what she likes. In short, engage with her mind ... not her outward appearance (Bloom 2011)."
+   },
+   {
+    "id": "B-soc3e-p0144-001",
+    "page": 144,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": -11.240720748901367,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nEach time we embark on one of these new categories—senior, adult, taxpayer—we must be socialized into our new role. Seniors must learn the ropes of Medicare, Social Security benefits, and senior shopping discounts. When U.S. males turn eighteen, they must register with the Selective Service System within thirty days to be entered into a database for possible military service. These government dictates mark the points at which we require socialization into a new category.\nMass Media\nMass media distribute impersonal information to a wide audience, via television, newspapers, radio, and the Internet. With the average person spending over four hours a day in front of the television (and children averaging even more screen time), media greatly influences social norms (Roberts, Foehr, and Rideout 2005). People learn about objects of material culture (like new technology and transportation options), as well as nonmaterial culture—what is true (beliefs), what is important (values), and what is expected (norms).\nGirls and Movies\nFIGURE 5.7 Some researchers, parents, and children's advocates are concerned about the effects of raising girls"
+   },
+   {
+    "id": "B-soc3e-p0138-002",
+    "page": 138,
+    "source": "soc3e",
+    "section": "5.2 Why Socialization Matters",
+    "chapter": 5,
+    "score": -11.275606155395508,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.2 Why Socialization Matters\nGladwell looked to a recent study conducted by sociologist Annette Lareau in which she closely shadowed 12 families from various economic backgrounds and examined their parenting techniques. Parents from lower income families followed a strategy of “accomplishment of natural growth,” which is to say they let their children develop on their own with a large amount of independence; parents from higher-income families, however, “actively fostered and accessed a child’s talents, opinions, and skills” (Gladwell 2008). These parents were more likely to engage in analytical conversation, encourage active questioning of the establishment, and foster development of negotiation skills. The parents were also able to introduce their children to a wide range of activities, from sports to music to accelerated academic programs. When one middle-class child was denied entry to a gifted and talented program, the mother petitioned the school and arranged additional testing until her daughter was admitted. Lower-income parents, however, were more likely to unquestioningly obey authorities such as school boards."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d06",
+  "question": "What do sociologists call the informal teaching done by schools?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "Sociologists call the informal teaching done by schools the hidden curriculum [B-soc3e-p0142-000].",
+  "citations": [
+   "B-soc3e-p0142-000"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 22.319,
+    "retries": 1,
+    "usage": {
+     "prompt": 705,
+     "output": 46,
+     "thoughts": 63,
+     "total": 814
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "informal teaching done by schools curriculum",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": "Chapter 5 covers socialization, including schools and the hidden curriculum.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0142-000",
+      "score": 6.8883,
+      "rank": 1,
+      "page": 142
+     },
+     {
+      "id": "B-soc3e-p0142-001",
+      "score": -1.6906,
+      "rank": 2,
+      "page": 142
+     },
+     {
+      "id": "B-soc3e-p0142-002",
+      "score": -2.26,
+      "rank": 3,
+      "page": 142
+     },
+     {
+      "id": "B-soc3e-p0141-001",
+      "score": -3.2744,
+      "rank": 4,
+      "page": 141
+     },
+     {
+      "id": "B-soc3e-p0174-003",
+      "score": -6.0036,
+      "rank": 5,
+      "page": 174
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0142-000",
+     "B-soc3e-p0142-001",
+     "B-soc3e-p0142-002",
+     "B-soc3e-p0141-001",
+     "B-soc3e-p0174-003"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.443,
+    "context_chars_used": 4121
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 22.765,
+    "retries": 0,
+    "usage": {
+     "prompt": 1832,
+     "output": 93,
+     "thoughts": 133,
+     "total": 2058
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0142-000"
+    ],
+    "evidence_quote": "Sociologists describe this aspect of schools as the hidden curriculum, the informal teaching done by schools."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2537,
+   "output": 139,
+   "thoughts": 196,
+   "total": 2872
+  },
+  "latency_s": 92.834,
+  "context_ids": [
+   "B-soc3e-p0142-000",
+   "B-soc3e-p0142-001",
+   "B-soc3e-p0142-002",
+   "B-soc3e-p0141-001",
+   "B-soc3e-p0174-003"
+  ],
+  "context_chars": 4121,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0142-000",
+    "page": 142,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": 6.88831090927124,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nFIGURE 5.5 These kindergarteners aren’t just learning to read and write; they are being socialized to norms like\nkeeping their hands to themselves, standing in line, and playing together. (Credit: woodleywonderworks/flickr)\nSchool and classroom rituals, led by teachers serving as role models and leaders, regularly reinforce what society expects from children. Sociologists describe this aspect of schools as the hidden curriculum, the informal teaching done by schools."
+   },
+   {
+    "id": "B-soc3e-p0142-001",
+    "page": 142,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": -1.690558671951294,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nFor example, in the United States, schools have built a sense of competition into the way grades are awarded and the way teachers evaluate students (Bowles and Gintis 1976). When children participate in a relay race or a math contest, they learn there are winners and losers in society. When children are required to work together on a project, they practice teamwork with other people in cooperative situations. The hidden curriculum prepares children for the adult world. Children learn how to deal with bureaucracy, rules, expectations, waiting their turn, and sitting still for hours during the day. Schools in different cultures socialize children differently in order to prepare them to function well in those cultures. The latent functions of teamwork and dealing with bureaucracy are features of U.S. culture."
+   },
+   {
+    "id": "B-soc3e-p0142-002",
+    "page": 142,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": -2.2600483894348145,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nSchools also socialize children by teaching them about citizenship and national pride. In the United States, children are taught to say the Pledge of Allegiance. Most districts require classes about U.S. history and geography. As academic understanding of history evolves, textbooks in the United States have been scrutinized and revised to update attitudes toward other cultures as well as perspectives on historical events; thus, children are socialized to a different national or world history than earlier textbooks may have done. For example, information about the mistreatment of African Americans and Native American Indians more accurately reflects those events than in textbooks of the past.\nControversial Textbooks On August 13, 2001, twenty South Korean men gathered in Seoul. Each chopped off one of his own fingers because of textbooks. These men took drastic measures to protest eight middle school textbooks approved by Tokyo for use in Japanese middle schools. According to the Korean government (and other East Asian nations),\nBIG PICTURE"
+   },
+   {
+    "id": "B-soc3e-p0141-001",
+    "page": 141,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": -3.274371862411499,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nThe social institutions of our culture also inform our socialization. Formal institutions—like schools, workplaces, and the government—teach people how to behave in and navigate these systems. Other institutions, like the media, contribute to socialization by inundating us with messages about norms and expectations.\nSchool\nMost U.S. children spend about seven hours a day, 180 days a year, in school, which makes it hard to deny the importance school has on their socialization (U.S. Department of Education 2004). Students are not in school only to study math, reading, science, and other subjects—the manifest function of this system. Schools also serve a latent function in society by socializing children into behaviors like practicing teamwork, following a schedule, and using textbooks."
+   },
+   {
+    "id": "B-soc3e-p0174-003",
+    "page": 174,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -6.00362491607666,
+    "rank": 5,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nThe corporate impact of this phenomenon is interesting on its own, but sociologists and ordinary citizens are often more concerned about its echoes in other areas of society. A primary example, discussed extensively later on in this text, is education. Curricula and teaching practices were long the domain of local districts under state guidance. Some experts felt that this led to both inefficiency and underperformance. Starting in the 1990s and especially in the early 2000s with the No Child Left Behind law, national standards began to override local approaches. But the desired outcome (improved education) is difficult to measure and far more difficult to achieve. Due to funding gaps, difficult standards, and intense public and local government opposition, the law was largely seen as having limited impact and was eventually phased out."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d07",
+  "question": "What is anticipatory socialization?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "Anticipatory socialization is the preparation for future life roles, such as adults planning for retirement or soon-to-be parents reading infant care books and preparing their home [B-soc3e-p0147-003].",
+  "citations": [
+   "B-soc3e-p0147-003"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 22.047,
+    "retries": 0,
+    "usage": {
+     "prompt": 699,
+     "output": 43,
+     "thoughts": 41,
+     "total": 783
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "anticipatory socialization",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 5
+    },
+    "filter_reason": "Anticipatory socialization is a core concept in socialization (Chapter 5).",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0147-003",
+      "score": 7.1255,
+      "rank": 1,
+      "page": 147
+     },
+     {
+      "id": "B-soc3e-p0133-001",
+      "score": -1.0351,
+      "rank": 2,
+      "page": 133
+     },
+     {
+      "id": "B-soc3e-p0139-001",
+      "score": -3.0619,
+      "rank": 3,
+      "page": 139
+     },
+     {
+      "id": "B-soc3e-p0148-000",
+      "score": -3.9285,
+      "rank": 4,
+      "page": 148
+     },
+     {
+      "id": "B-soc3e-p0140-000",
+      "score": -4.1129,
+      "rank": 5,
+      "page": 140
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0147-003",
+     "B-soc3e-p0133-001",
+     "B-soc3e-p0139-001",
+     "B-soc3e-p0148-000",
+     "B-soc3e-p0140-000"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.293,
+    "context_chars_used": 4410
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 23.05,
+    "retries": 0,
+    "usage": {
+     "prompt": 1857,
+     "output": 112,
+     "thoughts": 74,
+     "total": 2043
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0147-003"
+    ],
+    "evidence_quote": "adults also engage in anticipatory socialization, the preparation for future life roles."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2556,
+   "output": 155,
+   "thoughts": 115,
+   "total": 2826
+  },
+  "latency_s": 58.084,
+  "context_ids": [
+   "B-soc3e-p0147-003",
+   "B-soc3e-p0133-001",
+   "B-soc3e-p0139-001",
+   "B-soc3e-p0148-000",
+   "B-soc3e-p0140-000"
+  ],
+  "context_chars": 4410,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0147-003",
+    "page": 147,
+    "source": "soc3e",
+    "section": "5.4 Socialization Across the Life Course",
+    "chapter": 5,
+    "score": 7.125545501708984,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.4 Socialization Across the Life Course\nJust as young children pretend to be doctors or lawyers, play house, and dress up, adults also engage in anticipatory socialization, the preparation for future life roles. Examples would include a couple who cohabitate before marriage or soon-to-be parents who read infant care books and prepare their home for the new arrival. As part of anticipatory socialization, adults who are financially able begin planning for their retirement, saving money, and looking into future healthcare options. The transition into any new life role, despite the social structure that supports it, can be difficult."
+   },
+   {
+    "id": "B-soc3e-p0133-001",
+    "page": 133,
+    "source": "soc3e",
+    "section": "Introduction",
+    "chapter": 5,
+    "score": -1.035111665725708,
+    "rank": 2,
+    "origin": "search",
+    "text": "Introduction\nSocialization is the process through which people are taught to be proficient members of a society. It describes the ways that people come to understand societal norms and expectations, to accept society’s beliefs, and to be aware of societal values. Socialization is not the same as socializing (interacting with others, like family and friends); to be precise, it is a sociological process that occurs through socializing.\nWhile Noel's story is about a relatively advanced stage of life, socialization is crucial for early childhood. Even the most basic of human activities are learned. Learning to crawl and then walk are major milestones, but as any parent, guardian, or family member of a toddler knows, other minor accomplishments can be life-altering for the child: climbing stairs, safely getting out of bed, sitting in a regular chair, and drinking from a regular cup. Likewise, family behaviors and values must be learned, sometimes through observation and sometimes through active instruction."
+   },
+   {
+    "id": "B-soc3e-p0139-001",
+    "page": 139,
+    "source": "soc3e",
+    "section": "5.2 Why Socialization Matters",
+    "chapter": 5,
+    "score": -3.0618650913238525,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.2 Why Socialization Matters\nSociologists all recognize the importance of socialization for healthy individual and societal development. But how do scholars working in the three major theoretical paradigms approach this topic? Structural functionalists would say that socialization is essential to society, both because it trains members to operate successfully within it and because it perpetuates culture by transmitting it to new generations. Without socialization, a society’s culture would perish as members died off. A conflict theorist might argue that socialization reproduces inequality from generation to generation by conveying different expectations and norms to those with different social characteristics. For example, individuals are socialized differently by gender, social class, and race. As in Chris Langan's case, this creates different (unequal) opportunities. An interactionist studying socialization is concerned with face-to-face exchanges and symbolic communication. For example, dressing baby boys in blue and baby girls in pink is one small way we convey messages about differences in gender roles."
+   },
+   {
+    "id": "B-soc3e-p0148-000",
+    "page": 148,
+    "source": "soc3e",
+    "section": "5.4 Socialization Across the Life Course",
+    "chapter": 5,
+    "score": -3.928539514541626,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.4 Socialization Across the Life Course\napply. The process of resocialization is typically more stressful than normal socialization because people have to unlearn behaviors that have become customary to them. While resocialization has a specific meaning, many organizations consider their training or retraining processes to embody elements of resocialization.\nThe most common way resocialization occurs is in a total institution where people are isolated from society and are forced to follow someone else’s rules. A ship at sea is a total institution, as are religious convents, prisons, or some cult organizations. They are places cut off from a larger society. The 6.9 million Americans who lived in prisons and penitentiaries at the end of 2012 are also members of this type of institution (U.S. Department of Justice 2012)."
+   },
+   {
+    "id": "B-soc3e-p0140-000",
+    "page": 140,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": -4.11293363571167,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nculture in these settings, as well as being introduced to the beliefs and values of society.\nFamily\nFamily is the first agent of socialization. Mothers and fathers, siblings and grandparents, plus members of an extended family, all teach a child what he or she needs to know. For example, they show the child how to use objects (such as clothes, computers, eating utensils, books, bikes); how to relate to others (some as “family,” others as “friends,” still others as “strangers” or “teachers” or “neighbors”); and how the world works (what is “real” and what is “imagined”). As you are aware, either from your own experience as a child or from your role in helping to raise one, socialization includes teaching and learning about an unending array of objects and ideas."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d08",
+  "question": "What must new members of an institution go through first in the two-part resocialization process?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "First, new members entering an institution must leave behind their old identity through a process known as a degradation ceremony [B-soc3e-p0148-001].",
+  "citations": [
+   "B-soc3e-p0148-001"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 21.95,
+    "retries": 0,
+    "usage": {
+     "prompt": 713,
+     "output": 53,
+     "thoughts": 67,
+     "total": 833
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "resocialization two part process institution first",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 5
+    },
+    "filter_reason": "Resocialization is a topic covered in Chapter 5 (Socialization).",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0148-001",
+      "score": 6.2754,
+      "rank": 1,
+      "page": 148
+     },
+     {
+      "id": "B-soc3e-p0148-000",
+      "score": 1.1009,
+      "rank": 2,
+      "page": 148
+     },
+     {
+      "id": "B-soc3e-p0149-000",
+      "score": -2.5222,
+      "rank": 3,
+      "page": 149
+     },
+     {
+      "id": "B-soc3e-p0148-002",
+      "score": -4.3199,
+      "rank": 4,
+      "page": 148
+     },
+     {
+      "id": "B-soc3e-p0147-004",
+      "score": -5.5201,
+      "rank": 5,
+      "page": 147
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0148-001",
+     "B-soc3e-p0148-000",
+     "B-soc3e-p0149-000",
+     "B-soc3e-p0148-002",
+     "B-soc3e-p0147-004"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.426,
+    "context_chars_used": 5004
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 22.895,
+    "retries": 0,
+    "usage": {
+     "prompt": 2082,
+     "output": 104,
+     "thoughts": 154,
+     "total": 2340
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0148-001"
+    ],
+    "evidence_quote": "First, members entering an institution must leave behind their old identity through what is known as a degradation ceremony."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2795,
+   "output": 157,
+   "thoughts": 221,
+   "total": 3173
+  },
+  "latency_s": 57.848,
+  "context_ids": [
+   "B-soc3e-p0148-001",
+   "B-soc3e-p0148-000",
+   "B-soc3e-p0149-000",
+   "B-soc3e-p0148-002",
+   "B-soc3e-p0147-004"
+  ],
+  "context_chars": 5004,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0148-001",
+    "page": 148,
+    "source": "soc3e",
+    "section": "5.4 Socialization Across the Life Course",
+    "chapter": 5,
+    "score": 6.275421142578125,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.4 Socialization Across the Life Course\nMany individuals are resocialized into an institution through a two-part process. First, members entering an institution must leave behind their old identity through what is known as a degradation ceremony. In a degradation ceremony, new members lose the aspects of their old identity and are given new identities. The process is sometimes gentle. To enter a senior care home, an elderly person often must leave a family home and give up many belongings which were part of his or her long-standing identity. Though caretakers guide the elderly compassionately, the process can still be one of loss. In many cults, this process is also gentle and happens in an environment of support and caring.\nIn other situations, the degradation ceremony can be more extreme. New prisoners lose freedom, rights (including the right to privacy), and personal belongings. When entering the military, soldiers have their hair cut short. Their old clothes are removed, and they wear matching uniforms. These individuals must give up any markers of their former identity in order to be resocialized into an identity as a “soldier.”"
+   },
+   {
+    "id": "B-soc3e-p0148-000",
+    "page": 148,
+    "source": "soc3e",
+    "section": "5.4 Socialization Across the Life Course",
+    "chapter": 5,
+    "score": 1.100881814956665,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.4 Socialization Across the Life Course\napply. The process of resocialization is typically more stressful than normal socialization because people have to unlearn behaviors that have become customary to them. While resocialization has a specific meaning, many organizations consider their training or retraining processes to embody elements of resocialization.\nThe most common way resocialization occurs is in a total institution where people are isolated from society and are forced to follow someone else’s rules. A ship at sea is a total institution, as are religious convents, prisons, or some cult organizations. They are places cut off from a larger society. The 6.9 million Americans who lived in prisons and penitentiaries at the end of 2012 are also members of this type of institution (U.S. Department of Justice 2012)."
+   },
+   {
+    "id": "B-soc3e-p0149-000",
+    "page": 149,
+    "source": "soc3e",
+    "section": "5.4 Socialization Across the Life Course",
+    "chapter": 5,
+    "score": -2.52215838432312,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.4 Socialization Across the Life Course\nachieve a mission, and they take pride in the accomplishments of their units. Many soldiers who leave the military transition these skills into excellent careers. Others have significant challenges upon leaving, uncertain about the outside world and what to do next. The process of resocialization to civilian life is not a simple one.\nOther types of organizations may utilize or extend the concept of resocialization with regard to changing people's behaviors. Corporate trainers (and training researchers) sometimes emphasize the need for trainees to shed their old behaviors and adopt entirely new ones. When the people return to their jobs after training, they may be called to leave their old behaviors behind. Similarly, if an entire team goes for training, they may be called to leave their culture behind (Weinbauer-Heidel 2019). Not all such training would apply the resocialization metaphor, but behavioral or personal-professional areas such as stress management or priority/project management might borrow from resocialization principles in order to make the training effective."
+   },
+   {
+    "id": "B-soc3e-p0148-002",
+    "page": 148,
+    "source": "soc3e",
+    "section": "5.4 Socialization Across the Life Course",
+    "chapter": 5,
+    "score": -4.319900035858154,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.4 Socialization Across the Life Course\nFIGURE 5.8 In basic training, members of the Air Force are taught to walk, move, and look like each other. (Credit:\nStaff Sergeant Desiree N. Palacios, U.S. Air Force/Wikimedia Commons)\nAfter new members of an institution are stripped of their old identity, they build a new one that matches the new society. In the military, soldiers go through basic training together, where they learn new rules and bond with one another. They follow structured schedules set by their leaders. Soldiers must keep their areas clean for inspection, learn to march in correct formations, and salute when in the presence of superiors.\nLearning to deal with life after having lived in a total institution requires yet another process of resocialization. In the U.S. military, soldiers learn discipline and a capacity for hard work. They set aside personal goals to"
+   },
+   {
+    "id": "B-soc3e-p0147-004",
+    "page": 147,
+    "source": "soc3e",
+    "section": "5.4 Socialization Across the Life Course",
+    "chapter": 5,
+    "score": -5.520059585571289,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.4 Socialization Across the Life Course\nAbout a decade after the nation began to recover from the Recession, it was hit by another. Millennials, who had entered a very challenging employment situation, were saddled with debt and had very little in savings. By July 2020, the Millennial unemployment rate was 11.5 percent, which was actually higher than their unemployment rate during the 2008 Recession. Gen Z, the group of people born after the Millennials, fared even worse—with an 18 percent unemployment rate (Hoffower 2020). The cycle of financial insecurity and the potential socialization impacts may happen again in this decade.\nResocialization\nIn the process of resocialization, old behaviors that were helpful in a previous role are removed because they are no longer of use. Resocialization is necessary when a person moves to a senior care center, goes to boarding school, or serves a sentence in the prison system. In the new environment, the old rules no longer\nSOCIOLOGY IN THE REAL WORLD"
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d09",
+  "question": "According to the textbook, what is the minimum number of people needed to form a group?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "According to the textbook, a group is defined as a collection of at least two people who interact with some frequency and share a sense of identity [B-soc3e-p0161-001].",
+  "citations": [
+   "B-soc3e-p0161-001"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 22.73,
+    "retries": 0,
+    "usage": {
+     "prompt": 711,
+     "output": 47,
+     "thoughts": 49,
+     "total": 807
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "minimum number of people group dyad triad",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 6
+    },
+    "filter_reason": "Chapter 6 covers social groups and organizations.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0166-000",
+      "score": -0.0425,
+      "rank": 1,
+      "page": 166
+     },
+     {
+      "id": "B-soc3e-p0170-002",
+      "score": -10.7823,
+      "rank": 2,
+      "page": 170
+     },
+     {
+      "id": "B-soc3e-p0161-001",
+      "score": -11.0395,
+      "rank": 3,
+      "page": 161
+     },
+     {
+      "id": "B-soc3e-p0161-002",
+      "score": -11.1314,
+      "rank": 4,
+      "page": 161
+     },
+     {
+      "id": "B-soc3e-p0170-000",
+      "score": -11.1489,
+      "rank": 5,
+      "page": 170
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0166-000",
+     "B-soc3e-p0170-002",
+     "B-soc3e-p0161-001",
+     "B-soc3e-p0161-002",
+     "B-soc3e-p0170-000"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.751,
+    "context_chars_used": 5236
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 23.409,
+    "retries": 0,
+    "usage": {
+     "prompt": 2161,
+     "output": 116,
+     "thoughts": 494,
+     "total": 2771
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0161-001"
+    ],
+    "evidence_quote": "any collection of at least two people who interact with some frequency and who share a sense that their identity is somehow aligned with the group"
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2872,
+   "output": 163,
+   "thoughts": 543,
+   "total": 3578
+  },
+  "latency_s": 59.157,
+  "context_ids": [
+   "B-soc3e-p0166-000",
+   "B-soc3e-p0170-002",
+   "B-soc3e-p0161-001",
+   "B-soc3e-p0161-002",
+   "B-soc3e-p0170-000"
+  ],
+  "context_chars": 5236,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0166-000",
+    "page": 166,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": -0.04249301925301552,
+    "rank": 1,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nFIGURE 6.5 Cadets illustrate how strongly conformity can define groups. (Credit: West Point — The U.S. Military\nAcademy/flickr)\nDyads, Triads, and Large Groups\nA small group is typically one where the collection of people is small enough that all members of the group know each other and share simultaneous interaction, such as a nuclear family, a dyad, or a triad. Georg Simmel (1858–1915) wrote extensively about the difference between a dyad, or two-member group, and a triad, which is a three-member group (Simmel 1902). In the former, if one person withdraws, the group can no longer exist. We can think of a divorce, which effectively ends the “group” of the married couple or of two best friends never speaking again. In a triad, however, the dynamic is quite different. If one person withdraws, the group lives on. A triad has a different set of relationships. If there are three in the group, two-against-one dynamics can develop, and a majority opinion may form on any issue."
+   },
+   {
+    "id": "B-soc3e-p0170-002",
+    "page": 170,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": -10.78227710723877,
+    "rank": 2,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nSo what was the conclusion? Asch found that thirty-seven out of fifty test subjects responded with an “obviously erroneous” answer at least once. When faced by a unanimous wrong answer from the rest of the group, the subject conformed to a mean of four of the staged answers. Asch revised the study and repeated it, wherein the subject still heard the staged wrong answers, but was allowed to write down his answer rather than speak it aloud. In this version, the number of examples of conformity––giving an incorrect answer so as not to contradict the group––fell by two thirds. He also found that group size had an impact on how much pressure the subject felt to conform.\nThe results showed that speaking up when only one other person gave an erroneous answer was far more common than when five or six people defended the incorrect position. Finally, Asch discovered that people were far more likely to give the correct answer in the face of near-unanimous consent if they had a single ally. If even one person in the group also dissented, the subject conformed only a quarter as often. Clearly, it was easier to be a minority of two than a minority of one."
+   },
+   {
+    "id": "B-soc3e-p0161-001",
+    "page": 161,
+    "source": "soc3e",
+    "section": "6.1 Types of Groups",
+    "chapter": 6,
+    "score": -11.039533615112305,
+    "rank": 3,
+    "origin": "search",
+    "text": "6.1 Types of Groups\nThe term group is an amorphous one and can refer to a wide variety of gatherings, from just two people (think about a “group project” in school when you partner with another student), a club, a regular gathering of friends, or people who work together or share a hobby. In short, the term refers to any collection of at least two people who interact with some frequency and who share a sense that their identity is somehow aligned with the group. Of course, every time people are gathered, it is not necessarily a group. A rally is usually a one-time event, for instance, and belonging to a political party doesn’t imply interaction with others. People who happen to be in the same place at the same time but who do not interact or share a sense of identity—such as a bunch of people standing in line at Starbucks—are considered an aggregate, or a crowd."
+   },
+   {
+    "id": "B-soc3e-p0161-002",
+    "page": 161,
+    "source": "soc3e",
+    "section": "6.1 Types of Groups",
+    "chapter": 6,
+    "score": -11.131433486938477,
+    "rank": 4,
+    "origin": "search",
+    "text": "6.1 Types of Groups\nAnother example of a nongroup is people who share similar characteristics but are not tied to one another in any way. These people are considered a category, and as an example all children born from approximately 1980–2000 are referred to as “Millennials.” Why are Millennials a category and not a group? Because while some of them may share a sense of identity, they do not, as a whole, interact frequently with each other.\nInterestingly, people within an aggregate or category can become a group. During disasters, people in a neighborhood (an aggregate) who did not know each other might become friendly and depend on each other at the local shelter. After the disaster when people go back to simply living near each other, the feeling of cohesiveness may last since they have all shared an experience. They might remain a group, practicing emergency readiness, coordinating supplies for next time, or taking turns caring for neighbors who need extra help."
+   },
+   {
+    "id": "B-soc3e-p0170-000",
+    "page": 170,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": -11.148931503295898,
+    "rank": 5,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nenjoy being noticed? Do you consciously prefer to conform to group norms so as not to be singled out? Are there people in your class who immediately come to mind when you think about those who don’t want to conform?\nPsychologist Solomon Asch (1907–1996) conducted experiments that illustrated how great the pressure to conform is, specifically within a small group (1956). Read about his work in the Sociological Research feature and consider what you would do in Asch’s experiment. Would you speak up? What would help you speak up and what would discourage it?\nConforming to Expectations In 1951, psychologist Solomon Asch sat a small group of about eight people around a table. Only one of the people sitting there was the true subject; the rest were associates of the experimenter. However, the subject was led to believe that the others were all, like him, people brought in for an experiment in visual judgments. The group was shown two cards, the first card with a single vertical line, and the second card with three vertical lines differing in length. The experimenter polled the group and asked each participant one at a time which line on the"
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d10",
+  "question": "What is a reference group?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "A reference group is a group that people compare themselves to, which provides a standard of measurement to help guide behavior and establish social norms [B-soc3e-p0164-000].",
+  "citations": [
+   "B-soc3e-p0164-000"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.002,
+    "retries": 0,
+    "usage": {
+     "prompt": 699,
+     "output": 44,
+     "thoughts": 46,
+     "total": 789
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "reference group definition",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 6
+    },
+    "filter_reason": "Reference groups are a topic typically covered in Chapter 6: Social Groups and Organization.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0164-000",
+      "score": 7.0862,
+      "rank": 1,
+      "page": 164
+     },
+     {
+      "id": "B-soc3e-p0164-001",
+      "score": 5.9287,
+      "rank": 2,
+      "page": 164
+     },
+     {
+      "id": "B-soc3e-p0160-005",
+      "score": 3.0084,
+      "rank": 3,
+      "page": 160
+     },
+     {
+      "id": "B-soc3e-p0169-001",
+      "score": 2.3896,
+      "rank": 4,
+      "page": 169
+     },
+     {
+      "id": "B-soc3e-p0165-000",
+      "score": 1.531,
+      "rank": 5,
+      "page": 165
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0164-000",
+     "B-soc3e-p0164-001",
+     "B-soc3e-p0160-005",
+     "B-soc3e-p0169-001",
+     "B-soc3e-p0165-000"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.162,
+    "context_chars_used": 3518
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 2.728,
+    "retries": 0,
+    "usage": {
+     "prompt": 1734,
+     "output": 140,
+     "thoughts": 401,
+     "total": 2275
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0164-000",
+     "B-soc3e-p0164-001"
+    ],
+    "evidence_quote": "A reference group is a group that people compare themselves to—it provides a standard of measurement."
+   },
+   {
+    "event": "citation_check_failed",
+    "problem": " citations not written as [id] in the answer: ['B-soc3e-p0164-000', 'B-soc3e-p0164-001']"
+   },
+   {
+    "event": "model_call",
+    "n": 3,
+    "latency_s": 1.852,
+    "retries": 0,
+    "usage": {
+     "prompt": 2350,
+     "output": 107,
+     "thoughts": 155,
+     "total": 2612
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0164-000"
+    ],
+    "evidence_quote": "A reference group is a group that people compare themselves to—it provides a standard of measurement."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 3,
+  "tokens": {
+   "prompt": 4783,
+   "output": 291,
+   "thoughts": 602,
+   "total": 5676
+  },
+  "latency_s": 25.086,
+  "context_ids": [
+   "B-soc3e-p0164-000",
+   "B-soc3e-p0164-001",
+   "B-soc3e-p0160-005",
+   "B-soc3e-p0169-001",
+   "B-soc3e-p0165-000"
+  ],
+  "context_chars": 3518,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0164-000",
+    "page": 164,
+    "source": "soc3e",
+    "section": "6.1 Types of Groups",
+    "chapter": 6,
+    "score": 7.086240768432617,
+    "rank": 1,
+    "origin": "search",
+    "text": "6.1 Types of Groups\nWill legislation change the behavior of would-be cyberbullies? That remains to be seen. But we can hope communities will work to protect victims before they feel they must resort to extreme measures.\nReference Groups\nFIGURE 6.3 Athletes are often viewed as a reference group for young people. (Credit: nonorganical/ flickr)\nA reference group is a group that people compare themselves to—it provides a standard of measurement. In U.S. society, peer groups are common reference groups. Kids and adults pay attention to what their peers wear, what music they like, what they do with their free time—and they compare themselves to what they see. Most people have more than one reference group, so a middle school boy might look not just at his classmates but also at his older brother’s friends and see a different set of norms. And he might observe the behaviors of his favorite athletes for yet another point of reference."
+   },
+   {
+    "id": "B-soc3e-p0164-001",
+    "page": 164,
+    "source": "soc3e",
+    "section": "6.1 Types of Groups",
+    "chapter": 6,
+    "score": 5.928653240203857,
+    "rank": 2,
+    "origin": "search",
+    "text": "6.1 Types of Groups\nSome other examples of reference groups can be one’s cultural center, workplace, family gathering, and even parents. Often, reference groups convey competing messages. For instance, on television and in movies, young adults often have wonderful apartments and cars and lively social lives despite not holding a job. In music videos, young women might dance and sing in a sexually aggressive way that suggests experience beyond their years. At all ages, we use reference groups to help guide our behavior and establish our social norms. So how important is it to surround yourself with positive reference groups? You may not recognize a reference group, but it still influences the way you act. Identifying your reference groups can help you understand the source of the social identities you aspire to or want to distance yourself from."
+   },
+   {
+    "id": "B-soc3e-p0160-005",
+    "page": 160,
+    "source": "soc3e",
+    "section": "6.1 Types of Groups",
+    "chapter": 6,
+    "score": 3.0084056854248047,
+    "rank": 3,
+    "origin": "search",
+    "text": "6.1 Types of Groups\nLEARNING OBJECTIVES\nBy the end of this section, you should be able to:\n• Differentiate between primary and secondary groups. • Recognize in-groups and out-groups as subtypes of primary and secondary groups • Define reference groups\nMost of us feel comfortable using the word “group” without giving it much thought. Often, we mean different"
+   },
+   {
+    "id": "B-soc3e-p0169-001",
+    "page": 169,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": 2.3895645141601562,
+    "rank": 4,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nConformity is the extent to which an individual complies with group norms or expectations. As you might recall, we use reference groups to assess and understand how to act, to dress, and to behave. Not surprisingly, young people are particularly aware of who conforms and who does not. A high school boy whose mother makes him wear ironed button-down shirts might protest that everyone else wears T-shirts and he will look stupid. Another high school boy might like wearing those shirts as a way of standing out. How much do you"
+   },
+   {
+    "id": "B-soc3e-p0165-000",
+    "page": 165,
+    "source": "soc3e",
+    "section": "6.1 Types of Groups",
+    "chapter": 6,
+    "score": 1.530965805053711,
+    "rank": 5,
+    "origin": "search",
+    "text": "6.1 Types of Groups\nCollege: A World of In-Groups, Out-Groups, and Reference Groups\nFIGURE 6.4 Which fraternity or sorority would you fit into, if any? Sorority recruitment day offers students an\nopportunity to learn about these different groups. (Credit: Texas A&M/flickr)\nFor a student entering college, the sociological study of groups takes on an immediate and practical meaning. After all, when we arrive someplace new, most of us glance around to see how well we fit in or stand out in the ways we want. This is a natural response to a reference group, and on a large campus, there can be many competing groups. Say you are a strong athlete who wants to play intramural sports, and your favorite musicians are a local punk band. You may find yourself engaged with two very different reference groups."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d11",
+  "question": "Which leadership style issues orders and assigns tasks with little to no feedback from group members?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "The authoritarian leadership style issues orders and assigns tasks with little to no feedback from group members [B-soc3e-p0167-002].",
+  "citations": [
+   "B-soc3e-p0167-002"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.834,
+    "retries": 0,
+    "usage": {
+     "prompt": 710,
+     "output": 46,
+     "thoughts": 65,
+     "total": 821
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "leadership style issues orders assigns tasks little feedback",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 6
+    },
+    "filter_reason": "Leadership styles are discussed in Chapter 6 (Social Groups and Organization).",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0167-002",
+      "score": 7.0513,
+      "rank": 1,
+      "page": 167
+     },
+     {
+      "id": "B-soc3e-p0167-001",
+      "score": -5.259,
+      "rank": 2,
+      "page": 167
+     },
+     {
+      "id": "B-soc3e-p0166-002",
+      "score": -7.0562,
+      "rank": 3,
+      "page": 166
+     },
+     {
+      "id": "B-soc3e-p0167-000",
+      "score": -7.617,
+      "rank": 4,
+      "page": 167
+     },
+     {
+      "id": "B-soc3e-p0160-004",
+      "score": -8.5547,
+      "rank": 5,
+      "page": 160
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0167-002",
+     "B-soc3e-p0167-001",
+     "B-soc3e-p0166-002",
+     "B-soc3e-p0167-000",
+     "B-soc3e-p0160-004"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.534,
+    "context_chars_used": 4351
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 1.446,
+    "retries": 0,
+    "usage": {
+     "prompt": 1875,
+     "output": 95,
+     "thoughts": 124,
+     "total": 2094
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0167-002"
+    ],
+    "evidence_quote": "authoritarian leaders issue orders and assign tasks with little to no feedback from group members"
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2585,
+   "output": 141,
+   "thoughts": 189,
+   "total": 2915
+  },
+  "latency_s": 16.264,
+  "context_ids": [
+   "B-soc3e-p0167-002",
+   "B-soc3e-p0167-001",
+   "B-soc3e-p0166-002",
+   "B-soc3e-p0167-000",
+   "B-soc3e-p0160-004"
+  ],
+  "context_chars": 4351,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0167-002",
+    "page": 167,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": 7.051326751708984,
+    "rank": 1,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nFinally, authoritarian leaders issue orders and assign tasks with little to no feedback from group members. These leaders are often instrumental leaders with a strong focus on meeting goals. Often, entrepreneurs fall into this mold, like Facebook founder Mark Zuckerberg. Not surprisingly, authoritarian leaders risk alienating the workers. When decisions need to made quickly or informed by a high level of expertise, however, this style of leadership can be required.\nIn different circumstances, each of these leadership styles can be effective and successful. Consider what leadership style you prefer. Why? Do you like the same style in different areas of your life, such as a classroom, a workplace, and a sports team?"
+   },
+   {
+    "id": "B-soc3e-p0167-001",
+    "page": 167,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": -5.259025573730469,
+    "rank": 2,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nSociologists recognize three leadership styles. Democratic leaders encourage group participation in all decision making. They work hard to build consensus before choosing a course of action and moving forward. This type of leader is particularly common, for example, in a club where the members vote on which activities or projects to pursue. Democratic leaders can be well liked, but there is often a danger that decisions will proceed slowly since consensus building is time-consuming. A further risk is that group members might pick sides and entrench themselves into opposing factions rather than reaching a solution.\nIn contrast, a laissez-faire (French for “leave it alone”) leader is hands-off, allowing group members to selfmanage and make their own decisions. An example of this kind of leader might be an art teacher who opens the art cupboard, leaves materials on the shelves, and tells students to help themselves and make some art. While this style can work well with highly motivated and mature participants who have clear goals and guidelines, it risks group dissolution and a lack of progress."
+   },
+   {
+    "id": "B-soc3e-p0166-002",
+    "page": 166,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": -7.056163787841797,
+    "rank": 3,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nOften, larger groups require some kind of leadership. In small, primary groups, leadership tends to be informal. After all, most families don’t take a vote on who will rule the group, nor do most groups of friends. This is not to say that de facto leaders don’t emerge, but formal leadership is rare. In secondary groups, leadership is usually more overt. They often outline roles and responsibilities, with a chain of command to follow. Some secondary groups, like the military, have highly structured and clearly understood chains of command, and sometimes lives depend on those. After all, how well could soldiers function in a battle if different people were calling out orders and if they had no idea whom to listen to? Other secondary groups, like a workplace or a classroom, also have formal leaders, but the styles and functions of leadership can vary significantly."
+   },
+   {
+    "id": "B-soc3e-p0167-000",
+    "page": 167,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": -7.6169610023498535,
+    "rank": 4,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nLeadership function refers to the main goal of the leader, which may be instrumental or expressive. An instrumental leader is one who is goal-oriented and largely concerned with accomplishing set tasks. We can imagine that an army general or a Fortune 500 CEO would be an instrumental leader. In contrast, expressive leaders are more concerned with promoting emotional strength and health, and ensuring that people feel supported. Social and religious leaders—rabbis, priests, imams, directors of youth homes and social service programs—are often perceived as expressive leaders. Sometimes people expect men to take on instrumental roles and women to assume expressive roles. Women and men who exhibit the other-gender manner can be seen as deviants and can encounter resistance. Yet, both men and women prefer leaders who use a combination of expressive and instrumental leadership (Boatwright and Forrest, 2000)."
+   },
+   {
+    "id": "B-soc3e-p0160-004",
+    "page": 160,
+    "source": "soc3e",
+    "section": "Introduction",
+    "chapter": 6,
+    "score": -8.554718017578125,
+    "rank": 5,
+    "origin": "search",
+    "text": "Introduction\nA third perspective is the Symbolic Interaction or Interactionist perspective. This method of analyzing groups takes a micro-level view. Instead of studying the big picture, these researchers look at the day-to-day interactions of groups. Studying these details, the Interactionist looks at issues like leadership style and group dynamics. In the case of the Tea Party Movement, Interactionists might ask, “How does the Tea Party dynamic in New York differ from that in Atlanta?” Or, in the case of the MeToo, researchers may seek to learn about who defines the agenda and approach within the movement."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d12",
+  "question": "In Asch's conformity study, how many of the fifty test subjects gave an obviously erroneous answer at least once?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "In Solomon Asch's conformity study, thirty-seven out of fifty test subjects gave an obviously erroneous answer at least once [B-soc3e-p0170-002].",
+  "citations": [
+   "B-soc3e-p0170-002"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.14,
+    "retries": 1,
+    "usage": {
+     "prompt": 717,
+     "output": 46,
+     "thoughts": 69,
+     "total": 832
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Asch conformity study fifty test subjects erroneous answer",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": "Asch's conformity study belongs to Chapter 6 (social groups, conformity).",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0170-002",
+      "score": 8.8974,
+      "rank": 1,
+      "page": 170
+     },
+     {
+      "id": "B-soc3e-p0170-001",
+      "score": 3.0621,
+      "rank": 2,
+      "page": 170
+     },
+     {
+      "id": "B-soc3e-p0170-003",
+      "score": 2.5113,
+      "rank": 3,
+      "page": 170
+     },
+     {
+      "id": "B-soc3e-p0170-000",
+      "score": -1.6335,
+      "rank": 4,
+      "page": 170
+     },
+     {
+      "id": "B-soc3e-p0169-001",
+      "score": -9.934,
+      "rank": 5,
+      "page": 169
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0170-002",
+     "B-soc3e-p0170-001",
+     "B-soc3e-p0170-003",
+     "B-soc3e-p0170-000",
+     "B-soc3e-p0169-001"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 2.628,
+    "context_chars_used": 4554
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 1.753,
+    "retries": 0,
+    "usage": {
+     "prompt": 2010,
+     "output": 111,
+     "thoughts": 121,
+     "total": 2242
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0170-002"
+    ],
+    "evidence_quote": "Asch found that thirty-seven out of fifty test subjects responded with an “obviously erroneous” answer at least once."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2727,
+   "output": 157,
+   "thoughts": 190,
+   "total": 3074
+  },
+  "latency_s": 41.561,
+  "context_ids": [
+   "B-soc3e-p0170-002",
+   "B-soc3e-p0170-001",
+   "B-soc3e-p0170-003",
+   "B-soc3e-p0170-000",
+   "B-soc3e-p0169-001"
+  ],
+  "context_chars": 4554,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0170-002",
+    "page": 170,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": 8.897424697875977,
+    "rank": 1,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nSo what was the conclusion? Asch found that thirty-seven out of fifty test subjects responded with an “obviously erroneous” answer at least once. When faced by a unanimous wrong answer from the rest of the group, the subject conformed to a mean of four of the staged answers. Asch revised the study and repeated it, wherein the subject still heard the staged wrong answers, but was allowed to write down his answer rather than speak it aloud. In this version, the number of examples of conformity––giving an incorrect answer so as not to contradict the group––fell by two thirds. He also found that group size had an impact on how much pressure the subject felt to conform.\nThe results showed that speaking up when only one other person gave an erroneous answer was far more common than when five or six people defended the incorrect position. Finally, Asch discovered that people were far more likely to give the correct answer in the face of near-unanimous consent if they had a single ally. If even one person in the group also dissented, the subject conformed only a quarter as often. Clearly, it was easier to be a minority of two than a minority of one."
+   },
+   {
+    "id": "B-soc3e-p0170-001",
+    "page": 170,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": 3.0620622634887695,
+    "rank": 2,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nsecond card matched up with the line on the first card.\nHowever, this was not really a test of visual judgment. Rather, it was Asch’s study on the pressures of conformity. He was curious to see what the effect of multiple wrong answers would be on the subject, who presumably was able to tell which lines matched. In order to test this, Asch had each planted respondent answer in a specific way. The subject was seated in such a way that he had to hear almost everyone else’s answers before it was his turn. Sometimes the nonsubject members would unanimously choose an answer that was clearly wrong."
+   },
+   {
+    "id": "B-soc3e-p0170-003",
+    "page": 170,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": 2.511317014694214,
+    "rank": 3,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nAsch concluded that there are two main causes for conformity: people want to be liked by the group or they believe the group is better informed than they are. He found his study results disturbing. To him, they revealed that intelligent, well-educated people would, with very little coaxing, go along with an untruth. He believed this result highlighted real problems with the education system and values in our society (Asch 1956).\nStanley Milgram, a Yale psychologist, had similar results in his experiment that is now known simply as the Milgram Experiment. In 1962, Milgram found that research subjects were overwhelmingly willing to perform acts that directly conflicted with their consciences when directed by a person of authority. In the experiment, subjects were willing to administer painful, even supposedly deadly, shocks to others who answered questions incorrectly.\nTo learn more about similar research, visit http://www.prisonexp.org/\nSOCIOLOGICAL RESEARCH"
+   },
+   {
+    "id": "B-soc3e-p0170-000",
+    "page": 170,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": -1.6334939002990723,
+    "rank": 4,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nenjoy being noticed? Do you consciously prefer to conform to group norms so as not to be singled out? Are there people in your class who immediately come to mind when you think about those who don’t want to conform?\nPsychologist Solomon Asch (1907–1996) conducted experiments that illustrated how great the pressure to conform is, specifically within a small group (1956). Read about his work in the Sociological Research feature and consider what you would do in Asch’s experiment. Would you speak up? What would help you speak up and what would discourage it?\nConforming to Expectations In 1951, psychologist Solomon Asch sat a small group of about eight people around a table. Only one of the people sitting there was the true subject; the rest were associates of the experimenter. However, the subject was led to believe that the others were all, like him, people brought in for an experiment in visual judgments. The group was shown two cards, the first card with a single vertical line, and the second card with three vertical lines differing in length. The experimenter polled the group and asked each participant one at a time which line on the"
+   },
+   {
+    "id": "B-soc3e-p0169-001",
+    "page": 169,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": -9.933990478515625,
+    "rank": 5,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nConformity is the extent to which an individual complies with group norms or expectations. As you might recall, we use reference groups to assess and understand how to act, to dress, and to behave. Not surprisingly, young people are particularly aware of who conforms and who does not. A high school boy whose mother makes him wear ironed button-down shirts might protest that everyone else wears T-shirts and he will look stupid. Another high school boy might like wearing those shirts as a way of standing out. How much do you"
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d13",
+  "question": "According to Etzioni, what are the three categories of formal organizations?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "According to Amitai Etzioni, formal organizations fall into three categories: normative (or voluntary) organizations [B-soc3e-p0171-003], coercive organizations [B-soc3e-p0171-003], and utilitarian organizations [B-soc3e-p0172-000].",
+  "citations": [
+   "B-soc3e-p0171-003",
+   "B-soc3e-p0172-000"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.555,
+    "retries": 0,
+    "usage": {
+     "prompt": 707,
+     "output": 51,
+     "thoughts": 70,
+     "total": 828
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Etzioni categories formal organizations",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 6
+    },
+    "filter_reason": "Chapter 6 covers social groups and organizations, where formal organizations and Etzioni's typology are typically discussed.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0171-003",
+      "score": 7.6551,
+      "rank": 1,
+      "page": 171
+     },
+     {
+      "id": "B-soc3e-p0172-000",
+      "score": 7.2861,
+      "rank": 2,
+      "page": 172
+     },
+     {
+      "id": "B-soc3e-p0171-002",
+      "score": 1.6871,
+      "rank": 3,
+      "page": 171
+     },
+     {
+      "id": "B-soc3e-p0172-001",
+      "score": -0.3422,
+      "rank": 4,
+      "page": 172
+     },
+     {
+      "id": "B-soc3e-p0172-003",
+      "score": -1.6349,
+      "rank": 5,
+      "page": 172
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0171-003",
+     "B-soc3e-p0172-000",
+     "B-soc3e-p0171-002",
+     "B-soc3e-p0172-001",
+     "B-soc3e-p0172-003"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 2.008,
+    "context_chars_used": 4383
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 2.097,
+    "retries": 0,
+    "usage": {
+     "prompt": 1904,
+     "output": 161,
+     "thoughts": 209,
+     "total": 2274
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0171-003",
+     "B-soc3e-p0172-000"
+    ],
+    "evidence_quote": "Sociologist Amitai Etzioni (1975) posited that formal organizations fall into three categories. Normative organizations... Coercive organizations... The third type is utilitarian organizations..."
+   },
+   {
+    "event": "citation_check_failed",
+    "problem": " citations not written as [id] in the answer: ['B-soc3e-p0171-003', 'B-soc3e-p0172-000']"
+   },
+   {
+    "event": "model_call",
+    "n": 3,
+    "latency_s": 1.805,
+    "retries": 1,
+    "usage": {
+     "prompt": 2349,
+     "output": 201,
+     "thoughts": 178,
+     "total": 2728
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0171-003",
+     "B-soc3e-p0172-000"
+    ],
+    "evidence_quote": "Sociologist Amitai Etzioni (1975) posited that formal organizations fall into three categories. Normative organizations, also called voluntary organizations, are based on shared interests. Coercive organizations are groups that we must be coerced, or pushed, to join. The third type is utilitarian organizations..."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 3,
+  "tokens": {
+   "prompt": 4960,
+   "output": 413,
+   "thoughts": 457,
+   "total": 5830
+  },
+  "latency_s": 52.158,
+  "context_ids": [
+   "B-soc3e-p0171-003",
+   "B-soc3e-p0172-000",
+   "B-soc3e-p0171-002",
+   "B-soc3e-p0172-001",
+   "B-soc3e-p0172-003"
+  ],
+  "context_chars": 4383,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0171-003",
+    "page": 171,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": 7.655063629150391,
+    "rank": 1,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nSociologist Amitai Etzioni (1975) posited that formal organizations fall into three categories. Normative organizations, also called voluntary organizations, are based on shared interests. As the name suggests, joining them is voluntary. People find membership rewarding in an intangible way. They receive non-material benefits. The Audubon Society and a ski club are examples of normative organizations.\nCoercive organizations are groups that we must be coerced, or pushed, to join. These may include prison or a rehabilitation center. Symbolic interactionist Erving Goffman states that most coercive organizations are total institutions (1961). A total institution is one in which inmates or military soldiers live a controlled lifestyle and"
+   },
+   {
+    "id": "B-soc3e-p0172-000",
+    "page": 172,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": 7.286092758178711,
+    "rank": 2,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nin which total resocialization takes place.\nThe third type is utilitarian organizations, which, as the name suggests, are joined because of the need for a specific material reward. High school and the workplace fall into this category—one joined in pursuit of a diploma, the other in order to make money.\nNormative or Voluntary Coercive Utilitarian\nBenefit of Membership Intangible benefit Corrective benefit Tangible benefit\nType of Membership Volunteer basis Required Contractual basis\nFeeling of Connectedness Shared affinity No affinity Some affinity\nTABLE 6.1 Table of Formal Organizations This table shows Etzioni’s three types of formal organizations. (Credit: Etzioni 1975)\nThe Structure of Bureaucracies"
+   },
+   {
+    "id": "B-soc3e-p0171-002",
+    "page": 171,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": 1.6871473789215088,
+    "rank": 3,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nLEARNING OBJECTIVES\nBy the end of this section, you should be able to:\n• Distinguish the types of formal organizations • Recognize the characteristics of bureaucracies • Identify the impact of the McDonaldization of society\nA complaint of modern life is that society is dominated by large and impersonal secondary organizations. From schools to businesses to healthcare to government, these organizations, referred to as formal organizations, are highly bureaucratized. Indeed, all formal organizations are, or likely will become, bureaucracies. We will discuss the purpose of formal organizations and the structure of their bureaucracies.\nTypes of Formal Organizations\nFIGURE 6.8 Girl Scout troops and correctional facilities are both formal organizations. (Credit: (a) moonlightbulb/\nflickr; (b) CxOxS/flickr)"
+   },
+   {
+    "id": "B-soc3e-p0172-001",
+    "page": 172,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -0.3421825170516968,
+    "rank": 4,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nBureaucracies are an ideal type of formal organization. By ideal, sociologists don’t mean “best.” Rather, bureaucracies have a collection of characteristics that most of them exhibit. Pioneer sociologist Max Weber characterized a bureaucracy as having a hierarchy of authority, a clear division of labor, explicit rules, and impersonality (1922). People often complain about bureaucracies––declaring them slow, rule-bound, difficult to navigate, and unfriendly. Let’s take a look at terms that define a bureaucracy to understand what they mean.\nHierarchy of authority refers to the chain of command that places one individual or office in charge of another, who in turn must answer to her own superiors. For example, as an employee at Walmart, your shift manager assigns you tasks. Your shift manager answers to his store manager, who must answer to her regional manager, and so on, up to the CEO who must answer to the board members, who in turn answer to the stockholders. Everyone in this bureaucracy follows the chain of command."
+   },
+   {
+    "id": "B-soc3e-p0172-003",
+    "page": 172,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -1.6349139213562012,
+    "rank": 5,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nFinally, bureaucracies are also characterized by impersonality, which takes personal feelings out of professional situations. This characteristic grew, to some extent, out of a desire to avoid nepotism, backroom deals, and other types of favoritism, while simultaneously protecting customers and others served by the organization. Impersonality Bureaucracies can effectively and efficiently serve volumes of customers quickly. However, explicit rules, clear division of labor, and a strict hierarchy of authority does not allow them to easily adjust to unique or new situations. As a result, customers frequently complain that stores with bureaucratic structures, like Walmart, care little about individuals, other businesses, and the community at large.\nBureaucracies are often meritocracies, meaning that hiring and promotion is based on proven and documented skills, rather than on nepotism or random choice. In order to get into a prestigious college, you"
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d14",
+  "question": "What four characteristics did Max Weber attribute to a bureaucracy?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "Max Weber characterized a bureaucracy as having a hierarchy of authority, a clear division of labor, explicit rules, and impersonality [B-soc3e-p0172-001].",
+  "citations": [
+   "B-soc3e-p0172-001"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 2.401,
+    "retries": 0,
+    "usage": {
+     "prompt": 704,
+     "output": 53,
+     "thoughts": 45,
+     "total": 802
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Max Weber bureaucracy four characteristics",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 6
+    },
+    "filter_reason": "Bureaucracy and Max Weber are topics in Chapter 6 (Social Groups and Organization).",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0172-001",
+      "score": 6.439,
+      "rank": 1,
+      "page": 172
+     },
+     {
+      "id": "B-soc3e-p0172-003",
+      "score": -8.0219,
+      "rank": 2,
+      "page": 172
+     },
+     {
+      "id": "B-soc3e-p0171-002",
+      "score": -10.1117,
+      "rank": 3,
+      "page": 171
+     },
+     {
+      "id": "B-soc3e-p0173-001",
+      "score": -10.529,
+      "rank": 4,
+      "page": 173
+     },
+     {
+      "id": "B-soc3e-p0172-002",
+      "score": -10.6615,
+      "rank": 5,
+      "page": 172
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0172-001",
+     "B-soc3e-p0172-003",
+     "B-soc3e-p0171-002",
+     "B-soc3e-p0173-001",
+     "B-soc3e-p0172-002"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.019,
+    "context_chars_used": 4553
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 1.172,
+    "retries": 0,
+    "usage": {
+     "prompt": 1890,
+     "output": 41,
+     "thoughts": 180,
+     "total": 2111
+    },
+    "function_calls": [],
+    "text": "Max Weber characterized a bureaucracy as having a hierarchy of authority, a clear division of labor, explicit rules, and impersonality [B-soc3e-p0172-001].",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "model_call",
+    "n": 3,
+    "latency_s": 1.184,
+    "retries": 0,
+    "usage": {
+     "prompt": 2127,
+     "output": 119,
+     "thoughts": 0,
+     "total": 2246
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0172-001"
+    ],
+    "evidence_quote": "Pioneer sociologist Max Weber characterized a bureaucracy as having a hierarchy of authority, a clear division of labor, explicit rules, and impersonality (1922)."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 3,
+  "tokens": {
+   "prompt": 4721,
+   "output": 213,
+   "thoughts": 225,
+   "total": 5159
+  },
+  "latency_s": 24.275,
+  "context_ids": [
+   "B-soc3e-p0172-001",
+   "B-soc3e-p0172-003",
+   "B-soc3e-p0171-002",
+   "B-soc3e-p0173-001",
+   "B-soc3e-p0172-002"
+  ],
+  "context_chars": 4553,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0172-001",
+    "page": 172,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": 6.439023494720459,
+    "rank": 1,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nBureaucracies are an ideal type of formal organization. By ideal, sociologists don’t mean “best.” Rather, bureaucracies have a collection of characteristics that most of them exhibit. Pioneer sociologist Max Weber characterized a bureaucracy as having a hierarchy of authority, a clear division of labor, explicit rules, and impersonality (1922). People often complain about bureaucracies––declaring them slow, rule-bound, difficult to navigate, and unfriendly. Let’s take a look at terms that define a bureaucracy to understand what they mean.\nHierarchy of authority refers to the chain of command that places one individual or office in charge of another, who in turn must answer to her own superiors. For example, as an employee at Walmart, your shift manager assigns you tasks. Your shift manager answers to his store manager, who must answer to her regional manager, and so on, up to the CEO who must answer to the board members, who in turn answer to the stockholders. Everyone in this bureaucracy follows the chain of command."
+   },
+   {
+    "id": "B-soc3e-p0172-003",
+    "page": 172,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -8.021909713745117,
+    "rank": 2,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nFinally, bureaucracies are also characterized by impersonality, which takes personal feelings out of professional situations. This characteristic grew, to some extent, out of a desire to avoid nepotism, backroom deals, and other types of favoritism, while simultaneously protecting customers and others served by the organization. Impersonality Bureaucracies can effectively and efficiently serve volumes of customers quickly. However, explicit rules, clear division of labor, and a strict hierarchy of authority does not allow them to easily adjust to unique or new situations. As a result, customers frequently complain that stores with bureaucratic structures, like Walmart, care little about individuals, other businesses, and the community at large.\nBureaucracies are often meritocracies, meaning that hiring and promotion is based on proven and documented skills, rather than on nepotism or random choice. In order to get into a prestigious college, you"
+   },
+   {
+    "id": "B-soc3e-p0171-002",
+    "page": 171,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -10.111688613891602,
+    "rank": 3,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nLEARNING OBJECTIVES\nBy the end of this section, you should be able to:\n• Distinguish the types of formal organizations • Recognize the characteristics of bureaucracies • Identify the impact of the McDonaldization of society\nA complaint of modern life is that society is dominated by large and impersonal secondary organizations. From schools to businesses to healthcare to government, these organizations, referred to as formal organizations, are highly bureaucratized. Indeed, all formal organizations are, or likely will become, bureaucracies. We will discuss the purpose of formal organizations and the structure of their bureaucracies.\nTypes of Formal Organizations\nFIGURE 6.8 Girl Scout troops and correctional facilities are both formal organizations. (Credit: (a) moonlightbulb/\nflickr; (b) CxOxS/flickr)"
+   },
+   {
+    "id": "B-soc3e-p0173-001",
+    "page": 173,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -10.52899169921875,
+    "rank": 4,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nThere are several positive aspects of bureaucracies. They are intended to improve efficiency, ensure equal opportunities, and serve a large population. And there are times when rigid hierarchies are needed. But remember that many of our bureaucracies grew large at the same time that our school model was developed––during the Industrial Revolution. Young workers were trained, and organizations were built for mass production, assembly line work, and factory jobs. In these scenarios, a clear chain of command was critical. Now, in the information age, this kind of rigid training and adherence to protocol can actually decrease both productivity and efficiency."
+   },
+   {
+    "id": "B-soc3e-p0172-002",
+    "page": 172,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -10.661542892456055,
+    "rank": 5,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nBureaucracies have a clear division of labor: each individual has a specialized task to perform. For example, at a university, psychology professors teach psychology, but they do not attempt to provide students with financial aid forms. The Office of Admissions often takes on this task. In this case, it is a clear and commonsense division. But what about in a restaurant where food is backed up in the kitchen and a hostess is standing nearby texting on her phone? Her job is to seat customers, not to deliver food. Is this a smart division of labor?\nBureaucracies have explicit rules, rules that are outlined, written down, and standardized. For example, at your college or university, the student guidelines are contained within the Student Handbook. As technology changes and campuses encounter new concerns like cyberbullying, identity theft, and other problems that arise, organizations scramble to ensure their explicit rules cover these emerging issues."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d15",
+  "question": "How many ways did Robert Merton define people respond to the gap between a socially accepted goal and no socially accepted means to reach it?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "Robert Merton defined five ways people respond to the gap between having a socially accepted goal and having no socially accepted way to pursue it: conformity, innovation, ritualism, retreatism, and rebellion [B-soc3e-p0191-003].",
+  "citations": [
+   "B-soc3e-p0191-003"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.615,
+    "retries": 1,
+    "usage": {
+     "prompt": 719,
+     "output": 52,
+     "thoughts": 82,
+     "total": 853
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Robert Merton ways respond socially accepted goal means strain theory",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 7
+    },
+    "filter_reason": "Robert Merton's strain theory is covered in Chapter 7 on deviance and crime.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0191-002",
+      "score": 5.4768,
+      "rank": 1,
+      "page": 191
+     },
+     {
+      "id": "B-soc3e-p0191-003",
+      "score": 4.8982,
+      "rank": 2,
+      "page": 191
+     },
+     {
+      "id": "B-soc3e-p0191-001",
+      "score": -0.309,
+      "rank": 3,
+      "page": 191
+     },
+     {
+      "id": "B-soc3e-p0190-002",
+      "score": -5.2834,
+      "rank": 4,
+      "page": 190
+     },
+     {
+      "id": "B-soc3e-p0197-002",
+      "score": -7.8389,
+      "rank": 5,
+      "page": 197
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0191-002",
+     "B-soc3e-p0191-003",
+     "B-soc3e-p0191-001",
+     "B-soc3e-p0190-002",
+     "B-soc3e-p0197-002"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.712,
+    "context_chars_used": 4551
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 2.127,
+    "retries": 0,
+    "usage": {
+     "prompt": 1998,
+     "output": 126,
+     "thoughts": 259,
+     "total": 2383
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0191-003"
+    ],
+    "evidence_quote": "Merton defined five ways people respond to this gap between having a socially accepted goal and having no socially accepted way to pursue it."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2717,
+   "output": 178,
+   "thoughts": 341,
+   "total": 3236
+  },
+  "latency_s": 44.148,
+  "context_ids": [
+   "B-soc3e-p0191-002",
+   "B-soc3e-p0191-003",
+   "B-soc3e-p0191-001",
+   "B-soc3e-p0190-002",
+   "B-soc3e-p0197-002"
+  ],
+  "context_chars": 4551,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0191-002",
+    "page": 191,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": 5.476790904998779,
+    "rank": 1,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nSociologist Robert Merton agreed that deviance is an inherent part of a functioning society, but he expanded on Durkheim’s ideas by developing strain theory, which notes that access to socially acceptable goals plays a part in determining whether a person conforms or deviates. From birth, we’re encouraged to achieve the “American Dream” of financial success. A person who attends business school, receives an MBA, and goes on to make a million-dollar income as CEO of a company is said to be a success. However, not everyone in our society stands on equal footing. That MBA-turned-CEO may have grown up in the best school district and had means to hire tutors. Another person may grow up in a neighborhood with lower-quality schools, and may not be able to pay for extra help. A person may have the socially acceptable goal of financial success but lack a socially acceptable way to reach that goal. According to Merton’s theory, an entrepreneur who can’t afford to launch their own company may be tempted to embezzle from their employer for start-up funds."
+   },
+   {
+    "id": "B-soc3e-p0191-003",
+    "page": 191,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": 4.89818000793457,
+    "rank": 2,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nMerton defined five ways people respond to this gap between having a socially accepted goal and having no socially accepted way to pursue it.\n1. Conformity: Those who conform choose not to deviate. They pursue their goals to the extent that they can through socially accepted means. 2. Innovation: Those who innovate pursue goals they cannot reach through legitimate means by instead using criminal or deviant means.\n3. Ritualism: People who ritualize lower their goals until they can reach them through socially acceptable ways. These members of society focus on conformity rather than attaining a distant dream. 4. Retreatism: Others retreat and reject society’s goals and means. Some people who beg and people who are homeless have withdrawn from society’s goal of financial success. 5. Rebellion: A handful of people rebel and replace a society’s goals and means with their own. Terrorists or freedom fighters look to overthrow a society’s goals through socially unacceptable means.\nSocial Disorganization Theory"
+   },
+   {
+    "id": "B-soc3e-p0191-001",
+    "page": 191,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -0.3089600205421448,
+    "rank": 3,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nDurkheim’s point regarding the impact of punishing deviance speaks to his arguments about law. Durkheim saw laws as an expression of the “collective conscience,” which are the beliefs, morals, and attitudes of a society. “A crime is a crime because we condemn it,” he said (1893). He discussed the impact of societal size and complexity as contributors to the collective conscience and the development of justice systems and punishments. For example, in large, industrialized societies that were largely bound together by the interdependence of work (the division of labor), punishments for deviance were generally less severe. In smaller, more homogeneous societies, deviance might be punished more severely.\nRobert Merton: Strain Theory"
+   },
+   {
+    "id": "B-soc3e-p0190-002",
+    "page": 190,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -5.283377647399902,
+    "rank": 4,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nSociologists who follow the functionalist approach are concerned with the way the different elements of a society contribute to the whole. They view deviance as a key component of a functioning society. Strain theory, social disorganization theory, and cultural deviance theory represent three functionalist perspectives on deviance in society."
+   },
+   {
+    "id": "B-soc3e-p0197-002",
+    "page": 197,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -7.8388991355896,
+    "rank": 5,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\ntheir opinions of us. People conform to society’s norms in order to gain approval (and prevent disapproval) from family, friends, and romantic partners. 2. Commitment refers to the investments we make in the community. A well-respected local businessperson who volunteers at their synagogue and is a member of the neighborhood block organization has more to lose from committing a crime than a person who doesn’t have a career or ties to the community. 3. Similarly, levels of involvement, or participation in socially legitimate activities, lessen a person’s likelihood of deviance. A child who plays little league baseball and takes art classes has fewer opportunities to ______. 4. The final bond, belief, is an agreement on common values in society. If a person views social values as beliefs, they will conform to them. An environmentalist is more likely to pick up trash in a park, because a clean environment is a social value to them (Hirschi 1969).\nFunctionalism Associated Theorist Deviance arises from:\nStrain Theory Robert Merton A lack of ways to reach socially accepted goals by accepted methods\nSocial Disorganization Theory"
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d16",
+  "question": "In Edwin Lemert's work, what is primary deviance?",
+  "status": "answered",
+  "reason": "model_answer",
+  "answer": "In Edwin Lemert's work, primary deviance is a violation of norms that causes no long-term effects on an individual's self-image or interactions with others [B-soc3e-p0194-001]. Individuals who engage in primary deviance still maintain a feeling of belonging in society and continue to conform to norms [B-soc3e-p0194-001].",
+  "citations": [
+   "B-soc3e-p0194-001"
+  ],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.209,
+    "retries": 0,
+    "usage": {
+     "prompt": 707,
+     "output": 55,
+     "thoughts": 65,
+     "total": 827
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Edwin Lemert primary deviance",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 7
+    },
+    "filter_reason": "Edwin Lemert and primary deviance are concepts related to deviance and labeling theory, which are covered in Chapter 7.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0194-001",
+      "score": 8.3619,
+      "rank": 1,
+      "page": 194
+     },
+     {
+      "id": "B-soc3e-p0198-000",
+      "score": 3.0595,
+      "rank": 2,
+      "page": 198
+     },
+     {
+      "id": "B-soc3e-p0196-001",
+      "score": -1.4043,
+      "rank": 3,
+      "page": 196
+     },
+     {
+      "id": "B-soc3e-p0194-002",
+      "score": -1.4336,
+      "rank": 4,
+      "page": 194
+     },
+     {
+      "id": "B-soc3e-p0196-000",
+      "score": -6.0689,
+      "rank": 5,
+      "page": 196
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0194-001",
+     "B-soc3e-p0198-000",
+     "B-soc3e-p0196-001",
+     "B-soc3e-p0194-002",
+     "B-soc3e-p0196-000"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.694,
+    "context_chars_used": 4309
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 2.364,
+    "retries": 0,
+    "usage": {
+     "prompt": 1910,
+     "output": 166,
+     "thoughts": 355,
+     "total": 2431
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": false,
+    "citations": [
+     "B-soc3e-p0194-001"
+    ],
+    "evidence_quote": "Primary deviance is a violation of norms that does not result in any long-term effects on the individual’s self-image or interactions with others."
+   },
+   {
+    "event": "answer"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 1,
+  "llm_calls": 2,
+  "tokens": {
+   "prompt": 2617,
+   "output": 221,
+   "thoughts": 420,
+   "total": 3258
+  },
+  "latency_s": 16.571,
+  "context_ids": [
+   "B-soc3e-p0194-001",
+   "B-soc3e-p0198-000",
+   "B-soc3e-p0196-001",
+   "B-soc3e-p0194-002",
+   "B-soc3e-p0196-000"
+  ],
+  "context_chars": 4309,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0194-001",
+    "page": 194,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": 8.3619384765625,
+    "rank": 1,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nSociologist Edwin Lemert expanded on the concepts of labeling theory and identified two types of deviance that affect identity formation. Primary deviance is a violation of norms that does not result in any long-term effects on the individual’s self-image or interactions with others. Speeding is a deviant act, but receiving a speeding ticket generally does not make others view you as a bad person, nor does it alter your own self-concept. Individuals who engage in primary deviance still maintain a feeling of belonging in society and are likely to continue to conform to norms in the future."
+   },
+   {
+    "id": "B-soc3e-p0198-000",
+    "page": 198,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": 3.0595219135284424,
+    "rank": 2,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nPower Elite C. Wright Mills Ability of those in power to define deviance in ways that maintain the status quo\nSymbolic Interactionism\nAssociated Theorist Deviance arises from:\nLabeling Theory Edwin Lemert The reactions of others, particularly those in power who are able to determine labels\nDifferential Association Theory\nEdwin Sutherland Learning and modeling deviant behavior seen in other people close to the individual\nControl Theory Travis Hirschi Feelings of disconnection from society\nTABLE 7.2"
+   },
+   {
+    "id": "B-soc3e-p0196-001",
+    "page": 196,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -1.4043011665344238,
+    "rank": 3,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nIn the early 1900s, sociologist Edwin Sutherland sought to understand how deviant behavior developed among people. Since criminology was a young field, he drew on other aspects of sociology including social interactions and group learning (Laub 2006). His conclusions established differential association theory, which suggested that individuals learn deviant behavior from those close to them who provide models of and opportunities for deviance. According to Sutherland, deviance is less a personal choice and more a result of differential socialization processes. For example, a young person whose friends are sexually active is more likely to view sexual activity as acceptable. Sutherland developed a series of propositions to explain how deviance is learned. In proposition five, for example, he discussed how people begin to accept and participate in a behavior after learning whether it is viewed as “favorable” by those around them."
+   },
+   {
+    "id": "B-soc3e-p0194-002",
+    "page": 194,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -1.4336494207382202,
+    "rank": 4,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nSometimes, in more extreme cases, primary deviance can morph into secondary deviance. Secondary deviance occurs when a person’s self-concept and behavior begin to change after his or her actions are labeled as deviant by members of society. The person may begin to take on and fulfill the role of a “deviant” as an act of rebellion against the society that has labeled that individual as such. For example, consider a high school student who often cuts class and gets into fights. The student is reprimanded frequently by teachers and school staff, and soon enough, develops a reputation as a “troublemaker.” As a result, the student starts acting out even more and breaking more rules; the student has adopted the “troublemaker” label and embraced this deviant identity. Secondary deviance can be so strong that it bestows a master status on an individual. A master status is a label that describes the chief characteristic of an individual. Some people see themselves primarily as doctors, artists, or grandfathers. Others see themselves as beggars, convicts, or addicts.\nTechniques of Neutralization"
+   },
+   {
+    "id": "B-soc3e-p0196-000",
+    "page": 196,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -6.068924903869629,
+    "rank": 5,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nOpponents of felony disfranchisement in the United States argue that voting is a basic human right and should be available to all citizens regardless of past deeds. Many point out that felony disfranchisement has its roots in the 1800s, when it was used primarily to block Black citizens from voting. These laws disproportionately target poor minority members, denying them a chance to participate in a system that, as a social conflict theorist would point out, is already constructed to their disadvantage (Holding 2006). Those who cite labeling theory worry that denying deviants the right to vote will only further encourage deviant behavior. If ex-criminals are disenfranchised from voting, are they being disenfranchised from society?\nFIGURE 7.7 Should a former felony conviction permanently strip a U.S. citizen of the right to vote? (Credit: Joshin\nYamada/flickr)\nEdwin Sutherland: Differential Association"
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d17",
+  "question": "According to Piaget, at what age do children reach the formal operational stage?",
+  "status": "abstain",
+  "reason": "model_abstain",
+  "answer": "There is not enough evidence in the provided chunks to determine Piaget's formal operational stage age.",
+  "citations": [],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.141,
+    "retries": 1,
+    "usage": {
+     "prompt": 708,
+     "output": 49,
+     "thoughts": 39,
+     "total": 796
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Piaget formal operational stage age",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": "Chapter 5 covers socialization and developmental theories like Piaget's stages of cognitive development.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0134-000",
+      "score": -5.0371,
+      "rank": 1,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0135-002",
+      "score": -10.9206,
+      "rank": 2,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0143-002",
+      "score": -10.9977,
+      "rank": 3,
+      "page": 143
+     },
+     {
+      "id": "B-soc3e-p0135-000",
+      "score": -11.0927,
+      "rank": 4,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0173-001",
+      "score": -11.1973,
+      "rank": 5,
+      "page": 173
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0134-000",
+     "B-soc3e-p0135-002",
+     "B-soc3e-p0143-002",
+     "B-soc3e-p0135-000",
+     "B-soc3e-p0173-001"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 1.344,
+    "context_chars_used": 4499
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 1.429,
+    "retries": 0,
+    "usage": {
+     "prompt": 1932,
+     "output": 49,
+     "thoughts": 47,
+     "total": 2028
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Piaget cognitive development formal operational stage ages",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": "Searching specifically for Jean Piaget's cognitive development stages including formal operational stage.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0134-000",
+      "score": -3.4644,
+      "rank": 1,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0135-002",
+      "score": -8.1405,
+      "rank": 2,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0135-000",
+      "score": -10.1269,
+      "rank": 3,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0133-004",
+      "score": -10.7214,
+      "rank": 4,
+      "page": 133
+     },
+     {
+      "id": "B-soc3e-p0133-003",
+      "score": -10.7847,
+      "rank": 5,
+      "page": 133
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0133-004",
+     "B-soc3e-p0133-003"
+    ],
+    "duplicates": [
+     "B-soc3e-p0134-000",
+     "B-soc3e-p0135-002",
+     "B-soc3e-p0135-000"
+    ],
+    "budget_dropped": [],
+    "latency_s": 0.811,
+    "context_chars_used": 6220
+   },
+   {
+    "event": "model_call",
+    "n": 3,
+    "latency_s": 1.44,
+    "retries": 0,
+    "usage": {
+     "prompt": 2538,
+     "output": 44,
+     "thoughts": 18,
+     "total": 2600
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Piaget sensorimotor preoperational concrete formal operational",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": "Search for Piaget in the textbook text.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0134-000",
+      "score": -9.5548,
+      "rank": 1,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0172-000",
+      "score": -11.3366,
+      "rank": 2,
+      "page": 172
+     },
+     {
+      "id": "B-soc3e-p0172-001",
+      "score": -11.3624,
+      "rank": 3,
+      "page": 172
+     },
+     {
+      "id": "B-soc3e-p0189-003",
+      "score": -11.3846,
+      "rank": 4,
+      "page": 189
+     },
+     {
+      "id": "B-soc3e-p0171-002",
+      "score": -11.3862,
+      "rank": 5,
+      "page": 171
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0172-000",
+     "B-soc3e-p0171-002"
+    ],
+    "duplicates": [
+     "B-soc3e-p0134-000"
+    ],
+    "budget_dropped": [
+     "B-soc3e-p0172-001",
+     "B-soc3e-p0189-003"
+    ],
+    "latency_s": 1.843,
+    "context_chars_used": 7793
+   },
+   {
+    "event": "model_call",
+    "n": 4,
+    "latency_s": 2.334,
+    "retries": 0,
+    "usage": {
+     "prompt": 3077,
+     "output": 47,
+     "thoughts": 17,
+     "total": 3141
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": true,
+    "citations": [],
+    "evidence_quote": ""
+   },
+   {
+    "event": "abstain",
+    "reason": "model_abstain"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 3,
+  "llm_calls": 4,
+  "tokens": {
+   "prompt": 8255,
+   "output": 189,
+   "thoughts": 121,
+   "total": 8565
+  },
+  "latency_s": 59.1,
+  "context_ids": [
+   "B-soc3e-p0134-000",
+   "B-soc3e-p0135-002",
+   "B-soc3e-p0143-002",
+   "B-soc3e-p0135-000",
+   "B-soc3e-p0173-001",
+   "B-soc3e-p0133-004",
+   "B-soc3e-p0133-003",
+   "B-soc3e-p0172-000",
+   "B-soc3e-p0171-002"
+  ],
+  "context_chars": 7793,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0134-000",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -5.037110328674316,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nJean Piaget (1896–1980) was a psychologist who focused on the role of social interactions in child development. He recognized that the development of self evolved through a negotiation between the world as it exists in one’s mind and the world that exists as it is experienced socially (Piaget 1954). All three of these thinkers have contributed to our modern understanding of self-development.\nSociology or Psychology: What’s the Difference? You might be wondering: if sociologists and psychologists are both interested in people and their behavior, how are these two disciplines different? What do they agree on, and where do their ideas diverge? The answers are complicated, but the distinction is important to scholars in both fields."
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -10.920561790466309,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nIn the preconventional stage, young children, who lack a higher level of cognitive ability, experience the world around them only through their senses. It isn’t until the teen years that the conventional theory develops, when youngsters become increasingly aware of others’ feelings and take those into consideration when determining what’s “good” and “bad.” The final stage, called postconventional, is when people begin to think of morality in abstract terms, such as Americans believing that everyone has the right to life, liberty, and the pursuit of happiness. At this stage, people also recognize that legality and morality do not always match up evenly (Kohlberg 1981). When hundreds of thousands of Egyptians turned out in 2011 to protest government corruption, they were using postconventional morality. They understood that although their government was legal, it was not morally correct.\nGilligan’s Theory of Moral Development and Gender"
+   },
+   {
+    "id": "B-soc3e-p0143-002",
+    "page": 143,
+    "source": "soc3e",
+    "section": "5.3 Agents of Socialization",
+    "chapter": 5,
+    "score": -10.997713088989258,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.3 Agents of Socialization\nDifferent jobs require different types of socialization. In the past, many people worked a single job until retirement. Today, the trend is to switch jobs at least once a decade. Between the ages of eighteen and forty-six, the average Baby Boomer of the younger set held 11.3 different jobs (U.S. Bureau of Labor Statistics, 2014). This means that people must become socialized to, and socialized by, a variety of work environments.\nReligion\nWhile some religions are informal institutions, here we focus on practices followed by formal institutions. Religion is an important avenue of socialization for many people. The United States is full of synagogues, temples, churches, mosques, and similar religious communities where people gather to worship and learn. Like other institutions, these places teach participants how to interact with the religion’s material culture (like a mezuzah, a prayer rug, or a communion wafer). For some people, important ceremonies related to family"
+   },
+   {
+    "id": "B-soc3e-p0135-000",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.09267807006836,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nacting out “grownup” behavior, like playing dress-up and acting out the “mom” role, or talking on a toy telephone the way they see adults do.\nDuring the game stage, children learn to consider several roles at the same time and how those roles interact with each other. They learn to understand interactions involving different people with a variety of purposes. For example, a child at this stage is likely to be aware of the different responsibilities of people in a restaurant who together make for a smooth dining experience (someone seats you, another takes your order, someone else cooks the food, while yet another clears away dirty dishes).\nFinally, children develop, understand, and learn the idea of the generalized other, the common behavioral expectations of general society. By this stage of development, an individual is able to imagine how he or she is viewed by one or many others—and thus, from a sociological perspective, to have a “self” (Mead 1934; Mead 1964).\nKohlberg’s Theory of Moral Development"
+   },
+   {
+    "id": "B-soc3e-p0173-001",
+    "page": 173,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -11.197299003601074,
+    "rank": 5,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nThere are several positive aspects of bureaucracies. They are intended to improve efficiency, ensure equal opportunities, and serve a large population. And there are times when rigid hierarchies are needed. But remember that many of our bureaucracies grew large at the same time that our school model was developed––during the Industrial Revolution. Young workers were trained, and organizations were built for mass production, assembly line work, and factory jobs. In these scenarios, a clear chain of command was critical. Now, in the information age, this kind of rigid training and adherence to protocol can actually decrease both productivity and efficiency."
+   },
+   {
+    "id": "B-soc3e-p0133-004",
+    "page": 133,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -10.721368789672852,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nPsychologist Erik Erikson (1902–1994) created a theory of personality development based, in part, on the work of Freud. However, Erikson believed the personality continued to change over time and was never truly finished. His theory includes eight stages of development, beginning with birth and ending with death. According to Erikson, people move through these stages throughout their lives. In contrast to Freud’s focus on psychosexual stages and basic human urges, Erikson’s view of self-development gave credit to more social aspects, like the way we negotiate between our own base desires and what is socially accepted (Erikson 1982)."
+   },
+   {
+    "id": "B-soc3e-p0133-003",
+    "page": 133,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -10.784749984741211,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nLEARNING OBJECTIVES\nBy the end of this section, you should be able to:\n• Differentiate psychological and sociological theories of self-development • Explain the process of moral development\nWhen we are born, we have a genetic makeup and biological traits. However, who we are as human beings develops through social interaction. Many scholars, both in the fields of psychology and in sociology, have described the process of self-development as a precursor to understanding how that “self” becomes socialized.\nPsychological Perspectives on Self-Development\nPsychoanalyst Sigmund Freud (1856–1939) was one of the most influential modern scientists to put forth a theory about how people develop a sense of self. He divided the maturation process into stages, and posited that people’s self-development is closely linked to their early stages of development.\nAccording to Freud, failure to properly engage in or disengage from a specific stage results in emotional and psychological consequences throughout adulthood."
+   },
+   {
+    "id": "B-soc3e-p0172-000",
+    "page": 172,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -11.336585998535156,
+    "rank": 2,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nin which total resocialization takes place.\nThe third type is utilitarian organizations, which, as the name suggests, are joined because of the need for a specific material reward. High school and the workplace fall into this category—one joined in pursuit of a diploma, the other in order to make money.\nNormative or Voluntary Coercive Utilitarian\nBenefit of Membership Intangible benefit Corrective benefit Tangible benefit\nType of Membership Volunteer basis Required Contractual basis\nFeeling of Connectedness Shared affinity No affinity Some affinity\nTABLE 6.1 Table of Formal Organizations This table shows Etzioni’s three types of formal organizations. (Credit: Etzioni 1975)\nThe Structure of Bureaucracies"
+   },
+   {
+    "id": "B-soc3e-p0171-002",
+    "page": 171,
+    "source": "soc3e",
+    "section": "6.3 Formal Organizations",
+    "chapter": 6,
+    "score": -11.386222839355469,
+    "rank": 5,
+    "origin": "search",
+    "text": "6.3 Formal Organizations\nLEARNING OBJECTIVES\nBy the end of this section, you should be able to:\n• Distinguish the types of formal organizations • Recognize the characteristics of bureaucracies • Identify the impact of the McDonaldization of society\nA complaint of modern life is that society is dominated by large and impersonal secondary organizations. From schools to businesses to healthcare to government, these organizations, referred to as formal organizations, are highly bureaucratized. Indeed, all formal organizations are, or likely will become, bureaucracies. We will discuss the purpose of formal organizations and the structure of their bureaucracies.\nTypes of Formal Organizations\nFIGURE 6.8 Girl Scout troops and correctional facilities are both formal organizations. (Credit: (a) moonlightbulb/\nflickr; (b) CxOxS/flickr)"
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d18",
+  "question": "What is the average recidivism rate of released US prisoners within five years?",
+  "status": "abstain",
+  "reason": "model_abstain",
+  "answer": "There is not enough evidence in the provided text to answer what the average recidivism rate of released US prisoners within five years is.",
+  "citations": [],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.011,
+    "retries": 1,
+    "usage": {
+     "prompt": 708,
+     "output": 58,
+     "thoughts": 48,
+     "total": 814
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "recidivism rate five years US prisoners",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 7
+    },
+    "filter_reason": "Recidivism and crime relate to Chapter 7 (Deviance, Crime, and Social Control).",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0203-001",
+      "score": -0.055,
+      "rank": 1,
+      "page": 203
+     },
+     {
+      "id": "B-soc3e-p0203-000",
+      "score": -9.2346,
+      "rank": 2,
+      "page": 203
+     },
+     {
+      "id": "B-soc3e-p0201-001",
+      "score": -9.5853,
+      "rank": 3,
+      "page": 201
+     },
+     {
+      "id": "B-soc3e-p0203-002",
+      "score": -9.8623,
+      "rank": 4,
+      "page": 203
+     },
+     {
+      "id": "B-soc3e-p0203-003",
+      "score": -9.8805,
+      "rank": 5,
+      "page": 203
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0203-001",
+     "B-soc3e-p0203-000",
+     "B-soc3e-p0201-001",
+     "B-soc3e-p0203-002",
+     "B-soc3e-p0203-003"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 4.159,
+    "context_chars_used": 4704
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 1.485,
+    "retries": 0,
+    "usage": {
+     "prompt": 2026,
+     "output": 48,
+     "thoughts": 14,
+     "total": 2088
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "recidivism",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 7
+    },
+    "filter_reason": "Recidivism would be discussed in Chapter 7 under corrections or crime.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0203-003",
+      "score": -7.9316,
+      "rank": 1,
+      "page": 203
+     },
+     {
+      "id": "B-soc3e-p0194-002",
+      "score": -9.9927,
+      "rank": 2,
+      "page": 194
+     },
+     {
+      "id": "B-soc3e-p0188-002",
+      "score": -10.2156,
+      "rank": 3,
+      "page": 188
+     },
+     {
+      "id": "B-soc3e-p0189-003",
+      "score": -10.263,
+      "rank": 4,
+      "page": 189
+     },
+     {
+      "id": "B-soc3e-p0191-003",
+      "score": -10.2798,
+      "rank": 5,
+      "page": 191
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0194-002",
+     "B-soc3e-p0188-002",
+     "B-soc3e-p0191-003"
+    ],
+    "duplicates": [
+     "B-soc3e-p0203-003"
+    ],
+    "budget_dropped": [
+     "B-soc3e-p0189-003"
+    ],
+    "latency_s": 2.715,
+    "context_chars_used": 7968
+   },
+   {
+    "event": "model_call",
+    "n": 3,
+    "latency_s": 1.691,
+    "retries": 0,
+    "usage": {
+     "prompt": 2927,
+     "output": 22,
+     "thoughts": 13,
+     "total": 2962
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "recidivism",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": null,
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0203-003",
+      "score": -7.9316,
+      "rank": 1,
+      "page": 203
+     },
+     {
+      "id": "B-soc3e-p0194-002",
+      "score": -9.9927,
+      "rank": 2,
+      "page": 194
+     },
+     {
+      "id": "B-soc3e-p0188-002",
+      "score": -10.2156,
+      "rank": 3,
+      "page": 188
+     },
+     {
+      "id": "B-soc3e-p0189-003",
+      "score": -10.263,
+      "rank": 4,
+      "page": 189
+     },
+     {
+      "id": "B-soc3e-p0191-003",
+      "score": -10.2798,
+      "rank": 5,
+      "page": 191
+     }
+    ],
+    "context_added": [],
+    "duplicates": [
+     "B-soc3e-p0203-003",
+     "B-soc3e-p0194-002",
+     "B-soc3e-p0188-002",
+     "B-soc3e-p0191-003"
+    ],
+    "budget_dropped": [
+     "B-soc3e-p0189-003"
+    ],
+    "latency_s": 2.357,
+    "context_chars_used": 7968
+   },
+   {
+    "event": "model_call",
+    "n": 4,
+    "latency_s": 1.581,
+    "retries": 0,
+    "usage": {
+     "prompt": 3077,
+     "output": 54,
+     "thoughts": 42,
+     "total": 3173
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": true,
+    "citations": [],
+    "evidence_quote": ""
+   },
+   {
+    "event": "abstain",
+    "reason": "model_abstain"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 3,
+  "llm_calls": 4,
+  "tokens": {
+   "prompt": 8738,
+   "output": 182,
+   "thoughts": 117,
+   "total": 9037
+  },
+  "latency_s": 59.335,
+  "context_ids": [
+   "B-soc3e-p0203-001",
+   "B-soc3e-p0203-000",
+   "B-soc3e-p0201-001",
+   "B-soc3e-p0203-002",
+   "B-soc3e-p0203-003",
+   "B-soc3e-p0194-002",
+   "B-soc3e-p0188-002",
+   "B-soc3e-p0191-003"
+  ],
+  "context_chars": 7968,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0203-001",
+    "page": 203,
+    "source": "soc3e",
+    "section": "7.3 Crime and the Law",
+    "chapter": 7,
+    "score": -0.055039603263139725,
+    "rank": 1,
+    "origin": "search",
+    "text": "7.3 Crime and the Law\nThe U.S. incarceration rate has grown considerably in the last hundred years, but has begun to decline in the past decade. The total correctional population (including parolees and those on probation), peaked in 2007 at 7.3 million, resulting in approximately 1 in 32 people being under some sort of correctional supervision. With the 2018 correction system number close to 6.4 million people, that ratio goes to 1 in every 40 people (BJS 2020). The declines are seen as a positive, but the United States holds the largest number of prisoners of any nation in the world."
+   },
+   {
+    "id": "B-soc3e-p0203-000",
+    "page": 203,
+    "source": "soc3e",
+    "section": "7.3 Crime and the Law",
+    "chapter": 7,
+    "score": -9.234569549560547,
+    "rank": 2,
+    "origin": "search",
+    "text": "7.3 Crime and the Law\ncourtroom of the Michigan Supreme Court (right). (Credit: (a) Ammodramus/Wikimedia Commons; Photo (b) Steve & Christine/Wikimedia Commons)\nCorrections\nThe corrections system is charged with supervising individuals who have been arrested, convicted, and sentenced for a criminal offense, plus people detained while awaiting hearings, trials, or other procedures. At the end of 2018, approximately 2.3 million people were incarcerated in the United States (BJS 2020); these include people who are in state and federal prisons as well as those in local jails or related facilities, as explained below. Since many convicted people are placed on probation or parole, have their sentences deferred or otherwise altered, or are released under other circumstances, the total number of people within the corrections system is much higher. In 2018, the total number of people either incarcerated, detained, paroled, or on probation was 6,410,000 (BJS 2020)."
+   },
+   {
+    "id": "B-soc3e-p0201-001",
+    "page": 201,
+    "source": "soc3e",
+    "section": "7.3 Crime and the Law",
+    "chapter": 7,
+    "score": -9.585256576538086,
+    "rank": 3,
+    "origin": "search",
+    "text": "7.3 Crime and the Law\nNeither the NCVR nor the UCR accounts for all crime in the United States, but general trends can be determined. Crime rates, particularly for violent and gun-related crimes, have been on the decline since peaking in the early 1990s (Cohn, Taylor, Lopez, Gallagher, Parker, and Maass 2013). However, the public believes crime rates are still high, or even worsening. Recent surveys (Saad 2011; Pew Research Center 2013, cited in Overburg and Hoyer 2013) have found U.S. adults believe crime is worse now than it was twenty years ago.\nInaccurate public perception of crime may be heightened by popular crime series such as Law & Order (Warr 2008) and by extensive and repeated media coverage of crime. Many researchers have found that people who closely follow media reports of crime are likely to estimate the crime rate as inaccurately high and more likely to feel fearful about the chances of experiencing crime (Chiricos, Padgett, and Gertz 2000). Recent research has also found that people who reported watching news coverage of 9/11 or the Boston Marathon Bombing for more than an hour daily became more fearful of future terrorism (Holman, Garfin, and Silver 2014)."
+   },
+   {
+    "id": "B-soc3e-p0203-002",
+    "page": 203,
+    "source": "soc3e",
+    "section": "7.3 Crime and the Law",
+    "chapter": 7,
+    "score": -9.862311363220215,
+    "rank": 4,
+    "origin": "search",
+    "text": "7.3 Crime and the Law\nPrison is different from jail. A jail provides temporary confinement, usually while an individual awaits trial or parole. Prisons are facilities built for individuals serving sentences of more than a year. Whereas jails are small and local, prisons are large and run by either the state or the federal government. While incarcerated, people have differing levels of freedom and opportunity for engagement. Some inmates have options to take classes, play organized sports, and otherwise enrich themselves, usually with the goal of improving their lives upon release. Other incarcerated people have very limited opportunities. Usually these distinctions are based on the severity of their crimes and their behavior once imprisoned, but available resources and funding can be a significant factor."
+   },
+   {
+    "id": "B-soc3e-p0203-003",
+    "page": 203,
+    "source": "soc3e",
+    "section": "7.3 Crime and the Law",
+    "chapter": 7,
+    "score": -9.880498886108398,
+    "rank": 5,
+    "origin": "search",
+    "text": "7.3 Crime and the Law\nParole refers to a temporary release from prison or jail that requires supervision and the consent of officials. Parole is different from probation, which is supervised time used as an alternative to prison. Probation and parole can both follow a period of incarceration in prison, especially if the prison sentence is shortened. Most people in these situations are supervised by correctional officers or other appropriate professionals, including mental health professionals; they may attend regular meetings or counseling sessions and may be required to report on their activities and travel. People on probation or parole often have strict guidelines; not only will they be returned to jail upon committing a crime, but they may also be prohibited from associating with known criminals or suspects. These strategies are designed to prevent people on parole or probation from returning to criminal engagements, and to increase the likelihood that they will remain positive members of the community through interactions with family, productive employment, and mental health treatment if needed.\nPolicing and Race"
+   },
+   {
+    "id": "B-soc3e-p0194-002",
+    "page": 194,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -9.992722511291504,
+    "rank": 2,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nSometimes, in more extreme cases, primary deviance can morph into secondary deviance. Secondary deviance occurs when a person’s self-concept and behavior begin to change after his or her actions are labeled as deviant by members of society. The person may begin to take on and fulfill the role of a “deviant” as an act of rebellion against the society that has labeled that individual as such. For example, consider a high school student who often cuts class and gets into fights. The student is reprimanded frequently by teachers and school staff, and soon enough, develops a reputation as a “troublemaker.” As a result, the student starts acting out even more and breaking more rules; the student has adopted the “troublemaker” label and embraced this deviant identity. Secondary deviance can be so strong that it bestows a master status on an individual. A master status is a label that describes the chief characteristic of an individual. Some people see themselves primarily as doctors, artists, or grandfathers. Others see themselves as beggars, convicts, or addicts.\nTechniques of Neutralization"
+   },
+   {
+    "id": "B-soc3e-p0188-002",
+    "page": 188,
+    "source": "soc3e",
+    "section": "7.1 Deviance and Control",
+    "chapter": 7,
+    "score": -10.2156343460083,
+    "rank": 3,
+    "origin": "search",
+    "text": "7.1 Deviance and Control\nAs discussed earlier, we typically learn these social norms as children and evolve them with experience. But the relativity of deviance can have significant societal impacts, including perceptions and prosecutions of crime. They may often be based on racial, ethnic, or related prejudices. When 15-year-old Elizabeth Eckford of the Little Rock Nine attempted to enter her legally desegregated high school, she was abiding by the law; but she was considered deviant by the crowd of White people that harassed and insulted her. (These events are discussed in more detail in the Education chapter.)\nConsider the example of marijuana legalization mentioned earlier. Why was marijuana illegal in the first place? In fact, it wasn’t. Humans have used cannabis openly in their societies for thousands of years. While it was not a widely used substance in the United States, it had been accepted as a medicinal and recreational option, and was neither prohibited nor significantly regulated until the early 1900s. What changed?"
+   },
+   {
+    "id": "B-soc3e-p0191-003",
+    "page": 191,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -10.279769897460938,
+    "rank": 5,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nMerton defined five ways people respond to this gap between having a socially accepted goal and having no socially accepted way to pursue it.\n1. Conformity: Those who conform choose not to deviate. They pursue their goals to the extent that they can through socially accepted means. 2. Innovation: Those who innovate pursue goals they cannot reach through legitimate means by instead using criminal or deviant means.\n3. Ritualism: People who ritualize lower their goals until they can reach them through socially acceptable ways. These members of society focus on conformity rather than attaining a distant dream. 4. Retreatism: Others retreat and reject society’s goals and means. Some people who beg and people who are homeless have withdrawn from society’s goal of financial success. 5. Rebellion: A handful of people rebel and replace a society’s goals and means with their own. Terrorists or freedom fighters look to overthrow a society’s goals through socially unacceptable means.\nSocial Disorganization Theory"
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ },
+ {
+  "query_id": "d19",
+  "question": "What does Vygotsky's zone of proximal development say about how children learn?",
+  "status": "abstain",
+  "reason": "model_abstain",
+  "answer": "There is not enough evidence in the provided text to answer what Vygotsky's zone of proximal development says about how children learn.",
+  "citations": [],
+  "events": [
+   {
+    "event": "model_call",
+    "n": 1,
+    "latency_s": 1.292,
+    "retries": 1,
+    "usage": {
+     "prompt": 711,
+     "output": 48,
+     "thoughts": 76,
+     "total": 835
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Vygotsky zone of proximal development",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": {
+     "chapter": 5
+    },
+    "filter_reason": "Vygotsky and socialization/child development are covered in Chapter 5.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0134-003",
+      "score": -11.269,
+      "rank": 1,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0133-004",
+      "score": -11.2726,
+      "rank": 2,
+      "page": 133
+     },
+     {
+      "id": "B-soc3e-p0134-000",
+      "score": -11.299,
+      "rank": 3,
+      "page": 134
+     },
+     {
+      "id": "B-soc3e-p0133-003",
+      "score": -11.3061,
+      "rank": 4,
+      "page": 133
+     },
+     {
+      "id": "B-soc3e-p0135-002",
+      "score": -11.3135,
+      "rank": 5,
+      "page": 135
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0134-003",
+     "B-soc3e-p0133-004",
+     "B-soc3e-p0134-000",
+     "B-soc3e-p0133-003",
+     "B-soc3e-p0135-002"
+    ],
+    "duplicates": [],
+    "budget_dropped": [],
+    "latency_s": 2.863,
+    "context_chars_used": 4536
+   },
+   {
+    "event": "model_call",
+    "n": 2,
+    "latency_s": 1.084,
+    "retries": 0,
+    "usage": {
+     "prompt": 2018,
+     "output": 41,
+     "thoughts": 39,
+     "total": 2098
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "Vygotsky",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": "Searching for Vygotsky across the entire text since the exact location is unknown.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0192-003",
+      "score": -10.1545,
+      "rank": 1,
+      "page": 192
+     },
+     {
+      "id": "B-soc3e-p0170-002",
+      "score": -10.4874,
+      "rank": 2,
+      "page": 170
+     },
+     {
+      "id": "B-soc3e-p0191-000",
+      "score": -10.6206,
+      "rank": 3,
+      "page": 191
+     },
+     {
+      "id": "B-soc3e-p0191-002",
+      "score": -10.623,
+      "rank": 4,
+      "page": 191
+     },
+     {
+      "id": "B-soc3e-p0194-002",
+      "score": -10.6596,
+      "rank": 5,
+      "page": 194
+     }
+    ],
+    "context_added": [
+     "B-soc3e-p0192-003",
+     "B-soc3e-p0170-002",
+     "B-soc3e-p0191-000"
+    ],
+    "duplicates": [],
+    "budget_dropped": [
+     "B-soc3e-p0191-002",
+     "B-soc3e-p0194-002"
+    ],
+    "latency_s": 1.01,
+    "context_chars_used": 7611
+   },
+   {
+    "event": "model_call",
+    "n": 3,
+    "latency_s": 1.44,
+    "retries": 0,
+    "usage": {
+     "prompt": 2903,
+     "output": 37,
+     "thoughts": 58,
+     "total": 2998
+    },
+    "function_calls": [
+     "search"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "search",
+    "tool": "search",
+    "query": "zone proximal development",
+    "top_k": 5,
+    "method": "hybrid_rerank",
+    "filter": null,
+    "filter_reason": "Searching for zone or proximal to find Vygotsky if present.",
+    "ok": true,
+    "error": null,
+    "results": [
+     {
+      "id": "B-soc3e-p0135-001",
+      "score": -11.0766,
+      "rank": 1,
+      "page": 135
+     },
+     {
+      "id": "B-soc3e-p0133-004",
+      "score": -11.1233,
+      "rank": 2,
+      "page": 133
+     },
+     {
+      "id": "B-soc3e-p0136-002",
+      "score": -11.1314,
+      "rank": 3,
+      "page": 136
+     },
+     {
+      "id": "B-soc3e-p0133-003",
+      "score": -11.1374,
+      "rank": 4,
+      "page": 133
+     },
+     {
+      "id": "B-soc3e-p0135-002",
+      "score": -11.1547,
+      "rank": 5,
+      "page": 135
+     }
+    ],
+    "context_added": [],
+    "duplicates": [
+     "B-soc3e-p0133-004",
+     "B-soc3e-p0133-003",
+     "B-soc3e-p0135-002"
+    ],
+    "budget_dropped": [
+     "B-soc3e-p0135-001",
+     "B-soc3e-p0136-002"
+    ],
+    "latency_s": 1.035,
+    "context_chars_used": 7611
+   },
+   {
+    "event": "model_call",
+    "n": 4,
+    "latency_s": 1.612,
+    "retries": 0,
+    "usage": {
+     "prompt": 3113,
+     "output": 58,
+     "thoughts": 55,
+     "total": 3226
+    },
+    "function_calls": [
+     "finish"
+    ],
+    "text": "",
+    "finish_reason": "FinishReason.STOP"
+   },
+   {
+    "event": "finish_call",
+    "abstain": true,
+    "citations": [],
+    "evidence_quote": ""
+   },
+   {
+    "event": "abstain",
+    "reason": "model_abstain"
+   }
+  ],
+  "errors": [],
+  "tool_calls": 3,
+  "llm_calls": 4,
+  "tokens": {
+   "prompt": 8745,
+   "output": 184,
+   "thoughts": 228,
+   "total": 9157
+  },
+  "latency_s": 59.727,
+  "context_ids": [
+   "B-soc3e-p0134-003",
+   "B-soc3e-p0133-004",
+   "B-soc3e-p0134-000",
+   "B-soc3e-p0133-003",
+   "B-soc3e-p0135-002",
+   "B-soc3e-p0192-003",
+   "B-soc3e-p0170-002",
+   "B-soc3e-p0191-000"
+  ],
+  "context_chars": 7611,
+  "final_context": [
+   {
+    "id": "B-soc3e-p0134-003",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.268963813781738,
+    "rank": 1,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nOne of the pioneering contributors to sociological perspectives was Charles Cooley (1864–1929). He asserted that people’s self understanding is constructed, in part, by their perception of how others view them—a process termed “the looking glass self” (Cooley 1902).\nLater, George Herbert Mead (1863–1931) studied the self, a person’s distinct identity that is developed through social interaction. In order to engage in this process of “self,” an individual has to be able to view him or herself through the eyes of others. That’s not an ability that we are born with (Mead 1934). Through socialization we learn to put ourselves in someone else's shoes and look at the world through their perspective. This assists us in becoming self-aware, as we look at ourselves from the perspective of the \"other.\" The case of Danielle, for example, illustrates what happens when social interaction is absent from early experience: Danielle had no ability to see herself as others would see her. From Mead’s point of view, she had no “self.”"
+   },
+   {
+    "id": "B-soc3e-p0133-004",
+    "page": 133,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.272584915161133,
+    "rank": 2,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nPsychologist Erik Erikson (1902–1994) created a theory of personality development based, in part, on the work of Freud. However, Erikson believed the personality continued to change over time and was never truly finished. His theory includes eight stages of development, beginning with birth and ending with death. According to Erikson, people move through these stages throughout their lives. In contrast to Freud’s focus on psychosexual stages and basic human urges, Erikson’s view of self-development gave credit to more social aspects, like the way we negotiate between our own base desires and what is socially accepted (Erikson 1982)."
+   },
+   {
+    "id": "B-soc3e-p0134-000",
+    "page": 134,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.299038887023926,
+    "rank": 3,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nJean Piaget (1896–1980) was a psychologist who focused on the role of social interactions in child development. He recognized that the development of self evolved through a negotiation between the world as it exists in one’s mind and the world that exists as it is experienced socially (Piaget 1954). All three of these thinkers have contributed to our modern understanding of self-development.\nSociology or Psychology: What’s the Difference? You might be wondering: if sociologists and psychologists are both interested in people and their behavior, how are these two disciplines different? What do they agree on, and where do their ideas diverge? The answers are complicated, but the distinction is important to scholars in both fields."
+   },
+   {
+    "id": "B-soc3e-p0133-003",
+    "page": 133,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.306148529052734,
+    "rank": 4,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nLEARNING OBJECTIVES\nBy the end of this section, you should be able to:\n• Differentiate psychological and sociological theories of self-development • Explain the process of moral development\nWhen we are born, we have a genetic makeup and biological traits. However, who we are as human beings develops through social interaction. Many scholars, both in the fields of psychology and in sociology, have described the process of self-development as a precursor to understanding how that “self” becomes socialized.\nPsychological Perspectives on Self-Development\nPsychoanalyst Sigmund Freud (1856–1939) was one of the most influential modern scientists to put forth a theory about how people develop a sense of self. He divided the maturation process into stages, and posited that people’s self-development is closely linked to their early stages of development.\nAccording to Freud, failure to properly engage in or disengage from a specific stage results in emotional and psychological consequences throughout adulthood."
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "page": 135,
+    "source": "soc3e",
+    "section": "5.1 Theories of Self-Development",
+    "chapter": 5,
+    "score": -11.313501358032227,
+    "rank": 5,
+    "origin": "search",
+    "text": "5.1 Theories of Self-Development\nIn the preconventional stage, young children, who lack a higher level of cognitive ability, experience the world around them only through their senses. It isn’t until the teen years that the conventional theory develops, when youngsters become increasingly aware of others’ feelings and take those into consideration when determining what’s “good” and “bad.” The final stage, called postconventional, is when people begin to think of morality in abstract terms, such as Americans believing that everyone has the right to life, liberty, and the pursuit of happiness. At this stage, people also recognize that legality and morality do not always match up evenly (Kohlberg 1981). When hundreds of thousands of Egyptians turned out in 2011 to protest government corruption, they were using postconventional morality. They understood that although their government was legal, it was not morally correct.\nGilligan’s Theory of Moral Development and Gender"
+   },
+   {
+    "id": "B-soc3e-p0192-003",
+    "page": 192,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -10.15447998046875,
+    "rank": 1,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nConflict theory was greatly influenced by the work of German philosopher, economist, and social scientist Karl Marx. Marx believed that the general population was divided into two groups. He labeled the wealthy, who controlled the means of production and business, the bourgeois. He labeled the workers who depended on the bourgeois for employment and survival the proletariat. Marx believed that the bourgeois centralized their power and influence through government, laws, and other authority agencies in order to maintain and expand their positions of power in society. Though Marx spoke little of deviance, his ideas created the foundation for conflict theorists who study the intersection of deviance and crime with wealth and power.\nC. Wright Mills: The Power Elite\nIn his book The Power Elite (1956), sociologist C. Wright Mills described the existence of what he dubbed the power elite, a small group of wealthy and influential people at the top of society who hold the power and resources. Wealthy executives, politicians, celebrities, and military leaders often have access to national and"
+   },
+   {
+    "id": "B-soc3e-p0170-002",
+    "page": 170,
+    "source": "soc3e",
+    "section": "6.2 Group Size and Structure",
+    "chapter": 6,
+    "score": -10.487419128417969,
+    "rank": 2,
+    "origin": "search",
+    "text": "6.2 Group Size and Structure\nSo what was the conclusion? Asch found that thirty-seven out of fifty test subjects responded with an “obviously erroneous” answer at least once. When faced by a unanimous wrong answer from the rest of the group, the subject conformed to a mean of four of the staged answers. Asch revised the study and repeated it, wherein the subject still heard the staged wrong answers, but was allowed to write down his answer rather than speak it aloud. In this version, the number of examples of conformity––giving an incorrect answer so as not to contradict the group––fell by two thirds. He also found that group size had an impact on how much pressure the subject felt to conform.\nThe results showed that speaking up when only one other person gave an erroneous answer was far more common than when five or six people defended the incorrect position. Finally, Asch discovered that people were far more likely to give the correct answer in the face of near-unanimous consent if they had a single ally. If even one person in the group also dissented, the subject conformed only a quarter as often. Clearly, it was easier to be a minority of two than a minority of one."
+   },
+   {
+    "id": "B-soc3e-p0191-000",
+    "page": 191,
+    "source": "soc3e",
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime",
+    "chapter": 7,
+    "score": -10.620635032653809,
+    "rank": 3,
+    "origin": "search",
+    "text": "7.2 Theoretical Perspectives on Deviance and Crime\nÉmile Durkheim: The Essential Nature of Deviance\nÉmile Durkheim believed that deviance is a necessary part of a successful society. One way deviance is functional, he argued, is that it challenges people’s present views (1893). For instance, when Black students across the United States participated in sit-ins during the civil rights movement, they challenged society’s notions of segregation. Moreover, Durkheim noted, when deviance is punished, it reaffirms currently held social norms, which also contributes to society (1893). Seeing a student given detention for skipping class reminds other high schoolers that playing hooky isn’t allowed and that they, too, could get detention."
+   }
+  ],
+  "config_name": "rerank",
+  "model": "gemini-3.5-flash-lite"
+ }
+]

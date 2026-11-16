@@ -1,0 +1,116 @@
+[
+ {
+  "id": "d01",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d02",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d03",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d04",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d05",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d06",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d07",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d08",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d09",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d10",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d11",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d12",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d13",
+  "split": "dev",
+  "answerable": true,
+  "type": "multi-hop"
+ },
+ {
+  "id": "d14",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d15",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d16",
+  "split": "dev",
+  "answerable": true,
+  "type": "direct"
+ },
+ {
+  "id": "d17",
+  "split": "dev",
+  "answerable": false,
+  "type": "unanswerable"
+ },
+ {
+  "id": "d18",
+  "split": "dev",
+  "answerable": false,
+  "type": "unanswerable"
+ },
+ {
+  "id": "d19",
+  "split": "dev",
+  "answerable": false,
+  "type": "unanswerable"
+ }
+]

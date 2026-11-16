@@ -1,0 +1,125 @@
+{
+ "config": "rerank_nb",
+ "queries": 19,
+ "errors": 0,
+ "answered": 16,
+ "abstain": 3,
+ "context_evidence": {
+  "n": 16,
+  "N": 16
+ },
+ "retrieved_evidence": {
+  "n": 16,
+  "N": 16
+ },
+ "per_query": {
+  "d01": {
+   "context": true,
+   "retrieved": true
+  },
+  "d02": {
+   "context": true,
+   "retrieved": true
+  },
+  "d03": {
+   "context": true,
+   "retrieved": true
+  },
+  "d04": {
+   "context": true,
+   "retrieved": true
+  },
+  "d05": {
+   "context": true,
+   "retrieved": true
+  },
+  "d06": {
+   "context": true,
+   "retrieved": true
+  },
+  "d07": {
+   "context": true,
+   "retrieved": true
+  },
+  "d08": {
+   "context": true,
+   "retrieved": true
+  },
+  "d09": {
+   "context": true,
+   "retrieved": true
+  },
+  "d10": {
+   "context": true,
+   "retrieved": true
+  },
+  "d11": {
+   "context": true,
+   "retrieved": true
+  },
+  "d12": {
+   "context": true,
+   "retrieved": true
+  },
+  "d13": {
+   "context": true,
+   "retrieved": true
+  },
+  "d14": {
+   "context": true,
+   "retrieved": true
+  },
+  "d15": {
+   "context": true,
+   "retrieved": true
+  },
+  "d16": {
+   "context": true,
+   "retrieved": true
+  }
+ },
+ "tool_calls_mean": 1.42,
+ "tool_calls_dist": {
+  "1": 15,
+  "3": 4
+ },
+ "llm_calls_mean": 2.58,
+ "tokens_mean": 5095,
+ "prompt_tokens_mean": 4559,
+ "active_median_s": 7.0,
+ "active_p95_s": 47.2,
+ "latency_median_s": 44.4,
+ "latency_p95_s": 60.0,
+ "context_chars_mean": 5179,
+ "agent_metrics": {
+  "cases": 19,
+  "provider_errors": 0,
+  "tool_use": {
+   "n": 19,
+   "N": 19
+  },
+  "grounded_answer": {
+   "0": 0,
+   "1": 0,
+   "2": 16,
+   "N": 16,
+   "mean": 2.0
+  },
+  "citation_validity": {
+   "n": 18,
+   "N": 18
+  },
+  "answer_citation_coverage": {
+   "n": 16,
+   "N": 16
+  },
+  "abstention": {
+   "n": 3,
+   "N": 3
+  },
+  "false_abstention": {
+   "n": 0,
+   "N": 16
+  }
+ }
+}

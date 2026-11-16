@@ -1,0 +1,51 @@
+{
+  "frozen": true,
+  "frozen_on": "2026-11-16",
+  "derived_from": "configs/rerank_fix.json (dev config rerank_fix)",
+  "note": "Frozen before any test-split run. Do not edit; run: python scripts/run_agent.py --split test --config final --allow-test",
+  "config": {
+    "name": "final",
+    "model": "gemini-3.5-flash-lite",
+    "prompt_version": "v1",
+    "method": "hybrid_rerank",
+    "collection": "soc3e_B",
+    "top_k": 5,
+    "depth": 30,
+    "fuse_depth": 30,
+    "rrf_k": 60,
+    "demote_backmatter": true,
+    "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "max_tool_calls": 2,
+    "context_budget_chars": 8000,
+    "neighbors": false,
+    "allow_chapter_filter": true,
+    "thinking_budget": 1024,
+    "temperature": 0.0,
+    "pace_s": 6.5,
+    "max_retries": 6,
+    "lenient_citation_format": true
+  },
+  "model_id": "gemini-3.5-flash-lite",
+  "prompt_version": "v1",
+  "system_prompt_sha256": "d5ef139d76b5bf15096ea3ac10888aab48a7a5a13813ed06124d8695013db948",
+  "embedding": "BAAI/bge-small-en-v1.5 (Day 6, 384-d)",
+  "reranker": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+  "retrieval": {
+    "method": "hybrid_rerank",
+    "collection": "soc3e_B",
+    "top_k": 5,
+    "depth": 30,
+    "fuse_depth": 30,
+    "rrf_k": 60,
+    "demote_backmatter": true
+  },
+  "agent": {
+    "max_tool_calls": 2,
+    "context_budget_chars": 8000,
+    "neighbors": false,
+    "allow_chapter_filter": true,
+    "lenient_citation_format": true,
+    "thinking_budget": 1024,
+    "temperature": 0.0
+  }
+}
