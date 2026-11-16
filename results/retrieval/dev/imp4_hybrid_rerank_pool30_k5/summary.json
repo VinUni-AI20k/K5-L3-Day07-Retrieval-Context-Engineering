@@ -1,0 +1,38 @@
+{
+ "config": "imp4_hybrid_rerank_pool30_k5",
+ "method": "hybrid_rerank",
+ "top_k": 5,
+ "params": {
+  "depth": 30,
+  "fuse_depth": 30
+ },
+ "collection": "soc3e_B",
+ "split": "dev",
+ "n_answerable": 16,
+ "n_direct": 15,
+ "n_multihop": 1,
+ "n_unanswerable": 3,
+ "errors": 0,
+ "hit@1": 0.9375,
+ "hit@3": 1.0,
+ "hit@5": 1.0,
+ "recall@k": 1.0,
+ "full_recall@k": 1.0,
+ "multihop_full_recall": 1.0,
+ "multihop_recall": 1.0,
+ "mrr": 0.96875,
+ "failed_queries": [],
+ "latency_ms_mean": 1138.5521368448328,
+ "latency_ms_median": 1089.5858999574557,
+ "latency_ms_p95": 1494.3044000538066,
+ "unanswerable_top1_scores": {
+  "d17": -4.872062683105469,
+  "d18": -1.3947789669036865,
+  "d19": -2.906954050064087
+ },
+ "unanswerable_top1_mean": -3.057931900024414,
+ "unanswerable_top1_max": -1.3947789669036865,
+ "answerable_top1_mean": 6.913140118122101,
+ "answerable_top1_min": -6.881333351135254,
+ "score_scale_note": "dense=cosine, bm25=raw BM25, hybrid=RRF sum, *_rerank=cross-encoder logit; not comparable across methods"
+}

@@ -1,0 +1,41 @@
+{
+ "config": "imp3_hybrid_collA_k5",
+ "method": "hybrid",
+ "top_k": 5,
+ "params": {
+  "collection": "soc3e_A"
+ },
+ "collection": "soc3e_A",
+ "split": "dev",
+ "n_answerable": 16,
+ "n_direct": 15,
+ "n_multihop": 1,
+ "n_unanswerable": 3,
+ "errors": 0,
+ "hit@1": 0.75,
+ "hit@3": 0.875,
+ "hit@5": 0.875,
+ "recall@k": 0.84375,
+ "full_recall@k": 0.8125,
+ "multihop_full_recall": 0.0,
+ "multihop_recall": 0.5,
+ "mrr": 0.8125,
+ "failed_queries": [
+  "d08",
+  "d09",
+  "d13"
+ ],
+ "latency_ms_mean": 24.97978420854595,
+ "latency_ms_median": 24.794199969619513,
+ "latency_ms_p95": 27.42599998600781,
+ "unanswerable_top1_scores": {
+  "d17": 0.03252247488101534,
+  "d18": 0.032266458495966696,
+  "d19": 0.03200204813108039
+ },
+ "unanswerable_top1_mean": 0.032263660502687475,
+ "unanswerable_top1_max": 0.03252247488101534,
+ "answerable_top1_mean": 0.0326557293109382,
+ "answerable_top1_min": 0.03200204813108039,
+ "score_scale_note": "dense=cosine, bm25=raw BM25, hybrid=RRF sum, *_rerank=cross-encoder logit; not comparable across methods"
+}

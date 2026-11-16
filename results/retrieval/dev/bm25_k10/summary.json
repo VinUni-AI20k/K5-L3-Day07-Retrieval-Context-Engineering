@@ -1,0 +1,37 @@
+{
+ "config": "bm25_k10",
+ "method": "bm25",
+ "top_k": 10,
+ "params": {},
+ "collection": "soc3e_B",
+ "split": "dev",
+ "n_answerable": 16,
+ "n_direct": 15,
+ "n_multihop": 1,
+ "n_unanswerable": 3,
+ "errors": 0,
+ "hit@1": 0.875,
+ "hit@3": 0.9375,
+ "hit@5": 0.9375,
+ "recall@k": 0.9375,
+ "full_recall@k": 0.9375,
+ "multihop_full_recall": 1.0,
+ "multihop_recall": 1.0,
+ "mrr": 0.90625,
+ "failed_queries": [
+  "d09"
+ ],
+ "latency_ms_mean": 1.150778945118777,
+ "latency_ms_median": 1.1744999792426825,
+ "latency_ms_p95": 1.7104999860748649,
+ "unanswerable_top1_scores": {
+  "d17": 8.931190614904622,
+  "d18": 11.344124006204014,
+  "d19": 8.850760154630889
+ },
+ "unanswerable_top1_mean": 9.708691591913174,
+ "unanswerable_top1_max": 11.344124006204014,
+ "answerable_top1_mean": 23.371260292632307,
+ "answerable_top1_min": 7.236864713828778,
+ "score_scale_note": "dense=cosine, bm25=raw BM25, hybrid=RRF sum, *_rerank=cross-encoder logit; not comparable across methods"
+}

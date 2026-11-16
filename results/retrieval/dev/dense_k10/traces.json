@@ -1,0 +1,1928 @@
+[
+ {
+  "query_id": "d01",
+  "split": "dev",
+  "question": "What did Charles Cooley mean by the looking glass self?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0134-003",
+    "score": 0.7365371584892273,
+    "rank": 1,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0136-000",
+    "score": 0.5378689169883728,
+    "rank": 2,
+    "page": 136,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0150-001",
+    "score": 0.5371564626693726,
+    "rank": 3,
+    "page": 150,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0134-002",
+    "score": 0.529800295829773,
+    "rank": 4,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0134-004",
+    "score": 0.501337468624115,
+    "rank": 5,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0136-001",
+    "score": 0.4999529719352722,
+    "rank": 6,
+    "page": 136,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0133-003",
+    "score": 0.4979112148284912,
+    "rank": 7,
+    "page": 133,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0191-000",
+    "score": 0.4973914623260498,
+    "rank": 8,
+    "page": 191,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "score": 0.49700266122817993,
+    "rank": 9,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0138-004",
+    "score": 0.4935867190361023,
+    "rank": 10,
+    "page": 138,
+    "section": "5.2 Why Socialization Matters"
+   }
+  ],
+  "latency_ms": 107.57149994606152,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0134-003"
+   ]
+  }
+ },
+ {
+  "query_id": "d02",
+  "split": "dev",
+  "question": "In George Herbert Mead's account of self development, what can children do during the preparatory stage?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0134-004",
+    "score": 0.7701907157897949,
+    "rank": 1,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-000",
+    "score": 0.6909911632537842,
+    "rank": 2,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "score": 0.6764423251152039,
+    "rank": 3,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0134-003",
+    "score": 0.6713306903839111,
+    "rank": 4,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0133-003",
+    "score": 0.6593153476715088,
+    "rank": 5,
+    "page": 133,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0150-001",
+    "score": 0.6229692697525024,
+    "rank": 6,
+    "page": 150,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0133-002",
+    "score": 0.6228799819946289,
+    "rank": 7,
+    "page": 133,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0133-004",
+    "score": 0.6148301362991333,
+    "rank": 8,
+    "page": 133,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0134-000",
+    "score": 0.6072874069213867,
+    "rank": 9,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-001",
+    "score": 0.6013243794441223,
+    "rank": 10,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   }
+  ],
+  "latency_ms": 117.86330002360046,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0134-004"
+   ]
+  }
+ },
+ {
+  "query_id": "d03",
+  "split": "dev",
+  "question": "In Kohlberg's theory of moral development, at which stage do young children experience the world around them only through their senses?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0135-001",
+    "score": 0.7433733940124512,
+    "rank": 1,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-000",
+    "score": 0.7275193929672241,
+    "rank": 2,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "score": 0.707537055015564,
+    "rank": 3,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0151-000",
+    "score": 0.6883399486541748,
+    "rank": 4,
+    "page": 151,
+    "section": "Section Quiz"
+   },
+   {
+    "id": "B-soc3e-p0150-001",
+    "score": 0.6865525841712952,
+    "rank": 5,
+    "page": 150,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0134-004",
+    "score": 0.6853146553039551,
+    "rank": 6,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-004",
+    "score": 0.6760299205780029,
+    "rank": 7,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-003",
+    "score": 0.6663036942481995,
+    "rank": 8,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0133-003",
+    "score": 0.6588979959487915,
+    "rank": 9,
+    "page": 133,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0134-000",
+    "score": 0.6233212947845459,
+    "rank": 10,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   }
+  ],
+  "latency_ms": 79.8258000286296,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": false,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 3,
+   "mrr": 0.3333333333333333,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0135-002"
+   ]
+  }
+ },
+ {
+  "query_id": "d04",
+  "split": "dev",
+  "question": "What is the Egalia preschool in Sweden trying to do about gender socialization?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0136-002",
+    "score": 0.8327180743217468,
+    "rank": 1,
+    "page": 136,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0133-001",
+    "score": 0.6219989061355591,
+    "rank": 2,
+    "page": 133,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0153-002",
+    "score": 0.6097668409347534,
+    "rank": 3,
+    "page": 153,
+    "section": "Short Answer"
+   },
+   {
+    "id": "B-soc3e-p0133-002",
+    "score": 0.5906186103820801,
+    "rank": 4,
+    "page": 133,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0153-001",
+    "score": 0.5837366580963135,
+    "rank": 5,
+    "page": 153,
+    "section": "Short Answer"
+   },
+   {
+    "id": "B-soc3e-p0145-005",
+    "score": 0.5766373872756958,
+    "rank": 6,
+    "page": 145,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0140-003",
+    "score": 0.5755906105041504,
+    "rank": 7,
+    "page": 140,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0135-004",
+    "score": 0.5755345821380615,
+    "rank": 8,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0139-001",
+    "score": 0.5742034316062927,
+    "rank": 9,
+    "page": 139,
+    "section": "5.2 Why Socialization Matters"
+   },
+   {
+    "id": "B-soc3e-p0150-001",
+    "score": 0.5738396644592285,
+    "rank": 10,
+    "page": 150,
+    "section": "Section Summary"
+   }
+  ],
+  "latency_ms": 52.52719996497035,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0136-002"
+   ]
+  }
+ },
+ {
+  "query_id": "d05",
+  "split": "dev",
+  "question": "How many days of subsidized time off for families with newborns does the Swedish government policy provide?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0140-003",
+    "score": 0.766980767250061,
+    "rank": 1,
+    "page": 140,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0146-001",
+    "score": 0.5619032382965088,
+    "rank": 2,
+    "page": 146,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0145-005",
+    "score": 0.5616629123687744,
+    "rank": 3,
+    "page": 145,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0138-002",
+    "score": 0.543514609336853,
+    "rank": 4,
+    "page": 138,
+    "section": "5.2 Why Socialization Matters"
+   },
+   {
+    "id": "B-soc3e-p0144-001",
+    "score": 0.5384387969970703,
+    "rank": 5,
+    "page": 144,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0147-001",
+    "score": 0.5363362431526184,
+    "rank": 6,
+    "page": 147,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0147-004",
+    "score": 0.5353413820266724,
+    "rank": 7,
+    "page": 147,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0174-003",
+    "score": 0.5336689949035645,
+    "rank": 8,
+    "page": 174,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0146-002",
+    "score": 0.5262328386306763,
+    "rank": 9,
+    "page": 146,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0136-002",
+    "score": 0.5254793763160706,
+    "rank": 10,
+    "page": 136,
+    "section": "5.1 Theories of Self-Development"
+   }
+  ],
+  "latency_ms": 44.26039999816567,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0140-003"
+   ]
+  }
+ },
+ {
+  "query_id": "d06",
+  "split": "dev",
+  "question": "What do sociologists call the informal teaching done by schools?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0142-000",
+    "score": 0.7460157871246338,
+    "rank": 1,
+    "page": 142,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0174-003",
+    "score": 0.6684624552726746,
+    "rank": 2,
+    "page": 174,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0142-001",
+    "score": 0.6577128171920776,
+    "rank": 3,
+    "page": 142,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0141-001",
+    "score": 0.6491146087646484,
+    "rank": 4,
+    "page": 141,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0133-001",
+    "score": 0.6287134885787964,
+    "rank": 5,
+    "page": 133,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0140-002",
+    "score": 0.6250684261322021,
+    "rank": 6,
+    "page": 140,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0150-002",
+    "score": 0.6209580302238464,
+    "rank": 7,
+    "page": 150,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0140-000",
+    "score": 0.6199318766593933,
+    "rank": 8,
+    "page": 140,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0148-000",
+    "score": 0.6194964051246643,
+    "rank": 9,
+    "page": 148,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0139-002",
+    "score": 0.6178412437438965,
+    "rank": 10,
+    "page": 139,
+    "section": "5.3 Agents of Socialization"
+   }
+  ],
+  "latency_ms": 76.18050003657117,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0142-000"
+   ]
+  }
+ },
+ {
+  "query_id": "d07",
+  "split": "dev",
+  "question": "What is anticipatory socialization?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0147-003",
+    "score": 0.7996840476989746,
+    "rank": 1,
+    "page": 147,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0150-000",
+    "score": 0.7883163094520569,
+    "rank": 2,
+    "page": 150,
+    "section": "Key Terms"
+   },
+   {
+    "id": "B-soc3e-p0133-001",
+    "score": 0.7373671531677246,
+    "rank": 3,
+    "page": 133,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0150-002",
+    "score": 0.7322224378585815,
+    "rank": 4,
+    "page": 150,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0133-002",
+    "score": 0.7018760442733765,
+    "rank": 5,
+    "page": 133,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0148-000",
+    "score": 0.6999424695968628,
+    "rank": 6,
+    "page": 148,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0151-000",
+    "score": 0.6886292695999146,
+    "rank": 7,
+    "page": 151,
+    "section": "Section Quiz"
+   },
+   {
+    "id": "B-soc3e-p0139-001",
+    "score": 0.679978609085083,
+    "rank": 8,
+    "page": 139,
+    "section": "5.2 Why Socialization Matters"
+   },
+   {
+    "id": "B-soc3e-p0145-004",
+    "score": 0.666395902633667,
+    "rank": 9,
+    "page": 145,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0147-002",
+    "score": 0.6604361534118652,
+    "rank": 10,
+    "page": 147,
+    "section": "5.4 Socialization Across the Life Course"
+   }
+  ],
+  "latency_ms": 47.377999988384545,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0147-003"
+   ]
+  }
+ },
+ {
+  "query_id": "d08",
+  "split": "dev",
+  "question": "What must new members of an institution go through first in the two-part resocialization process?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0148-000",
+    "score": 0.7066543102264404,
+    "rank": 1,
+    "page": 148,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0148-001",
+    "score": 0.7020469903945923,
+    "rank": 2,
+    "page": 148,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0172-000",
+    "score": 0.6689592599868774,
+    "rank": 3,
+    "page": 172,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0153-002",
+    "score": 0.6586959958076477,
+    "rank": 4,
+    "page": 153,
+    "section": "Short Answer"
+   },
+   {
+    "id": "B-soc3e-p0149-000",
+    "score": 0.6504716873168945,
+    "rank": 5,
+    "page": 149,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0171-003",
+    "score": 0.6476787328720093,
+    "rank": 6,
+    "page": 171,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0143-001",
+    "score": 0.6475632786750793,
+    "rank": 7,
+    "page": 143,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0150-002",
+    "score": 0.6434817910194397,
+    "rank": 8,
+    "page": 150,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0148-002",
+    "score": 0.6412126421928406,
+    "rank": 9,
+    "page": 148,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0173-000",
+    "score": 0.6257514953613281,
+    "rank": 10,
+    "page": 173,
+    "section": "6.3 Formal Organizations"
+   }
+  ],
+  "latency_ms": 37.86390001187101,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": false,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 2,
+   "mrr": 0.5,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0148-001"
+   ]
+  }
+ },
+ {
+  "query_id": "d09",
+  "split": "dev",
+  "question": "According to the textbook, what is the minimum number of people needed to form a group?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0159-000",
+    "score": 0.6630444526672363,
+    "rank": 1,
+    "page": 159,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0161-003",
+    "score": 0.6565756797790527,
+    "rank": 2,
+    "page": 161,
+    "section": "6.1 Types of Groups"
+   },
+   {
+    "id": "B-soc3e-p0166-000",
+    "score": 0.6531676650047302,
+    "rank": 3,
+    "page": 166,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0166-001",
+    "score": 0.6473054885864258,
+    "rank": 4,
+    "page": 166,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0170-000",
+    "score": 0.6445966362953186,
+    "rank": 5,
+    "page": 170,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0170-002",
+    "score": 0.6435229778289795,
+    "rank": 6,
+    "page": 170,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0179-000",
+    "score": 0.6389760971069336,
+    "rank": 7,
+    "page": 179,
+    "section": "Section Quiz"
+   },
+   {
+    "id": "B-soc3e-p0166-002",
+    "score": 0.6353628635406494,
+    "rank": 8,
+    "page": 166,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0170-003",
+    "score": 0.6326619386672974,
+    "rank": 9,
+    "page": 170,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0180-001",
+    "score": 0.6294894814491272,
+    "rank": 10,
+    "page": 180,
+    "section": "Short Answer"
+   }
+  ],
+  "latency_ms": 38.207100005820394,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": false,
+    "3": false,
+    "5": false,
+    "10": false
+   },
+   "first_gold_rank": null,
+   "mrr": 0.0,
+   "recall": 0.0,
+   "full_recall": false,
+   "items_found": 0,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0161-001"
+   ]
+  }
+ },
+ {
+  "query_id": "d10",
+  "split": "dev",
+  "question": "What is a reference group?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0164-000",
+    "score": 0.8342576026916504,
+    "rank": 1,
+    "page": 164,
+    "section": "6.1 Types of Groups"
+   },
+   {
+    "id": "B-soc3e-p0164-001",
+    "score": 0.7744402885437012,
+    "rank": 2,
+    "page": 164,
+    "section": "6.1 Types of Groups"
+   },
+   {
+    "id": "B-soc3e-p0165-000",
+    "score": 0.7120107412338257,
+    "rank": 3,
+    "page": 165,
+    "section": "6.1 Types of Groups"
+   },
+   {
+    "id": "B-soc3e-p0160-005",
+    "score": 0.6989055871963501,
+    "rank": 4,
+    "page": 160,
+    "section": "6.1 Types of Groups"
+   },
+   {
+    "id": "B-soc3e-p0169-001",
+    "score": 0.6887917518615723,
+    "rank": 5,
+    "page": 169,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0161-001",
+    "score": 0.6614137887954712,
+    "rank": 6,
+    "page": 161,
+    "section": "6.1 Types of Groups"
+   },
+   {
+    "id": "B-soc3e-p0176-001",
+    "score": 0.6605342626571655,
+    "rank": 7,
+    "page": 176,
+    "section": "Key Terms"
+   },
+   {
+    "id": "B-soc3e-p0166-000",
+    "score": 0.6443694233894348,
+    "rank": 8,
+    "page": 166,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0165-001",
+    "score": 0.6410602331161499,
+    "rank": 9,
+    "page": 165,
+    "section": "6.1 Types of Groups"
+   },
+   {
+    "id": "B-soc3e-p0161-000",
+    "score": 0.6335703134536743,
+    "rank": 10,
+    "page": 161,
+    "section": "6.1 Types of Groups"
+   }
+  ],
+  "latency_ms": 38.02249999716878,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0164-000"
+   ]
+  }
+ },
+ {
+  "query_id": "d11",
+  "split": "dev",
+  "question": "Which leadership style issues orders and assigns tasks with little to no feedback from group members?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0167-002",
+    "score": 0.7064734697341919,
+    "rank": 1,
+    "page": 167,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0167-001",
+    "score": 0.686087429523468,
+    "rank": 2,
+    "page": 167,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0166-002",
+    "score": 0.6834997534751892,
+    "rank": 3,
+    "page": 166,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0176-001",
+    "score": 0.6731815338134766,
+    "rank": 4,
+    "page": 176,
+    "section": "Key Terms"
+   },
+   {
+    "id": "B-soc3e-p0179-000",
+    "score": 0.6605068445205688,
+    "rank": 5,
+    "page": 179,
+    "section": "Section Quiz"
+   },
+   {
+    "id": "B-soc3e-p0167-000",
+    "score": 0.6274946928024292,
+    "rank": 6,
+    "page": 167,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0176-000",
+    "score": 0.6233725547790527,
+    "rank": 7,
+    "page": 176,
+    "section": "Key Terms"
+   },
+   {
+    "id": "B-soc3e-p0177-000",
+    "score": 0.6151666045188904,
+    "rank": 8,
+    "page": 177,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0166-001",
+    "score": 0.5988633036613464,
+    "rank": 9,
+    "page": 166,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0165-002",
+    "score": 0.583380401134491,
+    "rank": 10,
+    "page": 165,
+    "section": "6.2 Group Size and Structure"
+   }
+  ],
+  "latency_ms": 45.059400028549135,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0167-002"
+   ]
+  }
+ },
+ {
+  "query_id": "d12",
+  "split": "dev",
+  "question": "In Asch's conformity study, how many of the fifty test subjects gave an obviously erroneous answer at least once?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0170-002",
+    "score": 0.8101568222045898,
+    "rank": 1,
+    "page": 170,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0170-003",
+    "score": 0.7348400354385376,
+    "rank": 2,
+    "page": 170,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0170-001",
+    "score": 0.7273448705673218,
+    "rank": 3,
+    "page": 170,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0170-000",
+    "score": 0.690467119216919,
+    "rank": 4,
+    "page": 170,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0180-002",
+    "score": 0.5995291471481323,
+    "rank": 5,
+    "page": 180,
+    "section": "Short Answer"
+   },
+   {
+    "id": "B-soc3e-p0135-003",
+    "score": 0.5737115144729614,
+    "rank": 6,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-004",
+    "score": 0.5671170949935913,
+    "rank": 7,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0179-000",
+    "score": 0.5641123652458191,
+    "rank": 8,
+    "page": 179,
+    "section": "Section Quiz"
+   },
+   {
+    "id": "B-soc3e-p0169-001",
+    "score": 0.5624414682388306,
+    "rank": 9,
+    "page": 169,
+    "section": "6.2 Group Size and Structure"
+   },
+   {
+    "id": "B-soc3e-p0194-003",
+    "score": 0.5496695637702942,
+    "rank": 10,
+    "page": 194,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   }
+  ],
+  "latency_ms": 56.38570000883192,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0170-002"
+   ]
+  }
+ },
+ {
+  "query_id": "d13",
+  "split": "dev",
+  "question": "According to Etzioni, what are the three categories of formal organizations?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0171-003",
+    "score": 0.713935136795044,
+    "rank": 1,
+    "page": 171,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0172-000",
+    "score": 0.7044341564178467,
+    "rank": 2,
+    "page": 172,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0171-002",
+    "score": 0.6830236911773682,
+    "rank": 3,
+    "page": 171,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0177-001",
+    "score": 0.6713385581970215,
+    "rank": 4,
+    "page": 177,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0172-001",
+    "score": 0.6560362577438354,
+    "rank": 5,
+    "page": 172,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0176-000",
+    "score": 0.6502648591995239,
+    "rank": 6,
+    "page": 176,
+    "section": "Key Terms"
+   },
+   {
+    "id": "B-soc3e-p0173-002",
+    "score": 0.6450005173683167,
+    "rank": 7,
+    "page": 173,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0173-003",
+    "score": 0.6378065347671509,
+    "rank": 8,
+    "page": 173,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0172-002",
+    "score": 0.6306748390197754,
+    "rank": 9,
+    "page": 172,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0174-004",
+    "score": 0.6282624006271362,
+    "rank": 10,
+    "page": 174,
+    "section": "6.3 Formal Organizations"
+   }
+  ],
+  "latency_ms": 39.20230001676828,
+  "answerable": true,
+  "type": "multi-hop",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 2,
+   "items_required": 2,
+   "gold_ids": [
+    "B-soc3e-p0171-003",
+    "B-soc3e-p0172-000"
+   ]
+  }
+ },
+ {
+  "query_id": "d14",
+  "split": "dev",
+  "question": "What four characteristics did Max Weber attribute to a bureaucracy?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0172-001",
+    "score": 0.6487831473350525,
+    "rank": 1,
+    "page": 172,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0179-001",
+    "score": 0.605501651763916,
+    "rank": 2,
+    "page": 179,
+    "section": "Section Quiz"
+   },
+   {
+    "id": "B-soc3e-p0176-000",
+    "score": 0.6046535968780518,
+    "rank": 3,
+    "page": 176,
+    "section": "Key Terms"
+   },
+   {
+    "id": "B-soc3e-p0177-001",
+    "score": 0.597624659538269,
+    "rank": 4,
+    "page": 177,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0173-002",
+    "score": 0.5889453887939453,
+    "rank": 5,
+    "page": 173,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0173-001",
+    "score": 0.583215594291687,
+    "rank": 6,
+    "page": 173,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0180-002",
+    "score": 0.5802503824234009,
+    "rank": 7,
+    "page": 180,
+    "section": "Short Answer"
+   },
+   {
+    "id": "B-soc3e-p0171-002",
+    "score": 0.564550518989563,
+    "rank": 8,
+    "page": 171,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0197-001",
+    "score": 0.5608309507369995,
+    "rank": 9,
+    "page": 197,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0172-003",
+    "score": 0.560172438621521,
+    "rank": 10,
+    "page": 172,
+    "section": "6.3 Formal Organizations"
+   }
+  ],
+  "latency_ms": 35.175500030163676,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0172-001"
+   ]
+  }
+ },
+ {
+  "query_id": "d15",
+  "split": "dev",
+  "question": "How many ways did Robert Merton define people respond to the gap between a socially accepted goal and no socially accepted means to reach it?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0191-003",
+    "score": 0.7812497019767761,
+    "rank": 1,
+    "page": 191,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0191-002",
+    "score": 0.7103986740112305,
+    "rank": 2,
+    "page": 191,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0197-002",
+    "score": 0.5965980291366577,
+    "rank": 3,
+    "page": 197,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0134-002",
+    "score": 0.5956006050109863,
+    "rank": 4,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0174-003",
+    "score": 0.5902396440505981,
+    "rank": 5,
+    "page": 174,
+    "section": "6.3 Formal Organizations"
+   },
+   {
+    "id": "B-soc3e-p0191-001",
+    "score": 0.5837550163269043,
+    "rank": 6,
+    "page": 191,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0186-002",
+    "score": 0.5820273160934448,
+    "rank": 7,
+    "page": 186,
+    "section": "7.1 Deviance and Control"
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "score": 0.5799904465675354,
+    "rank": 8,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0148-000",
+    "score": 0.5768714547157288,
+    "rank": 9,
+    "page": 148,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0134-003",
+    "score": 0.5726548433303833,
+    "rank": 10,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   }
+  ],
+  "latency_ms": 31.311400001868606,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0191-003"
+   ]
+  }
+ },
+ {
+  "query_id": "d16",
+  "split": "dev",
+  "question": "In Edwin Lemert's work, what is primary deviance?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0194-001",
+    "score": 0.7704765796661377,
+    "rank": 1,
+    "page": 194,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0198-000",
+    "score": 0.6501911282539368,
+    "rank": 2,
+    "page": 198,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0191-000",
+    "score": 0.6472962498664856,
+    "rank": 3,
+    "page": 191,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0194-002",
+    "score": 0.6460052132606506,
+    "rank": 4,
+    "page": 194,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0191-001",
+    "score": 0.6399149894714355,
+    "rank": 5,
+    "page": 191,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0186-002",
+    "score": 0.6301180720329285,
+    "rank": 6,
+    "page": 186,
+    "section": "7.1 Deviance and Control"
+   },
+   {
+    "id": "B-soc3e-p0188-001",
+    "score": 0.6266999840736389,
+    "rank": 7,
+    "page": 188,
+    "section": "7.1 Deviance and Control"
+   },
+   {
+    "id": "B-soc3e-p0188-002",
+    "score": 0.6211816072463989,
+    "rank": 8,
+    "page": 188,
+    "section": "7.1 Deviance and Control"
+   },
+   {
+    "id": "B-soc3e-p0196-001",
+    "score": 0.6124383211135864,
+    "rank": 9,
+    "page": 196,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0206-000",
+    "score": 0.6107131242752075,
+    "rank": 10,
+    "page": 206,
+    "section": "Section Summary"
+   }
+  ],
+  "latency_ms": 34.80200003832579,
+  "answerable": true,
+  "type": "direct",
+  "eval": {
+   "hit_at": {
+    "1": true,
+    "3": true,
+    "5": true,
+    "10": true
+   },
+   "first_gold_rank": 1,
+   "mrr": 1.0,
+   "recall": 1.0,
+   "full_recall": true,
+   "items_found": 1,
+   "items_required": 1,
+   "gold_ids": [
+    "B-soc3e-p0194-001"
+   ]
+  }
+ },
+ {
+  "query_id": "d17",
+  "split": "dev",
+  "question": "According to Piaget, at what age do children reach the formal operational stage?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0134-000",
+    "score": 0.6437735557556152,
+    "rank": 1,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0145-005",
+    "score": 0.6269506812095642,
+    "rank": 2,
+    "page": 145,
+    "section": "5.4 Socialization Across the Life Course"
+   },
+   {
+    "id": "B-soc3e-p0134-004",
+    "score": 0.6180341243743896,
+    "rank": 3,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-002",
+    "score": 0.6021249294281006,
+    "rank": 4,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0153-000",
+    "score": 0.5994222164154053,
+    "rank": 5,
+    "page": 153,
+    "section": "Section Quiz"
+   },
+   {
+    "id": "B-soc3e-p0135-000",
+    "score": 0.5992026329040527,
+    "rank": 6,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0133-002",
+    "score": 0.5869061946868896,
+    "rank": 7,
+    "page": 133,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0144-000",
+    "score": 0.5867695808410645,
+    "rank": 8,
+    "page": 144,
+    "section": "5.3 Agents of Socialization"
+   },
+   {
+    "id": "B-soc3e-p0133-001",
+    "score": 0.5844533443450928,
+    "rank": 9,
+    "page": 133,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0146-003",
+    "score": 0.5719234943389893,
+    "rank": 10,
+    "page": 146,
+    "section": "5.4 Socialization Across the Life Course"
+   }
+  ],
+  "latency_ms": 38.796600012574345,
+  "answerable": false,
+  "type": "unanswerable"
+ },
+ {
+  "query_id": "d18",
+  "split": "dev",
+  "question": "What is the average recidivism rate of released US prisoners within five years?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0203-001",
+    "score": 0.7016804218292236,
+    "rank": 1,
+    "page": 203,
+    "section": "7.3 Crime and the Law"
+   },
+   {
+    "id": "B-soc3e-p0203-000",
+    "score": 0.6766699552536011,
+    "rank": 2,
+    "page": 203,
+    "section": "7.3 Crime and the Law"
+   },
+   {
+    "id": "B-soc3e-p0203-003",
+    "score": 0.6081973314285278,
+    "rank": 3,
+    "page": 203,
+    "section": "7.3 Crime and the Law"
+   },
+   {
+    "id": "B-soc3e-p0203-002",
+    "score": 0.6045609712600708,
+    "rank": 4,
+    "page": 203,
+    "section": "7.3 Crime and the Law"
+   },
+   {
+    "id": "B-soc3e-p0193-003",
+    "score": 0.5986204147338867,
+    "rank": 5,
+    "page": 193,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0206-001",
+    "score": 0.5883981585502625,
+    "rank": 6,
+    "page": 206,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0193-002",
+    "score": 0.5861800312995911,
+    "rank": 7,
+    "page": 193,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0201-001",
+    "score": 0.5801233053207397,
+    "rank": 8,
+    "page": 201,
+    "section": "7.3 Crime and the Law"
+   },
+   {
+    "id": "B-soc3e-p0193-001",
+    "score": 0.5681585669517517,
+    "rank": 9,
+    "page": 193,
+    "section": "7.2 Theoretical Perspectives on Deviance and Crime"
+   },
+   {
+    "id": "B-soc3e-p0199-005",
+    "score": 0.5624066591262817,
+    "rank": 10,
+    "page": 199,
+    "section": "7.3 Crime and the Law"
+   }
+  ],
+  "latency_ms": 41.75279999617487,
+  "answerable": false,
+  "type": "unanswerable"
+ },
+ {
+  "query_id": "d19",
+  "split": "dev",
+  "question": "What does Vygotsky's zone of proximal development say about how children learn?",
+  "method": "dense",
+  "top_k": 10,
+  "params": {},
+  "collection": "soc3e_B",
+  "ok": true,
+  "error": null,
+  "inferred_chapter": null,
+  "retrieved": [
+   {
+    "id": "B-soc3e-p0135-000",
+    "score": 0.6328943967819214,
+    "rank": 1,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0135-001",
+    "score": 0.6213866472244263,
+    "rank": 2,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0136-002",
+    "score": 0.620754599571228,
+    "rank": 3,
+    "page": 136,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0151-000",
+    "score": 0.6146371960639954,
+    "rank": 4,
+    "page": 151,
+    "section": "Section Quiz"
+   },
+   {
+    "id": "B-soc3e-p0135-004",
+    "score": 0.6123286485671997,
+    "rank": 5,
+    "page": 135,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0133-002",
+    "score": 0.6095913648605347,
+    "rank": 6,
+    "page": 133,
+    "section": "Introduction"
+   },
+   {
+    "id": "B-soc3e-p0133-003",
+    "score": 0.5978864431381226,
+    "rank": 7,
+    "page": 133,
+    "section": "5.1 Theories of Self-Development"
+   },
+   {
+    "id": "B-soc3e-p0138-002",
+    "score": 0.5952991247177124,
+    "rank": 8,
+    "page": 138,
+    "section": "5.2 Why Socialization Matters"
+   },
+   {
+    "id": "B-soc3e-p0150-001",
+    "score": 0.5931679606437683,
+    "rank": 9,
+    "page": 150,
+    "section": "Section Summary"
+   },
+   {
+    "id": "B-soc3e-p0134-004",
+    "score": 0.5926826000213623,
+    "rank": 10,
+    "page": 134,
+    "section": "5.1 Theories of Self-Development"
+   }
+  ],
+  "latency_ms": 57.59340000804514,
+  "answerable": false,
+  "type": "unanswerable"
+ }
+]

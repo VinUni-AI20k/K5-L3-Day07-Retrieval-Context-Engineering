@@ -1,0 +1,37 @@
+{
+ "config": "dense_k3",
+ "method": "dense",
+ "top_k": 3,
+ "params": {},
+ "collection": "soc3e_B",
+ "split": "dev",
+ "n_answerable": 16,
+ "n_direct": 15,
+ "n_multihop": 1,
+ "n_unanswerable": 3,
+ "errors": 0,
+ "hit@1": 0.8125,
+ "hit@3": 0.9375,
+ "hit@5": null,
+ "recall@k": 0.9375,
+ "full_recall@k": 0.9375,
+ "multihop_full_recall": 1.0,
+ "multihop_recall": 1.0,
+ "mrr": 0.8645833333333334,
+ "failed_queries": [
+  "d09"
+ ],
+ "latency_ms_mean": 51.3123421145505,
+ "latency_ms_median": 43.622200028039515,
+ "latency_ms_p95": 89.89970001857728,
+ "unanswerable_top1_scores": {
+  "d17": 0.6437735557556152,
+  "d18": 0.7016804218292236,
+  "d19": 0.6328943967819214
+ },
+ "unanswerable_top1_mean": 0.6594494581222534,
+ "unanswerable_top1_max": 0.7016804218292236,
+ "answerable_top1_mean": 0.7519081979990005,
+ "answerable_top1_min": 0.6487831473350525,
+ "score_scale_note": "dense=cosine, bm25=raw BM25, hybrid=RRF sum, *_rerank=cross-encoder logit; not comparable across methods"
+}

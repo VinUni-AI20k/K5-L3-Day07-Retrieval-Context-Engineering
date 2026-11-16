@@ -1,0 +1,39 @@
+{
+ "config": "imp6_hybrid_demote_k5",
+ "method": "hybrid",
+ "top_k": 5,
+ "params": {
+  "demote_backmatter": true
+ },
+ "collection": "soc3e_B",
+ "split": "dev",
+ "n_answerable": 16,
+ "n_direct": 15,
+ "n_multihop": 1,
+ "n_unanswerable": 3,
+ "errors": 0,
+ "hit@1": 0.9375,
+ "hit@3": 0.9375,
+ "hit@5": 0.9375,
+ "recall@k": 0.9375,
+ "full_recall@k": 0.9375,
+ "multihop_full_recall": 1.0,
+ "multihop_recall": 1.0,
+ "mrr": 0.9375,
+ "failed_queries": [
+  "d09"
+ ],
+ "latency_ms_mean": 24.98196842344968,
+ "latency_ms_median": 24.746200011577457,
+ "latency_ms_p95": 27.847599994856864,
+ "unanswerable_top1_scores": {
+  "d17": 0.032266458495966696,
+  "d18": 0.03278688524590164,
+  "d19": 0.03278688524590164
+ },
+ "unanswerable_top1_mean": 0.03261340966258999,
+ "unanswerable_top1_max": 0.03278688524590164,
+ "answerable_top1_mean": 0.03255346189625844,
+ "answerable_top1_min": 0.03036576949620428,
+ "score_scale_note": "dense=cosine, bm25=raw BM25, hybrid=RRF sum, *_rerank=cross-encoder logit; not comparable across methods"
+}

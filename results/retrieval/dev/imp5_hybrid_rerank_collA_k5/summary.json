@@ -1,0 +1,41 @@
+{
+ "config": "imp5_hybrid_rerank_collA_k5",
+ "method": "hybrid_rerank",
+ "top_k": 5,
+ "params": {
+  "collection": "soc3e_A"
+ },
+ "collection": "soc3e_A",
+ "split": "dev",
+ "n_answerable": 16,
+ "n_direct": 15,
+ "n_multihop": 1,
+ "n_unanswerable": 3,
+ "errors": 0,
+ "hit@1": 0.75,
+ "hit@3": 0.875,
+ "hit@5": 0.875,
+ "recall@k": 0.84375,
+ "full_recall@k": 0.8125,
+ "multihop_full_recall": 0.0,
+ "multihop_recall": 0.5,
+ "mrr": 0.8020833333333334,
+ "failed_queries": [
+  "d08",
+  "d09",
+  "d13"
+ ],
+ "latency_ms_mean": 328.8006421154071,
+ "latency_ms_median": 326.40530000207946,
+ "latency_ms_p95": 375.29460003133863,
+ "unanswerable_top1_scores": {
+  "d17": -4.00108003616333,
+  "d18": -1.0870311260223389,
+  "d19": -3.733956813812256
+ },
+ "unanswerable_top1_mean": -2.9406893253326416,
+ "unanswerable_top1_max": -1.0870311260223389,
+ "answerable_top1_mean": 6.5243337750434875,
+ "answerable_top1_min": -7.277629375457764,
+ "score_scale_note": "dense=cosine, bm25=raw BM25, hybrid=RRF sum, *_rerank=cross-encoder logit; not comparable across methods"
+}
